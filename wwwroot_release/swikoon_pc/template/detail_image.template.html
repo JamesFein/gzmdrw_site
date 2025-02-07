@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Developed By M Abdur Rokib Promy">
+  <meta name="author" content="cosmic">
+  <meta name="keywords" content="Bootstrap 3, Template, Theme, Responsive, Corporate, Business">
+  <link rel="shortcut icon" href="${Prefix}img/favicon.png">
+  <title>${Content.title}_${Site.name}</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="${Prefix}css/bootstrap.min.css" rel="stylesheet">
+  <link href="${Prefix}css/theme.css" rel="stylesheet">
+  <link href="${Prefix}css/bootstrap-reset.css" rel="stylesheet">
+  <!--external css-->
+  <link href="${Prefix}assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" href="${Prefix}css/flexslider.css" />
+  <link href="${Prefix}assets/bxslider/jquery.bxslider.css" rel="stylesheet" />
+  <link rel="stylesheet" href="${Prefix}css/animate.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+
+  <!-- Custom styles for this template -->
+  <link href="${Prefix}css/style.css" rel="stylesheet">
+  <link href="${Prefix}css/style-responsive.css" rel="stylesheet" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+  <!--[if lt IE 9]>
+<script src="${Prefix}js/html5shiv.js">
+</script>
+<script src="${Prefix}js/respond.min.js">
+</script>
+<![endif]-->
+
+<script>window._xy_cms = { catalog_id: '${Catalog.catalogId}', content_id: '${Content.contentId}' };</script>
+<style>
+.pagebar { height: 50px; }
+.pagebar a { border: 1px solid #48cfad; padding: 3px 8px; margin: 0 2px; }
+.pagebar a.current { background-color: #48cfad; color: #fff; }
+</style>
+</head>
+
+<body>
+  <!--header start-->
+  <@cms_include file="header.template.html"></@cms_include>
+  <!--header end-->
+
+  <!--breadcrumbs start-->
+  <div class="breadcrumbs">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-4">
+          <h1>${Catalog.name}</h1>
+        </div>
+        <div class="col-lg-8 col-sm-8" style="text-align:right;padding-top: 5px;">
+          <a class="position" href="${Site.link}">首页</a>
+          <#list Catalog.ancestors?split(":") as catalogId>
+            <@cms_catalog id="${catalogId}" level="Self">
+              <#list DataList as catalog>
+                 > <a class="position" href="${catalog.link}">${catalog.name}</a>
+              </#list>
+            </@cms_catalog>
+          </#list>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--breadcrumbs end-->
+
+  <!--container start-->
+  <div class="container">
+    <div class="row">
+      <!--blog start-->
+      <div class="col-lg-9">
+        <div class="blog-item">
+          <div class="row">
+            <div class="col-lg-2 col-sm-2">
+              <div class="date-wrap">
+                <span class="date">
+                  ${dateFormat(Content.publishDate, 'MM/dd')}
+                </span>
+                <span class="month">
+                  ${dateFormat(Content.publishDate, 'yyyy')}
+                </span>
+              </div>
+              <div class="author">
+                By
+                <a href="#">
+                  ${Content.author!Site.name}
+                </a>
+              </div>
+              <div class="st-view">
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="javascript:;">
+                      ${randomInt(10000)}&nbsp;看过
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">
+                      ${randomInt(20)}&nbsp;分享过
+                    </a>
+                  </li>
+                  <!-- <li>
+                      <a href="javascript:;">
+                        15&nbsp;评论
+                      </a>
+                    </li> -->
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-10 col-sm-10">
+              <h1 style="margin-top:0;">
+                <a href="javascript:void(0);">
+                  ${Content.title}
+                </a>
+              </h1>
+              <div>
+                <@cms_image contentid="${Content.contentId}">
+                  <#list DataList as item>
+                    <p><img src = "${internalUrl(item.path)}" style="width:100%" /></p>
+                    <p style="text-algin:center">${item.description!'a'} - ${item.redirectUrl!'b'}</p>
+                    </#list>
+                  </@cms_image>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <div class="blog-side-item">
+          <div class="search-row">
+            <input type="text" class="form-control" placeholder="Search here">
+          </div>
+          <#if Catalog.parentId!=0>
+          <@cms_catalog id="${Catalog.ancestors[0..(Catalog.ancestors?index_of(':')-1)]}" level="Child" size="10">
+            <#if Total?? && Total &gt; 0>
+              <div class="category">
+                <h3>
+                  ${Catalog.name}
+                </h3>
+                <ul class="list-unstyled">
+                  <#list DataList as child>
+                    <li>
+                      <a href="${child.link}">
+                        <i class="fa fa-angle-right pr-10">
+                        </i>
+                        ${child.name}
+                      </a>
+                    </li>
+                  </#list>
+                </ul>
+              </div>
+            </#if>
+          </@cms_catalog>
+          </#if>
+          <div class="blog-post">
+            <h3>最近更新</h3>
+            <@cms_content catalogalias="news" level="CurrentAndChild" size="5">
+              <#list DataList as content>
+                <div class="media">
+                  <#if content.logoSrc??>
+                    <a class="pull-left" href="javascript:;">
+                      <img class=" " src="${ResourcePrefix}${content.logoSrc}" alt="${content.title}">
+                    </a>
+                  </#if>
+                  <div class="media-body">
+                    <h5 class="media-heading">
+                      <a href="${content.link}">
+                        <#if content.title?length &gt; 60>${content.title[0..60]}<#else>${content.title}</#if>
+                      </a>
+                    </h5>
+                    <p>${dateFormat(content.publishDate)}</p>
+                  </div>
+                </div>
+              </#list>
+            </@cms_content>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--container end-->
+
+  <!--footer start-->
+  <@cms_include file="footer.template.html"></@cms_include>
+  <!--small footer end-->
+
+  <!-- js placed at the end of the document so the pages load faster -->
+  <script src="${Prefix}js/jquery.js">
+  </script>
+  <script src="${Prefix}js/bootstrap.min.js">
+  </script>
+  <script type="text/javascript" src="${Prefix}js/hover-dropdown.js">
+  </script>
+  <script defer src="${Prefix}js/jquery.flexslider.js">
+  </script>
+  <script type="text/javascript" src="${Prefix}assets/bxslider/jquery.bxslider.js">
+  </script>
+
+  <script src="${Prefix}js/jquery.easing.min.js">
+  </script>
+  <script src="${Prefix}js/link-hover.js">
+  </script>
+
+
+  <!--common script for all pages-->
+  <script src="${Prefix}js/common-scripts.js">
+  </script>
+
+
+  <script src="${Prefix}js/wow.min.js">
+  </script>
+  <script>
+    wow = new WOW(
+      {
+        boxClass: 'wow',      // default
+        animateClass: 'animated', // default
+        offset: 0          // default
+      }
+    )
+    wow.init();
+  </script>
+</body>
+
+</html>

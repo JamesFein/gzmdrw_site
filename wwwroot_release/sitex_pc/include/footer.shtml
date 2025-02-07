@@ -1,0 +1,44 @@
+<footer class="footer width-footer-bar">
+  <div class="container">
+    <div class="footer-col-wrap footer-with-logo-icon">
+      <div class="footer-col footer-col-logo">
+        <img src="" alt="sitex">
+      </div>
+      <div class="footer-col footer-col-copy">
+        <ul class="footer-nav hidden-xs">
+              <li id="menu-item-152" class="menu-item menu-item-152"><a href="/contact/">联系我们</a></li>
+          <li id="menu-item-130" class="menu-item menu-item-130"><a href="#">新品</a></li>
+              <li id="menu-item-157" class="menu-item menu-item-157"><a href="/topic/">专题</a>
+          </li>
+        </ul>
+        <div class="copyright">
+          <p>Copyright © 2021 sitex 版权所有</p>
+        </div>
+      </div>
+      <div class="footer-col footer-col-sns">
+        <div class="footer-sns">
+              <a href=" #" aria-label="icon" rel="noopener">
+                <i class="wpcom-icon fa fa-twitter sns-icon"></i> </a>
+              <a href=" #" aria-label="icon" rel="noopener">
+                <i class="wpcom-icon fa fa-weibo sns-icon"></i> </a>
+              <a class="sns-wx" href="javascript:;" aria-label="icon">
+                <i class="wpcom-icon fa fa-wechat sns-icon"></i> <span
+                  style="background-image:url(&#39;&#39;);"></span>
+              </a>
+              <a href=" #" aria-label="icon" rel="noopener">
+                <i class="wpcom-icon fa fa-paper-plane sns-icon"></i> </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c330a2e130186b55467d9c8084ead742";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+

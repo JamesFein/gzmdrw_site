@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Developed By M Abdur Rokib Promy">
+  <meta name="author" content="cosmic">
+  <meta name="keywords" content="Bootstrap 3, Template, Theme, Responsive, Corporate, Business">
+  <link rel="shortcut icon" href="http://www.demo.com/img/favicon.png">
+  <title>
+    基因控
+  </title>
+  <!-- Bootstrap core CSS -->
+  <link href="http://www.demo.com/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://www.demo.com/css/theme.css" rel="stylesheet">
+  <link href="http://www.demo.com/css/bootstrap-reset.css" rel="stylesheet">
+  <!-- <link href="http://www.demo.com/css/bootstrap.min.css" rel="stylesheet">-->
+
+  <!--external css-->
+  <link href="http://www.demo.com/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" href="http://www.demo.com/css/flexslider.css" />
+  <link href="http://www.demo.com/assets/bxslider/jquery.bxslider.css" rel="stylesheet" />
+  <link rel="stylesheet" href="http://www.demo.com/css/animate.css">
+  <link rel="stylesheet" href="http://www.demo.com/assets/owlcarousel/owl.carousel.css">
+  <link rel="stylesheet" href="http://www.demo.com/assets/owlcarousel/owl.theme.css">
+
+  <link href="http://www.demo.com/css/superfish.css" rel="stylesheet" media="screen">
+  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" type="text/css" href="http://www.demo.com/css/component.css">
+  <link href="http://www.demo.com/css/style.css" rel="stylesheet">
+  <link href="http://www.demo.com/css/style-responsive.css" rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="http://www.demo.com/css/parallax-slider/parallax-slider.css" />
+  <script type="text/javascript" src="http://www.demo.com/js/parallax-slider/modernizr.custom.28468.js">
+  </script>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+  <!--[if lt IE 9]>
+    <script src="http://www.demo.com/js/html5shiv.js">
+    </script>
+    <script src="http://www.demo.com/js/respond.min.js">
+    </script>
+    <![endif]-->
+</head>
+
+<body>
+  <!--header start-->

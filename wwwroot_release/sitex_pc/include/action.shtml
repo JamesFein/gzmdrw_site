@@ -1,0 +1,29 @@
+<div class="action action-style-0 action-color-1 action-pos-1 hide-gotop" style="bottom:20%;">
+  <div class="action-item">
+    <i class="wpcom-icon fa fa-comments action-item-icon"></i>
+    <div class="action-item-inner action-item-type-2" style="margin-top: -114.781px;">
+      <h3>联系我们</h3>
+                <p>在线咨询：<a class="btn btn-primary btn-xs" href="http://wpa.qq.com/msgrd?uin=190785909" target="_blank"
+              rel="noopener noreferrer noopener"><i class="wpcom-icon fa fa-qq"></i>&nbsp;QQ交谈</a></p>
+          <p>微信：兮玥</p>
+          <p>邮件：190785909#qq.com</p>
+          <p>工作时间：周一至周五，9:30-18:30，节假日休息</p>
+    </div>
+  </div>
+  <div class="action-item">
+    <i class="wpcom-icon fa fa-commenting action-item-icon"></i>
+        <div class="action-item-inner action-item-type-1" style="margin-top: -125.562px;">
+          <img class="action-item-img" src="" alt="微信">
+        </div>
+  </div>
+  <div class="action-item j-share">
+    <i class="wpcom-icon wi action-item-icon"><svg aria-hidden="true">
+        <use xlink:href="#wi-share"></use>
+      </svg></i>
+  </div>
+  <div class="action-item gotop j-top">
+    <i class="wpcom-icon wi action-item-icon"><svg aria-hidden="true">
+        <use xlink:href="#wi-arrow-up-2"></use>
+      </svg></i>
+  </div>
+</div>

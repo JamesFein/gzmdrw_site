@@ -1,0 +1,7 @@
+<@cms_advertisement code="ad_article1">
+  <#list DataList as ad>
+    <div class="wpcom_myimg_wrap __single_2">
+      <a href="${ad.redirectUrl}" target="_blank"><img src="${internalUrl(ad.resourcePath)}"></a>
+    </div>
+  </#list>
+</@cms_advertisement>

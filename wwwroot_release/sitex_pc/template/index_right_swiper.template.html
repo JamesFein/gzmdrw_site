@@ -1,0 +1,26 @@
+<div class="widget widget_image_slider">
+  <div class="wpcom-slider swiper-container show-title">
+    <ul class="swiper-wrapper">
+      <@cms_pagewidget_data code="index_right_swiper">
+        <#list Data.contentObj as row>
+          <#list row.items as item>
+            <li class="swiper-slide">
+              <a class="slide-post-inner" href="${item.url}" target="_blank" title="${item.title}">
+                <img src="${internalUrl(item.logo)}" alt="${item.title}" />
+                <span class="slide-post-title"></span>
+              </a>
+            </li>
+          </#list>
+        </#list>
+      </@cms_pagewidget_data>
+    </ul>
+    <div class="swiper-pagination"></div>
+    <!-- Add Navigation -->
+    <div class="swiper-button-prev"><i class="wpcom-icon wi"><svg aria-hidden="true">
+          <use xlink:href="#wi-arrow-left-3"></use>
+        </svg></i></div>
+    <div class="swiper-button-next"><i class="wpcom-icon wi"><svg aria-hidden="true">
+          <use xlink:href="#wi-arrow-right-3"></use>
+        </svg></i></div>
+  </div>
+</div>

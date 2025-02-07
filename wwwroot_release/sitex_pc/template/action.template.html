@@ -1,0 +1,49 @@
+<div class="action action-style-0 action-color-1 action-pos-1 hide-gotop" style="bottom:20%;">
+  <div class="action-item">
+    <i class="wpcom-icon fa fa-comments action-item-icon"></i>
+    <div class="action-item-inner action-item-type-2" style="margin-top: -114.781px;">
+      <h3>联系我们</h3>
+      <@cms_site_property siteid="${Site.siteId}" code="qq">
+        <#list DataList as prop>
+          <p>在线咨询：<a class="btn btn-primary btn-xs" href="http://wpa.qq.com/msgrd?uin=${prop.propValue}" target="_blank"
+              rel="noopener noreferrer noopener"><i class="wpcom-icon fa fa-qq"></i>&nbsp;QQ交谈</a></p>
+        </#list>
+      </@cms_site_property>
+      <@cms_site_property siteid="${Site.siteId}" code="wechat">
+        <#list DataList as prop>
+          <p>微信：${prop.propValue}</p>
+        </#list>
+      </@cms_site_property>
+      <@cms_site_property siteid="${Site.siteId}" code="email">
+        <#list DataList as prop>
+          <p>邮件：${prop.propValue}</p>
+        </#list>
+      </@cms_site_property>
+      <@cms_site_property siteid="${Site.siteId}" code="working_hours">
+        <#list DataList as prop>
+          <p>工作时间：${prop.propValue}</p>
+        </#list>
+      </@cms_site_property>
+    </div>
+  </div>
+  <div class="action-item">
+    <i class="wpcom-icon fa fa-commenting action-item-icon"></i>
+    <@cms_catalog alias="qrcode" level="Self">
+      <#list DataList as c>
+        <div class="action-item-inner action-item-type-1" style="margin-top: -125.562px;">
+          <img class="action-item-img" src="${c.logoSrc!!}" alt="微信">
+        </div>
+      </#list>
+    </@cms_catalog>
+  </div>
+  <div class="action-item j-share">
+    <i class="wpcom-icon wi action-item-icon"><svg aria-hidden="true">
+        <use xlink:href="#wi-share"></use>
+      </svg></i>
+  </div>
+  <div class="action-item gotop j-top">
+    <i class="wpcom-icon wi action-item-icon"><svg aria-hidden="true">
+        <use xlink:href="#wi-arrow-up-2"></use>
+      </svg></i>
+  </div>
+</div>

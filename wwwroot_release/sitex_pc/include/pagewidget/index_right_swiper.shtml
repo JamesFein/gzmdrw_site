@@ -1,0 +1,26 @@
+<div class="widget widget_image_slider">
+  <div class="wpcom-slider swiper-container show-title">
+    <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+              <a class="slide-post-inner" href="iurl://content?id=440817354383429" target="_blank" title="深入 RWA：底层资产、业务结构、发展路径与潜在机遇">
+                <img src="/resources/image/2023/07/19/440821844885573.jpg" alt="深入 RWA：底层资产、业务结构、发展路径与潜在机遇" />
+                <span class="slide-post-title"></span>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a class="slide-post-inner" href="iurl://content?id=440822065160261" target="_blank" title="音乐元宇宙的 9 条设计原则">
+                <img src="/resources/image/2023/07/19/440822360567877.png" alt="音乐元宇宙的 9 条设计原则" />
+                <span class="slide-post-title"></span>
+              </a>
+            </li>
+    </ul>
+    <div class="swiper-pagination"></div>
+    <!-- Add Navigation -->
+    <div class="swiper-button-prev"><i class="wpcom-icon wi"><svg aria-hidden="true">
+          <use xlink:href="#wi-arrow-left-3"></use>
+        </svg></i></div>
+    <div class="swiper-button-next"><i class="wpcom-icon wi"><svg aria-hidden="true">
+          <use xlink:href="#wi-arrow-right-3"></use>
+        </svg></i></div>
+  </div>
+</div>

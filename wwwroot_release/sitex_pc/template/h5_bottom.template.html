@@ -1,0 +1,30 @@
+<div class="footer-bar" style="">
+  <div class="fb-item" style="background-color: #FFFFFF;">
+    <a href="${Site.link}" style="color: #002FA7;">
+      <i class="wpcom-icon fa fa-home fb-item-icon"></i> <span>首页</span>
+    </a>
+  </div>
+  <@cms_catalog alias="kuaixun" level="Self">
+    <#list DataList as cc>
+      <div class="fb-item">
+        <a href="${cc.link}" style="color: #002FA7;">
+          <i class="wpcom-icon fa fa-sticky-note fb-item-icon"></i> <span>${cc.name}</span>
+        </a>
+      </div>
+    </#list>
+  </@cms_catalog>
+  <@cms_catalog alias="special" level="Self">
+    <#list DataList as cc>
+      <div class="fb-item">
+        <a href="${cc.link}" style="color: #002FA7;">
+          <i class="wpcom-icon fa fa-th-list fb-item-icon"></i> <span>${cc.name}</span>
+        </a>
+      </div>
+    </#list>
+  </@cms_catalog>
+  <div class="fb-item footer-bar-user">
+    <a href="javascript:;" style="color: #002FA7;">
+      <i class="wpcom-icon fa fa-user-circle-o fb-item-icon"></i> <span>我的</span>
+    </a>
+  </div>
+</div>

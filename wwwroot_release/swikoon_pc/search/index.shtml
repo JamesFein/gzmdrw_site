@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="shortcut icon" href="http://swikoon.1000mz.com/img/favicon.png" />
+
+    <title>搜索_思威控</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://swikoon.1000mz.com/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://swikoon.1000mz.com/css/theme.css" rel="stylesheet">
+    <link href="http://swikoon.1000mz.com/css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="http://swikoon.1000mz.com/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://swikoon.1000mz.com/css/flexslider.css"/>
+    <link href="http://swikoon.1000mz.com/assets/bxslider/jquery.bxslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://swikoon.1000mz.com/css/animate.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="http://swikoon.1000mz.com/css/style.css" rel="stylesheet">
+    <link href="http://swikoon.1000mz.com/css/style-responsive.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+	<script src="http://swikoon.1000mz.com/js/html5shiv.js"></script>
+	<script src="http://swikoon.1000mz.com/js/respond.min.js"></script>
+	<![endif]-->
+  <style>
+  .pagebar { height: 50px; }
+  .pagebar a { border: 1px solid #48cfad; padding: 3px 8px; margin: 0 2px; }
+  .pagebar a.current { background-color: #48cfad; color: #fff; }
+  </style>
+  </head>
+
+  <body>
+    <!--header start-->
+<!--#include file="/include/header.shtml" -->
+    <!--header end-->
+
+    <!--breadcrumbs start-->
+  <div class="breadcrumbs">
+    <div class="container">
+      <div class="row">
+        <div>
+			<input class="form-control" id="_query" placeholder=" Search" type="text" style="float: left;width: 295px;margin-right: 5px;">
+			<input class="form-control" type="button" onclick="queryResult()" value="搜索" style="width: 60px;color: #666;float: left;">
+        </div>
+        <div class="col-lg-8 col-sm-8" style="text-align:right;padding-top: 5px;">
+          <a class="position" href="http://swikoon.1000mz.com/">首页</a>  > <a class="position" href="#">搜索</a>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--breadcrumbs end-->
+
+    <!--container start-->
+    <div class="container">
+	  <div style="margin-bottom: 20px;">
+	  为您找到 <span style="color:red;"><!-- FREEMARKER ERROR MESSAGE STARTS HERE --><!-- ]]> --><script language=javascript>//"></script><script language=javascript>//'></script><script language=javascript>//"></script><script language=javascript>//'></script></title></xmp></script></noscript></style></object></head></pre></table></form></table></table></table></a></u></i></b><div align='left' style='background-color:#FFFF7C; display:block; border-top:double; padding:4px; margin:0; font-family:Arial,sans-serif; color:#A80000; font-size:12px; font-style:normal; font-variant:normal; font-weight:normal; text-decoration:none; text-transform: none'><b style='font-size:12px; font-style:normal; font-weight:bold; text-decoration:none; text-transform: none;'>FreeMarker template error  (HTML_DEBUG mode; use RETHROW in production!)</b><pre style='display:block; background: none; border: 0; margin:0; padding: 0;font-family:monospace; color:#A80000; font-size:12px; font-style:normal; font-variant:normal; font-weight:normal; text-decoration:none; text-transform: none; white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;'>
+
+The following has evaluated to null or missing:
+==> Request  [in template "swikoon_pc/template/search.template.html" at line 63, column 43]
+
+----
+Tip: If the failing expression is known to legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use &lt;#if myOptionalVar??>when-present&lt;#else>when-missing&lt;/#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${Request.q}  [in template "swikoon_pc/template/search.template.html" at line 63, column 41]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:134)
+	at freemarker.core.UnexpectedTypeException.newDescriptionBuilder(UnexpectedTypeException.java:85)
+	at freemarker.core.UnexpectedTypeException.&lt;init>(UnexpectedTypeException.java:48)
+	at freemarker.core.NonHashException.&lt;init>(NonHashException.java:49)
+	at freemarker.core.Dot._eval(Dot.java:48)
+	at freemarker.core.Expression.eval(Expression.java:101)
+	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:104)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:63)
+	at freemarker.core.Environment.visit(Environment.java:335)
+	at freemarker.core.Environment.visit(Environment.java:341)
+	at freemarker.core.Environment.process(Environment.java:314)
+	at com.ruoyi.common.staticize.StaticizeService.process(StaticizeService.java:78)
+	at com.ruoyi.contentcore.service.impl.PublishServiceImpl.doCatalogStaticize(PublishServiceImpl.java:416)
+	at com.ruoyi.contentcore.service.impl.PublishServiceImpl.catalogStaticize(PublishServiceImpl.java:344)
+	at com.ruoyi.contentcore.service.impl.PublishServiceImpl$4.run0(PublishServiceImpl.java:329)
+	at com.ruoyi.common.async.AsyncTask.run(AsyncTask.java:90)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+</pre></div></html>

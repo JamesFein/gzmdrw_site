@@ -1,0 +1,7 @@
+<@cms_advertisement code="index_ad1">
+  <#list DataList as ad>
+    <div class="widget widget_html_myimg">
+      <a href="${ad.redirectUrl}"><img src="${internalUrl(ad.resourcePath)}" class="j-vip-new"></a>
+    </div>
+  </#list>
+</@cms_advertisement>

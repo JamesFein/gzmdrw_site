@@ -1,0 +1,41 @@
+<!-- 主滑块容器，使用 Swiper 插件实现轮播效果 -->
+<div class="main-slider wpcom-slider swiper-container">
+  <!-- 轮播项容器 -->
+  <ul class="swiper-wrapper">
+    <!-- 使用 cms_pagewidget_data 指令获取后台配置的数据 这个index_swiper 是后台配置的代码 -->
+    <@cms_pagewidget_data code="index_swiper">
+      <!-- 遍历数据对象中的内容 -->
+      <#list Data.contentObj as row>
+        <!-- 遍历每行中的具体项目 -->
+        <#list row.items as item>
+          <!-- 单个轮播项 -->
+          <li class="swiper-slide">
+            <!-- 轮播图片链接 -->
+            <a href="${item.url}">
+              <!-- 图片，使用 internalUrl 函数处理图片路径 -->
+              <img src="${internalUrl(item.logo)}" alt="${item.title}">
+            </a>
+            <!-- 轮播标题 -->
+            <p class="slide-title">
+              <a href="${item.url}">${item.title}</a>
+            </p>
+          </li>
+        </#list>
+      </#list>
+    </@cms_pagewidget_data>
+  </ul>
+  <!-- Swiper 分页器 -->
+  <div class="swiper-pagination"></div>
+  <!-- Swiper 上一页按钮 -->
+  <div class="swiper-button-prev">
+    <i class="wpcom-icon wi">
+      <svg aria-hidden="true"><use xlink:href="#wi-arrow-left-3"></use></svg>
+    </i>
+  </div>
+  <!-- Swiper 下一页按钮 -->
+  <div class="swiper-button-next">
+    <i class="wpcom-icon wi">
+      <svg aria-hidden="true"><use xlink:href="#wi-arrow-right-3"></use></svg>
+    </i>
+  </div>
+</div>

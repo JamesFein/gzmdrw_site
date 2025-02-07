@@ -1,0 +1,73 @@
+<div class="widget widget_post_hot">
+  <h3 class="widget-title">热榜推荐</h3>
+  <ul>
+              <li class="item">
+            <div class="item-img ">
+                <a class="item-img-inner" href="/kuaixun/444098308722757.shtml" title="曾获 a16z 投资的加密支付初创公司 Eco 推出非托管支付系统 Beam" style="height:160px;">
+                  <img width="480" height="300" src="/images/default.jpg"
+                    class="attachment-default size-default wp-post-image j-lazy" alt="曾获 a16z 投资的加密支付初创公司 Eco 推出非托管支付系统 Beam" decoding="async"
+                    data-original="http://localhost/dev-api/preview/sitex/resources/image/2025/01/26/638012792188997.jpg">
+                </a>
+            </div>
+            <div class="item-content">
+              <div class="item-hot"><i class="wpcom-icon wi"><svg aria-hidden="true">
+                    <use xlink:href="#wi-huo"></use>
+                  </svg></i>145</div>
+              <p class="item-title"><a href="/kuaixun/444098308722757.shtml" title="曾获 a16z 投资的加密支付初创公司 Eco 推出非托管支付系统 Beam">曾获 a16z 投资的加密支付初创公司 Eco 推出非托管支付系统 Beam</a>
+              </p>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item-content item-no-thumb">
+              <p class="item-title"><a href="/news/web3/446074472464453.shtml" title="数据：某巨鲸从Binance转出311万枚CRV，价值约182万美元789">数据：某巨鲸从Binance转出311万枚CRV，价值约182万美元789</a></p>
+              <div class="item-hot">
+                <i class="wpcom-icon wi">
+                  <svg aria-hidden="true">
+                    <use xlink:href="#wi-huo"></use>
+                  </svg>
+                </i>
+                656
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item-content item-no-thumb">
+              <p class="item-title"><a href="/vipbox/think/441455600029765.shtml" title="报告｜北京市互联网3.0创新发展白皮书（2023年）">报告｜北京市互联网3.0创新发展白皮书（2023年）</a></p>
+              <div class="item-hot">
+                <i class="wpcom-icon wi">
+                  <svg aria-hidden="true">
+                    <use xlink:href="#wi-huo"></use>
+                  </svg>
+                </i>
+                285
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item-content item-no-thumb">
+              <p class="item-title"><a href="/news/nft/446069064171589.shtml" title="Worldcoin确认收到肯尼亚政府通知，目前已暂停在该国的服务">Worldcoin确认收到肯尼亚政府通知，目前已暂停在该国的服务</a></p>
+              <div class="item-hot">
+                <i class="wpcom-icon wi">
+                  <svg aria-hidden="true">
+                    <use xlink:href="#wi-huo"></use>
+                  </svg>
+                </i>
+                258
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item-content item-no-thumb">
+              <p class="item-title"><a href="/vipbox/daosearch/441454841741381.shtml" title="研报｜RWA代币化：下一个加密财富密码？">研报｜RWA代币化：下一个加密财富密码？</a></p>
+              <div class="item-hot">
+                <i class="wpcom-icon wi">
+                  <svg aria-hidden="true">
+                    <use xlink:href="#wi-huo"></use>
+                  </svg>
+                </i>
+                220
+              </div>
+            </div>
+          </li>
+  </ul>
+</div>

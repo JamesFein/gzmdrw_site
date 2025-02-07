@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1,viewport-fit=cover">
+  <title>${Member.displayName}的个人主页_${Site.name}</title>
+  <meta name="keywords" content="个人主页,${Site.name}">
+  <meta name="description" content="${Site.seoDescription!!}">
+  <meta property="og:type" content="webpage">
+  <meta property="og:url" content="${accountUrl(Member.memberId,'', false)}">
+  <meta property="og:site_name" content="${Site.name}">
+  <meta property="og:title" content="个人主页">
+  <meta property="og:image"
+    content="${((Member.avatar!'')=='')?then(Prefix+'images/default_avatar.png',MemberResourcePrefix + Member.avatar!!)}">
+  <meta property="og:description" content="${Member.slogan!!}">
+  <meta name="applicable-device" content="pc,mobile">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <link rel="shortcut icon" href="${Prefix}images/favicon.png">
+  <link rel="dns-prefetch" href="${Site.link}">
+  <link rel="stylesheet" id="stylesheet-css" href="${Prefix}css/style.6.14.1.1689415232.css" type="text/css"
+    media="all">
+  <link rel="stylesheet" id="font-awesome-css" href="${Prefix}css/font-awesome.css" type="text/css" media="all">
+  <link rel="stylesheet" id="wp-block-library-css" href="${Prefix}css/style.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="classic-theme-styles-css" href="${Prefix}css/classic-themes.min.css" type="text/css"
+    media="all">
+  <@cms_include file="block_top_style.template.html"></@cms_include>
+  <link rel="stylesheet" id="wpcom-member-css" href="${Prefix}css/wpcom_member.css" type="text/css" media="all">
+  <link rel="stylesheet" id="wpcom-member-pro-css" href="${Prefix}css/wpcom_member_pro.css" type="text/css" media="all">
+  <link rel="stylesheet" id="QAPress-css" href="${Prefix}css/qapress.css" type="text/css" media="all">
+  <style id="QAPress-inline-css" type="text/css">
+    :root {
+      --qa-color: #002FA7;
+      --qa-hover: #002FA7;
+    }
+  </style>
+  <script type="text/javascript" src="${Prefix}js/jquery.min.js" id="jquery-core-js"></script>
+  <script type="text/javascript" src="${Prefix}js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+  <script type="text/javascript" src="${Prefix}js/jquery.cookie.js"></script>
+  <link rel="icon" href="${Prefix}images/favicon.png" sizes="32x32">
+  <link rel="icon" href="${Prefix}images/favicon.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="${Prefix}images/favicon.png">
+  <meta name="msapplication-TileImage" content="${Prefix}images/favicon.png">
+  <!--[if lte IE 11]><script src="${Prefix}js/update.js"></script><![endif]-->
+</head>
+
+<body
+  class="page-template-default page page-id-8 logged-in lang-cn el-boxed header-fixed style-by-toggle wpcom-member member-profile">
+  <@cms_include file="svg.template.html"></@cms_include>
+  <!-- header -->
+  <@cms_include file="header.template.html"></@cms_include>
+  <div id="wrap" style="min-height: 673px;">
+    <div class="wrap container">
+      <div class="main">
+        <article class="page type-page status-publish hentry entry">
+          <div class="entry-main">
+            <div class="entry-content">
+
+              <div class="wpcom-profile">
+                <div class="wpcom-profile-head">
+                  <div class="wpcom-ph-bg">
+                    <noscript><img src="${Prefix}images/default_account_cover.jpg"
+                        alt="${Member.displayName}"></noscript>
+                    <img class="j-lazy" src="${Prefix}images/default_account_cover.jpg"
+                      data-original="${Prefix}images/default_account_cover.jpg" alt="${Member.displayName}">
+                  </div>
+                  <div class="wpcom-ph-inner">
+                    <div class="wpcom-ph-user">
+                      <div class="wpcom-ph-avatar">
+                        <noscript>
+                          <img alt="${Member.displayName}"
+                            src="${((Member.avatar!'')=='')?then(Prefix+'images/default_avatar.png',MemberResourcePrefix + Member.avatar!!)}"
+                            class="avatar avatar-200 photo" height="200" width="200" />
+                        </noscript>
+                        <img alt="${Member.displayName}" src="${Prefix}images/default_avatar.png"
+                          data-original="${((Member.avatar!'')=='')?then(Prefix+'images/default_avatar.png',MemberResourcePrefix + Member.avatar!!)}"
+                          class="avatar avatar-200 photo j-lazy" height="200" width="200">
+                      </div>
+                      <h2 class="wpcom-ph-name">${Member.displayName}</h2>
+                      <div class="wpcom-ph-desc">${(Member.slogan??)?then(Member.slogan, '这个家伙很懒，什么都没有留下！')}</div>
+                      <div class="profile-stats">
+                        <div class="profile-stats-inner">
+                          <div class="user-stats-item">
+                            <b>${Member.stat.contribute}</b>
+                            <span>文章</span>
+                          </div>
+                          <div class="user-stats-item">
+                            <b>${Member.stat.comment}</b>
+                            <span>评论</span>
+                          </div>
+                          <div class="user-stats-item">
+                            <b>${Member.stat.follower}</b>
+                            <span>粉丝</span>
+                          </div>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-xs btn-follow check-follow btn-primary"
+                        data-user="${Member.memberId}"><i class="wpcom-icon wi"><svg aria-hidden="true">
+                            <use xlink:href="#wi-add"></use>
+                          </svg></i>关注</button>
+                    </div>
+                  </div>
+                </div>
+                <ul class="wpcom-profile-nav">
+                  <li class="${((Request.type!'')=='')?then('active','')}">
+                    <a
+                      href="${((Request.type!'')=='')?then('javascript:;',accountUrl(Member.memberId, '', false))}">文章</a>
+                  </li>
+                  <li class="${(Request.type?? && Request.type=='comment')?then('active','')}">
+                    <a
+                      href="${(Request.type?? && Request.type=='comment')?then('javascript:;', accountUrl(Member.memberId, 'comment', false))}">评论</a>
+                  </li>
+                  <li class="${(Request.type?? && Request.type=='follow')?then('active','')}">
+                    <a
+                      href="${(Request.type?? && Request.type=='follow')?then('javascript:;',accountUrl(Member.memberId, 'follow', false))}">关注</a>
+                  </li>
+                  <li class="${(Request.type?? && Request.type=='follower')?then('active','')}">
+                    <a
+                      href="${(Request.type?? && Request.type=='follower')?then('javascript:;',accountUrl(Member.memberId, 'follower', false))}">粉丝</a>
+                  </li>
+                  <li class="${(Request.type?? && Request.type=='favorite')?then('active','')}">
+                    <a
+                      href="${(Request.type?? && Request.type=='favorite')?then('javascript:;',accountUrl(Member.memberId, 'favorite', false))}">收藏</a>
+                  </li>
+                </ul>
+                <#if Request.type??>
+                  <#if Request.type=='comment'>
+                    <@cms_include file="account/account_centre_comment.template.html" ssi="false" cache="false">
+                    </@cms_include>
+                  </#if>
+                  <#if Request.type=='follow'>
+                    <@cms_include file="account/account_centre_follow.template.html" ssi="false" cache="false">
+                    </@cms_include>
+                  </#if>
+                  <#if Request.type=='follower'>
+                    <@cms_include file="account/account_centre_follower.template.html" ssi="false" cache="false">
+                    </@cms_include>
+                  </#if>
+                  <#if Request.type=='favorite'>
+                    <@cms_include file="account/account_centre_favorite.template.html" ssi="false" cache="false">
+                    </@cms_include>
+                  </#if>
+                </#if>
+                <#if (Request.type!'')==''>
+                  <@cms_include file="account/account_centre_article.template.html" ssi="false" cache="false">
+                  </@cms_include>
+                </#if>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <aside class="sidebar fixed" style="bottom: auto; top: 84px;">
+        <@cms_include file="block_recent.template.html"></@cms_include>
+      </aside>
+    </div>
+  </div>
+
+  <@cms_include file="footer.template.html"></@cms_include>
+  <@cms_include file="action.template.html"></@cms_include>
+  <@cms_include file="h5_bottom.template.html"></@cms_include>
+
+  <script type="text/javascript" id="main-js-extra">
+    /* <![CDATA[ */
+    var _xy_cms = {
+      prefix: '${Prefix}',
+      resource_prefix: '${ResourcePrefix}',
+      api_prefix: '${ApiPrefix}',
+      front_prefix: '${IsPreview?then(ApiPrefix, Prefix)}',
+      site_id: '${Site.siteId}',
+      publish_pipe: '${PublishPipeCode}',
+      preview: '${IsPreview?string}' == 'true',
+      memberId: '${Member.memberId}'
+    }
+    var _wpcom_js = { "webp": "", "ajaxurl": "", "theme_url": "", "slide_speed": "5000", "is_admin": "0", "js_lang": { "copy_done": "\u590d\u5236\u6210\u529f\uff01", "copy_fail": "\u6d4f\u89c8\u5668\u6682\u4e0d\u652f\u6301\u62f7\u8d1d\u529f\u80fd", "confirm": "\u786e\u5b9a", "qrcode": "\u4e8c\u7ef4\u7801", "page_loaded": "\u5df2\u7ecf\u5230\u5e95\u4e86", "no_content": "\u6682\u65e0\u5185\u5bb9", "load_failed": "\u52a0\u8f7d\u5931\u8d25\uff0c\u8bf7\u7a0d\u540e\u518d\u8bd5\uff01", "expand_more": "\u9605\u8bfb\u5269\u4f59 %s" }, "lightbox": "1", "post_id": "8", "user_card_height": "356", "poster": { "notice": "\u8bf7\u957f\u6309\u4fdd\u5b58\u56fe\u7247\uff0c\u5c06\u5185\u5bb9\u5206\u4eab\u7ed9\u66f4\u591a\u597d\u53cb", "generating": "\u6b63\u5728\u751f\u6210\u6d77\u62a5\u56fe\u7247...", "failed": "\u6d77\u62a5\u56fe\u7247\u751f\u6210\u5931\u8d25" }, "video_height": "482", "fixed_sidebar": "1", "dark_style": "0", "font_url": "..\/css\/fonts.9b34824582affe8e.css", "follow_btn": "<i class=\"wpcom-icon wi\"><svg aria-hidden=\"true\"><use xlink:href=\"#wi-add\"><\/use><\/svg><\/i>\u5173\u6ce8", "followed_btn": "\u5df2\u5173\u6ce8", "user_card": "1" };
+/* ]]> */
+  </script>
+  <script type="text/javascript" src="${Prefix}js/main.js" id="main-js"></script>
+  <script type="text/javascript" src="${Prefix}js/icons-2.7.7.js" id="wpcom-icons-js"></script>
+
+  <@cms_pagewidget code="ad_top"></@cms_pagewidget>
+  <@cms_include file="stat.template.html"></@cms_include>
+  <@cms_include file="block_user_login.template.html"></@cms_include>
+
+  <script>jQuery(function ($) { setup_share(1); });</script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<div class="wpcom-profile-main profile-follows">
+  <div class="profile-tab-content active">
+    <ul class="follow-items">
+      <@cms_member_follow uid="${Member.memberId}" type="follower" page="true" size="16">
+        <#list DataList as member>
+          <li class="follow-item">
+            <div class="follow-item-avatar">
+              <a href="${accountUrl(member.memberId, '', false)}" target="_blank">
+                <noscript>
+                  <img alt="${member.displayName}"
+                    src="${((member.avatar!'')=='')?then(Prefix+'images/default_avatar.png',MemberResourcePrefix + member.avatar!!)}"
+                    class='avatar avatar-120 photo' height='120' width='120' />
+                </noscript>
+                <img alt="${member.displayName}" src="${Prefix}images/default_avatar.png"
+                  data-original="${((member.avatar!'')=='')?then(Prefix+'images/default_avatar.png',MemberResourcePrefix + member.avatar!!)}"
+                  class="avatar avatar-120 photo j-lazy" height="120" width="120"></a>
+            </div>
+            <div class="follow-item-text">
+              <h2 class="follow-item-name"><a href="${accountUrl(member.memberId, '', false)}"
+                  target="_blank">${member.displayName}</a></h2>
+              <div class="follow-item-desc">${member.slogan!'这个人很懒，什么都没有留下～'}</div>
+              <div class="follow-item-meta">
+                <div class="user-stats-item">
+                  <b>${member.stat.contribute}</b>
+                  <span>文章</span>
+                </div>
+                <div class="user-stats-item">
+                  <b>${member.stat.comment}</b>
+                  <span>评论</span>
+                </div>
+                <div class="user-stats-item">
+                  <b>${member.stat.follower}</b>
+                  <span>粉丝</span>
+                </div>
+              </div>
+            </div>
+            <div class="follow-item-action">
+              <button type="button" class="btn btn-xs btn-follow btn-primary check-follow"
+                data-user="${member.memberId}"><i class="wpcom-icon wi"><svg aria-hidden="true">
+                    <use xlink:href="#wi-add"></use>
+                  </svg></i>关注</button>
+            </div>
+          </li>
+        </#list>
+      </@cms_member_follow>
+    </ul>
+    <div class="load-more-wrap">
+      <div class="load-more-wrap">
+        <#if PageTotal gt 0>
+          <ul class="pagination">
+            <#if PageTotal==0>
+              <#assign PageCount=1 />
+              <#else>
+                <#assign PageCount=(PageTotal + PageSize - 1) / PageSize />
+            </#if>
+            <li class="disabled"><span>${PageNo} / ${PageCount?int}</span></li>
+            <#if PageNo gt 1>
+              <#if PageNo==2>
+                <li class="prev">
+                  <a href="${IsPreview?then(ApiPrefix, Prefix)}${FirstPage}" class="prev">
+                    <i class="wpcom-icon wi"><svg aria-hidden="true">
+                        <use xlink:href="#wi-arrow-left"></use>
+                      </svg></i>
+                    <span>上一页</span>
+                  </a>
+                </li>
+                <#else>
+                  <li class="prev">
+                    <a href="${IsPreview?then(ApiPrefix, Prefix)}${OtherPage?replace('{0}', PageNo-1)}" class="prev">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-arrow-left"></use>
+                        </svg></i>
+                      <span>上一页</span>
+                    </a>
+                  </li>
+              </#if>
+            </#if>
+            <#list 1..PageCount as pn>
+              <#if PageNo==pn>
+                <li class="disabled"><span>${pn}</span></li>
+                <#else>
+                  <#if 1==pn>
+                    <li><a href="${IsPreview?then(ApiPrefix, Prefix)}${FirstPage}">${pn}</a></li>
+                    <#else>
+                      <li><a href="${IsPreview?then(ApiPrefix, Prefix)}${OtherPage?replace('{0}', pn)}">${pn}</a></li>
+                  </#if>
+              </#if>
+            </#list>
+            <#if PageNo lt PageCount?int>
+              <li class="next">
+                <a href="${IsPreview?then(ApiPrefix, Prefix)}${OtherPage?replace('{0}', PageNo+1)}" class="next">
+                  <span>下一页</span>
+                  <i class="wpcom-icon wi"><svg aria-hidden="true">
+                      <use xlink:href="#wi-arrow-right"></use>
+                    </svg></i>
+                </a>
+              </li>
+            </#if>
+          </ul>
+        </#if>
+      </div>
+    </div>
+  </div>

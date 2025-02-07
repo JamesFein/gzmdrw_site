@@ -1,0 +1,24 @@
+<div class="widget widget_post_thumb">
+  <h3 class="widget-title"><span>最新发布</span></h3>
+  <ul>
+    <@cms_content catalogalias="news" level="CurrentAndChild" sort="Recent" size="5">
+      <#list DataList as content>
+        <li class="item">
+          <#if content.logo?? && content.logo !=''>
+            <div class="item-img">
+              <a class="item-img-inner" href="${content.link}" title="${content.title}">
+                <img width="480" height="300" src="${Prefix}images/default.jpg"
+                  class="attachment-default size-default wp-post-image j-lazy" alt="${content.title}" decoding="async"
+                  data-original="${imageSize(content.logo, 480, 300, true)}">
+              </a>
+            </div>
+          </#if>
+          <div class="item-content ${(content.logo?? && content.logo !='')?then('', 'item-no-thumb')}">
+            <p class="item-title"><a href="${content.link}" title="${content.title}">${content.title}</a></p>
+            <p class=" item-date">${dateFormat(content.publishDate, 'yyyy年MM月dd日')}</p>
+          </div>
+        </li>
+      </#list>
+    </@cms_content>
+  </ul>
+</div>

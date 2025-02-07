@@ -1,0 +1,13 @@
+<@cms_advertisement code="ad_top">
+  <#list DataList as ad>
+    <div class="top-news" style="background-color: #002FA7;">
+    <div class="top-news-content container">
+      <div class="content-text">${ad.name} <span style="color: #999999"><a style="color: #999999"
+            href="${ad.redirectUrl!'#'}" rel="noopener">举报</a></span></div>
+      <i class="wpcom-icon wi top-news-close"><svg aria-hidden="true">
+          <use xlink:href="#wi-close"></use>
+        </svg></i>
+    </div>
+  </div>
+  </#list>
+</@cms_advertisement>

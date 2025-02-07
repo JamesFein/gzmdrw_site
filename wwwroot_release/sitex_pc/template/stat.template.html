@@ -1,0 +1,14 @@
+<div class="hide">
+  <!-- cnzz -->
+</div>
+<script type="text/javascript">
+  (function () {
+    var q = [];
+    q.push('sid=${Site.siteId}');
+    if (_xy_cms.catalog_id) q.push('cid=' + _xy_cms.catalog_id);
+    if (_xy_cms.content_id) q.push('id=' + _xy_cms.content_id);
+    var s = document.createElement("script");
+    s.src = '${ApiPrefix}api/stat/visit?' + q.join('&');
+    (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(s);
+  })();
+</script>

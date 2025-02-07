@@ -1,0 +1,53 @@
+<div class="widget widget_post_hot">
+  <h3 class="widget-title">热榜推荐</h3>
+  <ul>
+    <@cms_content level="Root" sort="Views" size="5">
+      <#list DataList as content>
+        <#if content?index==0>
+          <li class="item">
+            <div class="item-img ${(content.logo?? && content.logo !='')?then('', 'item-img-empty')}">
+              <#if content.logo?? && content.logo !=''>
+                <a class="item-img-inner" href="${content.link}" title="${content.title}" style="height:160px;">
+                  <img width="480" height="300" src="${Prefix}images/default.jpg"
+                    class="attachment-default size-default wp-post-image j-lazy" alt="${content.title}" decoding="async"
+                    data-original="${content.logoSrc}">
+                </a>
+              </#if>
+            </div>
+            <div class="item-content">
+              <div class="item-hot"><i class="wpcom-icon wi"><svg aria-hidden="true">
+                    <use xlink:href="#wi-huo"></use>
+                  </svg></i>${content.viewCount}</div>
+              <p class="item-title"><a href="${content.link}" title="${content.title}">${content.title}</a>
+              </p>
+            </div>
+          </li>
+        </#if>
+        <#if content?index gt 0>
+          <li class="item">
+            <#if content.logo?? && content.logo !=''>
+              <div class="item-img">
+                <a class="item-img-inner" href="${content.link}" title="${content.title}">
+                  <img width="480" height="300" src="${Prefix}images/default.jpg"
+                    class="attachment-default size-default wp-post-image j-lazy" alt="${content.title}" decoding="async"
+                    data-original="${imageSize(content.logo,480,300)}">
+                </a>
+              </div>
+            </#if>
+            <div class="item-content ${(content.logo?? && content.logo !='')?then('', 'item-no-thumb')}">
+              <p class="item-title"><a href="${content.link}" title="${content.title}">${content.title}</a></p>
+              <div class="item-hot">
+                <i class="wpcom-icon wi">
+                  <svg aria-hidden="true">
+                    <use xlink:href="#wi-huo"></use>
+                  </svg>
+                </i>
+                ${content.viewCount}
+              </div>
+            </div>
+          </li>
+        </#if>
+      </#list>
+    </@cms_content>
+  </ul>
+</div>

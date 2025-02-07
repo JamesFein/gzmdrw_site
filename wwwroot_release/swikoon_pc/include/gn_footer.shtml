@@ -1,0 +1,59 @@
+<footer class="footer-small">
+  <div class="container">
+    <div class="row">
+      <div class="copyright">
+        <p>
+          Developed by Mainlab Bioinformatics at Washington State University |
+        </p>
+        <p>
+          Funded by a partnership of USDA, NSF, Industry and US Land Grant
+          Universities
+        </p>
+        <p>
+          Copyright © 2010-2024. contact us | report a problem | make a
+          suggestion | follow us
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+  (function () {
+    var q = [];
+    q.push("h=" + window.location.host);
+    q.push(
+      "p=" +
+        window.location.href.substring(
+          window.location.href.indexOf(window.location.pathname)
+        )
+    );
+    q.push("sid=636438484807749");
+    if (
+      window._xy_cms &&
+      window._xy_cms.catalog_id &&
+      window._xy_cms.catalog_id.length > 0
+    )
+      q.push("cid=" + _xy_cms.catalog_id);
+    if (
+      window._xy_cms &&
+      window._xy_cms.content_id &&
+      window._xy_cms.content_id.length > 0
+    )
+      q.push("id=" + _xy_cms.content_id);
+    var s = document.createElement("script");
+    s.src = "http://localhost:8080/api/stat/visit?" + q.join("&");
+    (
+      document.getElementsByTagName("head")[0] ||
+      document.getElementsByTagName("body")[0]
+    ).appendChild(s);
+  })();
+</script>
+<script>
+  var _hmt = _hmt || [];
+  (function () {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?2f8f2746e4f850962153e8bce014ffbb";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>

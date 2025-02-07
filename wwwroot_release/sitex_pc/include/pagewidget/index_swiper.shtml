@@ -1,0 +1,61 @@
+<!-- 主滑块容器，使用 Swiper 插件实现轮播效果 -->
+<div class="main-slider wpcom-slider swiper-container">
+  <!-- 轮播项容器 -->
+  <ul class="swiper-wrapper">
+    <!-- 使用 cms_pagewidget_data 指令获取后台配置的数据 这个index_swiper 是后台配置的代码 -->
+          <!-- 遍历数据对象中的内容 -->
+        <!-- 遍历每行中的具体项目 -->
+          <!-- 单个轮播项 -->
+          <li class="swiper-slide">
+            <!-- 轮播图片链接 -->
+            <a href="iurl://content?id=440822565204037">
+              <!-- 图片，使用 internalUrl 函数处理图片路径 -->
+              <img src="/resources/image/2023/07/19/440822754545733.jpg" alt="香港虚拟资产交易监管将落地 散户交易将受详细保护">
+            </a>
+            <!-- 轮播标题 -->
+            <p class="slide-title">
+              <a href="iurl://content?id=440822565204037">香港虚拟资产交易监管将落地 散户交易将受详细保护</a>
+            </p>
+          </li>
+        <!-- 遍历每行中的具体项目 -->
+          <!-- 单个轮播项 -->
+          <li class="swiper-slide">
+            <!-- 轮播图片链接 -->
+            <a href="iurl://content?id=440822065160261">
+              <!-- 图片，使用 internalUrl 函数处理图片路径 -->
+              <img src="/resources/image/2023/07/19/440822360567877.png" alt="音乐元宇宙的 9 条设计原则">
+            </a>
+            <!-- 轮播标题 -->
+            <p class="slide-title">
+              <a href="iurl://content?id=440822065160261">音乐元宇宙的 9 条设计原则</a>
+            </p>
+          </li>
+        <!-- 遍历每行中的具体项目 -->
+          <!-- 单个轮播项 -->
+          <li class="swiper-slide">
+            <!-- 轮播图片链接 -->
+            <a href="iurl://content?id=440817354383429">
+              <!-- 图片，使用 internalUrl 函数处理图片路径 -->
+              <img src="/resources/image/2023/07/19/440821844885573.jpg" alt="深入 RWA：底层资产、业务结构、发展路径与潜在机遇">
+            </a>
+            <!-- 轮播标题 -->
+            <p class="slide-title">
+              <a href="iurl://content?id=440817354383429">深入 RWA：底层资产、业务结构、发展路径与潜在机遇</a>
+            </p>
+          </li>
+  </ul>
+  <!-- Swiper 分页器 -->
+  <div class="swiper-pagination"></div>
+  <!-- Swiper 上一页按钮 -->
+  <div class="swiper-button-prev">
+    <i class="wpcom-icon wi">
+      <svg aria-hidden="true"><use xlink:href="#wi-arrow-left-3"></use></svg>
+    </i>
+  </div>
+  <!-- Swiper 下一页按钮 -->
+  <div class="swiper-button-next">
+    <i class="wpcom-icon wi">
+      <svg aria-hidden="true"><use xlink:href="#wi-arrow-right-3"></use></svg>
+    </i>
+  </div>
+</div>

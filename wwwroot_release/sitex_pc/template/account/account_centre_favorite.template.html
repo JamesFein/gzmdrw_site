@@ -1,0 +1,112 @@
+<div class="wpcom-profile-main profile-posts">
+  <ul class="profile-posts-list post-loop post-loop-default clearfix content-list">
+    <@cms_favorite_content uid="${Member.memberId}" page="true" size="16">
+      <#list DataList as content>
+        <li class="item ${(content.logo?? && content.logo !='')?then('', 'item-no-thumb')}"
+          data-id="${content.contentId}">
+          <#if content.logo?? && content.logo !=''>
+            <div class="item-img">
+              <a class="item-img-inner" href="${content.link}" title="${content.title}" target="_blank" rel="bookmark">
+                <img width="480" height="300" src="${Prefix}images/default.jpg"
+                  class="attachment-default size-default wp-post-image j-lazy" alt="${content.title}" decoding="async"
+                  data-original="${imageSize(content.logo,480,300)}">
+              </a>
+              <#if content.tags?size gt 0>
+                <#list content.tags as item>
+                  <a class="item-category" href="#" target="_blank">${content.tags[0]}</a>
+                </#list>
+              </#if>
+            </div>
+          </#if>
+          <div class="item-content">
+            <h2 class="item-title">
+              <a href="${content.link}" target="_blank" rel="bookmark">
+                <#if content.topFlag?? && content.topFlag gt 0>
+                  <span class="sticky-post">置顶</span>
+                </#if>
+                ${content.title}
+              </a>
+            </h2>
+            <div class="item-excerpt">
+              <p>${content.summary!!}</p>
+            </div>
+            <div class="item-meta">
+
+              <span class="item-meta-li date">${dateFormat(content.publishDate,'yyyy年MM月dd日 HH点mm分')}</span>
+              <div class="item-meta-right">
+                <span class="item-meta-li likes" title="点赞数">
+                  <i class="wpcom-icon wi">
+                    <svg aria-hidden="true">
+                      <use xlink:href="#wi-thumb-up"></use>
+                    </svg>
+                  </i>
+                </span>
+                <span class="item-meta-li views" title="阅读数">
+                  <i class="wpcom-icon wi">
+                    <svg aria-hidden="true">
+                      <use xlink:href="#wi-eye"></use>
+                    </svg>
+                  </i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </li>
+      </#list>
+    </@cms_favorite_content>
+  </ul>
+  <div class="load-more-wrap">
+    <#if PageTotal gt 0>
+      <ul class="pagination">
+        <#if PageTotal==0>
+          <#assign PageCount=1 />
+          <#else>
+            <#assign PageCount=(PageTotal + PageSize - 1) / PageSize />
+        </#if>
+        <li class="disabled"><span>${PageNo} / ${PageCount?int}</span></li>
+        <#if PageNo gt 1>
+          <#if PageNo==2>
+            <li class="prev">
+              <a href="${IsPreview?then(ApiPrefix, Prefix)}${FirstPage}" class="prev">
+                <i class="wpcom-icon wi"><svg aria-hidden="true">
+                    <use xlink:href="#wi-arrow-left"></use>
+                  </svg></i>
+                <span>上一页</span>
+              </a>
+            </li>
+            <#else>
+              <li class="prev">
+                <a href="${IsPreview?then(ApiPrefix, Prefix)}${OtherPage?replace('{0}', PageNo-1)}" class="prev">
+                  <i class="wpcom-icon wi"><svg aria-hidden="true">
+                      <use xlink:href="#wi-arrow-left"></use>
+                    </svg></i>
+                  <span>上一页</span>
+                </a>
+              </li>
+          </#if>
+        </#if>
+        <#list 1..PageCount as pn>
+          <#if PageNo==pn>
+            <li class="disabled"><span>${pn}</span></li>
+            <#else>
+              <#if 1==pn>
+                <li><a href="${IsPreview?then(ApiPrefix, Prefix)}${FirstPage}">${pn}</a></li>
+                <#else>
+                  <li><a href="${IsPreview?then(ApiPrefix, Prefix)}${OtherPage?replace('{0}', pn)}">${pn}</a></li>
+              </#if>
+          </#if>
+        </#list>
+        <#if PageNo lt PageCount?int>
+          <li class="next">
+            <a href="${IsPreview?then(ApiPrefix, Prefix)}${OtherPage?replace('{0}', PageNo+1)}" class="next">
+              <span>下一页</span>
+              <i class="wpcom-icon wi"><svg aria-hidden="true">
+                  <use xlink:href="#wi-arrow-right"></use>
+                </svg></i>
+            </a>
+          </li>
+        </#if>
+      </ul>
+    </#if>
+  </div>
+</div>

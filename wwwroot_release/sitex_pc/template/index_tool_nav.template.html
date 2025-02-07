@@ -1,0 +1,14 @@
+<ul class="feature-post">
+  <@cms_pagewidget_data code="index_tool_nav">
+    <#list Data.contentObj as row>
+      <#list row.items as item>
+        <li>
+          <a href="${item.url}">
+            <img class="j-lazy" src="${Prefix}images/default.jpg" data-original="${internalUrl(item.logo)}" alt="${item.title}">
+          </a>
+          <span>${item.title}</span>
+        </li>
+      </#list>
+    </#list>
+  </@cms_pagewidget_data>
+</ul>

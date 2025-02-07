@@ -1,0 +1,116 @@
+    <!-- 倒数第二顶部导航栏 start-->
+    <div class="container d-flex justify-content-center align-items-center" style="font-size: 20px;font-weight: 500; min-height:170px;">
+        <!-- 定义递归宏 -->
+        <#macro renderMenu items currentLevel=1 maxLevel=3>
+            <#list items as item>
+                <@cms_catalog id="${item.catalogId}" level="Child" size="30">
+                <li>
+                    <#if DataList?size gt 0 && currentLevel lt maxLevel>
+                        <div class="dropend">
+                            <a class="dropdown-item dropdown-toggle" href="${item.link!'#'}">
+                                ${item.name}
+                            </a>
+                            <ul class="dropdown-menu">
+                                <@renderMenu DataList currentLevel+1 maxLevel/>
+                            </ul>
+                        </div>
+                    <#else>
+                        <a class="dropdown-item" href="${item.link!'#'}">${item.name}</a>
+                    </#if>
+                </li>
+                </@cms_catalog>
+            </#list>
+        </#macro>
+  
+        <!-- 主导航菜单 -->
+        <ul class="nav nav-pills d-flex align-items-center">
+            <@cms_catalog level="Root" condition="tree_level=1" size="30">
+            <#list DataList as c1>
+                <@cms_catalog id="${c1.catalogId}" level="Child" size="30">
+                <li class="nav-item <#if DataList?size gt 0>dropdown</#if>">
+                    <a class="nav-link <#if DataList?size gt 0>dropdown-toggle</#if>" 
+                       href="${c1.link!'#'}">
+                        ${c1.name}
+                    </a>
+                    <#if DataList?size gt 0>
+                        <ul class="dropdown-menu">
+                            <@renderMenu DataList 2/>
+                        </ul>
+                    </#if>
+                </li>
+                </@cms_catalog>
+            </#list>
+            </@cms_catalog>
+            <!-- 添加搜索框 -->
+            <li class="nav-item ms-auto py-2">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" class="form-control" placeholder="搜索">
+                </div>
+            </li>
+        </ul>
+  
+        <style>
+            .nav {
+                font-family: "Montserrat", sans-serif;
+                font-weight: bolder;
+            }
+            .nav-link {
+                color: #333;
+                padding: 0.5rem 1rem;
+            }
+  
+            .dropdown-menu {
+                border-radius: 0;
+            }
+  
+            /* 保持原有的下拉菜单hover样式 */
+            .dropdown:hover > .dropdown-menu {
+                display: block;
+                border-top: 3px solid #AD1E23;
+            }
+            .dropend:hover > .dropdown-menu {
+                display: block;
+                position: absolute;
+                left: 100%;
+                top: 0;
+            }
+            /* 搜索框样式 */
+            .search-box {
+                position: relative;
+            }
+            .search-box input {
+                padding: 0.375rem 0.75rem;
+                padding-left: 35px; /* 为图标留出空间 */
+                border-radius: 5px;
+                border: 1px solid #ced4da;
+                width: 200px;
+            }
+            .search-box input:focus {
+                outline: none;
+                border-color: black;
+            }
+            .search-icon {
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #6c757d;
+                cursor: pointer; /* 添加鼠标指针样式 */
+            }
+        </style>
+    </div>
+  
+  
+    
+    <!-- 添加初始化脚本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 移除所有下拉菜单的 data-bs-toggle 属性，防止点击触发
+            document.querySelectorAll('.dropdown-toggle').forEach(function(element) {
+                element.removeAttribute('data-bs-toggle');
+            });
+        });
+    </script>
+  
+    <!-- 倒数第二顶部导航栏 end-->

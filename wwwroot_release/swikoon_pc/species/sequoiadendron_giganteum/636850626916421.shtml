@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- 基本的元信息设置 -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Developed By M Abdur Rokib Promy">
+  <meta name="author" content="cosmic">
+  <meta name="keywords" content="Bootstrap 3, Template, Theme, Responsive, Corporate, Business">
+  <link rel="shortcut icon" href="/img/favicon.png">
+  <!-- 页面标题: 产品标题_站点名称 -->
+  <title>Sequoiadendron giganteum_基因控</title>
+
+  <!-- 核心样式文件引入 -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/theme.css" rel="stylesheet">
+  <link href="/css/bootstrap-reset.css" rel="stylesheet">
+  
+  <!-- 外部样式资源引入 -->
+  <link href="/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/flexslider.css" />
+  <link href="/assets/bxslider/jquery.bxslider.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/animate.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+  <!-- 自定义样式文件 -->
+  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/style-responsive.css" rel="stylesheet" />
+
+  <!-- IE8兼容性处理 -->
+  <!--[if lt IE 9]>
+    <script src="/js/html5shiv.js"></script>
+    <script src="/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- CMS系统全局变量设置 -->
+  <script>window._xy_cms = { catalog_id: '636547708403781', content_id: '636850626916421' };</script>
+  
+  <!-- 页面内嵌样式定义 -->
+  <style>
+    /* 分页栏样式 */
+    .pagebar { height: 50px; }
+    .pagebar a { border: 1px solid #48cfad; padding: 3px 8px; margin: 0 2px; }
+    .pagebar a.current { background-color: #48cfad; color: #fff; }
+    /* 文章容器中表格样式 */
+    .article_container table { width: 100% }
+    .article_leftbar a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 引入头部模板 -->
+<!--#include file="/include/gn_header.shtml" -->
+
+  <!-- 面包屑导航 -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-4">
+          <h1>巨杉</h1>
+        </div>
+        <!-- 动态生成面包屑导航链接 -->
+        <div class="col-lg-8 col-sm-8" style="text-align:right;padding-top: 5px;">
+          <a class="position" href="/">首页</a>
+                 > <a class="position" href="/species/">物种</a>
+                 > <a class="position" href="/species/sequoiadendron_giganteum/">巨杉</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 主要内容区域 -->
+  <div class="container">
+    <div class="row">
+      <!-- 左侧主要内容区 -->
+      <div class="col-lg-9">
+        <div class="blog-item">
+          <div class="row">
+            <!-- 左侧日期、作者、统计信息 -->
+            <div class="col-lg-2 col-sm-2">
+              <!-- 日期显示 -->
+              <div class="date-wrap">
+                <span class="date">01/23</span>
+                <span class="month">2025</span>
+              </div>
+
+              
+              <!-- 文章顶左侧栏 -->
+              <div class="article_leftbar">
+                <p class="text-bold" style="font-weight: bold; color: #48CFAD; margin-bottom: 10px;">数据</p>
+                <ul class="list-unstyled">
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Overview</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Description</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Genes</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Genetic Maps</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Genomes</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Markers</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Publications</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Sequences</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">SNP Array</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Trait Loci</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Transcripts</a></li>
+                </ul>
+
+                <p class="text-bold" style="font-weight: bold; color: #48CFAD; margin-bottom: 10px;">工具</p>
+                <ul class="list-unstyled">
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">BLAST</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">JBrowse</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Links</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">AppleCyc</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Sequence Retrieval</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Synteny Viewer</a></li>
+                </ul>
+              </div>
+
+            </div>
+            
+            <!-- 右侧文章主体内容 -->
+            <div class="col-lg-10 col-sm-10">
+              <!-- 文章标题 -->
+              <h1 style="margin-top:0;">
+                <a href="javascript:void(0);">Sequoiadendron giganteum</a>
+              </h1>
+
+              <!-- 文章内容区域 -->
+              <div class="article_container">
+                <table class="table"><tbody style="box-sizing: border-box; margin: 0px; padding: 0px;"><tr style="box-sizing: border-box; margin: 0px; padding: 0px;" class="firstRow"><th style="box-sizing: border-box; margin: 0px; padding: 8px; width: 200px; text-align: left;" class="selectTdClass">Genus</th><td style="box-sizing: border-box; margin: 0px; padding: 8px; max-width: 300px;" width="194"><em style="box-sizing: border-box; margin: 0px; padding: 0px;">Fragaria</em></td><td class="image-cell" rowspan="10" style="box-sizing: border-box; margin: 0px; padding: 8px; vertical-align: top;" width="315"><p style="text-align:center"><img class="species-image" src="/resources/image/2025/01/23/636858107011141.jpg" alt="Species Image" style="box-sizing: border-box; margin: 20px 0px 0px; padding: 0px; width: 234px; max-width: 250px; height: auto;"  /></p></td></tr><tr class="even" style="box-sizing: border-box; margin: 0px; padding: 0px; border-bottom: 1px solid rgb(204, 204, 204); background-color: rgb(238, 238, 238); border-top: 1px solid rgb(204, 204, 204);"><th style="box-sizing: border-box; margin: 0px; padding: 8px; width: 200px; text-align: left; background-color: inherit;" class="selectTdClass">Species</th><td style="box-sizing: border-box; margin: 0px; padding: 8px; max-width: 300px;" width="194"><em style="box-sizing: border-box; margin: 0px; padding: 0px;">x ananassa</em></td></tr><tr class="odd" style="box-sizing: border-box; margin: 0px; padding: 0px; border-bottom: 1px solid rgb(221, 221, 221);"><th style="box-sizing: border-box; margin: 0px; padding: 8px; width: 200px; text-align: left; background-color: inherit;" class="selectTdClass">Common Name</th><td style="box-sizing: border-box; margin: 0px; padding: 8px; max-width: 300px;" width="194">Strawberry</td></tr><tr class="even" style="box-sizing: border-box; margin: 0px; padding: 0px; border-bottom: 1px solid rgb(204, 204, 204); background-color: rgb(238, 238, 238); border-top: 1px solid rgb(204, 204, 204);"><th style="box-sizing: border-box; margin: 0px; padding: 8px; width: 200px; text-align: left; background-color: inherit;">Abbreviation</th><td style="box-sizing: border-box; margin: 0px; padding: 8px; max-width: 300px;" width="173"><em style="box-sizing: border-box; margin: 0px; padding: 0px;">F. x ananassa</em></td></tr><tr class="odd" style="box-sizing: border-box; margin: 0px; padding: 0px; border-bottom: 1px solid rgb(221, 221, 221);"><th style="box-sizing: border-box; margin: 0px; padding: 8px; width: 200px; text-align: left; background-color: inherit;">Ploidy</th><td style="box-sizing: border-box; margin: 0px; padding: 8px; max-width: 300px;" width="173">Octoploid</td></tr><tr class="even" style="box-sizing: border-box; margin: 0px; padding: 0px; border-bottom: 1px solid rgb(204, 204, 204); background-color: rgb(238, 238, 238); border-top: 1px solid rgb(204, 204, 204);"><th style="box-sizing: border-box; margin: 0px; padding: 8px; width: 200px; text-align: left; background-color: inherit;">Chromosome Number</th><td style="box-sizing: border-box; margin: 0px; padding: 8px; max-width: 300px;" width="173">2n=8x=56</td></tr><tr class="odd" style="box-sizing: border-box; margin: 0px; padding: 0px; border-bottom: 1px solid rgb(221, 221, 221);"><th style="box-sizing: border-box; margin: 0px; padding: 8px; width: 200px; text-align: left; background-color: inherit;">Genome Size</th><td style="box-sizing: border-box; margin: 0px; padding: 8px; max-width: 300px;" width="173">240 Mb</td></tr><tr class="even" style="box-sizing: border-box; margin: 0px; padding: 0px; border-bottom: 1px solid rgb(204, 204, 204); background-color: rgb(238, 238, 238); border-top: 1px solid rgb(204, 204, 204);"><th style="box-sizing: border-box; margin: 0px; padding: 8px; width: 200px; text-align: left; background-color: inherit;">Genome Assemblies</th><td style="box-sizing: border-box; margin: 0px; padding: 8px; max-width: 300px;" width="173">6</td></tr><tr class="odd" style="box-sizing: border-box; margin: 0px; padding: 0px; border-bottom: 1px solid rgb(221, 221, 221);"><th style="box-sizing: border-box; margin: 0px; padding: 8px; width: 200px; text-align: left; background-color: inherit;">GRIN Taxonomy</th><td style="box-sizing: border-box; margin: 0px; padding: 8px; max-width: 300px;" width="173"><a href="https://npgsweb.ars-grin.gov/gringlobal/taxonomydetail.aspx?id=244" style="box-sizing: border-box; margin: 0px; padding: 0px; color: rgb(17, 87, 73);">244</a></td></tr><tr><td><br/></td><td width="173"><br/></td></tr></tbody></table><p><br/></p>
+              </div>
+              
+              <!-- 分页控件 -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右侧边栏 -->
+      <div class="col-lg-3">
+        <div class="blog-side-item">
+          <!-- 搜索框 -->
+          <div class="search-row">
+            <input type="text" class="form-control" placeholder="Search here">
+          </div>
+          <!-- 新品发布列表 -->
+          <div class="blog-post">
+            <h3>新品发布</h3>
+            <!-- 获取最新的5个产品信息 -->
+            <div class="media">
+              <div class="media-body">
+                <h5 class="media-heading">
+                  <a href="/product/gk/636506175438917.shtml">我们的爱</a>
+                </h5>
+                <p>2025-01-22</p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-body">
+                <h5 class="media-heading">
+                  <a href="/product/dk/636505909735493.shtml">GK是百科全数吗</a>
+                </h5>
+                <p>2025-01-22</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 引入页脚模板 -->
+<!--#include file="/include/gn_footer.shtml" -->
+
+  <!-- JavaScript文件引入 -->
+  <!-- 核心JS库 -->
+  <script src="/js/jquery.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <!-- 功能性插件 -->
+  <script type="text/javascript" src="/js/hover-dropdown.js"></script>
+  <script defer src="/js/jquery.flexslider.js"></script>
+  <script type="text/javascript" src="/assets/bxslider/jquery.bxslider.js"></script>
+  <script src="/js/jquery.easing.min.js"></script>
+  <script src="/js/link-hover.js"></script>
+  <!-- 公共脚本 -->
+  <script src="/js/common-scripts.js"></script>
+  <!-- 动画效果脚本 -->
+  <script src="/js/wow.min.js"></script>
+  <!-- WOW动画初始化 -->
+  <script>
+    wow = new WOW({
+      boxClass: 'wow',      // 动画元素的类名
+      animateClass: 'animated', // 动画样式类名
+      offset: 0          // 触发偏移量
+    })
+    wow.init();
+  </script>
+</body>
+
+</html>

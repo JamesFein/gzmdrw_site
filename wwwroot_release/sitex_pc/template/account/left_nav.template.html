@@ -1,0 +1,70 @@
+<div class="member-account-nav">
+  <div class="member-account-user">
+    <div class="member-account-avatar">
+      <noscript>
+        <img alt='${Member.nickName!Member.userName}' src='${Prefix}default_avatar.png' class='avatar avatar-200 photo'
+          height='200' width='200' />
+      </noscript>
+      <img alt="${Member.nickName!Member.userName}" src="${Prefix}images/default_avatar.png"
+        data-original="${(Member.avatar??&&Member.avatar?length gt 0)?then(MemberResourcePrefix + Member.avatar!!, Prefix + 'images/default_avatar.png')}"
+        class="avatar avatar-200 photo j-lazy" height="200" width="200">
+      <span class="edit-avatar" data-user="${Member.memberId}">
+        <i class="wpcom-icon wi"><svg aria-hidden="true">
+            <use xlink:href="#wi-camera"></use>
+          </svg></i>
+      </span>
+    </div>
+    <h3 class="member-account-name">
+      <a href="${IsPreview?then(ApiPrefix,Prefix)}account/${Member.memberId}${IsPreview?then('?sid='+Site.siteId+'&pp='+PublishPipeCode+'&preview=true', '')}"
+        target="_blank">
+        ${Member.nickName!Member.userName} </a>
+    </h3>
+    <div class="member-account-dio">${Member.slogan!'这个人很懒，什么都没有留下～'}</div>
+    <a class="member-account-vip-btn btn btn-danger btn-block j-vip-new" href="javascript:;">
+      <i class="wpcom-icon wi"><svg aria-hidden="true">
+          <use xlink:href="#wi-vip-crown"></use>
+        </svg></i>开通会员
+    </a>
+  </div>
+  <ul class="member-account-menu">
+    <li class="member-nav-general">
+      <a
+        href="${IsPreview?then(ApiPrefix,Prefix)}account/setting${IsPreview?then('?sid='+Site.siteId+'&pp='+PublishPipeCode+'&preview=true', '')}">
+        <i class="wpcom-icon wi member-nav-icon"><svg aria-hidden="true">
+            <use xlink:href="#wi-personal-circle"></use>
+          </svg></i>基本资料 </a>
+    </li>
+    <li class="member-nav-password">
+      <a
+        href="${IsPreview?then(ApiPrefix,Prefix)}account/password${IsPreview?then('?sid='+Site.siteId+'&pp='+PublishPipeCode+'&preview=true', '')}">
+        <i class="wpcom-icon wi member-nav-icon"><svg aria-hidden="true">
+            <use xlink:href="#wi-lock-circle"></use>
+          </svg></i>修改密码
+      </a>
+    </li>
+    <li class="member-nav-email">
+      <a
+        href="${IsPreview?then(ApiPrefix,Prefix)}account/change_email${IsPreview?then('?sid='+Site.siteId+'&pp='+PublishPipeCode+'&preview=true', '')}">
+        <i class="wpcom-icon wi member-nav-icon"><svg aria-hidden="true">
+            <use xlink:href="#wi-mail-circle"></use>
+          </svg></i>修改邮箱
+      </a>
+    </li>
+    <li class="member-nav-contribute">
+      <a
+        href="${IsPreview?then(ApiPrefix,Prefix)}account/contribute${IsPreview?then('?sid='+Site.siteId+'&pp='+PublishPipeCode+'&preview=true', '')}">
+        <i class="wpcom-icon wi member-nav-icon"><svg aria-hidden="true">
+            <use xlink:href="#wi-quill-pen"></use>
+          </svg></i>文章投稿
+      </a>
+    </li>
+    <li class="member-nav-logout">
+      <a class="btn-logout" href="javascript:;">
+        <i class="wpcom-icon wi member-nav-icon"><svg aria-hidden="true">
+            <use xlink:href="#wi-out-circle"></use>
+          </svg>
+        </i>退出登录
+      </a>
+    </li>
+  </ul>
+</div>

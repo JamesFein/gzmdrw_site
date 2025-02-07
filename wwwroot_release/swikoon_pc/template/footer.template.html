@@ -1,0 +1,103 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-sm-3 address wow fadeInUp" data-wow-duration="2s" data-wow-delay=".1s">
+        <h1>联系我们</h1>
+        <address>
+		  <@cms_site_property siteid="${Site.siteId}" page="false" size="10">
+		  <#list DataList as prop>
+		  <#if prop.propCode == 'address'>
+          <p><i class="fa fa-home pr-10"></i>地址：${prop.propValue}</p>
+		  </#if>
+		  <#if prop.propCode == 'contact'>
+          <p><i class="fa fa-globe pr-10"></i>联系人：${prop.propValue}</p>
+		  </#if>
+		  <#if prop.propCode == 'phone'>
+          <p><i class="fa fa-phone pr-10"></i>电 话： ${prop.propValue}</p>
+		  </#if>
+		  <#if prop.propCode == 'qq'>
+          <p><i class="fa fa-phone pr-10"></i>QQ： ${prop.propValue}</p>
+		  </#if>
+		  <#if prop.propCode == 'email'>
+          <p><i class="fa fa-envelope pr-10"></i>Email: <a href="javascript:;"
+              title="请把#替换成@">${prop.propValue}</a></p>
+		  </#if>
+		  <#if prop.propCode == 'website'>
+          <p><i class="fa fa-globe pr-10"></i>网址：<a href="${Site.link}">${prop.propValue}</a></p>
+		  </#if>
+		  </#list>
+		  </@cms_site_property>
+        </address>
+      </div>
+      <div class="col-lg-3 col-sm-3 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">
+        <h1>最新动态</h1>
+        <div id="owl-slide">
+          <@cms_content catalogalias="news" level="CurrentAndChild" page="false" size="3">
+            <#list DataList as content>
+              <div class="tweet-box">
+                <a href="${content.link}" style="color:#fff;"> ${content.title} </a>
+              </div>
+            </#list>
+          </@cms_content>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-3">
+        <div class="page-footer wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">
+          <h1>公司介绍</h1>
+          <ul class="page-footer-list">
+            <@cms_catalog alias="company" level="Child" page="false" size="5">
+              <#list DataList as catalog>
+                <li><i class="fa fa-angle-right"></i><a href="${catalog.link}">${catalog.name}</a></li>
+              </#list>
+            </@cms_catalog>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-3 companyinfo">
+
+        <div class="wow fadeInUp" data-wow-duration="2s" data-wow-delay=".7s">
+          <h1>公司简介</h1>
+          <p style="text-indent: 2em;text-align:justify;text-justify:inter-ideograph;">
+            深圳市思威控自动化设备有限公司是一家专业从事自动化解决方案、HMI人机界面产品、工业控制器、智能物联产品生产和销售的深圳市高新和国家高新企业。公司立志为制造业、自动化加工产业提供高效的解决方案和产品，为企业生产管理提供高效便捷的生产智，帮助客户向工业4.0、智能制造、无人工厂等自动化方向发展。您的满意是我们永远的追求！
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+<!-- footer end -->
+<!--small footer start -->
+<footer class="footer-small">
+  <div class="container">
+    <div class="row">
+      <div class="copyright">
+        <p>&copy; Copyright 2009 - 2015 深圳市思威控自动化设备有限公司. All Rights Reserved. - [ <a href="http:
+            //www.beian.miit.gov.cn/" target="_blank"  style="color:#fff;">粤ICP备13048956号-1</a> ]</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+  (function () {
+    var q = [];
+    q.push('h=' + window.location.host);
+    q.push('p=' + window.location.href.substring(window.location.href.indexOf(window.location.pathname)));
+    q.push('sid=${Site.siteId}');
+    if (window._xy_cms && window._xy_cms.catalog_id && window._xy_cms.catalog_id.length > 0) q.push('cid=' + _xy_cms.catalog_id);
+    if (window._xy_cms && window._xy_cms.content_id && window._xy_cms.content_id.length > 0) q.push('id=' + _xy_cms.content_id);
+    var s = document.createElement("script");
+    s.src = '${ApiPrefix}api/stat/visit?' + q.join('&');
+    (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(s);
+  })();
+</script>
+<script>
+  var _hmt = _hmt || [];
+  (function () {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?2f8f2746e4f850962153e8bce014ffbb";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>

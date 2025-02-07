@@ -1,0 +1,173 @@
+<!-- 网站头部区域 -->
+<header class="header">
+  <div class="container">
+    <!-- 导航栏头部（包含移动端菜单按钮和Logo） -->
+    <div class="navbar-header">
+      <!-- 移动端折叠菜单按钮 -->
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse"
+        aria-label="menu">
+        <span class="icon-bar icon-bar-1"></span>
+        <span class="icon-bar icon-bar-2"></span>
+        <span class="icon-bar icon-bar-3"></span>
+      </button>
+      <!-- Logo区域 -->
+      <div class="logo">
+        <!-- ${Site.link} 获取站点首页链接 -->
+        <a href="${Site.link}" rel="home">
+          <!-- ${Site.logoSrc!''} 获取站点Logo图片地址，如果为空则显示空字符串 -->
+          <img src="${Site.logoSrc!''}" alt="${Site.name}">
+        </a>
+      </div>
+    </div>
+
+    <!-- 可折叠的导航栏内容 -->
+    <div class="collapse navbar-collapse">
+      <!-- 主导航菜单 -->
+      <nav class="primary-menu">
+        <ul id="menu-justnews-menu" class="nav navbar-nav wpcom-adv-menu">
+          <!-- 首页菜单项 -->
+          <li class="menu-item" data-id="home"><a href="${Site.link}">首页</a></li>
+
+          <!-- 快讯栏目 - 使用cms_catalog标签获取快讯栏目数据 -->
+          <@cms_catalog alias="kuaixun" level="Self" page="false">
+            <#list DataList as catalog>
+              <li class="menu-item page-item-796" data-id="${catalog.ancestors}"><a
+                  href="${(catalog.link)!''}">${catalog.name}</a></li>
+            </#list>
+          </@cms_catalog>
+
+          <!-- VIP专区栏目 - 包含二级子栏目 -->
+          <@cms_catalog alias="vipbox" level="Self" page="false">
+            <#list DataList as catalog>
+              <li class="menu-item dropdown" data-id="${catalog.ancestors}">
+                <a href="${(catalog.link)!''}" class="dropdown-toggle">${catalog.name}专区</a>
+                <ul class="dropdown-menu menu-item-wrap">
+                  <li class="menu-item dropdown"><a href="${(catalog.link)!''}">全部精选</a>
+                    <!-- 使用cms_catalog标签获取子栏目数据 -->
+                    <ul class="dropdown-menu">
+                      <@cms_catalog id="${catalog.catalogId}" level="Child" page="false">
+                        <#list DataList as child>
+                          <li class="menu-item" data-id="${child.ancestors}">
+                            <a href="${(child.link)!''}">${child.name}</a>
+                          </li>
+                        </#list>
+                      </@cms_catalog>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </#list>
+          </@cms_catalog>
+
+          <!-- 新闻栏目 - 三列布局的下拉菜单 -->
+          <@cms_catalog alias="news" level="Self" page="false">
+            <#list DataList as catalog>
+              <li class="menu-item dropdown" data-id="${catalog.ancestors}"><a href="${(catalog.link)!''}"
+                  class="dropdown-toggle">${catalog.name}</a>
+                <ul class="dropdown-menu menu-item-wrap menu-item-col-3">
+                  <@cms_catalog id="${catalog.catalogId}" level="Child" page="false">
+                    <#list DataList as child>
+                      <!-- 排除vipbox别名的栏目 -->
+                      <#if child.alias!='vipbox'>
+                        <li class="menu-item" data-id="${child.ancestors}">
+                          <a href="${(child.link)!''}">${child.name}</a>
+                        </li>
+                      </#if>
+                    </#list>
+                  </@cms_catalog>
+                </ul>
+              </li>
+            </#list>
+          </@cms_catalog>
+
+          <!-- 专题栏目 -->
+          <@cms_catalog alias="special" level="Self" page="false">
+            <#list DataList as catalog>
+              <li class="menu-item" data-id="${catalog.ancestors}"><a href="${(catalog.link)!''}">${catalog.name}</a></li>
+            </#list>
+          </@cms_catalog>
+
+          <!-- 工具栏目 - 三列布局的下拉菜单 -->
+          <@cms_catalog alias="tool" level="Self" page="false">
+            <#list DataList as catalog>
+              <li class="menu-item dropdown" data-id="${catalog.ancestors}"><a href="${(catalog.link)!''}"
+                  class="dropdown-toggle">${catalog.name}</a>
+                <ul class="dropdown-menu menu-item-wrap menu-item-col-3">
+                  <@cms_catalog id="${catalog.catalogId}" level="Child" page="false">
+                    <#list DataList as child>
+                      <li class="menu-item" data-id="${child.ancestors}"><a href="${(child.link)!''}">${child.name}</a>
+                      </li>
+                    </#list>
+                  </@cms_catalog>
+                </ul>
+              </li>
+            </#list>
+          </@cms_catalog>
+
+          <!-- 更多菜单 - 包含活动栏目 -->
+          <li class="menu-item dropdown"><a href="#" class="dropdown-toggle">更多</a>
+            <ul class="dropdown-menu menu-item-wrap menu-item-col-3">
+              <@cms_catalog alias="activity" level="Child" page="false">
+                <#list DataList as catalog>
+                  <li class="menu-item"><a href="${(catalog.link)!''}">${catalog.name}</a></li>
+                </#list>
+              </@cms_catalog>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 导航栏右侧功能区 -->
+      <div class="navbar-action">
+        <!-- 暗黑模式切换按钮 -->
+        <div class="dark-style-toggle"><i class="wpcom-icon wi"><svg aria-hidden="true">
+              <use xlink:href="#wi-sun-fill"></use>
+            </svg></i></div>
+        <!-- 暗黑模式切换的JavaScript逻辑 -->
+        <script> if (window.localStorage) { var dark = localStorage.getItem('darkStyle'); var toggle = document.querySelector('.dark-style-toggle'); if (dark == 1 && !toggle.classList.contains('active')) { document.body.classList.add('style-for-dark'); toggle.classList.add('active'); toggle.querySelector('use').setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '#wi-moon-fill'); } else if (dark == 0 && toggle.classList.contains('active')) { document.body.classList.remove('style-for-dark'); toggle.classList.remove('active'); toggle.querySelector('use').setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '#wi-sun-fill'); } } </script>
+
+        <!-- 搜索图标 -->
+        <div class="navbar-search-icon j-navbar-search" style="display: inline-block;">
+          <i class="wpcom-icon wi">
+            <svg aria-hidden="true">
+              <use xlink:href="#wi-search"></use>
+            </svg>
+          </i>
+        </div>
+
+        <!-- 用户登录/注册区域 -->
+        <div id="header-user-wrap">
+          <a class="login cur btn-login" href="javascript:;">登录</a>
+          <a class="login register cur btn-register" href="javascript:;">注册</a>
+        </div>
+      </div>
+
+      <!-- 搜索表单 -->
+      <!-- IsPreview判断是否为预览模式，决定使用ApiPrefix还是Prefix -->
+      <form id="header_search" class="navbar-search" action="${IsPreview?then(ApiPrefix, Prefix)}_search" role="search">
+        <div class="navbar-search-inner">
+          <!-- 关闭搜索按钮 -->
+          <i class="wpcom-icon wi navbar-search-close">
+            <svg aria-hidden="true">
+              <use xlink:href="#wi-close"></use>
+            </svg>
+          </i>
+          <!-- 搜索输入框 -->
+          <input type="text" name="q" class="navbar-search-input" autocomplete="off" placeholder="输入关键词搜索..." value="">
+          <!-- 预览模式下需要额外的参数 -->
+          <#if (IsPreview?c)=="true">
+            <input type="hidden" name="pp" value="${PublishPipeCode}" />
+            <input type="hidden" name="sid" value="${Site.siteId}" />
+            <input type="hidden" name="preview" value="${IsPreview?c}" />
+          </#if>
+          <!-- 搜索提交按钮 -->
+          <button class="navbar-search-btn" type="submit">
+            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                <use xlink:href="#wi-search"></use>
+              </svg></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</header>

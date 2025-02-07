@@ -1,0 +1,74 @@
+<div class="container">
+  <div
+    class="mx-auto p-4 bg-white rounded shadow-sm my-4"
+    style="max-width: 800px"
+  >
+    <h4 class="mb-4 text-muted">Gene Index</h4>
+
+    <div class="mb-3">
+      <label for="geneId" class="form-label">Gene ID</label>
+      <div class="input-group">
+        <input type="text" class="form-control" id="geneId" />
+      </div>
+      <div class="form-text">
+        e.g. FT, AT1G65480, BnaA02G0156900ZS, FLOWERING LOCUS T
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="geneRegion" class="form-label">Gene region</label>
+      <div class="input-group">
+        <input type="text" class="form-control" id="geneRegion" />
+      </div>
+      <div class="form-text">e.g. A01:150000..230000</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="geneIndex" class="form-label">Gene Index</label>
+      <div class="input-group">
+        <textarea
+          class="form-control bg-light border min-h-200"
+          style="min-height: 200px"
+          id="geneIndex"
+        ></textarea>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <div class="input-group">
+        <input
+          type="file"
+          class="form-control"
+          id="fileInput"
+          accept=".txt,.text"
+          data-bs-toggle="tooltip"
+          title="Only .txt or .text files are allowed"
+        />
+        <button
+          class="btn btn-outline-secondary dropdown-toggle"
+          type="button"
+          data-bs-toggle="dropdown"
+        >
+          example file
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" href="#" onclick="loadExample('example_1')"
+              >example_1</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" href="#" onclick="loadExample('example_2')"
+              >example_2</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="d-flex gap-2">
+      <button class="btn btn-primary" onclick="handleSubmit()">submit</button>
+      <button class="btn btn-secondary" onclick="handleReset()">reset</button>
+    </div>
+  </div>
+</div>

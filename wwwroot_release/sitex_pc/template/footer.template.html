@@ -1,0 +1,68 @@
+<footer class="footer width-footer-bar">
+  <div class="container">
+    <div class="footer-col-wrap footer-with-logo-icon">
+      <div class="footer-col footer-col-logo">
+        <img src="${Site.logoSrc!!}" alt="${Site.name}">
+      </div>
+      <div class="footer-col footer-col-copy">
+        <ul class="footer-nav hidden-xs">
+          <@cms_catalog alias="contact" level="Self" page="false">
+            <#list DataList as cc>
+              <li id="menu-item-152" class="menu-item menu-item-152"><a href="${cc.link}">${cc.name}</a></li>
+            </#list>
+          </@cms_catalog>
+          <li id="menu-item-130" class="menu-item menu-item-130"><a href="#">新品</a></li>
+          <@cms_catalog alias="special" level="Self" page="false">
+            <#list DataList as cc>
+              <li id="menu-item-157" class="menu-item menu-item-157"><a href="${cc.link}">${cc.name}</a>
+            </#list>
+          </@cms_catalog>
+          </li>
+        </ul>
+        <div class="copyright">
+          <p>Copyright © 2021 ${Site.name} 版权所有</p>
+        </div>
+      </div>
+      <div class="footer-col footer-col-sns">
+        <div class="footer-sns">
+          <@cms_site_property siteid="${Site.siteId}" code="twitter">
+            <#list DataList as prop>
+              <a href=" ${prop.propValue}" aria-label="icon" rel="noopener">
+                <i class="wpcom-icon fa fa-twitter sns-icon"></i> </a>
+            </#list>
+          </@cms_site_property>
+          <@cms_site_property siteid="${Site.siteId}" code="weibo">
+            <#list DataList as prop>
+              <a href=" ${prop.propValue}" aria-label="icon" rel="noopener">
+                <i class="wpcom-icon fa fa-weibo sns-icon"></i> </a>
+            </#list>
+          </@cms_site_property>
+          <@cms_catalog alias="qrcode" level="Self">
+            <#list DataList as catalog>
+              <a class="sns-wx" href="javascript:;" aria-label="icon">
+                <i class="wpcom-icon fa fa-wechat sns-icon"></i> <span
+                  style="background-image:url(&#39;${catalog.logoSrc!!}&#39;);"></span>
+              </a>
+            </#list>
+          </@cms_catalog>
+          <@cms_site_property siteid="${Site.siteId}" code="weibo">
+            <#list DataList as prop>
+              <a href=" ${prop.propValue}" aria-label="icon" rel="noopener">
+                <i class="wpcom-icon fa fa-paper-plane sns-icon"></i> </a>
+            </#list>
+          </@cms_site_property>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c330a2e130186b55467d9c8084ead742";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+

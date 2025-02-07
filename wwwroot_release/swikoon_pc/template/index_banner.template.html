@@ -1,0 +1,31 @@
+<@cms_pagewidget_data code="index_banner">
+  <#list Data.contentObj as row>
+    <#list row.items as item>
+      <div class="da-slide">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2>
+                <#list item.summary?split("\n") as item>
+                <i>${item}</i>
+                <#sep><br/></#sep>
+                </#list>
+              </h2>
+              <p>
+                <i>${item.title}</i>
+                <br/>
+                <i></i>
+              </p>
+              <a href="${item.url}" class="btn btn-info btn-lg da-link">
+                Read more
+              </a>
+              <div class="da-img">
+                <img src="${internalUrl(item.logo)}" alt="image01" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </#list>
+  </#list>
+</@cms_pagewidget_data>

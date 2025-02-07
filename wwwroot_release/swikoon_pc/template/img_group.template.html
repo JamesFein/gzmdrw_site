@@ -1,0 +1,7 @@
+<p>图集开始</p>
+<@cms_image contentid="${Content.contentId}">
+  <#list DataList as item>
+  	<img src = "${internalUrl(item.path)}" style="width:200px" />
+  </#list>
+</@cms_image>
+<p>图集结束</p>

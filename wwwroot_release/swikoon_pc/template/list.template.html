@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="shortcut icon" href="${Prefix}img/favicon.png" />
+
+    <title>${Catalog.name}_${Site.name}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="${Prefix}css/bootstrap.min.css" rel="stylesheet">
+    <link href="${Prefix}css/theme.css" rel="stylesheet">
+    <link href="${Prefix}css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="${Prefix}assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="${Prefix}css/flexslider.css"/>
+    <link href="${Prefix}assets/bxslider/jquery.bxslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="${Prefix}css/animate.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="${Prefix}css/style.css" rel="stylesheet">
+    <link href="${Prefix}css/style-responsive.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+	<script src="${Prefix}js/html5shiv.js"></script>
+	<script src="${Prefix}js/respond.min.js"></script>
+	<![endif]-->
+<script>window._xy_cms = { catalog_id: '${Catalog.catalogId}' };</script>
+  <style>
+  .pagebar { height: 50px; }
+  .pagebar a { border: 1px solid #48cfad; padding: 3px 8px; margin: 0 2px; }
+  .pagebar a.current { background-color: #48cfad; color: #fff; }
+  </style>
+  </head>
+
+  <body>
+    <!--header start-->
+    <@cms_include file="header.template.html"></@cms_include>
+    <!--header end-->
+
+    <!--breadcrumbs start-->
+  <div class="breadcrumbs">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-4">
+          <h1>${Catalog.name}</h1>
+        </div>
+        <div class="col-lg-8 col-sm-8" style="text-align:right;padding-top: 5px;">
+          <a class="position" href="${Site.link}">首页</a>
+          <#list Catalog.ancestors?split(":") as catalogId>
+            <@cms_catalog id="${catalogId}" level="Self">
+              <#list DataList as catalog>
+                 > <a class="position" href="${catalog.link}">${catalog.name}</a>
+              </#list>
+            </@cms_catalog>
+          </#list>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--breadcrumbs end-->
+
+    <!--container start-->
+    <div class="container">
+      <div class="row">
+        <!--blog start-->
+        <div class="col-lg-9 ">
+          <@cms_content catalogid="${Catalog.catalogId}" level="CurrentAndChild" page="true" size="1">
+          <#list DataList as content>
+          <div class="blog-item">
+            <div class="row">
+              <div class="col-lg-2 col-sm-2">
+                <div class="date-wrap">
+                  <span class="date">
+                    ${dateFormat(content.publishDate,"MM/dd")}
+                  </span>
+                  <span class="month">
+                    ${dateFormat(content.publishDate,"yyyy")}
+                  </span>
+                </div>
+
+              </div>
+              <div class="col-lg-10 col-sm-10">
+                <h1 style="margin-top:0;">
+                  <a href="${content.link}">
+                    ${content.title}
+                  </a>
+                </h1>
+                <p>
+					<#if content.summary?? && content.summary != "">
+						${content.summary}
+					<#else>
+						<#if content.contentType == "article">
+							<@cms_article contentId="${content.contentId}">
+								<#assign cc = clearHtmlTag(ArticleContent)>
+
+								<#if cc?length &lt; 320>${cc}<#else>${cc[0..300]}...</#if>
+
+							</@cms_article>
+						</#if>
+	                </#if>
+                </p>
+              </div>
+            </div>
+          </div>
+          </#list>
+          </@cms_content>
+        		<#if PageTotal &gt; 10>
+          <div class="text-center pagebar">
+            <div class="paginator">
+    <#if PageTotal gt 0>
+        <#if PageTotal==0>
+          <#assign PageCount=1 />
+          <#else>
+            <#assign PageCount=(PageTotal + PageSize - 1) / PageSize />
+        </#if>
+        <#if PageNo gt 1>
+          <#if PageNo==2>
+            <a href="${FirstPage}" class="link">上一页</a>
+            <#else>
+            <a href="${OtherPage?replace('{0}', PageNo-1)}" class="link">上一页</a>
+          </#if>
+        </#if>
+        <#list 1..PageCount as pn>
+          <#if PageNo==pn>
+            <a href="#" class="link link-active">${pn}</a>
+            <#else>
+              <#if 1==pn>
+                <a href="${FirstPage}" class="link">${pn}</a>
+                <#else>
+                <a href="${OtherPage?replace('{0}', pn)}" class="link">${pn}</a>
+              </#if>
+          </#if>
+        </#list>
+        <#if PageNo lt PageCount?int>
+          <a href="${OtherPage?replace('{0}', PageNo+1)}" class="link">下一页</a>
+        </#if>
+    </#if>
+</div>
+          </div>
+         </#if>
+        </div>
+
+        <div class="col-lg-3">
+          <@cms_include file="rightblock.template.html"></@cms_include>
+        </div>
+
+        <!--blog end-->
+      </div>
+
+    </div>
+    <!--container end-->
+
+    <!--footer start-->
+    <@cms_include file="footer.template.html"></@cms_include>
+    <!--small footer end-->
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="${Prefix}js/jquery.js">
+    </script>
+    <script src="${Prefix}js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript" src="${Prefix}js/hover-dropdown.js">
+    </script>
+    <script defer src="${Prefix}js/jquery.flexslider.js">
+    </script>
+    <script type="text/javascript" src="${Prefix}assets/bxslider/jquery.bxslider.js">
+    </script>
+
+    <script src="${Prefix}js/jquery.easing.min.js">
+    </script>
+    <script src="${Prefix}js/link-hover.js">
+    </script>
+
+
+    <!--common script for all pages-->
+    <script src="${Prefix}js/common-scripts.js">
+    </script>
+
+
+    <script src="${Prefix}js/wow.min.js">
+    </script>
+    <script>
+      wow = new WOW(
+        {
+          boxClass:     'wow',      // default
+          animateClass: 'animated', // default
+          offset:       0          // default
+        }
+      )
+        wow.init();
+    </script>
+  </body>
+</html>

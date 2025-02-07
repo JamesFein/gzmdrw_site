@@ -1,0 +1,32 @@
+<@cms_advertisement code="pc_index" size="1">
+<#list DataList as adv>
+<div class="container">
+  <a href="${adv.link!'/'}" target="_blank" class="cms-ad" data-id="${adv.advertisementId}"><img style="width:100%;height:80px;" src="${internalUrl(adv.resourcePath)}" alt="${adv.name}" /></a>
+</div>
+</#list>
+</@cms_advertisement>
+
+<script type="text/javascript">
+  (function () {
+    var arr = document.getElementsByClassName("cms-ad")
+	for (var i = 0; i < arr.length; i++) {
+	  var aid = arr[i].getAttribute("data-id")
+	  if (aid) {
+        var q = [];
+        q.push('sid=${Site.siteId}');
+        q.push('aid=' + aid);
+        var s = document.createElement("script");
+        s.src = '${ApiPrefix}api/adv/view?' + q.join('&');
+        (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(s);
+		
+		var clickApi = '${ApiPrefix}api/adv/click?' + q.join('&');
+		arr[i].addEventListener("click", function(){
+			
+		  var xhr = new XMLHttpRequest();
+		  xhr.open("GET", clickApi, true);
+		  xhr.send();
+		});
+	  }
+	}
+  })();
+</script>

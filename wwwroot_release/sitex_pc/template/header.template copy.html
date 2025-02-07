@@ -1,0 +1,134 @@
+<header class="header">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse"
+        aria-label="menu">
+        <span class="icon-bar icon-bar-1"></span>
+        <span class="icon-bar icon-bar-2"></span>
+        <span class="icon-bar icon-bar-3"></span>
+      </button>
+      <div class="logo">
+        <a href="${Site.link}" rel="home">
+          <img src="${Site.logoSrc!''}" alt="${Site.name}">
+        </a>
+      </div>
+    </div>
+    <div class="collapse navbar-collapse">
+      <nav class="primary-menu">
+        <ul id="menu-justnews-menu" class="nav navbar-nav wpcom-adv-menu">
+          <li class="menu-item" data-id="home"><a href="${Site.link}">首页</a></li>
+          <@cms_catalog alias="kuaixun" level="Self" page="false">
+            <#list DataList as catalog>
+              <li class="menu-item page-item-796" data-id="${catalog.ancestors}"><a
+                  href="${catalog.link}">${catalog.name}</a></li>
+            </#list>
+          </@cms_catalog>
+          <@cms_catalog alias="vipbox" level="Self" page="false">
+            <#list DataList as catalog>
+              <li class="menu-item dropdown" data-id="${catalog.ancestors}">
+                <a href="${catalog.link}" class="dropdown-toggle">${catalog.name}专区</a>
+                <ul class="dropdown-menu menu-item-wrap">
+                  <li class="menu-item dropdown"><a href="${catalog.link}">全部精选</a>
+                    <ul class="dropdown-menu">
+                      <@cms_catalog id="${catalog.catalogId}" level="Child" page="false">
+                        <#list DataList as child>
+                          <li class="menu-item" data-id="${child.ancestors}">
+                            <a href="${child.link!!}">${child.name}</a>
+                          </li>
+                        </#list>
+                      </@cms_catalog>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </#list>
+          </@cms_catalog>
+          <@cms_catalog alias="news" level="Self" page="false">
+            <#list DataList as catalog>
+              <li class="menu-item dropdown" data-id="${catalog.ancestors}"><a href="${catalog.link}"
+                  class="dropdown-toggle">${catalog.name}</a>
+                <ul class="dropdown-menu menu-item-wrap menu-item-col-3">
+                  <@cms_catalog id="${catalog.catalogId}" level="Child" page="false">
+                    <#list DataList as child>
+                      <#if child.alias!='vipbox'>
+                        <li class="menu-item" data-id="${child.ancestors}">
+                          <a href="${child.link!!}">${child.name}</a>
+                        </li>
+                      </#if>
+                    </#list>
+                  </@cms_catalog>
+                </ul>
+              </li>
+            </#list>
+          </@cms_catalog>
+          <@cms_catalog alias="special" level="Self" page="false">
+            <#list DataList as catalog>
+              <li class="menu-item" data-id="${catalog.ancestors}"><a href="${catalog.link}">${catalog.name}</a></li>
+            </#list>
+          </@cms_catalog>
+          <@cms_catalog alias="tool" level="Self" page="false">
+            <#list DataList as catalog>
+              <li class="menu-item dropdown" data-id="${catalog.ancestors}"><a href="${catalog.link}"
+                  class="dropdown-toggle">${catalog.name}</a>
+                <ul class="dropdown-menu menu-item-wrap menu-item-col-3">
+                  <@cms_catalog id="${catalog.catalogId}" level="Child" page="false">
+                    <#list DataList as child>
+                      <li class="menu-item" data-id="${child.ancestors}"><a href="${child.link!!}">${child.name}</a>
+                      </li>
+                    </#list>
+                  </@cms_catalog>
+                </ul>
+              </li>
+            </#list>
+          </@cms_catalog>
+          <li class="menu-item dropdown"><a href="#" class="dropdown-toggle">更多</a>
+            <ul class="dropdown-menu menu-item-wrap menu-item-col-3">
+              <@cms_catalog alias="activity" level="Child" page="false">
+                <#list DataList as catalog>
+                  <li class="menu-item"><a href="${catalog.link!!}">${catalog.name}</a></li>
+                </#list>
+              </@cms_catalog>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="navbar-action">
+        <div class="dark-style-toggle"><i class="wpcom-icon wi"><svg aria-hidden="true">
+              <use xlink:href="#wi-sun-fill"></use>
+            </svg></i></div>
+        <script> if (window.localStorage) { var dark = localStorage.getItem('darkStyle'); var toggle = document.querySelector('.dark-style-toggle'); if (dark == 1 && !toggle.classList.contains('active')) { document.body.classList.add('style-for-dark'); toggle.classList.add('active'); toggle.querySelector('use').setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '#wi-moon-fill'); } else if (dark == 0 && toggle.classList.contains('active')) { document.body.classList.remove('style-for-dark'); toggle.classList.remove('active'); toggle.querySelector('use').setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '#wi-sun-fill'); } } </script>
+        <div class="navbar-search-icon j-navbar-search" style="display: inline-block;">
+          <i class="wpcom-icon wi">
+            <svg aria-hidden="true">
+              <use xlink:href="#wi-search"></use>
+            </svg>
+          </i>
+        </div>
+        <div id="header-user-wrap">
+          <a class="login cur btn-login" href="javascript:;">登录</a>
+          <a class="login register cur btn-register" href="javascript:;">注册</a>
+        </div>
+      </div>
+      <form id="header_search" class="navbar-search" action="${IsPreview?then(ApiPrefix, Prefix)}_search" role="search">
+        <div class="navbar-search-inner">
+          <i class="wpcom-icon wi navbar-search-close">
+            <svg aria-hidden="true">
+              <use xlink:href="#wi-close"></use>
+            </svg>
+          </i>
+          <input type="text" name="q" class="navbar-search-input" autocomplete="off" placeholder="输入关键词搜索..." value="">
+          <#if (IsPreview?c)=="true">
+            <input type="hidden" name="pp" value="${PublishPipeCode}" />
+            <input type="hidden" name="sid" value="${Site.siteId}" />
+            <input type="hidden" name="preview" value="${IsPreview?c}" />
+          </#if>
+          <button class="navbar-search-btn" type="submit">
+            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                <use xlink:href="#wi-search"></use>
+              </svg></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</header>

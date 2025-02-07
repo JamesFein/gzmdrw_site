@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- 基本的元信息设置 -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Developed By M Abdur Rokib Promy">
+  <meta name="author" content="cosmic">
+  <meta name="keywords" content="Bootstrap 3, Template, Theme, Responsive, Corporate, Business">
+  <link rel="shortcut icon" href="${Prefix}img/favicon.png">
+  <!-- 页面标题: 产品标题_站点名称 -->
+  <title>${Content.title}_${Site.name}</title>
+
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  
+  <!-- Google Fonts - Lato 字体 -->
+  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+
+  <!-- CMS系统全局变量设置 -->
+  <script>window._xy_cms = { catalog_id: '${Catalog.catalogId}', content_id: '${Content.contentId}' };</script>
+  
+  <!-- 页面内嵌样式定义 -->
+  <style>
+    /* 分页栏样式 */
+    .pagebar { height: 50px; }
+    .pagebar a { border: 1px solid #48cfad; padding: 3px 8px; margin: 0 2px; }
+    .pagebar a.current { background-color: #48cfad; color: #fff; }
+    /* 文章容器中表格样式 */
+    .article_container table { width: 100% }
+    .article_leftbar a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 引入头部模板 -->
+  <@cms_include file="gn_header.template.html"></@cms_include>
+
+     <!-- 面包屑导航 -->
+    <div class="bg-light py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h1 class="h2">${Catalog.name}</h1>
+          </div>
+          <div class="col-md-8 d-flex align-items-center justify-content-end">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="${Site.link}">HomePage</a></li>
+                <#list Catalog.ancestors?split(":") as catalogId>
+                  <@cms_catalog id="${catalogId}" level="Self">
+                    <#list DataList as catalog>
+                      <li class="breadcrumb-item"><a href="${catalog.link}">${catalog.name}</a></li>
+                    </#list>
+                  </@cms_catalog>
+                </#list>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- 主要内容区域 -->
+  <div class="container">
+    <div class="row">
+      <!-- 左侧主要内容区 -->
+      <div class="col-lg-9">
+        <div class="blog-item">
+          <div class="row">
+            <!-- 左侧日期、作者、统计信息 -->
+            <div class="col-lg-2 col-sm-2">
+              <!-- 日期显示 -->
+
+              
+              <!-- 文章顶左侧栏 -->
+              <div class="article_leftbar">
+                <p class="text-bold" style="font-weight: bold; color: #48CFAD; margin-top: 10px; margin-bottom: 10px;">Data</p>
+                <ul class="list-unstyled">
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Overview</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Description</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Genes</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Genetic Maps</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Genomes</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Markers</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Publications</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Sequences</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">SNP Array</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Trait Loci</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Transcripts</a></li>
+                </ul>
+
+                <p class="text-bold" style="font-weight: bold; color: #48CFAD; margin-bottom: 10px;">Tools</p>
+                <ul class="list-unstyled">
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">BLAST</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">JBrowse</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Links</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">AppleCyc</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Sequence Retrieval</a></li>
+                  <li style="margin-right: 15px; cursor: pointer;"><a style="color: inherit;" href="javascript:void(0);">Synteny Viewer</a></li>
+                </ul>
+              </div>
+
+            </div>
+            
+            <!-- 右侧文章主体内容 -->
+            <div class="col-lg-10 col-sm-10">
+              <!-- 文章标题 -->
+
+              <!-- 文章内容区域 -->
+              <div class="article_container">
+                <@cms_article contentId="${Content.contentId}" page="true">
+                ${htmlInternalUrl(ArticleContent)}
+                </@cms_article>
+              </div>
+              
+              <!-- 分页控件 -->
+              <#if PageTotal &gt; 1>
+                <div class="text-center pagebar">
+                  <!-- 上一页链接 -->
+                  <#if PageNo &gt; 1>
+                    <a href="${OtherPage?replace('{0}', PageNo-1)}"> 上一页 </a>
+                  </#if>
+                  <!-- 页码链接 -->
+                  <#list 1..PageTotal as pn>
+                    <#if pn == 1>
+                      <#if PageNo == pn><a href="javascript:void(0);" class="current">${pn}</a><#else><a href="${FirstPage}">${pn}</a></#if>
+                    <#else>
+                      <#if PageNo == pn><a href="javascript:void(0);" class="current">${pn}</a><#else><a href="${OtherPage?replace('{0}', pn)}">${pn}</a></#if>
+                    </#if>
+                  </#list>
+                  <!-- 下一页链接 -->
+                  <#if PageNo &lt; PageTotal>
+                    <a href="${OtherPage?replace('{0}', PageNo+1)}"> 下一页 </a>
+                  </#if>
+                </div>
+              </#if>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右侧边栏 -->
+      <div class="col-lg-3">
+          <!-- 新闻列表 -->
+            <h3>News</h3>
+            <!-- 获取最新的5个产品信息 -->
+            <@cms_content catalogalias="product" level="CurrentAndChild" sort="Recent" page="false" size="5">
+            <#list DataList as item>
+            <div class="media">
+              <#if item.logo??>
+              	<a class="pull-left" href="${item.link}">
+                <img src="${imageSize(item.logo,240, 240)}" alt="${item.title}" style="width:120px" />
+              </a>
+              </#if>
+              <div class="media-body">
+                <h5 class="media-heading">
+                  <a href="${item.link}">${(item.title!'')[0..*60]}</a>
+                </h5>
+                <p>${dateFormat(item.publishDate,"yyyy-MM-dd")}</p>
+              </div>
+            </div>
+            </#list>
+            </@cms_content>
+      </div>
+    </div>
+  </div>
+
+  <!-- 引入页脚模板 -->
+  <@cms_include file="gn_footer.template.html"></@cms_include>
+
+  <!-- Core JS Libraries -->
+  <script src="${Prefix}js/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" defer></script>
+  
+  <!-- jQuery Plugins -->
+  <script defer src="${Prefix}js/jquery.flexslider.js"></script>
+  <script defer src="${Prefix}js/jquery.easing.min.js"></script>
+  <script defer src="${Prefix}js/common-scripts.js"></script>
+  
+  <!-- Animation Library -->
+  <script defer src="${Prefix}js/wow.min.js"></script>
+
+</body>
+
+</html>

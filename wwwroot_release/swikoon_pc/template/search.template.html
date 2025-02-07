@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="shortcut icon" href="${Prefix}img/favicon.png" />
+
+    <title>搜索_${Site.name}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="${Prefix}css/bootstrap.min.css" rel="stylesheet">
+    <link href="${Prefix}css/theme.css" rel="stylesheet">
+    <link href="${Prefix}css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="${Prefix}assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="${Prefix}css/flexslider.css"/>
+    <link href="${Prefix}assets/bxslider/jquery.bxslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="${Prefix}css/animate.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="${Prefix}css/style.css" rel="stylesheet">
+    <link href="${Prefix}css/style-responsive.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+	<script src="${Prefix}js/html5shiv.js"></script>
+	<script src="${Prefix}js/respond.min.js"></script>
+	<![endif]-->
+  <style>
+  .pagebar { height: 50px; }
+  .pagebar a { border: 1px solid #48cfad; padding: 3px 8px; margin: 0 2px; }
+  .pagebar a.current { background-color: #48cfad; color: #fff; }
+  </style>
+  </head>
+
+  <body>
+    <!--header start-->
+    <@cms_include file="header.template.html"></@cms_include>
+    <!--header end-->
+
+    <!--breadcrumbs start-->
+  <div class="breadcrumbs">
+    <div class="container">
+      <div class="row">
+        <div>
+			<input class="form-control" id="_query" placeholder=" Search" type="text" style="float: left;width: 295px;margin-right: 5px;">
+			<input class="form-control" type="button" onclick="queryResult()" value="搜索" style="width: 60px;color: #666;float: left;">
+        </div>
+        <div class="col-lg-8 col-sm-8" style="text-align:right;padding-top: 5px;">
+          <a class="position" href="${Site.link}">首页</a>  > <a class="position" href="#">搜索</a>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--breadcrumbs end-->
+
+    <!--container start-->
+    <div class="container">
+	  <div style="margin-bottom: 20px;">
+	  为您找到 <span style="color:red;">${Request.q}</span> 相关结果 <span id="span-total" style="color:red;">0</span> 个
+	  </div>
+      <div class="row">
+        <!--blog start-->
+        <div class="col-lg-9 " id="div-result">
+		
+        </div>
+        <div class="col-lg-9 ">
+          <div class="text-center pagebar">
+          </div>
+        </div>
+		<script>
+		function queryResult() {
+			var params = new URLSearchParams(window.location.search);
+			var q = "${Request.q!''}"; 
+			if (!q || q.length == 0) {
+			  $("#div-result").html("请输入搜索词！");
+				return;
+			}
+			$('#_query').val(q); 
+			$("#div-result").html("Loading...");
+			var pageSize = 10;
+			var page = ${(Request.page??&&Request.page?number gt 0)?then(Request.page,1)};
+			$.ajax({
+				url: "${IsPreview?then(ApiPrefix, Prefix)}api/cms/search/query?sid=${Site.siteId}&pp=pc&preview=${IsPreview?then('true','false')}&q=" + q + "&page=" + page,
+				<#if IsPreview>
+				headers: {
+					"Authorization": "Bearer " + $.cookie("get", {name: 'Admin-Token'})
+				},
+				</#if>
+				type: "get",
+				success: function(res) {
+					$("#div-result").html("");
+					if (res.code != 200) {
+						alert(res.msg);
+						return;
+					}
+					$('#span-total').html(res.data.total);
+					var html = res.data.rows.map(row => {
+						return '<div class="blog-item">'
+							+ '<div class="row">'
+							  + '<div class="col-lg-10 col-sm-10">'
+								+ '<h1 style="margin-top:0;"><a href="'+row.link+'">'+row.title+'</a></h1>'
+								+ '<p>'+row.fullText+'</p>'
+							  + '</div>'
+							+ '</div>'
+							+ '<div>所属栏目：' + row.catalogName + '<a href="'+row.link+'">'+row.link+'</a></div>'
+						+ '</div>';
+					}).join("");
+					$("#div-result").html(html);
+					buildPageBar(page, pageSize, parseInt(res.data.total));
+				}
+			}) 
+		}
+		function buildPageBar(page, size, total) {
+			var link = "${IsPreview?then(ApiPrefix, Prefix)}_search${IsPreview?then('?sid='+Site.siteId+'&pp='+PublishPipeCode+'&preview=true', '')}";
+			if (link.indexOf('?') > -1) {
+			  link += "&q=" + $('#_query').val();
+			} else {
+			  link += "?q=" + $('#_query').val();
+			}
+			if (page > 1) {
+				$(".pagebar").append('<a href="'+link+'&page='+(page-1)+'"> 上一页 </a>')
+			}
+			var pageNumber = parseInt((total + size - 1) / size);
+			for (var i = 1; i <= pageNumber; i++) {
+				if (page == i) {
+					$(".pagebar").append('<a href="javascript:void(0);" class="current">'+i+'</a>')
+				} else {
+					$(".pagebar").append('<a href="'+link+'&page='+i+'" class="current">'+i+'</a>')
+				}
+			}
+			if (page < pageNumber) {
+				$(".pagebar").append('<a href="'+link+'&page='+(page+1)+'"> 下一页 </a>')
+			}
+		}
+		document.addEventListener('DOMContentLoaded', function() {  
+			queryResult();
+		});
+		</script>
+        <div class="col-lg-3">
+          <@cms_include file="rightblock.template.html"></@cms_include>
+        </div>
+        <!--blog end-->
+      </div>
+
+    </div>
+    <!--container end-->
+
+    <!--footer start-->
+    <@cms_include file="footer.template.html"></@cms_include>
+    <!--small footer end-->
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="${Prefix}js/jquery.js">
+    </script>
+	<script src="${Prefix}js/jquery.cookie.min.js"></script>
+    <script src="${Prefix}js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript" src="${Prefix}js/hover-dropdown.js">
+    </script>
+    <script defer src="${Prefix}js/jquery.flexslider.js">
+    </script>
+    <script type="text/javascript" src="${Prefix}assets/bxslider/jquery.bxslider.js">
+    </script>
+
+    <script src="${Prefix}js/jquery.easing.min.js">
+    </script>
+    <script src="${Prefix}js/link-hover.js">
+    </script>
+
+
+    <!--common script for all pages-->
+    <script src="${Prefix}js/common-scripts.js">
+    </script>
+
+
+    <script src="${Prefix}js/wow.min.js">
+    </script>
+    <script>
+      wow = new WOW(
+        {
+          boxClass:     'wow',      // default
+          animateClass: 'animated', // default
+          offset:       0          // default
+        }
+      )
+        wow.init();
+    </script>
+  </body>
+</html>

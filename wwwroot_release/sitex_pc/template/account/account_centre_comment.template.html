@@ -1,0 +1,74 @@
+<div class="wpcom-profile-main profile-comments">
+  <ul class="profile-comments-list clearfix">
+    <@cms_comment uid="${Member.memberId}" page="true" size="16">
+      <#list DataList as comment>
+        <li class="comment-item">
+          <div class="comment-item-meta">
+            <span class="comment-item-time">
+              <i class="wpcom-icon wi"><svg aria-hidden="true">
+                  <use xlink:href="#wi-comments-fill"></use>
+                </svg>
+              </i>
+              ${dateFormat(comment.commentTime)}</span>
+            <span> 评论于 <a target="_blank" href="${comment.sourceUrl!'#'}">${comment.sourceTitle!'文章已下线'}</a></span>
+          </div>
+          <div class="comment-item-link"> ${comment.content} </div>
+        </li>
+      </#list>
+    </@cms_comment>
+  </ul>
+  <div class="load-more-wrap">
+    <#if PageTotal gt 0>
+      <ul class="pagination">
+        <#if PageTotal==0>
+          <#assign PageCount=1 />
+          <#else>
+            <#assign PageCount=(PageTotal + PageSize - 1) / PageSize />
+        </#if>
+        <li class="disabled"><span>${PageNo} / ${PageCount?int}</span></li>
+        <#if PageNo gt 1>
+          <#if PageNo==2>
+            <li class="prev">
+              <a href="${IsPreview?then(ApiPrefix, Prefix)}${FirstPage}" class="prev">
+                <i class="wpcom-icon wi"><svg aria-hidden="true">
+                    <use xlink:href="#wi-arrow-left"></use>
+                  </svg></i>
+                <span>上一页</span>
+              </a>
+            </li>
+            <#else>
+              <li class="prev">
+                <a href="${IsPreview?then(ApiPrefix, Prefix)}${OtherPage?replace('{0}', PageNo-1)}" class="prev">
+                  <i class="wpcom-icon wi"><svg aria-hidden="true">
+                      <use xlink:href="#wi-arrow-left"></use>
+                    </svg></i>
+                  <span>上一页</span>
+                </a>
+              </li>
+          </#if>
+        </#if>
+        <#list 1..PageCount as pn>
+          <#if PageNo==pn>
+            <li class="disabled"><span>${pn}</span></li>
+            <#else>
+              <#if 1==pn>
+                <li><a href="${IsPreview?then(ApiPrefix, Prefix)}${FirstPage}">${pn}</a></li>
+                <#else>
+                  <li><a href="${IsPreview?then(ApiPrefix, Prefix)}${OtherPage?replace('{0}', pn)}">${pn}</a></li>
+              </#if>
+          </#if>
+        </#list>
+        <#if PageNo lt PageCount?int>
+          <li class="next">
+            <a href="${IsPreview?then(ApiPrefix, Prefix)}${OtherPage?replace('{0}', PageNo+1)}" class="next">
+              <span>下一页</span>
+              <i class="wpcom-icon wi"><svg aria-hidden="true">
+                  <use xlink:href="#wi-arrow-right"></use>
+                </svg></i>
+            </a>
+          </li>
+        </#if>
+      </ul>
+    </#if>
+  </div>
+</div>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1,viewport-fit=cover">
+  <title>文章投稿_${Site.name}</title>
+  <meta name="keywords" content="文章投稿">
+  <meta name="applicable-device" content="pc,mobile">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <link rel="shortcut icon" href="${Prefix}images/favicon.png">
+  <link rel="dns-prefetch" href="${Site.link}">
+  <link rel="stylesheet" id="stylesheet-css" href="${Prefix}css/style.6.14.1.1689415232.css" type="text/css"
+    media="all">
+  <link rel="stylesheet" id="font-awesome-css" href="${Prefix}css/font-awesome.css" type="text/css" media="all">
+  <link rel="stylesheet" id="wp-block-library-css" href="${Prefix}css/style.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="classic-theme-styles-css" href="${Prefix}css/classic-themes.min.css" type="text/css"
+    media="all">
+  <@cms_include file="block_top_style.template.html"></@cms_include>
+  <link rel="stylesheet" id="crop-css" href="${Prefix}css/cropper.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="wpcom-member-css" href="${Prefix}css/wpcom_member.css" type="text/css" media="all">
+  <link rel="stylesheet" id="wpcom-member-pro-css" href="${Prefix}css/wpcom_member_pro.css" type="text/css" media="all">
+  <link rel="stylesheet" id="QAPress-css" href="${Prefix}css/qapress.css" type="text/css" media="all">
+  <style id="QAPress-inline-css" type="text/css">
+    :root {
+      --qa-color: #002FA7;
+      --qa-hover: #002FA7;
+    }
+  </style>
+  <script type="text/javascript" src="${Prefix}js/jquery.min.js" id="jquery-core-js"></script>
+  <script type="text/javascript" src="${Prefix}js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+  <script type="text/javascript" src="${Prefix}js/jquery.cookie.js"></script>
+  <link rel="icon" href="${Prefix}images/favicon.png" sizes="32x32">
+  <link rel="icon" href="${Prefix}images/favicon.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="${Prefix}images/favicon.png">
+  <meta name="msapplication-TileImage" content="${Prefix}images/favicon.png">
+  <!--[if lte IE 11]><script src="${Prefix}js/update.js"></script><![endif]-->
+  <script id="editor" type="text/plain" style="height:300px;"></script>
+  <script type="text/javascript" src="${Prefix}js/UEditorPlus/ueditor.config.js"></script>
+  <script type="text/javascript" src="${Prefix}js/UEditorPlus/ueditor.all.js"></script>
+</head>
+
+<body
+  class="page-template-default page page-id-18 logged-in page-no-sidebar lang-cn el-boxed header-fixed style-by-toggle wpcom-member member-account">
+  <@cms_include file="svg.template.html"></@cms_include>
+  <!-- header -->
+  <@cms_include file="header.template.html"></@cms_include>
+
+  <div id="wrap" style="min-height: 673px;">
+    <div class="wrap container">
+      <form class="post-form" id="j-form">
+        <input type="hidden" id="contentId" name="contentId" value="${Article.contentId!''}" />
+        <div class="post-form-main">
+          <div class="pf-item row">
+            <div class="pf-item-label col-xs-24 col-sm-2"><label for="post-title">标题</label></div>
+            <div class="pf-item-input col-xs-24 col-sm-22">
+              <input type="text" class="form-control error" maxlength="200" name="title" placeholder="输入文章标题"
+                value="${Article.title!''}" autocomplete="off">
+            </div>
+          </div>
+          <div class="pf-item row">
+            <div class="pf-item-label col-xs-24 col-sm-2"><label for="post-content">摘要</label></div>
+            <div class="pf-item-input col-xs-24 col-sm-22">
+              <textarea name="summary" class="form-control" rows="3"
+                placeholder="摘要可选填">${Article.summary!''}</textarea>
+            </div>
+          </div>
+          <div class="pf-item row">
+            <div class="pf-item-label col-xs-24 col-sm-2"><label for="post-content">正文</label></div>
+            <div class="pf-item-input col-xs-24 col-sm-22">
+              <div id="wp-post-content-wrap" class="wp-core-ui wp-editor-wrap tmce-active">
+                <!-- 加载编辑器的容器 -->
+                <script id="ueditor" name="content" type="text/plain">${Article.contentHtml!''}</script>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="post-form-sidebar">
+          <div class="pf-submit-wrap">
+            <button type="button" class="btn btn-primary btn-block btn-lg contribute-submit">提交发布</button>
+          </div>
+          <div class="pf-side-item">
+            <div class="pf-side-label">
+              <h3>分类</h3>
+            </div>
+            <div class="pf-side-input">
+              <select size="6" name="catalogId" class="form-control">
+                <@cms_catalog alias="news" level="Child">
+                  <#list DataList as catalog>
+                    <option class="level-0" value="${catalog.catalogId}"
+                      ${(Article.catalogId??&&catalog.catalogId==Article.catalogId)?then('selected','')}>
+                      ${catalog.name}</option>
+                  </#list>
+                </@cms_catalog>
+              </select>
+            </div>
+          </div>
+          <div class="pf-side-item">
+            <div class="pf-side-label">
+              <h3>标签</h3>
+            </div>
+            <div class="pf-side-input">
+              <div class="tagHandler">
+                <ul id="tag-container" class="tagHandlerContainer">
+                  <#if Article.tags??>
+                    <#list Article.tags as tag>
+                      <#if (tag!'')!=''>
+                        <li class="tagItem">${tag}</li>
+                      </#if>
+                    </#list>
+                  </#if>
+                  <li class="tagInput"><input class="tagInputField" type="text"></li>
+                </ul>
+              </div>
+              <p class="pf-notice">即文章关键词，使用回车换行键确定，可选填</p>
+            </div>
+          </div>
+          <div class="pf-side-item">
+            <div class="pf-side-label">
+              <h3>缩略图</h3>
+            </div>
+            <div class="pf-side-input">
+              <div id="j-thumb-wrap" class="thumb-wrap">
+                <#if Article.logoSrc?? && (Article.logoSrc!'') !=''>
+                  <img src="${Article.logoSrc!!}" width="400" height="400">
+                  <div class="thumb-remove j-thumb-remove">×</div>
+                </#if>
+              </div>
+              <a class="thumb-selector j-thumb" href="javascript:;">设置缩略图片</a>
+              <p class="pf-notice">文章缩略图会显示在文章列表，建议设置一下缩略图</p>
+            </div>
+            <input type="hidden" name="logo" value="${Article.logo!''}">
+          </div>
+        </div>
+      </form>
+      <form id="upload_logo_form" enctype="multipart/form-data" style="display: none;">
+        <input type="file" name="file" accept=".png, .jpg, .jpeg">
+      </form>
+    </div>
+  </div>
+
+  <@cms_include file="footer.template.html"></@cms_include>
+  <@cms_include file="action.template.html"></@cms_include>
+  <@cms_include file="h5_bottom.template.html"></@cms_include>
+
+  <script type="text/javascript" id="main-js-extra">
+    /* <![CDATA[ */
+    var _xy_cms = {
+      prefix: '${Prefix}',
+      resource_prefix: '${ResourcePrefix}',
+      api_prefix: '${ApiPrefix}',
+      front_prefix: '${IsPreview?then(ApiPrefix, Prefix)}',
+      site_id: '${Site.siteId}',
+      publish_pipe: '${PublishPipeCode}',
+      preview: '${IsPreview?string}' == 'true'
+    }
+    var _wpcom_js = { "webp": "", "slide_speed": "5000", "is_admin": "0", "js_lang": { "copy_done": "\u590d\u5236\u6210\u529f\uff01", "copy_fail": "\u6d4f\u89c8\u5668\u6682\u4e0d\u652f\u6301\u62f7\u8d1d\u529f\u80fd", "confirm": "\u786e\u5b9a", "qrcode": "\u4e8c\u7ef4\u7801", "page_loaded": "\u5df2\u7ecf\u5230\u5e95\u4e86", "no_content": "\u6682\u65e0\u5185\u5bb9", "load_failed": "\u52a0\u8f7d\u5931\u8d25\uff0c\u8bf7\u7a0d\u540e\u518d\u8bd5\uff01", "expand_more": "\u9605\u8bfb\u5269\u4f59 %s" }, "lightbox": "1", "post_id": "18", "user_card_height": "356", "poster": { "notice": "\u8bf7\u957f\u6309\u4fdd\u5b58\u56fe\u7247\uff0c\u5c06\u5185\u5bb9\u5206\u4eab\u7ed9\u66f4\u591a\u597d\u53cb", "generating": "\u6b63\u5728\u751f\u6210\u6d77\u62a5\u56fe\u7247...", "failed": "\u6d77\u62a5\u56fe\u7247\u751f\u6210\u5931\u8d25" }, "video_height": "482", "fixed_sidebar": "1", "dark_style": "0", "font_url": "..\/css\/fonts.9b34824582affe8e.css", "follow_btn": "<i class=\"wpcom-icon wi\"><svg aria-hidden=\"true\"><use xlink:href=\"#wi-add\"><\/use><\/svg><\/i>\u5173\u6ce8", "followed_btn": "\u5df2\u5173\u6ce8", "user_card": "1" };
+/* ]]> */
+  </script>
+  <script type="text/javascript" src="${Prefix}js/main.js" id="main-js"></script>
+  <script type="text/javascript" src="${Prefix}js/icons-2.7.7.js" id="wpcom-icons-js"></script>
+
+  <script>
+    (function ($) {
+
+      var UE_HOME = "${Prefix}js/UEditorPlus/"
+      var ue = UE.getEditor('ueditor', {
+        UEDITOR_HOME_URL: UE_HOME,
+        serverUrl: undefined,
+        catchRemoteImageEnable: false,
+        maximumWords: 10000,
+        initialFrameHeight: 500,
+        autoSaveEnable: false,
+        enableDragUpload: false,
+        enablePasteUpload: false,
+        // imagePopup: false, // 关闭默认图片选择快捷工具栏
+        pageBreakTag: '__XY_UEDITOR_PAGE_BREAK__',
+        lang: (navigator.language || navigator.browserLanguage || navigator.userLanguage || 'zh-cn').toLowerCase(),
+        langPath: UE_HOME + "lang/",
+        imageActionName: "_",
+        imageAllowFiles: [".jpg", ".jpeg", ".png", ".gif"],
+        imageMaxSize: 1024 * 1024,
+        imageUrlPrefix: _xy_cms.resource_prefix,
+        imageUrl: _xy_cms.prefix + "api/account/contribute/upload_image?sid=" + _xy_cms.site_id,
+        imageFieldName: "file",
+        serverHeaders: {
+          "Authorization-M": "Bearer " + $.cookie("Authorization-M")
+        },
+        toolbars: [
+          [
+            "fullscreen",   // 全屏
+            "paragraph",           // 段落格式
+            "bold",         // 加粗
+            "italic",       // 斜体
+            "underline",    // 下划线
+            "strikethrough",// 删除线
+            "blockquote",   // 引用
+            "pasteplain",   // 纯文本粘贴模式
+            "|",
+            "forecolor",    // 字体颜色
+            "backcolor",    // 背景色
+            "insertorderedlist",   // 有序列表
+            "insertunorderedlist", // 无序列表
+            "indent",              // 首行缩进
+            "|",
+            "justifyleft",         // 居左对齐
+            "justifycenter",       // 居中对齐
+            "justifyright",
+            "justifyjustify",      // 两端对齐
+            "|",
+            "link",                // 超链接
+            "unlink",              // 取消链接
+            "simpleupload",        // 单图上传
+            "|",
+            "removeformat", // 清除格式
+            "formatmatch",  // 格式刷
+            "autotypeset",  // 自动排版
+            "|",
+            "imagenone",           // 图片默认
+            "imageleft",           // 图片左浮动
+            "imageright",          // 图片右浮动
+            "imagecenter",         // 图片居中
+          ],
+        ]
+      });
+      ue.on
+      $(document)
+        .on("keyup", "input.tagInputField", (function (e) {
+          if (e.keyCode == 13) {
+            $(this).parent().before('<li class="tagItem">' + $(this).val() + '</li>')
+            $(this).val("")
+          }
+        }))
+        .on("click", "#tag-container .tagItem", (function (e) {
+          $(this).remove();
+        }))
+        .on('click', '.j-thumb-remove', (function () {
+          $('#j-thumb-wrap').html('');
+          $('#_thumbnail_id').val('');
+        }))
+        .on('click', '.j-thumb-remove', (function () {
+          $('#j-thumb-wrap').html('');
+          $('#_thumbnail_id').val('');
+        }))
+        .on('click', '.j-thumb', (function () {
+          $('#upload_logo_form input[name="file"]').val("")
+          $('#upload_logo_form input[name="file"]').click();
+        }))
+        .on('change', '#upload_logo_form input[name="file"]', (function () {
+          if (this.files.length > 0) {
+            $('.j-thumb').loading(1);
+            var formData = new FormData(document.getElementById("upload_logo_form"));
+            $.ajax({
+              url: _xy_cms.api_prefix + "api/account/contribute/upload_image?sid=${Site.siteId}", // 你的上传URL  
+              type: 'POST',
+              headers: {
+                "Authorization-M": "Bearer " + $.cookie("Authorization-M")
+              },
+              data: formData,
+              processData: false,  // 告诉jQuery不要去处理发送的数据  
+              contentType: false,  // 告诉jQuery不要去设置Content-Type请求头  
+              success: function (res) {
+                $('.j-thumb').loading(0);
+                if (res.code == 200) {
+                  $('#j-thumb-wrap').html('<img src="' + _xy_cms.resource_prefix + res.data.url + '" width="400" height="400"><div class="thumb-remove j-thumb-remove">×</div>');
+                  $('#j-form input[name="logo"]').val(res.data.iurl);
+                }
+              },
+              error: function (jqXHR, textStatus, errorThrown) {
+                $('.j-thumb').loading(0);
+                // 处理错误  
+              }
+            });
+          }
+        }))
+        .on("click", ".contribute-submit", (function () {
+          var catalogId = $("#j-form select[name='catalogId']").val();
+          if (!catalogId || catalogId.length == 0) {
+            wpcom_notice({ message: "请先选择一个分类", type: "warning", show: 1500 })
+            return;
+          }
+          var title = $("#j-form input[name='title']").val();
+          if (!title || title.length == 0) {
+            wpcom_notice({ message: "标题不能为空", type: "warning", show: 1500 })
+            return;
+          }
+          var content = ue.getContent();
+          if (!content || content.length == 0) {
+            wpcom_notice({ message: "正文内容不能为空", type: "warning", show: 1500 })
+            return;
+          }
+          $('.contribute-submit').loading(1)
+          var tags = $('#tag-container .tagItem').toArray().map(item => $(item).text());
+          $.ajax({
+            type: "POST",
+            url: _xy_cms.api_prefix + "api/account/contribute",
+            headers: {
+              "Authorization-M": "Bearer " + $.cookie('Authorization-M')
+            },
+            contentType: "application/json;charset=UTF-8",
+            data: JSON.stringify({
+              contentId: $("#j-form input[name='contentId']").val(),
+              catalogId: catalogId,
+              title: title,
+              contentHtml: content,
+              summary: $("#j-form textarea[name='summary']").val(),
+              logo: $("#j-form input[name='logo']").val(),
+              tags: tags
+            }),
+            dataType: 'json',
+            success: function (res) {
+              $('.contribute-submit').loading(0)
+              if (res.code == 200) {
+                wpcom_notice({ message: "保存成功", type: "success", show: 1500 })
+                window.location.reload();
+              } else {
+                wpcom_notice({ message: res.msg, type: "error", show: 1500 })
+              }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+              $('.contribute-submit').loading(0)
+              // 处理错误  
+            }
+          })
+
+        }))
+    })(jQuery)
+  </script>
+
+  <@cms_pagewidget code="ad_top"></@cms_pagewidget>
+  <@cms_include file="stat.template.html"></@cms_include>
+  <@cms_include file="block_user_login.template.html"></@cms_include>
+
+  <script>jQuery(function ($) { setup_share(1); });</script>
+
+</body>
+
+</html>

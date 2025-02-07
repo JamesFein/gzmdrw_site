@@ -1,0 +1,33 @@
+<form id="form_contactus">
+  <input type="hidden" id="formId" value="${CustomForm.formId}" />
+  <table>
+      <@cms_xmodel_field modelid="${CustomForm.modelId}">
+      <#list DataList as field>
+        <#if field.controlType == 'input'>
+        <tr>
+          <td style="padding:5px;text-align:right;width:70px">${field.name}</td>
+          <td style="padding:5px;"><input type="text" class="form-control" id="${field.code}" /></td>
+        </tr>
+        </#if>
+      </#list>
+    </@cms_xmodel_field>
+    <tr>
+      <td></td>
+      <td style="text-align:right;padding:5px;"><input type="button" class="form-control" value="提交" onclick="submitCustomForm()" style="color:#666;width:auto;"> </td>
+    </tr>
+  </table>
+</form>
+<script>
+  function submitCustomForm() {
+   $.ajax({
+    url: "${CustomForm.action}",
+     type: "post",
+     contentType: "application/json; charset=utf-8",
+     dataType: "json",
+     data: JSON.stringify({"formId": $('#formId').val(), "uname": $('#uname').val(), "phone": $('#phone').val(), "email": $('#email').val(), "company": $('#company').val()}),
+     success: function(res) {
+        alert(res.msg)
+     }
+   }) 
+  }
+</script>

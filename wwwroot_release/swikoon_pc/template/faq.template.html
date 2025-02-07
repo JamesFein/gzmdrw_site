@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Developed By M Abdur Rokib Promy">
+    <meta name="author" content="cosmic">
+    <meta name="keywords" content="Bootstrap 3, Template, Theme, Responsive, Corporate, Business">
+    <link rel="shortcut icon" href="${Prefix}img/favicon.png">
+    <title>${Catalog.name}_${Site.name}</title>
+    <!-- Bootstrap core CSS -->
+    <link href="${Prefix}css/bootstrap.min.css" rel="stylesheet">
+    <link href="${Prefix}css/theme.css" rel="stylesheet">
+    <link href="${Prefix}css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="${Prefix}assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="${Prefix}css/flexslider.css"/>
+    <link href="${Prefix}assets/bxslider/jquery.bxslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="${Prefix}css/animate.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="${Prefix}css/style.css" rel="stylesheet">
+    <link href="${Prefix}css/style-responsive.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+      <script src="${Prefix}js/html5shiv.js"></script>
+      <script src="${Prefix}js/respond.min.js"></script>
+    <![endif]-->
+<script>window._xy_cms = { catalog_id: '${Catalog.catalogId}' };</script>
+  </head>
+
+  <body>
+    <!--header start-->
+    <@cms_include file="header.template.html"></@cms_include>
+    <!--header end-->
+
+    <!--breadcrumbs start-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-4">
+                    <h1>${Catalog.name}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--breadcrumbs end-->
+
+    <!--container start-->
+
+        <section id="faq">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 mar-b-30">
+
+                <div id="heading">
+                  <h1 class="wow flipInX">F.A.Q.</h1>
+                </div>
+
+                    <div class="panel-group wow fadeInUp" id="accordion" data-wow-duration="2s">
+                    <!--////////// Accordion Toggle //////////-->
+						<@cms_content catalogid="${Catalog.catalogId}" level="CurrentAndChild" page="false" size="100">
+                        <!-- PANEL 1 -->
+                        <#list DataList as content>
+                        <div class="panel panel-default">
+                            <div class="panel-heading panel-heading-faq">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne-${content.contentId}">
+                                    ${content.title}
+                                    </a>
+                                </h4>
+                            </div>
+
+                            <div id="collapseOne-${content.contentId}" class="panel-collapse collapse">
+                                <div class="panel-body panel-faq">
+                                  <@cms_article contentId="${content.contentId}">
+                                    <p>${clearHtmlTag(ArticleContent)}</p>
+                                  </@cms_article>
+                                </div>
+                            </div>
+                        </div>
+                        </#list>
+                        </@cms_content>
+                    </div>
+                </div><!-- /col-md-10 -->
+            </div>
+        </div>
+    </section>
+    <!--container end-->
+
+     <!--footer start-->
+     <@cms_include file="footer.template.html"></@cms_include>
+     <!--small footer end-->
+
+  <!-- js placed at the end of the document so the pages load faster -->
+    <script src="${Prefix}js/jquery-1.8.3.min.js"></script>
+    <script src="${Prefix}js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="${Prefix}js/hover-dropdown.js"></script>
+    <script defer src="${Prefix}js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="${Prefix}assets/bxslider/jquery.bxslider.js"></script>
+
+    <script type="text/javascript" src="${Prefix}js/jquery.parallax-1.1.3.js"></script>
+    <script src="${Prefix}js/wow.min.js"></script>
+    <script src="${Prefix}assets/owlcarousel/owl.carousel.js"></script>
+
+    <script src="${Prefix}js/jquery.easing.min.js"></script>
+    <script src="${Prefix}js/link-hover.js"></script>
+
+    <script src="${Prefix}assets/fancybox/source/jquery.fancybox.pack.js"></script>
+
+    <!--common script for all pages-->
+    <script src="${Prefix}js/common-scripts.js"></script>
+
+    <script src="${Prefix}js/revulation-slide.js"></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+
+
+            $('.bxslider1').bxSlider({
+                minSlides: 5,
+                maxSlides: 6,
+                slideWidth: 360,
+                slideMargin: 2,
+                moveSlides: 1,
+                responsive: true,
+                nextSelector: '#slider-next',
+                prevSelector: '#slider-prev',
+                nextText: 'Onward →',
+                prevText: '← Go back'
+            });
+        });
+
+
+    </script>
+  <script>
+
+      $(window).load(function() {
+          $('.flexslider').flexslider({
+              animation: "slide",
+              start: function(slider) {
+                  $('body').removeClass('loading');
+              }
+          });
+      });
+
+      wow = new WOW(
+          {
+            boxClass:     'wow',      // default
+            animateClass: 'animated', // default
+            offset:       0          // default
+          }
+        )
+        wow.init();
+    </script>
+
+  </body>
+</html>

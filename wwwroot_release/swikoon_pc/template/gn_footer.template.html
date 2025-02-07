@@ -1,0 +1,85 @@
+<!-- 使用 Bootstrap 5 的页脚组件 -->
+<!-- mt-auto 类确保页脚始终在页面底部 -->
+<footer class="footer mt-auto py-3 bg-light">
+  <div class="container">
+    <!-- 使用 Bootstrap 5 的栅格系统 -->
+    <div class="row justify-content-center">
+      <div class="col-12 text-center">
+        <!-- 版权信息部分 -->
+        <div class="copyright small">
+          <!-- 使用 mb-2 替代旧版本的行间距 -->
+          <p class="mb-2 text-muted">
+            Developed by Mainlab Bioinformatics at Washington State University |
+          </p>
+          <p class="mb-2 text-muted">
+            Funded by a partnership of USDA, NSF, Industry and US Land Grant
+            Universities
+          </p>
+          <!-- 使用 Bootstrap 的文本样式和链接样式 -->
+          <p class="mb-0 text-muted">
+            Copyright © 2010-2024
+            <!-- 使用 Bootstrap 的链接样式 -->
+            <a href="#" class="text-decoration-none">contact us</a> |
+            <a href="#" class="text-decoration-none">report a problem</a> |
+            <a href="#" class="text-decoration-none">make a suggestion</a> |
+            <a href="#" class="text-decoration-none">follow us</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- 访问统计脚本 -->
+<script type="text/javascript">
+  (function () {
+    // 创建查询参数数组
+    const queryParams = [];
+
+    // 添加主机名
+    queryParams.push("h=" + window.location.host);
+
+    // 添加页面路径
+    queryParams.push(
+      "p=" +
+        window.location.href.substring(
+          window.location.href.indexOf(window.location.pathname)
+        )
+    );
+
+    // 添加站点ID
+    queryParams.push("sid=${Site.siteId}");
+
+    // 如果存在目录ID，则添加
+    if (window._xy_cms?.catalog_id?.length > 0) {
+      queryParams.push("cid=" + _xy_cms.catalog_id);
+    }
+
+    // 如果存在内容ID，则添加
+    if (window._xy_cms?.content_id?.length > 0) {
+      queryParams.push("id=" + _xy_cms.content_id);
+    }
+
+    // 创建并添加统计脚本
+    const scriptElement = document.createElement("script");
+    scriptElement.src = "${ApiPrefix}api/stat/visit?" + queryParams.join("&");
+
+    // 将脚本添加到文档中
+    (
+      document.getElementsByTagName("head")[0] ||
+      document.getElementsByTagName("body")[0]
+    ).appendChild(scriptElement);
+  })();
+</script>
+
+<!-- 百度统计脚本 -->
+<script>
+  var _hmt = _hmt || [];
+  (function () {
+    const baiduScript = document.createElement("script");
+    baiduScript.src =
+      "https://hm.baidu.com/hm.js?2f8f2746e4f850962153e8bce014ffbb";
+    const firstScript = document.getElementsByTagName("script")[0];
+    firstScript.parentNode.insertBefore(baiduScript, firstScript);
+  })();
+</script>

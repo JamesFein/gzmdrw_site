@@ -1,0 +1,151 @@
+<!-- 页面头部区域 -->
+<header class="head-section">
+  <!-- 导航栏容器 -->
+  <div class="navbar navbar-default navbar-static-top container">
+    <!-- 移动端折叠按钮和Logo -->
+    <div class="navbar-header">
+      <!-- 移动端的折叠按钮 -->
+      <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- 网站Logo -->
+      <a class="navbar-brand" href="${Site.link}"><span>基因控</span></a>
+    </div>
+
+    <!-- 导航菜单区域 -->
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <!-- 首页链接 -->
+        <li>
+          <a href="${Site.link}">首页</a>
+        </li>
+
+        <!-- 新闻栏目及其子栏目 -->
+        <@cms_catalog alias="news" level="Self">
+          <#list DataList as pcatalog>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover="dropdown"
+                data-toggle="dropdown" href="${pcatalog.link}">${pcatalog.name} <i class="fa fa-angle-down"></i>
+              </a>
+              <!-- 新闻子栏目下拉菜单 -->
+              <ul class="dropdown-menu">
+                <@cms_catalog id="${pcatalog.catalogId}" level="Child">
+                  <#list DataList as catalog>
+                    <li>
+                      <a href="${catalog.link}">${catalog.name}</a>
+                    </li>
+                  </#list>
+                </@cms_catalog>
+              </ul>
+            </li>
+          </#list>
+        </@cms_catalog>
+
+        <!-- 产品栏目 -->
+        <@cms_catalog alias="product" level="Self">
+          <#list DataList as catalog>
+            <li>
+              <a href="${catalog.link}">${catalog.name}</a>
+            </li>
+          </#list>
+        </@cms_catalog>
+
+        <!-- 案例栏目 -->
+        <@cms_catalog alias="case" level="Self">
+          <#list DataList as catalog>
+            <li>
+              <a href="${catalog.link}">${catalog.name}</a>
+            </li>
+          </#list>
+        </@cms_catalog>
+
+        <!-- 支持栏目(含下载子栏目) -->
+        <li class="dropdown">
+          <@cms_catalog alias="support" level="Self">
+            <#list DataList as catalog>
+              <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover="dropdown"
+                data-toggle="dropdown" href="${catalog.link}">${catalog.name} <i class="fa fa-angle-down"></i>
+              </a>
+            </#list>
+          </@cms_catalog>
+          <!-- 下载子栏目的多级下拉菜单 -->
+          <ul class="dropdown-menu">
+            <@cms_catalog alias="download" level="Self">
+              <#list DataList as pcatalog>
+                <li class="dropdown-submenu">
+                  <a href="${pcatalog.link}" tabindex="-1">${pcatalog.name}</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-submenu"></li>
+                    <!-- 遍历下载栏目的子栏目 -->
+                    <@cms_catalog id="${pcatalog.catalogId}" level="Child">
+                      <#list DataList as catalog>
+                        <li>
+                          <a href="${catalog.link}">${catalog.name}</a>
+                        </li>
+                      </#list>
+                    </@cms_catalog>
+                  </ul>
+                </li>
+              </#list>
+            </@cms_catalog>
+          </ul>
+        </li>
+
+        <!-- 教程栏目 -->
+        <@cms_catalog alias="tutorial" level="Self">
+          <#list DataList as catalog>
+            <li>
+              <a href="${catalog.link}">${catalog.name}</a>
+            </li>
+          </#list>
+        </@cms_catalog>
+
+        <!-- 公司栏目及其子栏目 -->
+        <@cms_catalog alias="company" level="Self">
+          <#list DataList as pcatalog>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover="dropdown"
+                data-toggle="dropdown" href="#">${pcatalog.name} <i class="fa fa-angle-down"></i>
+              </a>
+              <!-- 公司子栏目下拉菜单 -->
+              <ul class="dropdown-menu">
+                <@cms_catalog id="${pcatalog.catalogId}" level="Child">
+                  <#list DataList as catalog>
+                    <li>
+                      <a href="${catalog.link}">${catalog.name}</a>
+                    </li>
+                  </#list>
+                </@cms_catalog>
+              </ul>
+            </li>
+          </#list>
+        </@cms_catalog>
+
+        <!-- 搜索框 -->
+        <li><input class="form-control search" placeholder=" Search" id="header_search" type="text"></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<!-- 搜索功能脚本 -->
+<script>
+  window.onload = function() {  
+    // 监听搜索框回车事件
+    document.getElementById('header_search').addEventListener('keyup', function(event) {  
+      if (event.key === 'Enter') {
+        // 构建搜索链接
+        var link = "${IsPreview?then(ApiPrefix, Prefix)}${dynamicPageLink('Search',false)}";
+        if (link.indexOf('?') > -1) {
+          link += "&q=" + $('#header_search').val();
+        } else {
+          link += "?q=" + $('#header_search').val();
+        }
+        // 跳转到搜索结果页
+        window.location.href = link;
+      }  
+    }); 
+  };
+</script>

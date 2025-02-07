@@ -1,0 +1,68 @@
+<div class="widget widget_post_hot">
+  <h3 class="widget-title">研究热榜</h3>
+  <ul>
+              <li class="item">
+            <div class="item-img item-img-empty">
+            </div>
+            <div class="item-content">
+              <div class="item-hot"><i class="wpcom-icon wi"><svg aria-hidden="true">
+                    <use xlink:href="#wi-huo"></use>
+                  </svg></i>51.8K</div>
+              <p class="item-title"><a href="https://gzmdrw.cn/zhongyaolunshu/" title="Let me try">Let me try</a>
+              </p>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item-content item-no-thumb">
+              <p class="item-title"><a href="/vipbox/think/441455600029765.shtml" title="报告｜北京市互联网3.0创新发展白皮书（2023年）">报告｜北京市互联网3.0创新发展白皮书（2023年）</a></p>
+              <div class="item-hot">
+                <i class="wpcom-icon wi">
+                  <svg aria-hidden="true">
+                    <use xlink:href="#wi-huo"></use>
+                  </svg>
+                </i>
+                32.5K
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item-content item-no-thumb">
+              <p class="item-title"><a href="/vipbox/think/441455394152517.shtml" title="报告｜清华大学《AIGC发展研究报告1.0》">报告｜清华大学《AIGC发展研究报告1.0》</a></p>
+              <div class="item-hot">
+                <i class="wpcom-icon wi">
+                  <svg aria-hidden="true">
+                    <use xlink:href="#wi-huo"></use>
+                  </svg>
+                </i>
+                32.5K
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item-content item-no-thumb">
+              <p class="item-title"><a href="/vipbox/daosearch/441455009255493.shtml" title="研报｜跨链DeFi借贷协议Radiant Capital">研报｜跨链DeFi借贷协议Radiant Capital</a></p>
+              <div class="item-hot">
+                <i class="wpcom-icon wi">
+                  <svg aria-hidden="true">
+                    <use xlink:href="#wi-huo"></use>
+                  </svg>
+                </i>
+                32.5K
+              </div>
+            </div>
+          </li>
+          <li class="item">
+            <div class="item-content item-no-thumb">
+              <p class="item-title"><a href="/vipbox/daosearch/441454841741381.shtml" title="研报｜RWA代币化：下一个加密财富密码？">研报｜RWA代币化：下一个加密财富密码？</a></p>
+              <div class="item-hot">
+                <i class="wpcom-icon wi">
+                  <svg aria-hidden="true">
+                    <use xlink:href="#wi-huo"></use>
+                  </svg>
+                </i>
+                32.5K
+              </div>
+            </div>
+          </li>
+  </ul>
+</div>

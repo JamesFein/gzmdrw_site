@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="shortcut icon" href="http://swikoon.1000mz.com/img/favicon.png" />
+
+    <title>测试3_思威控</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://swikoon.1000mz.com/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://swikoon.1000mz.com/css/theme.css" rel="stylesheet">
+    <link href="http://swikoon.1000mz.com/css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="http://swikoon.1000mz.com/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://swikoon.1000mz.com/css/flexslider.css"/>
+    <link href="http://swikoon.1000mz.com/assets/bxslider/jquery.bxslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://swikoon.1000mz.com/css/animate.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="http://swikoon.1000mz.com/css/style.css" rel="stylesheet">
+    <link href="http://swikoon.1000mz.com/css/style-responsive.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+	<script src="http://swikoon.1000mz.com/js/html5shiv.js"></script>
+	<script src="http://swikoon.1000mz.com/js/respond.min.js"></script>
+	<![endif]-->
+  <style>
+  .pagebar { height: 50px; }
+  .pagebar a { border: 1px solid #48cfad; padding: 3px 8px; margin: 0 2px; }
+  .pagebar a.current { background-color: #48cfad; color: #fff; }
+  </style>
+  </head>
+
+  <body>
+    <!--header start-->
+<!--#include file="/include/header.shtml" -->
+    <!--header end-->
+
+    <!--breadcrumbs start-->
+  <div class="breadcrumbs">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-4">
+          <h1>测试3</h1>
+        </div>
+        <div class="col-lg-8 col-sm-8" style="text-align:right;padding-top: 5px;">
+          <a class="position" href="http://swikoon.1000mz.com/">首页</a>
+                 > <a class="position" href="http://swikoon.1000mz.com/test3/">测试3</a>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--breadcrumbs end-->
+
+    <!--container start-->
+    <div class="container">
+      <div class="row">
+        <!--blog start-->
+        <div class="col-lg-9 ">
+        </div>
+
+        <div class="col-lg-3">
+<!--#include file="/include/rightblock.shtml" -->
+        </div>
+
+        <!--blog end-->
+      </div>
+
+    </div>
+    <!--container end-->
+
+    <!--footer start-->
+<!--#include file="/include/footer.shtml" -->
+    <!--small footer end-->
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="http://swikoon.1000mz.com/js/jquery.js">
+    </script>
+    <script src="http://swikoon.1000mz.com/js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript" src="http://swikoon.1000mz.com/js/hover-dropdown.js">
+    </script>
+    <script defer src="http://swikoon.1000mz.com/js/jquery.flexslider.js">
+    </script>
+    <script type="text/javascript" src="http://swikoon.1000mz.com/assets/bxslider/jquery.bxslider.js">
+    </script>
+
+    <script src="http://swikoon.1000mz.com/js/jquery.easing.min.js">
+    </script>
+    <script src="http://swikoon.1000mz.com/js/link-hover.js">
+    </script>
+
+
+    <!--common script for all pages-->
+    <script src="http://swikoon.1000mz.com/js/common-scripts.js">
+    </script>
+
+
+    <script src="http://swikoon.1000mz.com/js/wow.min.js">
+    </script>
+    <script>
+      wow = new WOW(
+        {
+          boxClass:     'wow',      // default
+          animateClass: 'animated', // default
+          offset:       0          // default
+        }
+      )
+        wow.init();
+    </script>
+  </body>
+</html>
