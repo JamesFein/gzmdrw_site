@@ -1,0 +1,16 @@
+# 自动检测文本文件并进行标准化
+* text=auto
+
+# 强制这些文件始终使用 LF
+*.html text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+
+# 二进制文件
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.pdf binary 

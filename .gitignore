@@ -8,4 +8,9 @@ Thumbs.db
 
 # 临时文件
 *.log
-*.tmp 
+*.tmp
+
+# 编辑器临时文件
+*~
+*.swp
+*.swo 
