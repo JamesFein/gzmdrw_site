@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    />
+
+    <!-- 添加 Montserrat 字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- 添加Font Awesome图标CSS -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <title>新闻中心_活动预告｜联合国糖尿病日——糖尿病与幸福感</title>
+    <style>
+        .list-group {
+            border: none;
+            border-radius: unset;
+        }
+
+        /* 左侧栏标题样式 */
+        .title-with-line {
+            position: relative;
+            padding-left: 20px;
+            background-color: transparent !important;
+            border: none;
+            font-weight: bold;
+            color: #333;
+            bottom: 1rem;
+        }
+
+        .title-with-line::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 25%;
+            width: 4px;
+            height: 50%;
+            background-color: #AD1E23;
+        }
+
+        /* 子栏目样式 */
+        .list-group-item {
+            border: none;
+            padding: 15px 20px;
+            background-color: #f5f5f5;
+            margin-bottom: 10px;
+            border-radius: unset;
+            transition: all 0.3s ease;
+        }
+
+        .list-group-item-action {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .list-group-item-action:hover,
+        .list-group-item-action.active {
+            background-color: #AD1E23;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .list-group-item-action.active:hover {
+            background-color: #92191d;
+        }
+
+        /* 分页控件样式 */
+        .pagination {
+            margin-bottom: 0;
+        }
+        
+        .pagination .page-link {
+            color: #333;
+            padding: 8px 16px;
+            border: 1px solid #dee2e6;
+            margin: 0 2px;
+        }
+
+        
+
+        .pagination .page-link:hover {
+            color: #AD1E23;
+            background-color: #f8f9fa;
+            border-color: #dee2e6;
+        }
+
+        .page-item {
+            margin-left: 5px;
+        }
+
+        .pagination .page-item.active .page-link {
+            background-color: #AD1E23;
+            border-color: #AD1E23;
+            color: #fff;
+        }
+
+        .pagination .page-item.active .page-link:hover {
+            background-color: #92191d;
+        }
+
+        .pagination-info {
+            color: #666;
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<!--#include file="/include/common/home_nav.shtml" -->
+
+    <!-- Banner部分 显示完整的面包屑 -->
+    <div class="banner-container position-relative">
+        <img src="/images/news_banner.jpg" alt="通知公告" class="w-100" style="height: 400px; object-fit: cover;">
+        <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+            <h1 class="display-4 fw-bold" style="font-family: 'Montserrat', sans-serif;">通知公告</h1>
+            <p class="lead">
+                <a href="/" class="text-white text-decoration-none">首页</a>
+                    <span class="text-white"> / </span>
+                            <a href="/xwzx/" class="text-white text-decoration-none">新闻中心</a>
+                    <span class="text-white"> / </span>
+                            <a href="/xwzx/tzgg/" class="text-white text-decoration-none">通知公告</a>
+            </p>
+        </div>
+    </div>
+   
+    <!-- 文章内容 start -->
+    <div class="container my-5" style="max-width: 1200px;">
+        <div class="row">
+            <!-- 左侧导航栏 -->
+            <div class="col-md-3">
+                <div class="list-group">
+                    <div class="list-group-item title-with-line">
+                        <p class="mb-0">通知公告</p>
+                    </div>
+                            <a href="/xwzx/rwyw/" class="list-group-item list-group-item-action ">人文要闻</a>
+                            <a href="/xwzx/xwzx/" class="list-group-item list-group-item-action ">新闻中心</a>
+                            <a href="/xwzx/tzgg/" class="list-group-item list-group-item-action active">通知公告</a>
+                </div>
+            </div>
+
+            <!-- 右侧文章列表 start 放在任何栏目下都可以-->
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-12 mb-4">
+                        <div class="card" style="border: none; border-radius: 0;">
+                            <div class="row g-0">
+                                <!-- 内容部分 -->
+                                <div class="col-md-12">
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-3">
+                                            <a href="/xwzx/tzgg/641756213899333.shtml" class="text-decoration-none text-dark fw-bold">
+                                                活动预告｜联合国糖尿病日——糖尿病与幸福感
+                                            </a>
+                                        </h5>
+                                        <p class="card-text text-muted mb-3"></p>
+                                        <div class="d-flex align-items-center text-muted small">
+                                            <i class="fas fa-user me-2"></i>
+                                            <span class="me-3">小编</span>
+                                            <i class="far fa-calendar me-2"></i>
+                                            <span class="me-3">2025-02-06</span>
+                                            <i class="fas fa-eye me-2"></i>
+                                            <span>0</span>
+                                        </div>
+                                        <!-- 文章内容 start -->
+                                        <div class="mt-5">
+                                                <p><br/></p><section style="-webkit-tap-highlight-color: transparent; margin: 10px 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; color: rgb(62, 62, 62); font-family: &quot;PingFang SC&quot;, system-ui, -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 16px; letter-spacing: 0.544px; text-wrap-mode: wrap; background-color: rgb(255, 255, 255); text-align: center; justify-content: center; display: flex; flex-flow: row; visibility: visible; overflow-wrap: break-word !important;"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px 12px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; display: inline-block; vertical-align: middle; width: auto; align-self: center; flex: 100 100 0%; height: auto; visibility: visible;"><section style="-webkit-tap-highlight-color: transparent; margin: 0px 0px 10px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; text-align: left; justify-content: flex-start; display: flex; flex-flow: row; visibility: visible;"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 20px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; display: inline-block; width: 633px; vertical-align: top; align-self: flex-start; flex: 0 0 auto; background-color: rgb(239, 244, 248); visibility: visible;"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px 2px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; text-align: justify; font-size: 15px; line-height: 2; letter-spacing: 2px; visibility: visible;"><p style="-webkit-tap-highlight-color: transparent; margin-top: 0px; margin-bottom: 2px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; text-align: center; text-indent: 0em; visibility: visible; overflow-wrap: break-word !important;"><strong style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; visibility: visible;">2024年11月14日是</strong></p><p style="-webkit-tap-highlight-color: transparent; margin-top: 0px; margin-bottom: 2px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; text-align: center; text-indent: 0em; visibility: visible; overflow-wrap: break-word !important;"><strong style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; visibility: visible;">第18个联合国糖尿病日</strong></p><p style="-webkit-tap-highlight-color: transparent; margin-top: 0px; margin-bottom: 2px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; text-align: center; text-indent: 0em; visibility: visible; overflow-wrap: break-word !important;"><strong style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; visibility: visible;">也称为“世界糖尿病日”</strong></p><p style="-webkit-tap-highlight-color: transparent; margin-top: 0px; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; text-indent: 2.2667em; visibility: visible; overflow-wrap: break-word !important;">为迎接“世界糖尿病日”的来临，我校后勤处将针对校园内患糖尿病的师生群体，提供无偿的药物援助服务。具体安排如下：</p></section><section style="-webkit-tap-highlight-color: transparent; margin: 10px 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; text-align: center; justify-content: center; display: flex; flex-flow: row; visibility: visible;"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; display: inline-block; vertical-align: middle; width: auto; align-self: center; flex: 0 0 0%; height: auto; line-height: 0; visibility: visible;"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; text-align: right; line-height: 0; visibility: visible;"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; vertical-align: middle; display: inline-block; line-height: 0; width: 7px; height: auto; visibility: visible;"><img data-ratio="6" data-s="300,640" data-w="300" data-src="/resources/image/2025/02/08/642583252189253.png" width="100%" data-original-style="vertical-align: middle;max-width: 100%;width: 100%;box-sizing: border-box;" data-index="2" src="http://localhost/dev-api/preview/sitex/resources/image/2025/02/08/642583252189253.png" class="" _width="100%" crossorigin="anonymous" alt="Image" data-fail="0" style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; box-sizing: border-box; vertical-align: middle; overflow-wrap: break-word !important; height: auto !important; width: 7px !important; visibility: visible !important;" /></section></section></section><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 7px 20px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; display: inline-block; vertical-align: middle; width: auto; align-self: center; flex: 0 0 auto; min-width: 5%; height: auto; background-color: rgb(30, 105, 206);"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; text-align: justify; font-size: 18px; color: rgb(255, 255, 255);"><p style="-webkit-tap-highlight-color: transparent; margin-top: 0px; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; overflow-wrap: break-word !important;"><strong style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important;">时间：2024年11月15日&nbsp;&nbsp;</strong></p><p style="-webkit-tap-highlight-color: transparent; margin-top: 0px; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; text-align: center; overflow-wrap: break-word !important;"><strong style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important;">12:00-15:00</strong></p><p style="-webkit-tap-highlight-color: transparent; margin-top: 0px; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; overflow-wrap: break-word !important;"><strong style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important;">地点：大学城校区中心广场</strong></p></section></section><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; display: inline-block; vertical-align: middle; width: auto; flex: 0 0 0%; height: auto; line-height: 0; align-self: center;"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; transform: perspective(0px); transform-style: flat;"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; text-align: right; line-height: 0; transform: rotateX(180deg) rotateY(180deg);"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; vertical-align: middle; display: inline-block; line-height: 0; width: 7px; height: auto;"><img class="rich_pages wxw-img" data-ratio="6" data-s="300,640" data-src="/resources/image/2025/02/08/642583252459589.png" data-w="300" width="100%" data-original-style="vertical-align: middle;max-width: 100%;width: 100%;box-sizing: border-box;" data-index="3" src="http://localhost/dev-api/preview/sitex/resources/image/2025/02/08/642583252459589.png" _width="100%" crossorigin="anonymous" alt="Image" data-fail="0" style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; box-sizing: border-box; vertical-align: middle; overflow-wrap: break-word !important; height: auto !important; width: 7px !important; visibility: visible !important;" /></section></section></section></section></section><section style="-webkit-tap-highlight-color: transparent; margin: 10px 0px 20px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; text-align: center; justify-content: center; display: flex; flex-flow: row;"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; display: inline-block; vertical-align: middle; width: auto; min-width: 5%; flex: 0 0 auto; height: auto; align-self: center;"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; display: flex; width: 30px; flex-flow: column;"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; z-index: 1; transform: perspective(0px); transform-style: flat;"><section style="-webkit-tap-highlight-color: transparent; margin: 10px 0px 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; text-align: right; line-height: 0; transform: rotateY(180deg);"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; vertical-align: middle; display: inline-block; line-height: 0; width: 30px; height: auto;"><img data-ratio="1.171875" data-s="300,640" data-w="640" data-src="/resources/image/2025/02/08/642583252787269.gif" width="100%" data-original-style="vertical-align: middle;max-width: 100%;width: 100%;box-sizing: border-box;" data-index="4" src="http://localhost/dev-api/preview/sitex/resources/image/2025/02/08/642583252787269.gif" class="__bg_gif" _width="100%" data-order="1" alt="Image" data-fail="0" style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; box-sizing: border-box; vertical-align: middle; overflow-wrap: break-word !important; height: auto !important; width: 30px !important; visibility: visible !important;" /></section></section></section></section></section><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px 10px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; display: inline-block; vertical-align: middle; width: auto; min-width: 5%; flex: 0 0 auto; height: auto; align-self: center;"><section style="-webkit-tap-highlight-color: transparent; margin: 10px 0px 5px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; text-align: left; justify-content: flex-start; display: flex; flex-flow: row;"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px 10px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; display: inline-block; width: 214.359px; vertical-align: top; align-self: flex-start; flex: 0 0 auto; border-top: 3px dashed rgb(209, 238, 255); border-bottom: 3px dashed rgb(209, 238, 255);"><section style="-webkit-tap-highlight-color: transparent; margin: -10px 0px -20px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; justify-content: flex-start; display: flex; flex-flow: row;"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 15px 20px 25px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; display: inline-block; width: 194.359px; vertical-align: top; align-self: flex-start; flex: 0 0 auto; border-left: 3px dashed rgb(209, 238, 255); border-right: 3px dashed rgb(209, 238, 255); height: auto;"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; text-align: justify; font-size: 18px; color: rgb(35, 141, 255);"><p style="-webkit-tap-highlight-color: transparent; margin-top: 0px; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; overflow-wrap: break-word !important;"><strong style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important;">糖尿病科普小知识</strong></p></section></section></section></section></section><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; text-align: right; justify-content: flex-end; display: flex; flex-flow: row; transform: translate3d(20px, 0px, 0px);"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; display: inline-block; width: 85.7344px; vertical-align: top; align-self: flex-start; flex: 0 0 auto; height: auto;"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important;"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; border-top: 3px dashed rgb(209, 238, 255);"><svg viewbox="0 0 1 1" style="float:left;line-height:0;width:0;vertical-align:top;"></svg></section></section></section></section></section><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; display: inline-block; vertical-align: middle; width: auto; min-width: 5%; flex: 0 0 auto; height: auto; align-self: center;"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; display: flex; width: 30px; flex-flow: column;"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; z-index: 1;"><section style="-webkit-tap-highlight-color: transparent; margin: 10px 0px 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; text-align: right; line-height: 0;"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; vertical-align: middle; display: inline-block; line-height: 0; width: 30px; height: auto;"><img class="rich_pages wxw-img __bg_gif" data-ratio="1.171875" data-s="300,640" data-src="/resources/image/2025/02/08/642583253123141.gif" data-w="640" width="100%" data-original-style="vertical-align: middle;max-width: 100%;width: 100%;box-sizing: border-box;" data-index="5" src="http://localhost/dev-api/preview/sitex/resources/image/2025/02/08/642583253123141.gif" _width="100%" data-order="2" alt="Image" data-fail="0" style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; box-sizing: border-box; vertical-align: middle; overflow-wrap: break-word !important; height: auto !important; width: 30px !important; visibility: visible !important;" /></section></section></section></section></section></section><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px 2px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; text-align: justify; font-size: 15px; line-height: 2; letter-spacing: 2px;"><p style="-webkit-tap-highlight-color: transparent; margin-top: 0px; margin-bottom: 2px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; text-indent: 2.2667em; overflow-wrap: break-word !important;"><strong style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important;">什么是糖尿病？</strong></p><p style="-webkit-tap-highlight-color: transparent; margin-top: 0px; margin-bottom: 2px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; text-indent: 2.2667em; overflow-wrap: break-word !important;">糖尿病是一种慢性、全身性、代谢性、进展性疾病，以血糖升高为特征。是由胰岛素分泌缺陷和（或）作用障碍引起的糖、脂肪、蛋白质代谢紊乱而影响正常生理活动的一种疾病。</p><p style="-webkit-tap-highlight-color: transparent; margin-top: 0px; margin-bottom: 2px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; text-indent: 2.2667em; overflow-wrap: break-word !important;"><strong style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important;">糖尿病的症状</strong></p><p style="-webkit-tap-highlight-color: transparent; margin-top: 0px; margin-bottom: 2px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; text-indent: 2.2667em; overflow-wrap: break-word !important;">三多一少：</p><p style="-webkit-tap-highlight-color: transparent; margin-top: 0px; margin-bottom: 2px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; text-indent: 2.2667em; overflow-wrap: break-word !important;">1. 多饮：患者会感到口渴，频繁饮水，以缓解体内缺水状态。</p><p style="-webkit-tap-highlight-color: transparent; margin-top: 0px; margin-bottom: 2px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; text-indent: 2.2667em; overflow-wrap: break-word !important;">2. 多尿：由于血糖水平过高，肾脏过滤负担加重，导致尿量增多。</p><p style="-webkit-tap-highlight-color: transparent; margin-top: 0px; margin-bottom: 2px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; text-indent: 2.2667em; overflow-wrap: break-word !important;">3. 多食：患者饥饿感增强，食量增加，但体重可能不增反降。</p><p style="-webkit-tap-highlight-color: transparent; margin-top: 0px; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; text-indent: 2.2667em; overflow-wrap: break-word !important;">4. 体重减少：由于体内葡萄糖不能有效利用，脂肪和肌肉分解，导致体重下降。</p></section></section></section><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; display: flex; width: 633px; flex-flow: column;"><svg viewbox="0 0 1 1" style="float:left;line-height:0;width:0;vertical-align:top;"></svg></section></section><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; display: inline-block; vertical-align: top; width: 10px; flex: 0 0 auto; height: auto; border-top: 1px solid rgb(52, 143, 204); border-bottom: 1px solid rgb(52, 143, 204); border-right: 1px solid rgb(52, 143, 204);"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; text-align: justify;"><p style="-webkit-tap-highlight-color: transparent; margin-top: 0px; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; overflow-wrap: break-word !important;"><br style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important;"/></p></section></section></section><p><br/></p><section style="-webkit-tap-highlight-color: transparent; margin: 10px 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; color: rgb(62, 62, 62); font-family: &quot;PingFang SC&quot;, system-ui, -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 16px; letter-spacing: 0.544px; text-wrap-mode: wrap; background-color: rgb(255, 255, 255); text-align: center; line-height: 0; overflow-wrap: break-word !important;"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; vertical-align: middle; display: inline-block; line-height: 0;"><img class="rich_pages wxw-img" data-ratio="0.07962962962962963" data-s="300,640" data-src="/resources/image/2025/02/08/642583253483589.png" data-w="1080" width="100%" data-original-style="vertical-align: middle;max-width: 100%;width: 100%;box-sizing: border-box;" data-index="6" src="http://localhost/dev-api/preview/sitex/resources/image/2025/02/08/642583253483589.png" _width="100%" crossorigin="anonymous" alt="Image" data-fail="0" style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; box-sizing: border-box; vertical-align: middle; overflow-wrap: break-word !important; height: auto !important; width: 677px !important; visibility: visible !important;" /></section></section><p><br/></p><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; color: rgb(62, 62, 62); font-family: &quot;PingFang SC&quot;, system-ui, -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 16px; letter-spacing: 0.544px; text-align: justify; text-wrap-mode: wrap; background-color: rgb(255, 255, 255); overflow-wrap: break-word !important;"><section style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px 15px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important; text-align: unset; font-size: 12px; line-height: 2; letter-spacing: 2px;"><p style="-webkit-tap-highlight-color: transparent; margin-top: 0px; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; text-align: center; text-wrap-style: initial; overflow-wrap: break-word !important;"><br style="-webkit-tap-highlight-color: transparent; margin: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; overflow-wrap: break-word !important;"/></p><p style="-webkit-tap-highlight-color: transparent; margin-top: 0px; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; box-sizing: border-box; clear: both; min-height: 1em; text-align: center; text-wrap-style: initial; overflow-wrap: break-word !important;">贵阳人文科技学院媒体中心</p></section></section><p><br/></p><p><br/></p>
+                                        </div>
+                                        <!-- 文章内容 end -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+                </div>
+                </div>
+               
+    <!-- 文章内容 end  -->
+
+      <!-- 页脚 -->
+<!--#include file="/include/common/home_footer.shtml" -->
+
+
+    <!-- Bootstrap 5.3.0 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

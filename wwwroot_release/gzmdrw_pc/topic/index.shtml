@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1,viewport-fit=cover">
+  <title>专题_gzmdrw</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:type" content="webpage">
+  <meta property="og:url" content="/topic/">
+  <meta property="og:site_name" content="gzmdrw">
+  <meta property="og:title" content="$Catalog.name}">
+  <meta property="og:image" content="/resources/image/2023/07/19/440907398164549.jpg">
+  <meta property="og:description" content="">
+  <link rel="canonical" href="/topic/">
+  <meta name="applicable-device" content="pc,mobile">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <link rel="shortcut icon" href="/images/favicon.png">
+  <link rel="dns-prefetch" href="/">
+  <link rel="stylesheet" id="stylesheet-css" href="/css/style.6.14.1.1689415232.css" type="text/css"
+    media="all">
+  <link rel="stylesheet" id="font-awesome-css" href="/css/font-awesome.css" type="text/css" media="all">
+  <link rel="stylesheet" id="wp-block-library-css" href="/css/style.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="classic-theme-styles-css" href="/css/classic-themes.min.css" type="text/css"
+    media="all">
+<!--#include file="/include/block_top_style.shtml" -->
+  <link rel="stylesheet" id="wpcom-member-css" href="/css/wpcom_member.css" type="text/css" media="all">
+  <link rel="stylesheet" id="wpcom-member-pro-css" href="/css/wpcom_member_pro.css" type="text/css" media="all">
+  <link rel="stylesheet" id="QAPress-css" href="/css/qapress.css" type="text/css" media="all">
+  <style id="QAPress-inline-css" type="text/css">
+    :root {
+      --qa-color: #002FA7;
+      --qa-hover: #002FA7;
+    }
+  </style>
+  <script type="text/javascript" src="/js/jquery.min.js" id="jquery-core-js"></script>
+  <script type="text/javascript" src="/js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+  <script type="text/javascript" src="/js/jquery.cookie.js"></script>
+  <link rel="icon" href="/images/favicon.png" sizes="32x32">
+  <link rel="icon" href="/images/favicon.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+  <meta name="msapplication-TileImage" content="/images/favicon.png">
+  <!--[if lte IE 11]><script src="/js/update.js"></script><![endif]-->
+</head>
+
+<body
+  class="page-template page-template-page-special page-template-page-special-php page page-id-155 logged-in lang-cn el-boxed header-fixed style-by-toggle">
+<!--#include file="/include/header.shtml" -->
+  <div id="wrap" style="min-height: 243px;">
+    <div class="wrap container">
+      <ol class="breadcrumb" vocab="https://schema.org/" typeof="BreadcrumbList">
+        <li class="home" property="itemListElement" typeof="ListItem"><a href="/" property="item"
+            typeof="WebPage"><span property="name" class="hide">gzmdrw</span>首页</a>
+          <meta property="position" content="1">
+        </li>
+        <li class="active" property="itemListElement" typeof="ListItem"><i class="wpcom-icon wi"><svg
+              aria-hidden="true">
+              <use xlink:href="#wi-arrow-right-3"></use>
+            </svg></i><a href="/topic/" property="item" typeof="WebPage"><span
+              property="name">专题</span></a>
+          <meta property="position" content="2">
+        </li>
+      </ol>
+      <div class="banner banner-2">
+        <div class="banner-inner container">
+          <h1>专题列表</h1>
+          <div class="page-description">
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="special-wrap">
+        <div class="special-list row">
+              <div class="col-md-12 col-xs-24 special-item-wrap">
+                <div class="special-item">
+                  <div class="special-item-top">
+                    <div class="special-item-thumb">
+                      <a href="/special/rwa/" target="_blank">
+                        <img class="j-lazy" src="/images/default.jpg" data-original="/resources/image/2023/08/20/452229200887877.jpg"
+                          alt="RWA">
+                      </a>
+                    </div>
+                    <div class="special-item-info">
+                      <div class="special-item-title">
+                        <h2><a href="/special/rwa/" target="_blank">RWA</a></h2>
+                        <a class="special-item-more" href="/special/rwa/">
+                          进入专题
+                          <i class="wpcom-icon wi"><svg aria-hidden="true">
+                              <use xlink:href="#wi-arrow-right"></use>
+                            </svg></i>
+                        </a>
+                      </div>
+                      <div class="special-item-desc">
+                        <p></p>
+                      </div>
+                      <div class="special-item-meta">
+                        <span class="special-item-count">1篇文章</span>
+                        <div class="special-item-share">
+                          <span class="hidden-xs">分享到: </span>
+                          <a class="share-icon wechat hidden-xs" target="_blank" data-share="wechat"
+                            data-share-callback="zt_share" rel="noopener">
+                            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                                <use xlink:href="#wi-wechat"></use>
+                              </svg></i> </a>
+                          <a class="share-icon weibo hidden-xs" target="_blank" data-share="weibo"
+                            data-share-callback="zt_share" rel="noopener">
+                            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                                <use xlink:href="#wi-weibo"></use>
+                              </svg></i> </a>
+                          <a class="share-icon qq hidden-xs" target="_blank" data-share="qq"
+                            data-share-callback="zt_share" rel="noopener">
+                            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                                <use xlink:href="#wi-qq"></use>
+                              </svg></i> </a>
+                          <a class="share-icon twitter hidden-xs" target="_blank" data-share="twitter"
+                            data-share-callback="zt_share" rel="noopener">
+                            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                                <use xlink:href="#wi-twitter"></use>
+                              </svg></i> </a>
+                          <a class="share-icon facebook hidden-xs" target="_blank" data-share="facebook"
+                            data-share-callback="zt_share" rel="noopener">
+                            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                                <use xlink:href="#wi-facebook"></use>
+                              </svg></i> </a>
+                          <a class="share-icon linkedin hidden-xs" target="_blank" data-share="linkedin"
+                            data-share-callback="zt_share" rel="noopener">
+                            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                                <use xlink:href="#wi-linkedin"></use>
+                              </svg></i> </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="special-item-bottom">
+                        <li><a title="全面分析 RWA赛道的机遇与挑战" href="/special/rwa/441601574346821.shtml" target="_blank">全面分析 RWA赛道的机遇与挑战</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-12 col-xs-24 special-item-wrap">
+                <div class="special-item">
+                  <div class="special-item-top">
+                    <div class="special-item-thumb">
+                      <a href="/special/blockchain/" target="_blank">
+                        <img class="j-lazy" src="/images/default.jpg" data-original="/resources/image/2023/08/20/452229278982213.jpg"
+                          alt="区块链政策">
+                      </a>
+                    </div>
+                    <div class="special-item-info">
+                      <div class="special-item-title">
+                        <h2><a href="/special/blockchain/" target="_blank">区块链政策</a></h2>
+                        <a class="special-item-more" href="/special/blockchain/">
+                          进入专题
+                          <i class="wpcom-icon wi"><svg aria-hidden="true">
+                              <use xlink:href="#wi-arrow-right"></use>
+                            </svg></i>
+                        </a>
+                      </div>
+                      <div class="special-item-desc">
+                        <p></p>
+                      </div>
+                      <div class="special-item-meta">
+                        <span class="special-item-count">0篇文章</span>
+                        <div class="special-item-share">
+                          <span class="hidden-xs">分享到: </span>
+                          <a class="share-icon wechat hidden-xs" target="_blank" data-share="wechat"
+                            data-share-callback="zt_share" rel="noopener">
+                            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                                <use xlink:href="#wi-wechat"></use>
+                              </svg></i> </a>
+                          <a class="share-icon weibo hidden-xs" target="_blank" data-share="weibo"
+                            data-share-callback="zt_share" rel="noopener">
+                            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                                <use xlink:href="#wi-weibo"></use>
+                              </svg></i> </a>
+                          <a class="share-icon qq hidden-xs" target="_blank" data-share="qq"
+                            data-share-callback="zt_share" rel="noopener">
+                            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                                <use xlink:href="#wi-qq"></use>
+                              </svg></i> </a>
+                          <a class="share-icon twitter hidden-xs" target="_blank" data-share="twitter"
+                            data-share-callback="zt_share" rel="noopener">
+                            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                                <use xlink:href="#wi-twitter"></use>
+                              </svg></i> </a>
+                          <a class="share-icon facebook hidden-xs" target="_blank" data-share="facebook"
+                            data-share-callback="zt_share" rel="noopener">
+                            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                                <use xlink:href="#wi-facebook"></use>
+                              </svg></i> </a>
+                          <a class="share-icon linkedin hidden-xs" target="_blank" data-share="linkedin"
+                            data-share-callback="zt_share" rel="noopener">
+                            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                                <use xlink:href="#wi-linkedin"></use>
+                              </svg></i> </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="special-item-bottom">
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-12 col-xs-24 special-item-wrap">
+                <div class="special-item">
+                  <div class="special-item-top">
+                    <div class="special-item-thumb">
+                      <a href="/special/aigc/" target="_blank">
+                        <img class="j-lazy" src="/images/default.jpg" data-original="/resources/image/2023/08/20/452229200887877.jpg"
+                          alt="AIGC">
+                      </a>
+                    </div>
+                    <div class="special-item-info">
+                      <div class="special-item-title">
+                        <h2><a href="/special/aigc/" target="_blank">AIGC</a></h2>
+                        <a class="special-item-more" href="/special/aigc/">
+                          进入专题
+                          <i class="wpcom-icon wi"><svg aria-hidden="true">
+                              <use xlink:href="#wi-arrow-right"></use>
+                            </svg></i>
+                        </a>
+                      </div>
+                      <div class="special-item-desc">
+                        <p></p>
+                      </div>
+                      <div class="special-item-meta">
+                        <span class="special-item-count">0篇文章</span>
+                        <div class="special-item-share">
+                          <span class="hidden-xs">分享到: </span>
+                          <a class="share-icon wechat hidden-xs" target="_blank" data-share="wechat"
+                            data-share-callback="zt_share" rel="noopener">
+                            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                                <use xlink:href="#wi-wechat"></use>
+                              </svg></i> </a>
+                          <a class="share-icon weibo hidden-xs" target="_blank" data-share="weibo"
+                            data-share-callback="zt_share" rel="noopener">
+                            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                                <use xlink:href="#wi-weibo"></use>
+                              </svg></i> </a>
+                          <a class="share-icon qq hidden-xs" target="_blank" data-share="qq"
+                            data-share-callback="zt_share" rel="noopener">
+                            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                                <use xlink:href="#wi-qq"></use>
+                              </svg></i> </a>
+                          <a class="share-icon twitter hidden-xs" target="_blank" data-share="twitter"
+                            data-share-callback="zt_share" rel="noopener">
+                            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                                <use xlink:href="#wi-twitter"></use>
+                              </svg></i> </a>
+                          <a class="share-icon facebook hidden-xs" target="_blank" data-share="facebook"
+                            data-share-callback="zt_share" rel="noopener">
+                            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                                <use xlink:href="#wi-facebook"></use>
+                              </svg></i> </a>
+                          <a class="share-icon linkedin hidden-xs" target="_blank" data-share="linkedin"
+                            data-share-callback="zt_share" rel="noopener">
+                            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                                <use xlink:href="#wi-linkedin"></use>
+                              </svg></i> </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="special-item-bottom">
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-12 col-xs-24 special-item-wrap">
+                <div class="special-item">
+                  <div class="special-item-top">
+                    <div class="special-item-thumb">
+                      <a href="/special/fastnews/" target="_blank">
+                        <img class="j-lazy" src="/images/default.jpg" data-original="/resources/image/2023/08/20/452229278982213.jpg"
+                          alt="快新闻速递">
+                      </a>
+                    </div>
+                    <div class="special-item-info">
+                      <div class="special-item-title">
+                        <h2><a href="/special/fastnews/" target="_blank">快新闻速递</a></h2>
+                        <a class="special-item-more" href="/special/fastnews/">
+                          进入专题
+                          <i class="wpcom-icon wi"><svg aria-hidden="true">
+                              <use xlink:href="#wi-arrow-right"></use>
+                            </svg></i>
+                        </a>
+                      </div>
+                      <div class="special-item-desc">
+                        <p></p>
+                      </div>
+                      <div class="special-item-meta">
+                        <span class="special-item-count">0篇文章</span>
+                        <div class="special-item-share">
+                          <span class="hidden-xs">分享到: </span>
+                          <a class="share-icon wechat hidden-xs" target="_blank" data-share="wechat"
+                            data-share-callback="zt_share" rel="noopener">
+                            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                                <use xlink:href="#wi-wechat"></use>
+                              </svg></i> </a>
+                          <a class="share-icon weibo hidden-xs" target="_blank" data-share="weibo"
+                            data-share-callback="zt_share" rel="noopener">
+                            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                                <use xlink:href="#wi-weibo"></use>
+                              </svg></i> </a>
+                          <a class="share-icon qq hidden-xs" target="_blank" data-share="qq"
+                            data-share-callback="zt_share" rel="noopener">
+                            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                                <use xlink:href="#wi-qq"></use>
+                              </svg></i> </a>
+                          <a class="share-icon twitter hidden-xs" target="_blank" data-share="twitter"
+                            data-share-callback="zt_share" rel="noopener">
+                            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                                <use xlink:href="#wi-twitter"></use>
+                              </svg></i> </a>
+                          <a class="share-icon facebook hidden-xs" target="_blank" data-share="facebook"
+                            data-share-callback="zt_share" rel="noopener">
+                            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                                <use xlink:href="#wi-facebook"></use>
+                              </svg></i> </a>
+                          <a class="share-icon linkedin hidden-xs" target="_blank" data-share="linkedin"
+                            data-share-callback="zt_share" rel="noopener">
+                            <i class="wpcom-icon wi"><svg aria-hidden="true">
+                                <use xlink:href="#wi-linkedin"></use>
+                              </svg></i> </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="special-item-bottom">
+                  </ul>
+                </div>
+              </div>
+        </div>
+          <ul class="pagination">
+            <li class="disabled"><span>1 / 1</span></li>
+                  <li class="disabled"><span>1</span></li>
+          </ul>
+        <!-- <div class="load-more-wrap">
+          <div class="btn load-more">点击加载更多</div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+<!--#include file="/include/footer.shtml" -->
+<!--#include file="/include/action.shtml" -->
+<!--#include file="/include/h5_bottom.shtml" -->
+
+  <script type="text/javascript" id="main-js-extra">
+    /* <![CDATA[ */
+    var _xy_cms = {
+      prefix: '/',
+      resource_prefix: '/',
+      api_prefix: 'http://localhost:8080/',
+      front_prefix: '/',
+      site_id: '440515705974853',
+      catalog_id: '440520331505733',
+      publish_pipe: 'pc',
+      preview: 'false' == 'true'
+    }
+    var _wpcom_js = { "webp": "", "ajaxurl": "", "theme_url": "", "slide_speed": "5000", "is_admin": "0", "js_lang": { "copy_done": "\u590d\u5236\u6210\u529f\uff01", "copy_fail": "\u6d4f\u89c8\u5668\u6682\u4e0d\u652f\u6301\u62f7\u8d1d\u529f\u80fd", "confirm": "\u786e\u5b9a", "qrcode": "\u4e8c\u7ef4\u7801", "page_loaded": "\u5df2\u7ecf\u5230\u5e95\u4e86", "no_content": "\u6682\u65e0\u5185\u5bb9", "load_failed": "\u52a0\u8f7d\u5931\u8d25\uff0c\u8bf7\u7a0d\u540e\u518d\u8bd5\uff01", "expand_more": "\u9605\u8bfb\u5269\u4f59 %s" }, "lightbox": "1", "post_id": "155", "user_card_height": "356", "poster": { "notice": "\u8bf7\u957f\u6309\u4fdd\u5b58\u56fe\u7247\uff0c\u5c06\u5185\u5bb9\u5206\u4eab\u7ed9\u66f4\u591a\u597d\u53cb", "generating": "\u6b63\u5728\u751f\u6210\u6d77\u62a5\u56fe\u7247...", "failed": "\u6d77\u62a5\u56fe\u7247\u751f\u6210\u5931\u8d25" }, "video_height": "482", "fixed_sidebar": "1", "dark_style": "0", "font_url": "/css/fonts.9b34824582affe8e.css", "follow_btn": "<i class=\"wpcom-icon wi\"><svg aria-hidden=\"true\"><use xlink:href=\"#wi-add\"><\/use><\/svg><\/i>\u5173\u6ce8", "followed_btn": "\u5df2\u5173\u6ce8", "user_card": "1" };
+/* ]]> */
+  </script>
+  <script type="text/javascript" src="/js/main.js" id="main-js"></script>
+  <script type="text/javascript" src="/js/icons-2.7.7.js" id="wpcom-icons-js"></script>
+
+<!--#include file="/include/pagewidget/ad_top.shtml" -->
+<!--#include file="/include/block_user_login.shtml" -->
+<!--#include file="/include/stat.shtml" -->
+
+  <script>jQuery(function ($) { setup_share(1); });</script>
+
+</body>
+
+</html>

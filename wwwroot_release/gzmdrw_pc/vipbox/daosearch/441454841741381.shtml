@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1,viewport-fit=cover">
+  <title>研报｜RWA代币化：下一个加密财富密码？_gzmdrw</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="/vipbox/daosearch/441454841741381.shtml">
+  <meta property="og:site_name" content="gzmdrw">
+  <meta property="og:title" content="研报｜RWA代币化：下一个加密财富密码？">
+  <meta property="og:image" content="">
+  <meta property="og:description" content="">
+  <link rel="canonical" href="/vipbox/daosearch/441454841741381.shtml">
+  <meta name="applicable-device" content="pc,mobile">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <link rel="shortcut icon" href="/images/favicon.png">
+  <link rel="dns-prefetch" href="/">
+  <link rel="stylesheet" id="stylesheet-css" href="/css/style.6.14.1.1689415232.css" type="text/css"
+    media="all">
+  <link rel="stylesheet" id="font-awesome-css" href="/css/font-awesome.css" type="text/css" media="all">
+  <link rel="stylesheet" id="wp-block-library-css" href="/css/style.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="classic-theme-styles-css" href="/css/classic-themes.min.css" type="text/css"
+    media="all">
+<!--#include file="/include/block_top_style.shtml" -->
+  <link rel="stylesheet" id="wpcom-member-css" href="/css/wpcom_member.css" type="text/css" media="all">
+  <link rel="stylesheet" id="wpcom-member-pro-css" href="/css/wpcom_member_pro.css" type="text/css" media="all">
+  <link rel="stylesheet" id="QAPress-css" href="/css/qapress.css" type="text/css" media="all">
+  <style id="QAPress-inline-css" type="text/css">
+    :root {
+      --qa-color: #002FA7;
+      --qa-hover: #002FA7;
+    }
+  </style>
+  <script type="text/javascript" src="/js/jquery.min.js" id="jquery-core-js"></script>
+  <script type="text/javascript" src="/js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+  <script type="text/javascript" src="/js/jquery.cookie.js"></script>
+  <script type="text/javascript" src="/js/html2canvas.min.js"></script>
+  <link rel="icon" href="/images/favicon.png" sizes="32x32">
+  <link rel="icon" href="/images/favicon.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+  <meta name="msapplication-TileImage" content="/images/favicon.png">
+  <!--[if lte IE 11]><script src="/js/update.js"></script><![endif]-->
+  <link href="/css/fonts.9b34824582affe8e.css" rel="stylesheet" type="text/css">
+</head>
+
+<body
+  class="post-template-default single single-post postid-36029 single-format-standard logged-in lang-cn el-boxed header-fixed style-by-toggle">
+<!--#include file="/include/header.shtml" -->
+  <div id="wrap" style="min-height: 673px;">
+    <div class="wrap container">
+      <ol class="breadcrumb" vocab="https://schema.org/" typeof="BreadcrumbList">
+        <li class="home" property="itemListElement" typeof="ListItem"><a href="/" property="item"
+            typeof="WebPage"><span property="name" class="hide">gzmdrw</span>首页</a>
+          <meta property="position" content="1">
+        </li>
+        <li property="itemListElement" typeof="ListItem"><i class="wpcom-icon wi"><svg aria-hidden="true">
+              <use xlink:href="#wi-arrow-right-3"></use>
+            </svg></i><a href="/vipbox/daosearch/" property="item" typeof="WebPage"><span
+              property="name">DAO研究</span></a>
+          <meta property="position" content="2">
+        </li>
+      </ol>
+      <main class="main">
+        <article id="post-441454841741381"
+          class="post-441454841741381 post type-post status-publish format-standard has-post-thumbnail hentry category-knews tag-rwa tag-116 special-rwa entry">
+          <div class="entry-main">
+            <div class="entry-head">
+              <h1 class="entry-title">研报｜RWA代币化：下一个加密财富密码？</h1>
+              <div class="entry-info">
+                <time class="entry-date published" datetime="2025-02-13 20:03:15"
+                  pubdate="">
+                  2025年02月13日 </time>
+                <span class="dot">•</span>
+                <a href="/vipbox/daosearch/" rel="category tag">DAO研究</a>
+                <span class="dot">•</span>
+                <span id="views-441454841741381"><i class="wpcom-icon wi wi-loader"><svg aria-hidden="true">
+                      <use xlink:href="#wi-loader"></use>
+                    </svg></i></span>
+              </div>
+            </div>
+            <div class="entry-content">
+                <p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">作者｜Huobi Research</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">封面设计｜LDNews DAO</p><h1 class="wp-block-heading" style="box-sizing: border-box; margin: 32px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-weight: 500; line-height: 1.4; color: rgb(38, 38, 38); font-size: 24px; white-space: normal; background-color: rgb(255, 255, 255);">导读</h1><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">区块链带来了信任、流动性、透明度、安全性、效率和创新，但加密行业的熊市似乎很难找到新的增长点，加密行业急需一个赛道承载新的叙事。RWA代币化能够打通传统金融和加密金融的通道，承载数十万亿美元的资产市场，对加密行业来说可以是超越牛熊周期的生命之水，所以区块链诞生至今一直在尝试的RWA代币化，但受到了技术、监管、市场等多重因素的阻碍。如今，RWA赛道又被热议，多家机构开始布局。RWA项目已呈现种类繁多、DeFi为主、收益高、风险高的特点，已经逐渐步入大众视野，但项目总体上还存在流动性差、早期阶段、缺少价格发现等问题。RWA赛道是否能在未来几年爆发也要看基础设施的发展和监管体系的完善，这篇研报也提出了代币标准化和合规化是RWA赛道发展的必经之路。尽管RWA赛道面临多重挑战，行业发展始终是向前走的，我们已经看到不少创新项目的出现，尤其是基于美债美股、中小企业融资、实物资产的项目上，这些项目主要特点在于：1. 与传统金融机构合作；2. 最大化项目和代币的收益；3. 引入更多的合法第三方参与。这些特点能够部分解决RWA代币化上出现的问题，包括监管、中心化、链上链下身份、资产估值等，我们期待未来更多的项目丰富RWA赛道。</p><h1 class="wp-block-heading" style="box-sizing: border-box; margin: 32px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-weight: 500; line-height: 1.4; color: rgb(38, 38, 38); font-size: 24px; white-space: normal; background-color: rgb(255, 255, 255);">1. 正在酝酿的叙事</h1><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">经历了长达1年多的熊市，整个加密市场的市值严重缩水，资金不断流出，链上活动萎靡，DeFi收益已经不再有吸引力，场内互割严重。现在的我们无法想象，加密行业应该靠什么启动下一个牛市。加密市场和传统金融市场还有很大的差距。但我们也可以从熊市发生的一些暴雷事件中，窥见巨大的商机。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">可以说，导致2022年一些大型机构破产的主要原因是利用山寨币进行融资和借贷，当山寨币在熊市出现爆跌，进一步加剧了贷款的清算，死亡螺旋开始。我们看到，是机构和信贷推动了2021年的牛市，也是它们促成了2022年的熊市。实际上，信贷推动了价值数万亿美元的业务和全球经济的大部分发展。它带来的潜力是巨大的，目前，在 DeFi 市场上，越来越多的协议进入股权和债务融资等传统信贷市场。虽然带来了一些风险，但是这是唯一能够将超过 800 万亿美元的传统金融市场引入到链上的方式。<span style="box-sizing: border-box; font-weight: bolder;">弥合加密市场和传统金融之间的巨大差距，我们需要做的是现实世界资产的代币化。</span></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">在今年上半年，传统和加密行业开始关注RWA板块。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">首先是高盛宣布旗下数字资产平台 GS DAP 正式上线，而该平台已经帮助欧洲投资银行（EIB）发行 1 亿欧元的两年期数字债券。不久后，管理规模超 1000 亿的私募股权公司 Hamilton Lane 在 Polygon 网络上将其 21 亿美元旗舰股权基金的一部分代币化，向投资者出售；电气工程巨头西门子也在区块链上首次发行 6000 万欧元的数字债券。其次，一些政府机构也开始试水RWA，包括新加坡金融管理局 (MAS)将与摩根大通、星展银行合作。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">4月，币安宣布成为Layer1区块链Polymesh节点运营商；其次，MakerDAO、Aave、Maple Finance 等DeFi协议在RWA赛道上动作频繁，更多加密投资公司也在寻求RWA的项目。目前，RWA板块的项目已经超过50个，主要集中在金融资产类，包括固定收益、TradFi，少部分在地产和碳信用领域。近期，RWA概念代币都有所上涨，有些涨幅超过10倍以上。2023年上半年的一波蓄力，是否预示着RWA在未来几年将引领加密叙事？</p><h1 class="wp-block-heading" style="box-sizing: border-box; margin: 32px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-weight: 500; line-height: 1.4; color: rgb(38, 38, 38); font-size: 24px; white-space: normal; background-color: rgb(255, 255, 255);">2. RWA的前世今生</h1><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">RWA概念在区块链行业并不陌生，最早RWA的项目是“资产上链”的BTM比原链。目前，最成功的RWA就是数字美元USDT、USDC，即把美元映射到链上并代币化。稳定币潜移默化地影响着整个加密行业，现已成为重要基石。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">RWA的全称为现实世界资产的价值代币化（real world assets- tokenization），是将有形或无形资产中的所有权价值（以及任何相关权利）转换为数字代币的过程。这使得资产的数字所有权、转移和存储无需中央中介，价值映射到区块链上并交易。RWA可以是有形或无形资产。</p><ul style="box-sizing: border-box; margin-bottom: 20px; padding-left: 2em; list-style-position: outside; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; white-space: normal; background-color: rgb(255, 255, 255);" class=" list-paddingleft-2"><li><p>有形资产包括：房地产、艺术品、贵金属、交通工具、运动俱乐部、赛马等。</p></li></ul><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">无形资产包括：股票和债券、知识产权、投资基金、合成资产、收入分成协议、现金、应收账款等。</p><h1 class="wp-block-heading" style="box-sizing: border-box; margin: 32px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-weight: 500; line-height: 1.4; color: rgb(38, 38, 38); font-size: 24px; white-space: normal; background-color: rgb(255, 255, 255);">2.1 RWA赛道现状</h1><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">RWA赛道项目种类繁多，多以DeFi为主，主要有三种类别：1. 基于美债、股票、房地产、艺术品等链下资产的固定收益类项目；2. 基于公开市场发行或交易的公共信贷类项目；3. 基于碳信用等虚拟资产的交易市场类项目。除此之外，还有垂直公链等基础设施项目。</p><ul style="box-sizing: border-box; margin-bottom: 20px; padding-left: 2em; list-style-position: outside; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; white-space: normal; background-color: rgb(255, 255, 255);" class=" list-paddingleft-2"><li><p>固定收益类基于美债和股票市场，为私人和机构提供贷款。这些项目与链上其它DeFi借贷类项目的唯一区别在于抵押品可以是现实世界资产。</p></li><li><p>公共信贷类可以通过跟踪美债或其它债券建立投资基金以供加密用户投资。</p></li></ul><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">数据方面，根据RWA.xyz网站统计，包括Centrifuge、Maple、GoldFinch、Credix、Clearpool、TrueFi、Homecoin 在内的8个RWA借贷协议，共计发放贷款额度$4.38b，用户可获得平均APR达到10.52%，主要服务于中等以下的发展水平国家。这些信用借贷协议提供的收益比大部分DeFi借贷高，但在2022年的机构暴雷事件中，Maple Finance发生了6930万美元的债务违约。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);"><a class="j-wpcom-lightbox" href="http://www.liandu24.com/wp-content/uploads/2023/06/1686888852492349.jpg" data-group="0" data-id="0" data-index="0" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);"><img decoding="async" alt="DeFi" class="j-lazy" src="/resources/image/2023/07/21/441456002629701.jpg" data-original="http://admin.1000mz.com/prod-api/preview/sitex/resources/image/2023/07/21/441456002629701.jpg" style="box-sizing: border-box; border-style: none; vertical-align: top; height: auto;" /></a>根据Dune数据分析面板，以太坊RWA项目中，$wCFG, $MPL, $GFI, $FACTR, $ONDO, $RIO, $TRADE, $TRU, $BST的持币地址数也在不断增加，目前达到3.9k。</p><h1 class="wp-block-heading" style="box-sizing: border-box; margin: 32px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-weight: 500; line-height: 1.4; color: rgb(38, 38, 38); font-size: 24px; white-space: normal; background-color: rgb(255, 255, 255);"><a class="j-wpcom-lightbox" href="http://www.liandu24.com/wp-content/uploads/2023/06/1686888852491805.jpg" data-group="0" data-id="1" data-index="1" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);"><img decoding="async" alt="DeFi" class="j-lazy" src="/resources/image/2023/07/21/441456003518533.jpg" data-original="http://admin.1000mz.com/prod-api/preview/sitex/resources/image/2023/07/21/441456003518533.jpg" style="box-sizing: border-box; border-style: none; vertical-align: top; height: auto;" /></a></h1><p><br/></p>
+              <div class="entry-readmore">
+                <div class="entry-readmore-btn">
+                </div>
+              </div>
+              <div class="entry-copyright">
+                <p>
+                  <span>来源：</span>
+                  <span>
+                    <a href="#" style="font-size:14px;">
+                      互联网
+                    </a>
+                  </span><br>本文观点不代表gzmdrw立场，不承担法律责任，文章及观点也不构成任何投资意见。
+                </p>
+              </div>
+            </div>
+            <div class="entry-tag">
+            </div>
+            <div class="entry-action">
+              <div class="btn-zan1" data-id="441454841741381">
+                <i class="wpcom-icon wi">
+                  <svg aria-hidden="true">
+                    <use xlink:href="#wi-thumb-up-fill"></use>
+                  </svg>
+                </i>
+                赞 (<span class="entry-action-num"><i class="wpcom-icon wi wi-loader"><svg aria-hidden="true">
+                      <use xlink:href="#wi-loader"></use>
+                    </svg></i></span>)
+              </div>
+
+            </div>
+
+            <div class="entry-bar fixed">
+              <div class="entry-bar-inner clearfix" style="width: 860px;">
+                <div class="author pull-left art-author">
+                </div>
+                <div class="info pull-right">
+                  <div class="info-item meta">
+                    <a class="meta-item j-heart1" href="javascript:;" data-id="441454841741381">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-star"></use>
+                        </svg>
+                      </i>
+                      <span class="data"><i class="wpcom-icon wi wi-loader"><svg aria-hidden="true">
+                            <use xlink:href="#wi-loader"></use>
+                          </svg></i></span>
+                    </a>
+                    <a class="meta-item j-comment" href="#comments">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-comment"></use>
+                        </svg></i>
+                      <span class="data"><i class="wpcom-icon wi wi-loader"><svg aria-hidden="true">
+                            <use xlink:href="#wi-loader"></use>
+                          </svg></i></span>
+                    </a>
+                  </div>
+                  <div class="info-item share">
+                    <a class="meta-item mobile j-mobile-share2" href="javascript:;" data-title="研报｜RWA代币化：下一个加密财富密码？"
+                      data-qrcode="/vipbox/daosearch/441454841741381.shtml" data-time="2025年02月13日 20:03">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-share"></use>
+                        </svg></i> 生成海报</a>
+                    <a class="meta-item wechat" data-share="wechat" target="_blank" rel="nofollow" href="#">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-wechat"></use>
+                        </svg></i> </a>
+                    <a class="meta-item weibo" data-share="weibo" target="_blank" rel="nofollow" href="#">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-weibo"></use>
+                        </svg></i> </a>
+                    <a class="meta-item qq" data-share="qq" target="_blank" rel="nofollow" href="#">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-qq"></use>
+                        </svg></i> </a>
+                    <a class="meta-item twitter" data-share="twitter" target="_blank" rel="nofollow" href="#">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-twitter"></use>
+                        </svg></i> </a>
+                    <a class="meta-item facebook" data-share="facebook" target="_blank" rel="nofollow" href="#">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-facebook"></use>
+                        </svg></i> </a>
+                    <a class="meta-item linkedin" data-share="linkedin" target="_blank" rel="nofollow" href="#">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-linkedin"></use>
+                        </svg></i> </a>
+                  </div>
+                  <div class="info-item act">
+                    <a href="javascript:;" id="j-reading"><i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-article"></use>
+                        </svg></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<!--#include file="/include/pagewidget/ad_article1.shtml" -->
+
+          <div class="entry-related-posts">
+            <h3 class="entry-related-title">相关推荐</h3>
+            <ul class="entry-related cols-3 post-loop post-loop-default content-list">
+                  <li class="item item-no-thumb"
+                    data-id="640411834191941">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/640411834191941.shtml" target="_blank" rel="bookmark">
+                          news栏目中唯一的文章
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年02月02日 17点03分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="637957853511749">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="https://gzmdrw.cn/zhongyaolunshu/" target="_blank" rel="bookmark">
+                          Let me try
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年04月02日 16点33分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="528487814377541">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/new_box/528487814377541.shtml" target="_blank" rel="bookmark">
+                          321321
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年03月27日 19点58分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="485088154181701">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/new_box/485088154181701.shtml" target="_blank" rel="bookmark">
+                          测试
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年03月23日 18点14分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="446074472464453">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/web3/446074472464453.shtml" target="_blank" rel="bookmark">
+                          数据：某巨鲸从Binance转出311万枚CRV，价值约182万美元789
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年03月22日 09点47分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="446069064171589">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/nft/446069064171589.shtml" target="_blank" rel="bookmark">
+                          Worldcoin确认收到肯尼亚政府通知，目前已暂停在该国的服务
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年03月21日 16点22分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="446067922018373">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/nft/446067922018373.shtml" target="_blank" rel="bookmark">
+                          OKX Web3钱包Cryptopedia第5期现已正式开启，Lifeform早期用户可独家认领空投盒子NFT
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年03月20日 08点55分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="445844838629445">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/defi/445844838629445.shtml" target="_blank" rel="bookmark">
+                          一图速览“促进民营经济发展28条” 北京
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年03月19日 17点30分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="444774218055749">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/nft/444774218055749.shtml" target="_blank" rel="bookmark">
+                          引领Paradigm“意图交易”新赛道 , 获众多顶级VC青睐的dappOS有何亮点？
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年03月18日 10点04分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="441455600029765">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/vipbox/think/441455600029765.shtml" target="_blank" rel="bookmark">
+                          报告｜北京市互联网3.0创新发展白皮书（2023年）
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年02月16日 22点11分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="441455394152517">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/vipbox/think/441455394152517.shtml" target="_blank" rel="bookmark">
+                          报告｜清华大学《AIGC发展研究报告1.0》
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年02月15日 14点55分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="441455009255493">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/vipbox/daosearch/441455009255493.shtml" target="_blank" rel="bookmark">
+                          研报｜跨链DeFi借贷协议Radiant Capital
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年02月14日 09点29分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="441454841741381">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/vipbox/daosearch/441454841741381.shtml" target="_blank" rel="bookmark">
+                          研报｜RWA代币化：下一个加密财富密码？
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年02月13日 20点03分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="440910133866565">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/web3/440910133866565.shtml" target="_blank" rel="bookmark">
+                          从三代币模型理解 SAFT 以及 Web3 代币投融资
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年02月11日 16点38分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="440909824315461">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/web3/440909824315461.shtml" target="_blank" rel="bookmark">
+                          智者当借力而行：浅析六大 Web3 任务平台
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年02月10日 07点16分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="440909610135621">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/web3/440909610135621.shtml" target="_blank" rel="bookmark">
+                          深入加密空投：历史、流程与分类，以及近期 6 个最值得参与的机会
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年02月09日 18点52分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+            </ul>
+          </div>
+
+          <div id="comments" class="entry-comments">
+            <div id="respond" class="comment-respond">
+              <h3 id="reply-title" class="comment-reply-title">
+                发表回复
+                <small>
+                  <a rel="nofollow" id="cancel-comment-reply-link" href="#respond" style="display:none;"><i
+                      class="wpcom-icon wi"><svg aria-hidden="true">
+                        <use xlink:href="#wi-close"></use>
+                      </svg></i></a>
+                </small>
+              </h3>
+              <form id="commentform" class="comment-form" novalidate="" style="display: none;"
+                data-id="441454841741381">
+                <div class="comment-form-comment">
+                  <textarea id="comment" name="comment" rows="4" placeholder="写下你的评论…"></textarea>
+                  <div class="comment-form-smile" style="display:none" data-target="#comment">
+                    <i class="wpcom-icon wi smile-icon"><svg aria-hidden="true">
+                        <use xlink:href="#wi-emotion"></use>
+                      </svg></i>
+                  </div>
+                </div>
+                <div class="form-submit">
+                  <div class="pull-left form-submit-text login-user">
+                    <img alt="" src="/images/0303.png" class="avatar avatar-60 photo" height="60"
+                      width="60"><span>xxx</span>
+                  </div>
+                  <button name="submit" type="button" id="submit" class="btn btn-primary btn-xs submit">提交</button>
+                  <input type="hidden" name="comment_conent_id" value="441454841741381" id="comment_conent_id">
+                </div>
+              </form>
+              <div class="comment-form" style="display: none;">
+                <div class="comment-must-login">请登录后评论...</div>
+                <div class="form-submit">
+                  <div class="form-submit-text pull-left"><a class="btn-login" href=" javascript:;">登录</a>后才能评论</div>
+                  <button name="submit" type="submit" id="must-submit" class="btn btn-primary btn-xs submit">提交</button>
+                </div>
+              </div>
+            </div>
+            <!-- #respond -->
+            <h3 class="comments-title"> 评论列表 </h3>
+            <ul class="comments-list" data-id="441454841741381">
+              
+            </ul>
+            <div class="load-more-wrap">
+              <div class="btn load-more btn-more-comment" data-id="441454841741381">点击查看更多</div>
+            </div>
+            <ul class="pagination"></ul>
+          </div><!-- .comments-area -->
+        </article>
+      </main>
+      <aside class="sidebar">
+<!--#include file="/include/block_recent.shtml" -->
+<!--#include file="/include/block_recent_defi.shtml" -->
+      </aside>
+    </div>
+  </div>
+<!--#include file="/include/footer.shtml" -->
+<!--#include file="/include/action.shtml" -->
+<!--#include file="/include/h5_bottom.shtml" -->
+
+  <script type="text/javascript" id="main-js-extra">
+    /* <![CDATA[ */
+    var _xy_cms = {
+      prefix: '/',
+      resource_prefix: '/',
+      api_prefix: 'http://localhost:8080/',
+      front_prefix: '/',
+      member_resource_prefix: '',
+      site_id: '440515705974853',
+      catalog_id: '440722000269381',
+      content_id: '441454841741381',
+      site_id: '440515705974853',
+      publish_pipe: 'pc',
+      preview: 'false' == 'true'
+    }
+    var _wpcom_js = { "webp": "", "ajaxurl": "", "theme_url": "", "slide_speed": "5000", "is_admin": "0", "js_lang": { "copy_done": "\u590d\u5236\u6210\u529f\uff01", "copy_fail": "\u6d4f\u89c8\u5668\u6682\u4e0d\u652f\u6301\u62f7\u8d1d\u529f\u80fd", "confirm": "\u786e\u5b9a", "qrcode": "\u4e8c\u7ef4\u7801", "page_loaded": "\u5df2\u7ecf\u5230\u5e95\u4e86", "no_content": "\u6682\u65e0\u5185\u5bb9", "load_failed": "\u52a0\u8f7d\u5931\u8d25\uff0c\u8bf7\u7a0d\u540e\u518d\u8bd5\uff01", "expand_more": "\u9605\u8bfb\u5269\u4f59 %s" }, "lightbox": "1", "post_id": "36029", "user_card_height": "356", "poster": { "notice": "\u8bf7\u957f\u6309\u4fdd\u5b58\u56fe\u7247\uff0c\u5c06\u5185\u5bb9\u5206\u4eab\u7ed9\u66f4\u591a\u597d\u53cb", "generating": "\u6b63\u5728\u751f\u6210\u6d77\u62a5\u56fe\u7247...", "failed": "\u6d77\u62a5\u56fe\u7247\u751f\u6210\u5931\u8d25" }, "video_height": "482", "fixed_sidebar": "1", "dark_style": "0", "font_url": "..\/css\/fonts.9b34824582affe8e.css", "follow_btn": "<i class=\"wpcom-icon wi\"><svg aria-hidden=\"true\"><use xlink:href=\"#wi-add\"><\/use><\/svg><\/i>\u5173\u6ce8", "followed_btn": "\u5df2\u5173\u6ce8", "user_card": "1" };
+/* ]]> */
+  </script>
+  <script type="text/javascript" src="/js/main.js" id="main-js"></script>
+  <script type="text/javascript" src="/js/icons-2.7.7.js" id="wpcom-icons-js"></script>
+  <script type="text/javascript" src="/js/comment-reply.min.js" id="comment-reply-js"></script>
+
+<!--#include file="/include/pagewidget/ad_top.shtml" -->
+<!--#include file="/include/block_user_login.shtml" -->
+<!--#include file="/include/stat.shtml" -->
+
+  <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "@id": "/vipbox/daosearch/441454841741381.shtml",
+          "url": "/vipbox/daosearch/441454841741381.shtml",
+          "headline": "研报｜RWA代币化：下一个加密财富密码？",
+          "image": [""],
+          "description": "",
+          "datePublished": "2023-07-14T17:26:20",
+          "dateModified": "2023-07-14T17:26:22",
+          "author": {"@type":"Person","name":"xxxx","url":"#account_center","image":"#avatar"}        }
+  </script>
+  <script>jQuery(function ($) { setup_share(1); });</script>
+  <script>
+    (function ($) {
+      $(document)
+
+      cleanArticleContent = function (html) {
+        const nonPTagRegex = /<[^>]*?(?:>(?!<[^>]*?>)[^<]*)*>/g;
+        const pTagRegex = /<p\s[^>]*?(?:>(?!<\/p[^>]*?>)[^>]*)*>/g;
+        html = html.replace(nonPTagRegex, '');
+        html = html.replace(pTagRegex, '<p>');
+        return html;
+      }
+    })(jQuery)
+  </script>
+</body>
+
+</html>

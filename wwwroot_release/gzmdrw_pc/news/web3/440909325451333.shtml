@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1,viewport-fit=cover">
+  <title>以太坊扩展解决方案的演变：OP Stack、Arbitrum Orbit、Polygon 2.0…_gzmdrw</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="/news/web3/440909325451333.shtml">
+  <meta property="og:site_name" content="gzmdrw">
+  <meta property="og:title" content="以太坊扩展解决方案的演变：OP Stack、Arbitrum Orbit、Polygon 2.0…">
+  <meta property="og:image" content="">
+  <meta property="og:description" content="">
+  <link rel="canonical" href="/news/web3/440909325451333.shtml">
+  <meta name="applicable-device" content="pc,mobile">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <link rel="shortcut icon" href="/images/favicon.png">
+  <link rel="dns-prefetch" href="/">
+  <link rel="stylesheet" id="stylesheet-css" href="/css/style.6.14.1.1689415232.css" type="text/css"
+    media="all">
+  <link rel="stylesheet" id="font-awesome-css" href="/css/font-awesome.css" type="text/css" media="all">
+  <link rel="stylesheet" id="wp-block-library-css" href="/css/style.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="classic-theme-styles-css" href="/css/classic-themes.min.css" type="text/css"
+    media="all">
+<!--#include file="/include/block_top_style.shtml" -->
+  <link rel="stylesheet" id="wpcom-member-css" href="/css/wpcom_member.css" type="text/css" media="all">
+  <link rel="stylesheet" id="wpcom-member-pro-css" href="/css/wpcom_member_pro.css" type="text/css" media="all">
+  <link rel="stylesheet" id="QAPress-css" href="/css/qapress.css" type="text/css" media="all">
+  <style id="QAPress-inline-css" type="text/css">
+    :root {
+      --qa-color: #002FA7;
+      --qa-hover: #002FA7;
+    }
+  </style>
+  <script type="text/javascript" src="/js/jquery.min.js" id="jquery-core-js"></script>
+  <script type="text/javascript" src="/js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+  <script type="text/javascript" src="/js/jquery.cookie.js"></script>
+  <script type="text/javascript" src="/js/html2canvas.min.js"></script>
+  <link rel="icon" href="/images/favicon.png" sizes="32x32">
+  <link rel="icon" href="/images/favicon.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+  <meta name="msapplication-TileImage" content="/images/favicon.png">
+  <!--[if lte IE 11]><script src="/js/update.js"></script><![endif]-->
+  <link href="/css/fonts.9b34824582affe8e.css" rel="stylesheet" type="text/css">
+</head>
+
+<body
+  class="post-template-default single single-post postid-36029 single-format-standard logged-in lang-cn el-boxed header-fixed style-by-toggle">
+<!--#include file="/include/header.shtml" -->
+  <div id="wrap" style="min-height: 673px;">
+    <div class="wrap container">
+      <ol class="breadcrumb" vocab="https://schema.org/" typeof="BreadcrumbList">
+        <li class="home" property="itemListElement" typeof="ListItem"><a href="/" property="item"
+            typeof="WebPage"><span property="name" class="hide">gzmdrw</span>首页</a>
+          <meta property="position" content="1">
+        </li>
+        <li property="itemListElement" typeof="ListItem"><i class="wpcom-icon wi"><svg aria-hidden="true">
+              <use xlink:href="#wi-arrow-right-3"></use>
+            </svg></i><a href="/news/web3/" property="item" typeof="WebPage"><span
+              property="name">web3.0</span></a>
+          <meta property="position" content="2">
+        </li>
+      </ol>
+      <main class="main">
+        <article id="post-440909325451333"
+          class="post-440909325451333 post type-post status-publish format-standard has-post-thumbnail hentry category-knews tag-rwa tag-116 special-rwa entry">
+          <div class="entry-main">
+            <div class="entry-head">
+              <h1 class="entry-title">以太坊扩展解决方案的演变：OP Stack、Arbitrum Orbit、Polygon 2.0…</h1>
+              <div class="entry-info">
+                <time class="entry-date published" datetime="2025-02-08 13:24:47"
+                  pubdate="">
+                  2025年02月08日 </time>
+                <span class="dot">•</span>
+                <a href="/news/web3/" rel="category tag">web3.0</a>
+                <span class="dot">•</span>
+                <span id="views-440909325451333"><i class="wpcom-icon wi wi-loader"><svg aria-hidden="true">
+                      <use xlink:href="#wi-loader"></use>
+                    </svg></i></span>
+              </div>
+            </div>
+            <div class="entry-content">
+                <p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">撰写｜Stacy Muur</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">编译｜深潮 TechFlow</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);"><span class="wpcom_tag_link" style="box-sizing: border-box;"><a href="http://www.liandu24.com/archives/tag/l2" title="L2" target="_blank" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);">L2</a></span> 战争正在升温，以太坊扩展的未来预计将围绕 L3、SuperChain 和 Hyperchain 发展。如何跟上这一波趋势？让我们一起深入了解 L2 发展的前沿领域。</p><p></p><figure class="wp-block-image" style="box-sizing: border-box; margin: 0px 0px 20px; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; white-space: normal; background-color: rgb(255, 255, 255);"><a class="j-wpcom-lightbox" href="http://www.liandu24.com/wp-content/uploads/2023/06/2023062916474999772419.jpg" data-group="0" data-id="0" data-index="0" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);"><img decoding="async" class="j-lazy" src="/resources/image/2023/07/19/440909511819333.jpg" data-original="http://localhost/dev-api/preview/sitex/resources/image/2023/07/19/440909511819333.jpg" alt="以太坊扩展解决方案的演变：OP Stack、Arbitrum Orbit、Polygon 2.0..." style="box-sizing: border-box; border-style: none; vertical-align: top; height: auto;" /></a></figure><p></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">为什么会演变为这样的格局？虽然以太坊作为 L1 运行，但它必须具备与互联网相同规模的操作能力。然而，目前没有任何单个 L2 拥有这种能力。</p><p></p><figure class="wp-block-image" style="box-sizing: border-box; margin: 0px 0px 20px; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; white-space: normal; background-color: rgb(255, 255, 255);"><a class="j-wpcom-lightbox" href="http://www.liandu24.com/wp-content/uploads/2023/06/2023062916475043799406.jpg" data-group="0" data-id="1" data-index="1" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);"><img decoding="async" class="j-lazy" src="/resources/image/2023/07/19/440909514408005.jpg" data-original="http://localhost/dev-api/preview/sitex/resources/image/2023/07/19/440909514408005.jpg" alt="以太坊扩展解决方案的演变：OP Stack、Arbitrum Orbit、Polygon 2.0..." style="box-sizing: border-box; border-style: none; vertical-align: top; height: auto;" /></a></figure><p></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">从更高维度来看，Web3 开发者目前有三个选择：</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">• 在以太坊上部署，但会牺牲可扩展性。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">• 选择 L2 解决方案，但会面临对特定生态系统的依赖风险。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">• 部署并维护自己的链，但可能导致流动性碎片化。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">此外，实现互操作性也是一个重大挑战。事实证明，我们使用跨链桥应对这一挑战的努力是脆弱的，并且一直受到恶意行为者的攻击。新的挑战需要创新的解决方案。新的挑战需要创新的解决方案。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">下一波 Rollup，如 Optimism 上的 OP Chains、Arbitrum Orbit 上的 L3 或 zkSync 上的超级链，将赋予不同目标的各个实体创建自己定制环境的能力。你可以将其看作是部署新的 Rollup 链=创建一个新的网页。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">让我们更详细地了解核心扩展参与者提供的解决方案。</p><h1 class="wp-block-heading" style="box-sizing: border-box; margin: 32px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-weight: 500; line-height: 1.4; color: rgb(38, 38, 38); font-size: 24px; white-space: normal; background-color: rgb(255, 255, 255);">Optimism &amp; OP Stack</h1><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">在 2022 年 10 月，Optimism 提出了：</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">•&nbsp;<span style="box-sizing: border-box; font-weight: bolder;">OP Stack（OP 堆栈）</span>——一个用于创建可扩展和互操作的各种类型<span class="wpcom_tag_link" style="box-sizing: border-box;"><a href="http://www.liandu24.com/archives/tag/%e5%8c%ba%e5%9d%97%e9%93%be" title="区块链" target="_blank" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);">区块链</a></span>的模块化开源蓝图。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">•&nbsp;<span style="box-sizing: border-box; font-weight: bolder;">Superchain（超级链）</span>—— 紧密集成和统一的建立在 OP Stack 之上的 L2。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">简单来说，OP Stack 可以被看作是一个“建立 L2”的超市。它提供了不同的层次（模块），可以轻松定制以满足项目的特定需求。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">通过利用这种方法，他们可以释放超级链未来的潜力。</p><p></p><figure class="wp-block-image" style="box-sizing: border-box; margin: 0px 0px 20px; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; white-space: normal; background-color: rgb(255, 255, 255);"><a class="j-wpcom-lightbox" href="http://www.liandu24.com/wp-content/uploads/2023/06/2023062916475837610500.jpg" data-group="0" data-id="2" data-index="2" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);"><img decoding="async" class="j-lazy" src="/resources/image/2023/07/19/440909515391045.jpg" data-original="http://localhost/dev-api/preview/sitex/resources/image/2023/07/19/440909515391045.jpg" alt="以太坊扩展解决方案的演变：OP Stack、Arbitrum Orbit、Polygon 2.0..." style="box-sizing: border-box; border-style: none; vertical-align: top; height: auto;" /></a></figure><p></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">在 6 月初，Optimism 宣布将他们的 L2 Rollup 迁移到 Bedrock。这个发布代表了 OP 堆栈的首次正式上线，使 OP 主网成为代币交换最具成本效益的以太坊 L2 Rollup。</p><p></p><figure class="wp-block-image" style="box-sizing: border-box; margin: 0px 0px 20px; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; white-space: normal; background-color: rgb(255, 255, 255);"><a class="j-wpcom-lightbox" href="http://www.liandu24.com/wp-content/uploads/2023/06/2023062916475914669482.jpg" data-group="0" data-id="3" data-index="3" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);"><img decoding="async" class="j-lazy" src="/resources/image/2023/07/19/440909516075077.jpg" data-original="http://localhost/dev-api/preview/sitex/resources/image/2023/07/19/440909516075077.jpg" alt="以太坊扩展解决方案的演变：OP Stack、Arbitrum Orbit、Polygon 2.0..." style="box-sizing: border-box; border-style: none; vertical-align: top; height: auto;" /></a></figure><p></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">此外，Bedrock 还有以下优势：</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">• 将存款时间从 10 分钟缩短至 3 分钟。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">• 通过支持故障证明和 ZK 证明来增强证明模块化。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">• 允许在单个 Rollup“块”内执行多个交易。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">在完成 Bedrock 升级后，Optimism 的下一步是过渡到超级链。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">超级链是一个由 L2（OP 链）组成的去中心化网络，将共享安全性、通信层和开源技术堆栈（OP 堆栈）。</p><p></p><figure class="wp-block-image" style="box-sizing: border-box; margin: 0px 0px 20px; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; white-space: normal; background-color: rgb(255, 255, 255);"><a class="j-wpcom-lightbox" href="http://www.liandu24.com/wp-content/uploads/2023/06/2023062916475826558489.jpg" data-group="0" data-id="4" data-index="4" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);"><img decoding="async" class="j-lazy" src="/resources/image/2023/07/19/440909516755013.jpg" data-original="http://localhost/dev-api/preview/sitex/resources/image/2023/07/19/440909516755013.jpg" alt="以太坊扩展解决方案的演变：OP Stack、Arbitrum Orbit、Polygon 2.0..." style="box-sizing: border-box; border-style: none; vertical-align: top; height: auto;" /></a></figure><p></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">接下来是什么？Alpha 部分从这里开始。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">• Optimism 的 L2 Rollup 链 ——超级链的第一个成员。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">• Coinbase 即将推出的 Base L2 ——第二个成员，预计今年宣布上线主网。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">• Worldcoin 也承诺在 OP Stack 上构建。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">• AEVOXYZ，一个去中心化期权交易所，最近与 Conduit 合作推出了基于 OP Stack 的 Rollup。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">• BNB Chain 上的 opBNB 也利用了 OP Stack。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">• 由 OurZORA 开发的 Zora Network 是基于 OP Stack 构建的 L2 解决方案。</p><h1 class="wp-block-heading" style="box-sizing: border-box; margin: 32px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-weight: 500; line-height: 1.4; color: rgb(38, 38, 38); font-size: 24px; white-space: normal; background-color: rgb(255, 255, 255);">Arbitrum Orbit</h1><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">Arbitrum 目前是按照 TVL（总锁定价值）计算的最大和最具优势的 L2 网络，总价值超过 59 亿美元，占据了超过 60%的市场份额。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">Arbitrum 提供 4 个核心产品：</p><ol start="1" style="box-sizing: border-box; margin-bottom: 20px; padding-left: 2em; list-style-position: outside; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; white-space: normal; background-color: rgb(255, 255, 255);" class=" list-paddingleft-2"><li><p><span style="box-sizing: border-box; font-weight: bolder;">Arbitrum One</span>：这是 Arbitrum 生态系统的第一个主网 Rollup。</p></li><li><p><span style="box-sizing: border-box; font-weight: bolder;">Arbitrum Nova</span>：一种 AnyTrust 解决方案，专为成本敏感和高交易量预期的项目设计。</p></li><li><p><span style="box-sizing: border-box; font-weight: bolder;">Arbitrum Nitro</span>：这个技术软件堆栈驱动 Arbitrum L2，使 Rollup 更快、更便宜，并且更加兼容以太坊虚拟机（EVM）。</p></li><li><p><span style="box-sizing: border-box; font-weight: bolder;">Arbitrum Orbit</span>：这个开发框架允许在 Arbitrum 主网上创建和部署 L3。</p></li></ol><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">L3 Rollup，也被称为应用链，对于结算交易到 Arbitrum 链起着至关重要的作用。它们是 Arbitrum 扩展旅程的下一个阶段的基础，并且是实现他们愿景的解决方案。</p><p></p><figure class="wp-block-image" style="box-sizing: border-box; margin: 0px 0px 20px; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; white-space: normal; background-color: rgb(255, 255, 255);"><a class="j-wpcom-lightbox" href="http://www.liandu24.com/wp-content/uploads/2023/06/2023062916480337521891.jpg" data-group="0" data-id="5" data-index="5" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);"><img decoding="async" class="j-lazy" src="/resources/image/2023/07/19/440909517463621.jpg" data-original="http://localhost/dev-api/preview/sitex/resources/image/2023/07/19/440909517463621.jpg" alt="以太坊扩展解决方案的演变：OP Stack、Arbitrum Orbit、Polygon 2.0..." style="box-sizing: border-box; border-style: none; vertical-align: top; height: auto;" /></a></figure><p></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">Arbitrum 非常注重可定制性。Orbit 旨在与即将推出的 Arbitrum Stylus 升级兼容。这种兼容性为开发人员使用 C、C++ 和 Rust 构建 dApp 提供了可能性，并扩展了 Arbitrum 的多功能性和覆盖范围。</p><h1 class="wp-block-heading" style="box-sizing: border-box; margin: 32px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-weight: 500; line-height: 1.4; color: rgb(38, 38, 38); font-size: 24px; white-space: normal; background-color: rgb(255, 255, 255);">zkSync &amp; Hyperchain</h1><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">现在，让我们转向 zkSync 及其对以太坊扩展的未来愿景。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">Hyperchains 是 zkSync 对 L3 的设想，被构思为一个广阔的无信任且可定制链接的区块链生态系统。</p><p></p><figure class="wp-block-image" style="box-sizing: border-box; margin: 0px 0px 20px; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; white-space: normal; background-color: rgb(255, 255, 255);"><a class="j-wpcom-lightbox" href="http://www.liandu24.com/wp-content/uploads/2023/06/2023062916482340985023.jpg" data-group="0" data-id="6" data-index="6" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);"><img decoding="async" class="j-lazy" src="/resources/image/2023/07/19/440909518164037.jpg" data-original="http://localhost/dev-api/preview/sitex/resources/image/2023/07/19/440909518164037.jpg" alt="以太坊扩展解决方案的演变：OP Stack、Arbitrum Orbit、Polygon 2.0..." style="box-sizing: border-box; border-style: none; vertical-align: top; height: auto;" /></a></figure><p></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">简单来说，Hyperchain 指的是以太坊上的独立 ZK 链。这些链通过一系列可定制且完全无信任的超级跨链桥网络相互连接。这种方法有助于克服通常与非本地桥梁相关的漏洞。</p><h1 class="wp-block-heading" style="box-sizing: border-box; margin: 32px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-weight: 500; line-height: 1.4; color: rgb(38, 38, 38); font-size: 24px; white-space: normal; background-color: rgb(255, 255, 255);">StarkWare &amp; Fractal Scaling</h1><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">从理论上讲，该系统可以拥有无限数量的 Hyperchain 来代表整体。这就是 StarkWare 作为 Fractal Scaling 先驱者需要做的。</p><p></p><figure class="wp-block-image" style="box-sizing: border-box; margin: 0px 0px 20px; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; white-space: normal; background-color: rgb(255, 255, 255);"><a class="j-wpcom-lightbox" href="http://www.liandu24.com/wp-content/uploads/2023/06/2023062916481422138101.jpg" data-group="0" data-id="7" data-index="7" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);"><img decoding="async" class="j-lazy" src="/resources/image/2023/07/19/440909518938181.jpg" data-original="http://localhost/dev-api/preview/sitex/resources/image/2023/07/19/440909518938181.jpg" alt="以太坊扩展解决方案的演变：OP Stack、Arbitrum Orbit、Polygon 2.0..." style="box-sizing: border-box; border-style: none; vertical-align: top; height: auto;" /></a></figure><p></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">总之，StarkWare 的多层网络论文提出 L2 设计用于通用扩展，而 L3 应用于定制扩展。然而，除了最初发布的这篇论文之外，StarkWare 没有作出任何进一步的公告。</p><h1 class="wp-block-heading" style="box-sizing: border-box; margin: 32px 0px 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-weight: 500; line-height: 1.4; color: rgb(38, 38, 38); font-size: 24px; white-space: normal; background-color: rgb(255, 255, 255);">Polygon 2.0</h1><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">Polygon 在 6 月初发布了关于他们 L2 发展的下一个阶段的最新公告。Polygon 2.0 旨在创建“互联网的价值层”。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">该解决方案旨在通过一系列升级提高 Polygon zkEVM、PoS 和超网之间的互操作性。通过将零知识技术与现有的 PoS 机制相结合，Polygon 旨在增强安全性和隐私保护。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">在 Polygon 2.0 中，他们的目标是结合两种技术的优势。Polygon 团队最近的一项公告揭示了他们计划在 2024 年第一季度结束时将 Polygon PoS 转换为 zkEVM validium 的计划。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">总的来说，以太坊扩容解决方案的演变是未来几个月值得密切关注的话题，每一个 L2 巨头都给出了自己的方案，但最终鹿死谁手，还犹未可知。</p><p><br/></p>
+              <div class="entry-readmore">
+                <div class="entry-readmore-btn">
+                </div>
+              </div>
+              <div class="entry-copyright">
+                <p>
+                  <span>来源：</span>
+                  <span>
+                    <a href="#" style="font-size:14px;">
+                      互联网
+                    </a>
+                  </span><br>本文观点不代表gzmdrw立场，不承担法律责任，文章及观点也不构成任何投资意见。
+                </p>
+              </div>
+            </div>
+            <div class="entry-tag">
+                  <a href="#" rel="tag">Web3</a>
+            </div>
+            <div class="entry-action">
+              <div class="btn-zan1" data-id="440909325451333">
+                <i class="wpcom-icon wi">
+                  <svg aria-hidden="true">
+                    <use xlink:href="#wi-thumb-up-fill"></use>
+                  </svg>
+                </i>
+                赞 (<span class="entry-action-num"><i class="wpcom-icon wi wi-loader"><svg aria-hidden="true">
+                      <use xlink:href="#wi-loader"></use>
+                    </svg></i></span>)
+              </div>
+
+            </div>
+
+            <div class="entry-bar fixed">
+              <div class="entry-bar-inner clearfix" style="width: 860px;">
+                <div class="author pull-left art-author">
+                </div>
+                <div class="info pull-right">
+                  <div class="info-item meta">
+                    <a class="meta-item j-heart1" href="javascript:;" data-id="440909325451333">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-star"></use>
+                        </svg>
+                      </i>
+                      <span class="data"><i class="wpcom-icon wi wi-loader"><svg aria-hidden="true">
+                            <use xlink:href="#wi-loader"></use>
+                          </svg></i></span>
+                    </a>
+                    <a class="meta-item j-comment" href="#comments">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-comment"></use>
+                        </svg></i>
+                      <span class="data"><i class="wpcom-icon wi wi-loader"><svg aria-hidden="true">
+                            <use xlink:href="#wi-loader"></use>
+                          </svg></i></span>
+                    </a>
+                  </div>
+                  <div class="info-item share">
+                    <a class="meta-item mobile j-mobile-share2" href="javascript:;" data-title="以太坊扩展解决方案的演变：OP Stack、Arbitrum Orbit、Polygon 2.0…"
+                      data-qrcode="/news/web3/440909325451333.shtml" data-time="2025年02月08日 13:24">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-share"></use>
+                        </svg></i> 生成海报</a>
+                    <a class="meta-item wechat" data-share="wechat" target="_blank" rel="nofollow" href="#">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-wechat"></use>
+                        </svg></i> </a>
+                    <a class="meta-item weibo" data-share="weibo" target="_blank" rel="nofollow" href="#">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-weibo"></use>
+                        </svg></i> </a>
+                    <a class="meta-item qq" data-share="qq" target="_blank" rel="nofollow" href="#">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-qq"></use>
+                        </svg></i> </a>
+                    <a class="meta-item twitter" data-share="twitter" target="_blank" rel="nofollow" href="#">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-twitter"></use>
+                        </svg></i> </a>
+                    <a class="meta-item facebook" data-share="facebook" target="_blank" rel="nofollow" href="#">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-facebook"></use>
+                        </svg></i> </a>
+                    <a class="meta-item linkedin" data-share="linkedin" target="_blank" rel="nofollow" href="#">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-linkedin"></use>
+                        </svg></i> </a>
+                  </div>
+                  <div class="info-item act">
+                    <a href="javascript:;" id="j-reading"><i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-article"></use>
+                        </svg></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<!--#include file="/include/pagewidget/ad_article1.shtml" -->
+
+          <div class="entry-related-posts">
+            <h3 class="entry-related-title">相关推荐</h3>
+            <ul class="entry-related cols-3 post-loop post-loop-default content-list">
+                  <li class="item item-no-thumb"
+                    data-id="640411834191941">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/640411834191941.shtml" target="_blank" rel="bookmark">
+                          news栏目中唯一的文章
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年02月02日 17点03分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="637957853511749">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="https://gzmdrw.cn/zhongyaolunshu/" target="_blank" rel="bookmark">
+                          Let me try
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年04月02日 16点33分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="528487814377541">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/new_box/528487814377541.shtml" target="_blank" rel="bookmark">
+                          321321
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年03月27日 19点58分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="485088154181701">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/new_box/485088154181701.shtml" target="_blank" rel="bookmark">
+                          测试
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年03月23日 18点14分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="446074472464453">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/web3/446074472464453.shtml" target="_blank" rel="bookmark">
+                          数据：某巨鲸从Binance转出311万枚CRV，价值约182万美元789
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年03月22日 09点47分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="446069064171589">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/nft/446069064171589.shtml" target="_blank" rel="bookmark">
+                          Worldcoin确认收到肯尼亚政府通知，目前已暂停在该国的服务
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年03月21日 16点22分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="446067922018373">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/nft/446067922018373.shtml" target="_blank" rel="bookmark">
+                          OKX Web3钱包Cryptopedia第5期现已正式开启，Lifeform早期用户可独家认领空投盒子NFT
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年03月20日 08点55分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="445844838629445">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/defi/445844838629445.shtml" target="_blank" rel="bookmark">
+                          一图速览“促进民营经济发展28条” 北京
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年03月19日 17点30分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="444774218055749">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/nft/444774218055749.shtml" target="_blank" rel="bookmark">
+                          引领Paradigm“意图交易”新赛道 , 获众多顶级VC青睐的dappOS有何亮点？
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年03月18日 10点04分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="441455600029765">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/vipbox/think/441455600029765.shtml" target="_blank" rel="bookmark">
+                          报告｜北京市互联网3.0创新发展白皮书（2023年）
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年02月16日 22点11分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="441455394152517">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/vipbox/think/441455394152517.shtml" target="_blank" rel="bookmark">
+                          报告｜清华大学《AIGC发展研究报告1.0》
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年02月15日 14点55分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="441455009255493">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/vipbox/daosearch/441455009255493.shtml" target="_blank" rel="bookmark">
+                          研报｜跨链DeFi借贷协议Radiant Capital
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年02月14日 09点29分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="441454841741381">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/vipbox/daosearch/441454841741381.shtml" target="_blank" rel="bookmark">
+                          研报｜RWA代币化：下一个加密财富密码？
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年02月13日 20点03分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="440910133866565">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/web3/440910133866565.shtml" target="_blank" rel="bookmark">
+                          从三代币模型理解 SAFT 以及 Web3 代币投融资
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年02月11日 16点38分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="440909824315461">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/web3/440909824315461.shtml" target="_blank" rel="bookmark">
+                          智者当借力而行：浅析六大 Web3 任务平台
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年02月10日 07点16分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="440909610135621">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/web3/440909610135621.shtml" target="_blank" rel="bookmark">
+                          深入加密空投：历史、流程与分类，以及近期 6 个最值得参与的机会
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年02月09日 18点52分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+            </ul>
+          </div>
+
+          <div id="comments" class="entry-comments">
+            <div id="respond" class="comment-respond">
+              <h3 id="reply-title" class="comment-reply-title">
+                发表回复
+                <small>
+                  <a rel="nofollow" id="cancel-comment-reply-link" href="#respond" style="display:none;"><i
+                      class="wpcom-icon wi"><svg aria-hidden="true">
+                        <use xlink:href="#wi-close"></use>
+                      </svg></i></a>
+                </small>
+              </h3>
+              <form id="commentform" class="comment-form" novalidate="" style="display: none;"
+                data-id="440909325451333">
+                <div class="comment-form-comment">
+                  <textarea id="comment" name="comment" rows="4" placeholder="写下你的评论…"></textarea>
+                  <div class="comment-form-smile" style="display:none" data-target="#comment">
+                    <i class="wpcom-icon wi smile-icon"><svg aria-hidden="true">
+                        <use xlink:href="#wi-emotion"></use>
+                      </svg></i>
+                  </div>
+                </div>
+                <div class="form-submit">
+                  <div class="pull-left form-submit-text login-user">
+                    <img alt="" src="/images/0303.png" class="avatar avatar-60 photo" height="60"
+                      width="60"><span>xxx</span>
+                  </div>
+                  <button name="submit" type="button" id="submit" class="btn btn-primary btn-xs submit">提交</button>
+                  <input type="hidden" name="comment_conent_id" value="440909325451333" id="comment_conent_id">
+                </div>
+              </form>
+              <div class="comment-form" style="display: none;">
+                <div class="comment-must-login">请登录后评论...</div>
+                <div class="form-submit">
+                  <div class="form-submit-text pull-left"><a class="btn-login" href=" javascript:;">登录</a>后才能评论</div>
+                  <button name="submit" type="submit" id="must-submit" class="btn btn-primary btn-xs submit">提交</button>
+                </div>
+              </div>
+            </div>
+            <!-- #respond -->
+            <h3 class="comments-title"> 评论列表 </h3>
+            <ul class="comments-list" data-id="440909325451333">
+              
+            </ul>
+            <div class="load-more-wrap">
+              <div class="btn load-more btn-more-comment" data-id="440909325451333">点击查看更多</div>
+            </div>
+            <ul class="pagination"></ul>
+          </div><!-- .comments-area -->
+        </article>
+      </main>
+      <aside class="sidebar">
+<!--#include file="/include/block_recent.shtml" -->
+<!--#include file="/include/block_recent_defi.shtml" -->
+      </aside>
+    </div>
+  </div>
+<!--#include file="/include/footer.shtml" -->
+<!--#include file="/include/action.shtml" -->
+<!--#include file="/include/h5_bottom.shtml" -->
+
+  <script type="text/javascript" id="main-js-extra">
+    /* <![CDATA[ */
+    var _xy_cms = {
+      prefix: '/',
+      resource_prefix: '/',
+      api_prefix: 'http://localhost:8080/',
+      front_prefix: '/',
+      member_resource_prefix: '',
+      site_id: '440515705974853',
+      catalog_id: '440730091249733',
+      content_id: '440909325451333',
+      site_id: '440515705974853',
+      publish_pipe: 'pc',
+      preview: 'false' == 'true'
+    }
+    var _wpcom_js = { "webp": "", "ajaxurl": "", "theme_url": "", "slide_speed": "5000", "is_admin": "0", "js_lang": { "copy_done": "\u590d\u5236\u6210\u529f\uff01", "copy_fail": "\u6d4f\u89c8\u5668\u6682\u4e0d\u652f\u6301\u62f7\u8d1d\u529f\u80fd", "confirm": "\u786e\u5b9a", "qrcode": "\u4e8c\u7ef4\u7801", "page_loaded": "\u5df2\u7ecf\u5230\u5e95\u4e86", "no_content": "\u6682\u65e0\u5185\u5bb9", "load_failed": "\u52a0\u8f7d\u5931\u8d25\uff0c\u8bf7\u7a0d\u540e\u518d\u8bd5\uff01", "expand_more": "\u9605\u8bfb\u5269\u4f59 %s" }, "lightbox": "1", "post_id": "36029", "user_card_height": "356", "poster": { "notice": "\u8bf7\u957f\u6309\u4fdd\u5b58\u56fe\u7247\uff0c\u5c06\u5185\u5bb9\u5206\u4eab\u7ed9\u66f4\u591a\u597d\u53cb", "generating": "\u6b63\u5728\u751f\u6210\u6d77\u62a5\u56fe\u7247...", "failed": "\u6d77\u62a5\u56fe\u7247\u751f\u6210\u5931\u8d25" }, "video_height": "482", "fixed_sidebar": "1", "dark_style": "0", "font_url": "..\/css\/fonts.9b34824582affe8e.css", "follow_btn": "<i class=\"wpcom-icon wi\"><svg aria-hidden=\"true\"><use xlink:href=\"#wi-add\"><\/use><\/svg><\/i>\u5173\u6ce8", "followed_btn": "\u5df2\u5173\u6ce8", "user_card": "1" };
+/* ]]> */
+  </script>
+  <script type="text/javascript" src="/js/main.js" id="main-js"></script>
+  <script type="text/javascript" src="/js/icons-2.7.7.js" id="wpcom-icons-js"></script>
+  <script type="text/javascript" src="/js/comment-reply.min.js" id="comment-reply-js"></script>
+
+<!--#include file="/include/pagewidget/ad_top.shtml" -->
+<!--#include file="/include/block_user_login.shtml" -->
+<!--#include file="/include/stat.shtml" -->
+
+  <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "@id": "/news/web3/440909325451333.shtml",
+          "url": "/news/web3/440909325451333.shtml",
+          "headline": "以太坊扩展解决方案的演变：OP Stack、Arbitrum Orbit、Polygon 2.0…",
+          "image": [""],
+          "description": "",
+          "datePublished": "2023-07-14T17:26:20",
+          "dateModified": "2023-07-14T17:26:22",
+          "author": {"@type":"Person","name":"xxxx","url":"#account_center","image":"#avatar"}        }
+  </script>
+  <script>jQuery(function ($) { setup_share(1); });</script>
+  <script>
+    (function ($) {
+      $(document)
+
+      cleanArticleContent = function (html) {
+        const nonPTagRegex = /<[^>]*?(?:>(?!<[^>]*?>)[^<]*)*>/g;
+        const pTagRegex = /<p\s[^>]*?(?:>(?!<\/p[^>]*?>)[^>]*)*>/g;
+        html = html.replace(nonPTagRegex, '');
+        html = html.replace(pTagRegex, '<p>');
+        return html;
+      }
+    })(jQuery)
+  </script>
+</body>
+
+</html>

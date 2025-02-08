@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>图标轮播</title>
+    <style>
+      .icon-carousel-widget {
+        --icw-padding: 50px;
+        --icw-control-width: 40px;
+      }
+
+      .icon-carousel-widget[data-icon-carousel] {
+        position: relative;
+        padding: 0 var(--icw-padding);
+      }
+
+      .icon-carousel-widget[data-icon-carousel] .icw-carousel-inner .icw-row {
+        flex-wrap: nowrap;
+        display: flex;
+      }
+
+      .icon-carousel-widget[data-icon-carousel] .icw-icon-item {
+        text-align: center;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+
+      .icon-carousel-widget[data-icon-carousel] .icw-icon-item img {
+        width: 64px;
+        height: 64px;
+        object-fit: contain;
+      }
+
+      .icon-carousel-widget[data-icon-carousel] .icw-carousel-control-prev,
+      .icon-carousel-widget[data-icon-carousel] .icw-carousel-control-next {
+        width: var(--icw-control-width);
+        background: none;
+        border: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .icon-carousel-widget[data-icon-carousel] .icw-carousel-control-prev {
+        left: 0;
+      }
+
+      .icon-carousel-widget[data-icon-carousel] .icw-carousel-control-next {
+        right: 0;
+      }
+
+      .icon-carousel-widget[data-icon-carousel] .icw-carousel-control-prev-icon,
+      .icon-carousel-widget[data-icon-carousel]
+        .icw-carousel-control-next-icon {
+        background-color: black;
+        border-radius: 50%;
+        padding: 10px;
+        filter: invert(1);
+      }
+
+      /* 响应式布局 */
+      @media (min-width: 992px) {
+        .icon-carousel-widget[data-icon-carousel] .icw-col-lg {
+          flex: 0 0 16.666667%;
+          max-width: 16.666667%;
+        }
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        .icon-carousel-widget[data-icon-carousel] .icw-col-md {
+          flex: 0 0 20%;
+          max-width: 20%;
+        }
+      }
+      @media (max-width: 767.98px) {
+        .icon-carousel-widget[data-icon-carousel] .icw-col-sm {
+          flex: 0 0 33.333333%;
+          max-width: 33.333333%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="container px-0 mt-5"> -->
+      <div class="icon-carousel-widget px-0" data-icon-carousel>
+        <div id="iconCarouselWidget" class="carousel slide" data-icw-carousel>
+          <div class="carousel-inner icw-carousel-inner">
+                            <div class="carousel-item active">
+                  <div class="icw-row">
+                      <div class="icw-col-sm icw-col-md icw-col-lg">
+                        <div class="icw-icon-item">
+                          <img
+                            src="/resources/image/2025/02/07/642116635381829.png"
+                            alt="第七个logo"
+                            data-icw-tooltip
+                            data-bs-placement="top"
+                            title="第七个logo"
+                          />
+                        </div>
+                      </div>
+                      <div class="icw-col-sm icw-col-md icw-col-lg">
+                        <div class="icw-icon-item">
+                          <img
+                            src="/resources/image/2025/02/07/642113546113093.png"
+                            alt="红色专题"
+                            data-icw-tooltip
+                            data-bs-placement="top"
+                            title="红色专题"
+                          />
+                        </div>
+                      </div>
+                      <div class="icw-col-sm icw-col-md icw-col-lg">
+                        <div class="icw-icon-item">
+                          <img
+                            src="/resources/image/2025/02/07/642113396256837.png"
+                            alt="留言"
+                            data-icw-tooltip
+                            data-bs-placement="top"
+                            title="留言"
+                          />
+                        </div>
+                      </div>
+                      <div class="icw-col-sm icw-col-md icw-col-lg">
+                        <div class="icw-icon-item">
+                          <img
+                            src="/resources/image/2025/02/07/642113248432197.png"
+                            alt="云盘下载"
+                            data-icw-tooltip
+                            data-bs-placement="top"
+                            title="云盘下载"
+                          />
+                        </div>
+                      </div>
+                      <div class="icw-col-sm icw-col-md icw-col-lg">
+                        <div class="icw-icon-item">
+                          <img
+                            src="/resources/image/2025/02/07/642113164595269.png"
+                            alt="图书馆"
+                            data-icw-tooltip
+                            data-bs-placement="top"
+                            title="图书馆"
+                          />
+                        </div>
+                      </div>
+                      <div class="icw-col-sm icw-col-md icw-col-lg">
+                        <div class="icw-icon-item">
+                          <img
+                            src="/resources/image/2025/02/07/642113068814405.png"
+                            alt="校长信箱"
+                            data-icw-tooltip
+                            data-bs-placement="top"
+                            title="校长信箱"
+                          />
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="icw-row">
+                      <div class="icw-col-sm icw-col-md icw-col-lg">
+                        <div class="icw-icon-item">
+                          <img
+                            src="/resources/image/2025/02/07/642112874594373.png"
+                            alt="3d全景"
+                            data-icw-tooltip
+                            data-bs-placement="top"
+                            title="3d全景"
+                          />
+                        </div>
+                      </div>
+                  </div>
+                </div>
+          </div>
+          <button
+            class="carousel-control-prev icw-carousel-control-prev"
+            type="button"
+            data-bs-target="#iconCarouselWidget"
+            data-bs-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon icw-carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next icw-carousel-control-next"
+            type="button"
+            data-bs-target="#iconCarouselWidget"
+            data-bs-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon icw-carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    <!-- </div> -->
+
+    <script>
+      (function () {
+        function initIconCarousel(container) {
+          // 找到当前容器内的轮播元素
+          const carousel = container.querySelector("[data-icw-carousel]");
+
+          // 初始化轮播
+          new bootstrap.Carousel(carousel, {
+            interval: false, // 禁用自动播放
+            wrap: true, // 允许循环
+          });
+
+          // 初始化当前容器内的所有tooltip
+          const tooltipTriggerList =
+            container.querySelectorAll("[data-icw-tooltip]");
+          tooltipTriggerList.forEach((element) => {
+            new bootstrap.Tooltip(element);
+          });
+        }
+
+        // 初始化页面上所有的图标轮播组件
+        document.addEventListener("DOMContentLoaded", function () {
+          const containers = document.querySelectorAll("[data-icon-carousel]");
+          containers.forEach(initIconCarousel);
+        });
+      })();
+    </script>
+  </body>
+</html>

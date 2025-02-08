@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>贵阳人文科技学院</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- 添加 Montserrat 字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- 添加Font Awesome图标CSS -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+
+  </head>
+    <!-- 顶部导航栏 start-->
+    <nav
+      class="navbar d-flex justify-content-between px-5 py-5"
+      style="background-color: #ad1e23; "
+    >
+      <div class="ms-5">
+        <a href="/">
+          <img
+            style="width: 256px; height: 70px"
+            src="${Prefix}images/rw_logo.png"
+            alt="贵阳人文科技学院"
+          />
+        </a>
+      </div>
+
+      <ul class="banner-list list-unstyled d-flex" style="font-size: large; font-weight: 400;">
+        <li class="list ms-3 ps-3">
+          <a
+            class="index-list text-white text-decoration-none"
+            href="http://www.gzmdrw.cn/tushuguan_subsite/"
+            >图书馆</a
+          >
+        </li>
+        <li class="list ms-3 ps-3">
+          <a
+            class="index-list text-white text-decoration-none"
+            href="http://www.gzmdrw.cn/xiaochangxinxiang/"
+            >校长书记信箱</a
+          >
+        </li>
+        <li class="list ms-3 ps-3">
+          <a
+            class="index-list text-white text-decoration-none"
+            href="https://www.720yun.com/vr/433jzgmuum5"
+            >3D全景校园</a
+          >
+        </li>
+        <li class="list ms-3 ps-3">
+          <a
+            class="index-list text-white text-decoration-none"
+            href="https://gzmyrw.jw.chaoxing.com/admin/login"
+            >教务系统</a
+          >
+        </li>
+        <li class="list ms-3 ps-3">
+          <a
+            class="index-list text-white text-decoration-none"
+            href="http://www.gzmdrw.cn/admin.php/Index/index.html"
+            >管理员</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <!-- 顶部导航栏 end-->
+
+
+<@cms_include file="common/home_nav.template.html"></@cms_include>
+
+<!-- 轮播图 start-->
+<@cms_pagewidget code="home_banner"></@cms_pagewidget>
+<!-- 轮播图 end-->
+
+
+
+
+
+
+
+  <!-- 人文要闻 start -->
+
+    <div class="home_rwyw container" style="max-width: 1200px">
+      <!-- 页面标题 -->
+      <div class="text-center my-4">
+        <h2 class="fs-3 pb-2 fw-bolder">人文要闻</h2>
+        <div class="mx-auto" style="width: 40px; height: 3px; background-color: #ad1e23;"></div>
+      </div>
+
+      <div class="row">
+        <!-- 左侧新闻区域 -->
+        <div class="col-lg-8 pb-1">
+          <div class="news-section">
+            <!-- 主要新闻和新闻卡片网格 -->
+            <@cms_content catalogalias="xwzx_rwyw" size="5" sort="Recent">
+              <#assign displayCount = 0>
+              <#list DataList as content>
+                <#if (content.logo!'')!='' && displayCount < 5>
+                  <#assign displayCount = displayCount + 1>
+                  <#if displayCount == 1>
+                    <!-- 主要新闻 一张卡片-->
+                    <div class="card humanities-main-card overflow-hidden mb-4 d-flex justify-content-center align-items-center" style="height: 420px">
+                      <a href="${content.link}" class="text-decoration-none">
+                        <img src="${internalUrl(content.logo)}" class="card-img h-100 w-100 object-fit-cover" alt="${content.title}"/>
+                        <div class="card-img-overlay d-flex align-items-center">
+                          <h5 class="card-title fw-bold">${content.title}</h5>
+                        </div>
+                      </a>
+                    </div>
+                  <#else>
+                    <!-- 新闻卡片 4张卡片-->
+                    <#if displayCount == 2>
+                      <div class="row g-4">
+                    </#if>
+                    <div class="col-md-6">
+                      <div class="card humanities-news-card overflow-hidden d-flex justify-content-center align-items-center">
+                        <a href="${content.link}" class="text-decoration-none">
+                          <img src="${internalUrl(content.logo)}" class="card-img h-100 w-100 object-fit-cover" alt="${content.title}"/>
+                          <div class="card-img-overlay d-flex align-items-end">
+                            <h6 class="card-title fw-bold">${content.title}</h6>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <#if displayCount == 5>
+                      </div>
+                    </#if>
+                  </#if>
+                </#if>
+              </#list>
+            </@cms_content>
+          </div>
+        </div>
+
+        <!-- 右侧边栏 -->
+        <div class="col-lg-4">
+          <div class="sidebar rounded shadow-sm p-4 h-100">
+
+            <!-- 新闻中心 -->
+            <div class="mb-4">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="mb-0 fw-bold">新闻中心</h5>
+                <@cms_catalog alias="xwzx_xwzx" level="self">
+                <#list DataList as catalog>
+                <a href="${catalog.link}" class="text-decoration-none text-dark link-danger">更多</a>
+                </#list>
+                </@cms_catalog>
+              </div>
+
+              <div class="list-group" style="border-radius: 0">
+                <@cms_content catalogalias="xwzx_xwzx" size="6" sort="Recent">
+                  <#list DataList as content>
+                  <a href="${content.link}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-3 border-0 border-bottom border-secondary-subtle" style="padding-left: 5px; padding-right: 5px;">
+                      <span class="text-truncate" style="max-width: 70%">${content.title}</span>
+                      <small class="text-secondary">${dateFormat(content.publishDate, "yyyy-MM-dd")}</small>
+                    </a>
+                  </#list>
+                </@cms_content>
+              </div>
+            </div>
+
+            <!-- 通知公告 -->
+            <div class="mt-5">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-0 fw-bold">通知公告</h5>
+                <@cms_catalog alias="xwzx_tzgg" level="self">
+                <#list DataList as catalog>
+                <a href="${catalog.link}" class="text-decoration-none text-dark link-danger">更多</a>
+                </#list>
+                </@cms_catalog>
+              </div>
+              <div class="list-group" style="border-radius: 0">
+                <@cms_content catalogalias="xwzx_tzgg" size="6" sort="Recent">
+                  <#list DataList as content>
+                  <a href="${content.link}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-3 border-0 border-bottom border-secondary-subtle" style="padding-left: 5px; padding-right: 5px;">
+                      <span class="text-truncate">${content.title}</span>
+                      <small class="text-secondary">${dateFormat(content.publishDate, "yyyy-MM-dd")}</small>
+                    </a>
+                  </#list>
+                </@cms_content>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+
+    <style>
+
+      .home_rwyw .humanities-news-card {
+        height: 200px;
+      }
+
+      .home_rwyw .card-img-overlay {
+        height: 3rem;
+        background-color: rgba(180,0,0,0.65);
+        z-index: 1;
+        top: unset;
+        bottom: 0;
+        border-radius: unset;
+      }
+      .home_rwyw .text-truncate {
+        max-width: 65%;
+        display: inline-block;
+      }
+      .home_rwyw .sidebar {
+        box-shadow: 0 0px 20px rgba(0, 0, 0, 0.144);
+        padding: 20px;
+        height: 100%;
+      }
+      .home_rwyw .card-title {
+        margin-bottom: 0;
+        color: white;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+        padding: 0 10px;
+      }
+  </style>
+  
+  <!-- 人文要闻 end -->
+
+
+  <!-- 新闻中心板块 start -->
+  <div class="home_xwzx container mt-5" style="max-width: 1200px">
+    <!-- 标题 -->
+    <div class="text-center mb-4">
+      <h2 class="fs-3 pb-2 fw-bolder">新闻中心</h2>
+      <div class="mx-auto" style="width: 40px; height: 3px; background-color: #ad1e23;"></div>
+    </div>
+
+    <!-- 新闻列表 -->
+    <div class="row g-4 pb-5">
+      <!-- 左侧新闻 -->
+      <div class="col-md-6">
+        <div class="news-card p-3 shadow-sm">
+          <div class="news-header d-flex justify-content-between align-items-center mb-3">
+            <h5 class="m-0 fw-bold">新闻中心</h5>
+            <@cms_catalog alias="xwzx_xwzx" level="self">
+            <#list DataList as catalog>
+            <a href="${catalog.link}" class="text-decoration-none text-dark transition link-danger">更多</a>
+            </#list>
+            </@cms_catalog>
+          </div>
+          <@cms_content catalogalias="xwzx_xwzx" size="6" sort="Recent">
+            <#list DataList as content>
+              <a href="${content.link}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-3 border-0 border-bottom border-secondary-subtle" style="padding-left: 5px; padding-right: 5px;border-radius: unset;"">
+                  <span class="text-truncate">${content.title}</span>
+                  <small class="text-secondary">${dateFormat(content.publishDate, "yyyy-MM-dd")}</small>
+                </a>
+            </#list>
+          </@cms_content>
+        </div>
+      </div>
+
+      <!-- 右侧新闻 -->
+      <div class="col-md-6">
+        <div class="news-card p-3 shadow-sm">
+          <div class="news-header d-flex justify-content-between align-items-center mb-3">
+            <h5 class="m-0 fw-bold">通知公告</h5>
+            <@cms_catalog alias="xwzx_tzgg" level="self">
+            <#list DataList as catalog>
+            <a href="${catalog.link}" class="text-decoration-none text-dark transition link-danger">更多</a>
+            </#list>
+            </@cms_catalog>
+          </div>
+          <@cms_content catalogalias="xwzx_tzgg" size="6" sort="Recent">
+            <#list DataList as content>
+              <a href="${content.link}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-3 border-0 border-bottom border-secondary-subtle" style="padding-left: 5px; padding-right: 5px; border-radius: unset;">
+                <span class="text-truncate">${content.title}</span>
+                <small class="text-secondary">${dateFormat(content.publishDate, "yyyy-MM-dd")}</small>
+              </a>
+            </#list>
+          </@cms_content>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .home_xwzx .news-card {
+      background-color: #fff;
+      border-radius: 4px;
+      height: 100%;
+    }
+    .home_xwzx .text-truncate {
+      max-width: 85%;
+      display: inline-block;
+    }
+  </style>
+  <!-- 新闻中心板块 end -->
+
+
+
+  <!-- 校园风光 start -->
+  <div class="container mt-5" style="max-width: 1200px">
+    <!-- 标题 -->
+    <div class="text-center mb-4">
+      <h2 class="fs-3 pb-2 fw-bolder">校园风光</h2>
+      <div class="mx-auto" style="width: 40px; height: 3px; background-color: #ad1e23;"></div>
+    </div>
+
+    <video width="100%" height="auto" loop="" autoplay="" muted="" __idm_id__="2252801">
+      <source src="${Prefix}videos/v1.mp4" type="video/mp4">
+       Your browser does not support the video tag.
+      </video>
+  </div>
+  <!-- 校园风光 end  -->
+
+  <!-- 常用导航 start  -->
+
+  
+   <!-- 常用导航 end -->
+   <div class="container my-5" style="max-width: 1200px">
+    <!-- 标题 -->
+    <div class="text-center mb-4">
+      <h2 class="fs-3 pb-2 fw-bolder">常用导航</h2>
+      <div class="mx-auto" style="width: 40px; height: 3px; background-color: #ad1e23;"></div>
+    </div>
+    <@cms_pagewidget code="ad_links"></@cms_pagewidget>
+  </div>
+
+  
+</div>
+</div>
+<!-- 中间宽只有1200px的部分结束 -->
+
+
+  <!-- 页脚 -->
+<@cms_include file="common/home_footer.template.html"></@cms_include>
+
+
+
+
+
+
+  <!-- 添加所有用上的js库 -->
+  <!-- Bootstrap 5.3.0 JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

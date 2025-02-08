@@ -1,0 +1,155 @@
+  <!-- 轮播图 start-->
+  <div class="carousel-container">
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+              <!-- 分页指示器 -->
+        <div class="carousel-indicators">
+            <button type="button" 
+                    data-bs-target="#mainCarousel" 
+                    data-bs-slide-to="0" 
+                    class="active" aria-current="true">
+            </button>
+            <button type="button" 
+                    data-bs-target="#mainCarousel" 
+                    data-bs-slide-to="1" 
+                    >
+            </button>
+            <button type="button" 
+                    data-bs-target="#mainCarousel" 
+                    data-bs-slide-to="2" 
+                    >
+            </button>
+            <button type="button" 
+                    data-bs-target="#mainCarousel" 
+                    data-bs-slide-to="3" 
+                    >
+            </button>
+            <button type="button" 
+                    data-bs-target="#mainCarousel" 
+                    data-bs-slide-to="4" 
+                    >
+            </button>
+        </div>
+
+        <!-- 轮播项容器 -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="carousel-image-container">
+                <img src="/resources/image/2025/02/03/640837242351685.png" alt="home_banner5">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-image-container">
+                <img src="/resources/image/2025/02/03/640837347713093.png" alt="home_banner4">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-image-container">
+                <img src="/resources/image/2025/02/03/640837426159685.png" alt="home_banner1">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-image-container">
+                <img src="/resources/image/2025/02/03/640837488271429.png" alt="home_banner2">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-image-container">
+                <img src="/resources/image/2025/02/03/640837534298181.png" alt="home_banner3">
+              </div>
+            </div>
+        </div>
+
+      <!-- 控制按钮 -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- 添加样式 -->
+  <style>
+    .carousel-container {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1691/600;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    
+    #mainCarousel {
+      position: relative;
+      height: 100%;
+    }
+    
+    #mainCarousel .carousel-item {
+      height: 100%;
+    }
+    
+    .carousel-image-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    
+    #mainCarousel img {
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    
+    /* 控制按钮默认隐藏 */
+    .carousel-control-prev,
+    .carousel-control-next {
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    /* 鼠标悬浮时显示控制按钮 */
+    #mainCarousel:hover .carousel-control-prev,
+    #mainCarousel:hover .carousel-control-next {
+      opacity: 0.8;
+    }
+    
+    /* 自定义指示器样式 */
+    .carousel-indicators {
+      margin-bottom: 1rem;
+    }
+    
+    /* 自定义指示器样式 */
+    .carousel-indicators [data-bs-target] {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.6);
+      margin: 0 5px;
+      border: none;  /* 移除边框 */
+      padding: 0;    /* 移除内边距 */
+    }
+    
+    .carousel-indicators .active {
+      background-color: #fff;
+    }
+  </style>
+
+  <!-- 初始化轮播图 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const carousel = new bootstrap.Carousel(document.getElementById('mainCarousel'), {
+        interval: 5000,    // 自动播放间隔，5秒
+        wrap: true,        // 循环播放
+        pause: false,      // 修改：禁用鼠标悬停暂停
+        ride: 'carousel'   // 添加：确保自动播放
+      });
+    });
+  </script>
+
+  <!-- 轮播图 end-->

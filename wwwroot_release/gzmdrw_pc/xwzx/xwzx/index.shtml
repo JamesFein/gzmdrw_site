@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    />
+
+    <!-- 添加 Montserrat 字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- 添加Font Awesome图标CSS -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <title>新闻中心</title>
+    <style>
+        .list-group {
+            border: none;
+            border-radius: unset;
+        }
+
+        /* 左侧栏标题样式 */
+        .title-with-line {
+            position: relative;
+            padding-left: 20px;
+            background-color: transparent !important;
+            border: none;
+            font-weight: bold;
+            color: #333;
+            bottom: 1rem;
+        }
+
+        .title-with-line::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 25%;
+            width: 4px;
+            height: 50%;
+            background-color: #AD1E23;
+        }
+
+        /* 子栏目样式 */
+        .list-group-item {
+            border: none;
+            padding: 15px 20px;
+            background-color: #f5f5f5;
+            margin-bottom: 10px;
+            border-radius: unset;
+            transition: all 0.3s ease;
+        }
+
+        .list-group-item-action {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .list-group-item-action:hover,
+        .list-group-item-action.active {
+            background-color: #AD1E23;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .list-group-item-action.active:hover {
+            background-color: #92191d;
+        }
+
+        /* 分页控件样式 */
+        .pagination {
+            margin-bottom: 0;
+        }
+        
+        .pagination .page-link {
+            color: #333;
+            padding: 8px 16px;
+            border: 1px solid #dee2e6;
+            margin: 0 2px;
+        }
+
+        
+
+        .pagination .page-link:hover {
+            color: #AD1E23;
+            background-color: #f8f9fa;
+            border-color: #dee2e6;
+        }
+
+        .page-item {
+            margin-left: 5px;
+        }
+
+        .pagination .page-item.active .page-link {
+            background-color: #AD1E23;
+            border-color: #AD1E23;
+            color: #fff;
+        }
+
+        .pagination .page-item.active .page-link:hover {
+            background-color: #92191d;
+        }
+
+        .pagination-info {
+            color: #666;
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--#include file="/include/common/home_nav.shtml" -->
+
+    <!-- Banner部分 显示完整的面包屑 -->
+    <div class="banner-container position-relative">
+        <img src="/images/news_banner.jpg" alt="新闻中心" class="w-100" style="height: 400px; object-fit: cover;">
+        <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+            <h1 class="display-4 fw-bold" style="font-family: 'Montserrat', sans-serif;">新闻中心</h1>
+            <p class="lead">
+                <a href="/" class="text-white text-decoration-none">首页</a>
+                    <span class="text-white"> / </span>
+                            <a href="/xwzx/" class="text-white text-decoration-none">新闻中心</a>
+                    <span class="text-white"> / </span>
+                            <a href="/xwzx/xwzx/" class="text-white text-decoration-none">新闻中心</a>
+            </p>
+        </div>
+    </div>
+   
+    <!-- 文章列表 start -->
+    <div class="container my-5" style="max-width: 1200px;">
+        <div class="row">
+            <!-- 左侧导航栏 -->
+            <div class="col-md-3">
+                <div class="list-group">
+                    <div class="list-group-item title-with-line">
+                        <p class="mb-0">新闻中心</p>
+                    </div>
+                            <a href="/xwzx/rwyw/" class="list-group-item list-group-item-action ">人文要闻</a>
+                            <a href="/xwzx/xwzx/" class="list-group-item list-group-item-action active">新闻中心</a>
+                            <a href="/xwzx/tzgg/" class="list-group-item list-group-item-action ">通知公告</a>
+                </div>
+            </div>
+
+            <!-- 右侧文章列表 start 放在任何栏目下都可以-->
+            <div class="col-md-9">
+                <div class="row">
+
+                            <div class="col-12 mb-4">
+                                <div class="card" style="border: none; border-radius: 0; border-bottom: 1px solid #e0e0e0;">
+                                    <div class="row g-0">
+                                        <!-- 内容部分 -->
+                                        <div class="col-md-12">
+                                            <div class="card-body">
+                                                <h5 class="card-title mb-3">
+                                                    <a href="/xwzx/xwzx/641755739930693.shtml" class="text-decoration-none text-dark fw-bold">
+                                                        校地联动促青年成长 | 我校与贵阳花溪国家城市湿地公园达成社会实践战略合作协议
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text text-muted mb-3"></p>
+                                                <div class="d-flex align-items-center text-muted small">
+                                                    <i class="fas fa-user me-2"></i>
+                                                    <span class="me-3">小编</span>
+                                                    <i class="far fa-calendar me-2"></i>
+                                                    <span class="me-3">2025-02-06</span>
+                                                    <i class="fas fa-eye me-2"></i>
+                                                    <span>0</span>
+                                                </div>
+                                                <p class="mt-2"><a href="/xwzx/xwzx/641755739930693.shtml" class="text-decoration-none fw-bold" style="color:#AD1E23;">
+                                                    查看更多 <i class="fas fa-arrow-right"></i>
+                                                </a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-4">
+                                <div class="card" style="border: none; border-radius: 0; border-bottom: 1px solid #e0e0e0;">
+                                    <div class="row g-0">
+                                        <!-- 内容部分 -->
+                                        <div class="col-md-12">
+                                            <div class="card-body">
+                                                <h5 class="card-title mb-3">
+                                                    <a href="/xwzx/xwzx/641755664429125.shtml" class="text-decoration-none text-dark fw-bold">
+                                                        喜报 | 我校2位教师喜获2025年度贵州省科协决策咨询调研课题立项
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text text-muted mb-3"></p>
+                                                <div class="d-flex align-items-center text-muted small">
+                                                    <i class="fas fa-user me-2"></i>
+                                                    <span class="me-3">小编</span>
+                                                    <i class="far fa-calendar me-2"></i>
+                                                    <span class="me-3">2025-02-06</span>
+                                                    <i class="fas fa-eye me-2"></i>
+                                                    <span>0</span>
+                                                </div>
+                                                <p class="mt-2"><a href="/xwzx/xwzx/641755664429125.shtml" class="text-decoration-none fw-bold" style="color:#AD1E23;">
+                                                    查看更多 <i class="fas fa-arrow-right"></i>
+                                                </a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-4">
+                                <div class="card" style="border: none; border-radius: 0; border-bottom: 1px solid #e0e0e0;">
+                                    <div class="row g-0">
+                                        <!-- 内容部分 -->
+                                        <div class="col-md-12">
+                                            <div class="card-body">
+                                                <h5 class="card-title mb-3">
+                                                    <a href="/xwzx/xwzx/641755580633157.shtml" class="text-decoration-none text-dark fw-bold">
+                                                        快来接收！2025年3月全国计算机等级考试喊你报名啦🤩
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text text-muted mb-3"></p>
+                                                <div class="d-flex align-items-center text-muted small">
+                                                    <i class="fas fa-user me-2"></i>
+                                                    <span class="me-3">小编</span>
+                                                    <i class="far fa-calendar me-2"></i>
+                                                    <span class="me-3">2025-02-06</span>
+                                                    <i class="fas fa-eye me-2"></i>
+                                                    <span>0</span>
+                                                </div>
+                                                <p class="mt-2"><a href="/xwzx/xwzx/641755580633157.shtml" class="text-decoration-none fw-bold" style="color:#AD1E23;">
+                                                    查看更多 <i class="fas fa-arrow-right"></i>
+                                                </a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-4">
+                                <div class="card" style="border: none; border-radius: 0; border-bottom: 1px solid #e0e0e0;">
+                                    <div class="row g-0">
+                                        <!-- 内容部分 -->
+                                        <div class="col-md-12">
+                                            <div class="card-body">
+                                                <h5 class="card-title mb-3">
+                                                    <a href="/xwzx/xwzx/641755512315973.shtml" class="text-decoration-none text-dark fw-bold">
+                                                        贵州省应用统计学会第八届会员代表大会暨2024年学术年会成功召开
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text text-muted mb-3"></p>
+                                                <div class="d-flex align-items-center text-muted small">
+                                                    <i class="fas fa-user me-2"></i>
+                                                    <span class="me-3">小编</span>
+                                                    <i class="far fa-calendar me-2"></i>
+                                                    <span class="me-3">2025-02-06</span>
+                                                    <i class="fas fa-eye me-2"></i>
+                                                    <span>0</span>
+                                                </div>
+                                                <p class="mt-2"><a href="/xwzx/xwzx/641755512315973.shtml" class="text-decoration-none fw-bold" style="color:#AD1E23;">
+                                                    查看更多 <i class="fas fa-arrow-right"></i>
+                                                </a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-4">
+                                <div class="card" style="border: none; border-radius: 0; border-bottom: 1px solid #e0e0e0;">
+                                    <div class="row g-0">
+                                        <!-- 内容部分 -->
+                                        <div class="col-md-12">
+                                            <div class="card-body">
+                                                <h5 class="card-title mb-3">
+                                                    <a href="/xwzx/xwzx/641755332169797.shtml" class="text-decoration-none text-dark fw-bold">
+                                                        人文家书 | 师者如光 微以致远 志若鸿鹄 不负韶华
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text text-muted mb-3"></p>
+                                                <div class="d-flex align-items-center text-muted small">
+                                                    <i class="fas fa-user me-2"></i>
+                                                    <span class="me-3">小编</span>
+                                                    <i class="far fa-calendar me-2"></i>
+                                                    <span class="me-3">2025-02-06</span>
+                                                    <i class="fas fa-eye me-2"></i>
+                                                    <span>0</span>
+                                                </div>
+                                                <p class="mt-2"><a href="/xwzx/xwzx/641755332169797.shtml" class="text-decoration-none fw-bold" style="color:#AD1E23;">
+                                                    查看更多 <i class="fas fa-arrow-right"></i>
+                                                </a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+
+                <!-- 分页控件 -->
+                <div class="d-flex justify-content-center align-items-center mt-4">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+                                <!-- 首页 -->
+
+                                <!-- 上一页 -->
+                                
+                                <!-- 页码 -->
+                                    <li class="page-item active">
+                                            <a class="page-link" href="index.shtml">1</a>
+                                    </li>
+                                
+                                <!-- 下一页 -->
+
+                                <!-- 尾页 -->
+                            </ul>
+                        </nav>
+                        <!-- 分页信息 -->
+                        <div class="pagination-info ps-2 ">
+                            共 1 页 5 条数据
+                        </div>
+                </div>
+            </div>
+            <!-- 右侧文章列表 end 放在任何栏目下都可以-->
+        </div>
+    </div>
+    <!-- 文章列表 end  -->
+
+      <!-- 页脚 -->
+<!--#include file="/include/common/home_footer.shtml" -->
+
+
+    <!-- Bootstrap 5.3.0 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

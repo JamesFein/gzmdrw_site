@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1,viewport-fit=cover">
+  <title>从三代币模型理解 SAFT 以及 Web3 代币投融资_gzmdrw</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="/news/web3/440910133866565.shtml">
+  <meta property="og:site_name" content="gzmdrw">
+  <meta property="og:title" content="从三代币模型理解 SAFT 以及 Web3 代币投融资">
+  <meta property="og:image" content="">
+  <meta property="og:description" content="">
+  <link rel="canonical" href="/news/web3/440910133866565.shtml">
+  <meta name="applicable-device" content="pc,mobile">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <link rel="shortcut icon" href="/images/favicon.png">
+  <link rel="dns-prefetch" href="/">
+  <link rel="stylesheet" id="stylesheet-css" href="/css/style.6.14.1.1689415232.css" type="text/css"
+    media="all">
+  <link rel="stylesheet" id="font-awesome-css" href="/css/font-awesome.css" type="text/css" media="all">
+  <link rel="stylesheet" id="wp-block-library-css" href="/css/style.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="classic-theme-styles-css" href="/css/classic-themes.min.css" type="text/css"
+    media="all">
+<!--#include file="/include/block_top_style.shtml" -->
+  <link rel="stylesheet" id="wpcom-member-css" href="/css/wpcom_member.css" type="text/css" media="all">
+  <link rel="stylesheet" id="wpcom-member-pro-css" href="/css/wpcom_member_pro.css" type="text/css" media="all">
+  <link rel="stylesheet" id="QAPress-css" href="/css/qapress.css" type="text/css" media="all">
+  <style id="QAPress-inline-css" type="text/css">
+    :root {
+      --qa-color: #002FA7;
+      --qa-hover: #002FA7;
+    }
+  </style>
+  <script type="text/javascript" src="/js/jquery.min.js" id="jquery-core-js"></script>
+  <script type="text/javascript" src="/js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+  <script type="text/javascript" src="/js/jquery.cookie.js"></script>
+  <script type="text/javascript" src="/js/html2canvas.min.js"></script>
+  <link rel="icon" href="/images/favicon.png" sizes="32x32">
+  <link rel="icon" href="/images/favicon.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+  <meta name="msapplication-TileImage" content="/images/favicon.png">
+  <!--[if lte IE 11]><script src="/js/update.js"></script><![endif]-->
+  <link href="/css/fonts.9b34824582affe8e.css" rel="stylesheet" type="text/css">
+</head>
+
+<body
+  class="post-template-default single single-post postid-36029 single-format-standard logged-in lang-cn el-boxed header-fixed style-by-toggle">
+<!--#include file="/include/header.shtml" -->
+  <div id="wrap" style="min-height: 673px;">
+    <div class="wrap container">
+      <ol class="breadcrumb" vocab="https://schema.org/" typeof="BreadcrumbList">
+        <li class="home" property="itemListElement" typeof="ListItem"><a href="/" property="item"
+            typeof="WebPage"><span property="name" class="hide">gzmdrw</span>首页</a>
+          <meta property="position" content="1">
+        </li>
+        <li property="itemListElement" typeof="ListItem"><i class="wpcom-icon wi"><svg aria-hidden="true">
+              <use xlink:href="#wi-arrow-right-3"></use>
+            </svg></i><a href="/news/web3/" property="item" typeof="WebPage"><span
+              property="name">web3.0</span></a>
+          <meta property="position" content="2">
+        </li>
+      </ol>
+      <main class="main">
+        <article id="post-440910133866565"
+          class="post-440910133866565 post type-post status-publish format-standard has-post-thumbnail hentry category-knews tag-rwa tag-116 special-rwa entry">
+          <div class="entry-main">
+            <div class="entry-head">
+              <h1 class="entry-title">从三代币模型理解 SAFT 以及 Web3 代币投融资</h1>
+              <div class="entry-info">
+                <time class="entry-date published" datetime="2025-02-11 16:38:54"
+                  pubdate="">
+                  2025年02月11日 </time>
+                <span class="dot">•</span>
+                <a href="/news/web3/" rel="category tag">web3.0</a>
+                <span class="dot">•</span>
+                <span id="views-440910133866565"><i class="wpcom-icon wi wi-loader"><svg aria-hidden="true">
+                      <use xlink:href="#wi-loader"></use>
+                    </svg></i></span>
+              </div>
+            </div>
+            <div class="entry-content">
+                <p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">Web3是构架在<span class="wpcom_tag_link" style="box-sizing: border-box;"><a href="http://www.liandu24.com/archives/tag/%e5%8c%ba%e5%9d%97%e9%93%be" title="区块链" target="_blank" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);">区块链</a></span>上的价值网络，上面的一切价值皆可被代币化，代币是价值的数字化形式，并在 Web 3 的价值网络中自由、高效地组合、流转和分配。HashKey Group 的肖风博士提出的“三代币模型”，非常清晰地解释了价值的各个维度，即功能型代币（Utility Token）、权益型代币（Security Token）和非同质化代币（NFT）分别代表着使用权、所有权和数字通证。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">而 SAFT（Simple Agreements for Future Tokens）作为 Web3 投融资中最常见的协议，是通过 Token 的形式来捕获 Web3 项目的价值。本文将结合 HashKey Group 白皮书《Web3 新经济和代币化》以及美国 Cooley 律所 SAFT 白皮书，从三代币模型的角度来理解 SAFT，Web3 代币投融资以及 Token 投融资的价值捕获方式。</p><p></p><figure class="wp-block-image" style="box-sizing: border-box; margin: 0px 0px 20px; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; white-space: normal; background-color: rgb(255, 255, 255);"><a class="j-wpcom-lightbox" href="http://www.liandu24.com/wp-content/uploads/2023/05/eXfVPLhYna.png" data-group="0" data-id="0" data-index="0" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);"><img decoding="async" class="j-lazy" src="/resources/image/2023/07/19/440910320660549.png" data-original="http://localhost/dev-api/preview/sitex/resources/image/2023/07/19/440910320660549.png" alt="从三代币模型理解 SAFT 以及 Web3 代币投融资" style="box-sizing: border-box; border-style: none; vertical-align: top; height: auto;" /></a></figure><p></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">(from: How to Invest in Web3: The Next Phase of the Internet)</p><h3 class="wp-block-heading" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-weight: 500; line-height: 1.46; color: rgb(38, 38, 38); margin: 32px 0px 16px; font-size: 18px; position: relative; padding-left: 18px; border: 0px; white-space: normal; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; font-weight: bolder;">TL; DR</span></h3><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">Web3 新经济是利益相关者经济，核心是使用权制度；</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">三代币模型中的功能性代币、权益性代币、NFT 分别代表着使用权、所有权和数字通证；</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">使用权不能被股份化，但是可以被代币化，即功能性代币，是使用权的一种价值表示，获取的是网络效益的价值；</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">SAFT 本身是一份投资协议，SAFT 只适用于功能性代币，通过两步走的协议机制，实现了 Token 从证券型代币到功能型代币的转变，从而一定程度规避美国 SEC 的证券监管；</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">Web3 项目投融资，目的都是去捕获项目的价值，股权和代币投资的区别在于确定价值于何处实现，通过何种方式去捕获。</p><h3 class="wp-block-heading" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-weight: 500; line-height: 1.46; color: rgb(38, 38, 38); margin: 32px 0px 16px; font-size: 18px; position: relative; padding-left: 18px; border: 0px; white-space: normal; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; font-weight: bolder;">一、Web3 新经济的三代币模型</span></h3><p></p><figure class="wp-block-image" style="box-sizing: border-box; margin: 0px 0px 20px; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; white-space: normal; background-color: rgb(255, 255, 255);"><a class="j-wpcom-lightbox" href="http://www.liandu24.com/wp-content/uploads/2023/05/8B6t2761Wd.png" data-group="0" data-id="1" data-index="1" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);"><img decoding="async" class="j-lazy" src="/resources/image/2023/07/19/440910321303621.png" data-original="http://localhost/dev-api/preview/sitex/resources/image/2023/07/19/440910321303621.png" alt="从三代币模型理解 SAFT 以及 Web3 代币投融资" style="box-sizing: border-box; border-style: none; vertical-align: top; height: auto;" /></a></figure><p></p><pre class="wp-block-preformatted" style="box-sizing: border-box; font-family: SFMono-Regular, &quot;Liberation Mono&quot;, Consolas, Menlo, monospace, &quot;Microsoft Yahei&quot;; white-space: pre-wrap; padding: 20px; line-height: 1.45; background-color: rgb(43, 48, 59); border-radius: 3px; border: 0px; color: rgb(238, 238, 238); overflow-x: scroll;">(from:&nbsp;解析代币化，引领新经济！&nbsp;《Web3新经济和代币化》白皮书在2023香港Web3嘉年华发布)</pre><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">深入理解三代币模型的本质，对于理解 Web3 投融资中不同形式的价值捕获非常有帮助。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">无论是在 Web1 还是 Web2 的经济模型中（监控资本主义），都是由平台享有最终信息数据的所有权，平台通过变现后产生了巨大的商业价值，催生了如 Facebook、Googel 等平台级的商业巨头，但这与一般的用户参与者无关。<span style="box-sizing: border-box; font-weight: bolder;">而基于区块链网络的 Web3，则是基于一套价值网络的经济模型（利益相关者资本主义），强调数据可信、数据主权和价值互联。在一切价值都可代币化的前提下，价值不仅仅包括了所有权，更重要的价值是使用权。</span></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">所有权具有独占性，难以分割。所有权制度下的组织形态（一般为公司），其目标是股东利益最大化，是股东资本主义的体现。使用权则是非独占的，具有多重共享性，可以多次授权、许可，甚至做到开源、CC0 的无限循环。使用权制度的核心是利益相关者资本主义，原有的组织形态就不一定合适，以开源组织、非营利组织为基础的去中心化自治组织（DAO）就天然地适合利益相关者资本主义，成了 Web3 的新经济模式的最主要组织形式。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; font-weight: bolder;">在使用权制度下，组织中所有参与者以利益相关者的身份进行大规模协作，做出自身的贡献，共享组织价值</span>。在这样的背景下，项目股东所代表的股东所有权已经没有意义，真正有价值的是项目的使用权。<span style="box-sizing: border-box; font-weight: bolder;">使用权不能被股份化，但是可以被代币化。</span>结合区块链分布式账本技术，使用权能够以 Token 的形式标准化和份额化，这与每一个在项目网络中的参与者的利益都有关系，即功能性代币（Utility Token）。</p><p></p><figure class="wp-block-image" style="box-sizing: border-box; margin: 0px 0px 20px; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; white-space: normal; background-color: rgb(255, 255, 255);"><a class="j-wpcom-lightbox" href="https://cdn-img.panewslab.com/panews/images/M76OZp5i1K.png" data-group="0" data-id="2" data-index="2" rel="noopener" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);"><img decoding="async" class="j-lazy" src="/resources/image/2023/07/19/440910322221125.png" data-original="http://localhost/dev-api/preview/sitex/resources/image/2023/07/19/440910322221125.png" alt="从三代币模型理解 SAFT 以及 Web3 代币投融资" style="box-sizing: border-box; border-style: none; vertical-align: top; height: auto;" /></a></figure><p></p><pre class="wp-block-preformatted" style="box-sizing: border-box; font-family: SFMono-Regular, &quot;Liberation Mono&quot;, Consolas, Menlo, monospace, &quot;Microsoft Yahei&quot;; white-space: pre-wrap; padding: 20px; line-height: 1.45; background-color: rgb(43, 48, 59); border-radius: 3px; border: 0px; color: rgb(238, 238, 238); overflow-x: scroll;">(from:&nbsp;Web3&nbsp;新经济和代币化)</pre><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; font-weight: bolder;">在 Web3 经济模型、使用权制度、利益相关者资本主义的基础上，围绕项目构建的三代币模型——功能型代币（Utility Token）、权益型代币（Security Token）和非同质化代币（NFT），将根据自身的价值形态，与所有参与的利益相关者共享价值。</span>例如，利益相关者只有拥有该区块链网络、系统或应用的 Token，才具有使用该网络、系统或应用的权利；又或者代币可以是表决权的凭证，可以参与社区投票、表决和治理等，这些都是使用权的体现。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">l功能型代币（Utility Token）捕获的是该 Web3 网络、系统或应用的网络规模效应。生态应用和用户的体量越大，市场对该代币的需求就越高，代币的价格依靠市场的价值发现。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">l权益型代币（Security Token）捕获的是股权、债权等权益类资产未来现金流的价值。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">lNFT 则是事物底层资产的数字化资产形式，可以称为“数字通证”。NFT 与其锚定的底层资产价值相关，价值来源多种多样。</p><h3 class="wp-block-heading" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-weight: 500; line-height: 1.46; color: rgb(38, 38, 38); margin: 32px 0px 16px; font-size: 18px; position: relative; padding-left: 18px; border: 0px; white-space: normal; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; font-weight: bolder;">二、SAFT 的法律属性</span></h3><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">SAFT（Simple Agreements for Future Tokens）——未来代币投资协议，是专门针对架构在区块链网络上 Web3 项目的一种投资协议。SAFT 约定由项目方以未来网络上线后代币的认购权作为对价，来换取投资者当下的资金，用于项目网络当下的开发建设。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">由于权益型代币（Security Token）是各个司法辖区的重点监管对象，SAFT 通过建立一套协议机制，最终实现功能型代币（Utility Token）网络上线的效果，来规避美国证监会及相关法律对于 Web3 项目代币投融资行为的监管。</p><p></p><figure class="wp-block-image" style="box-sizing: border-box; margin: 0px 0px 20px; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; white-space: normal; background-color: rgb(255, 255, 255);"><a class="j-wpcom-lightbox" href="http://www.liandu24.com/wp-content/uploads/2023/05/TG16ZNH6g9.png" data-group="0" data-id="3" data-index="3" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);"><img decoding="async" class="j-lazy" src="/resources/image/2023/07/19/440910339829829.png" data-original="http://localhost/dev-api/preview/sitex/resources/image/2023/07/19/440910339829829.png" alt="从三代币模型理解 SAFT 以及 Web3 代币投融资" style="box-sizing: border-box; border-style: none; vertical-align: top; height: auto;" /></a></figure><p></p><pre class="wp-block-preformatted" style="box-sizing: border-box; font-family: SFMono-Regular, &quot;Liberation Mono&quot;, Consolas, Menlo, monospace, &quot;Microsoft Yahei&quot;; white-space: pre-wrap; padding: 20px; line-height: 1.45; background-color: rgb(43, 48, 59); border-radius: 3px; border: 0px; color: rgb(238, 238, 238); overflow-x: scroll;">(from:&nbsp;https://saft-project.org/)</pre><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">由美国 Cooly 律所主要操刀的 SAFT 白皮书（The SAFT Project: Toward a Compliant Token SaleFramework）于 2017 年 10 月 2 号发布，首次提出了 SAFT 的交易模式，旨在为 Web3 项目提供了一条基于美国证券法体系下的合规 Token 发行路径，主要分为两个步骤：</p><p></p><figure class="wp-block-image" style="box-sizing: border-box; margin: 0px 0px 20px; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; white-space: normal; background-color: rgb(255, 255, 255);"><a class="j-wpcom-lightbox" href="http://www.liandu24.com/wp-content/uploads/2023/05/NojdYSHN4i.png" data-group="0" data-id="4" data-index="4" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);"><img decoding="async" class="j-lazy" src="/resources/image/2023/07/19/440910340227141.png" data-original="http://localhost/dev-api/preview/sitex/resources/image/2023/07/19/440910340227141.png" alt="从三代币模型理解 SAFT 以及 Web3 代币投融资" style="box-sizing: border-box; border-style: none; vertical-align: top; height: auto;" /></a></figure><p></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">（1）项目开发阶段：对于尚在开发阶段的 Web3 项目，投资人通过金钱的投入之后，其利润的预期依赖于项目方开发团队对网络的管理和开发。由于代币并没有实际效用，这个阶段的代币性质，更加类似于股权的一种价值表示，捕获的价值是 Web3 项目的未来现金流的能力。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">这种投资行为可能满足 Howey Test 的标准，属于“投资合同”（Investment Contract），从而要被纳入美国证监会严格的证券监管。但可以根据美国证券法 Regulation D Rule 506 申请豁免，而无需进行证券登记，将投资人仅限于合格投资人（Accredited Investors）。</p><p></p><figure class="wp-block-image" style="box-sizing: border-box; margin: 0px 0px 20px; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; white-space: normal; background-color: rgb(255, 255, 255);"><a class="j-wpcom-lightbox" href="https://cdn-img.panewslab.com/panews/images/FY54H2VBlU.png" data-group="0" data-id="5" data-index="5" rel="noopener" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);"><img decoding="async" class="j-lazy" src="/resources/image/2023/07/19/440910340661317.png" data-original="http://localhost/dev-api/preview/sitex/resources/image/2023/07/19/440910340661317.png" alt="从三代币模型理解 SAFT 以及 Web3 代币投融资" style="box-sizing: border-box; border-style: none; vertical-align: top; height: auto;" /></a></figure><p></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">（2）项目开发完成上线阶段：对于已经开发完成并上线项目网络，其发行的代币（Already-functional Utility Token）具备允许用户访问该 Web3 项目生态网络的诸多效能（使用、消费、治理等）。这个阶段的代币性质，是使用权的一种价值表示，被定义为功能型代币（Utility Token）。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">由于该代币已经具有了实用属性，一般而言投资人购买代币的主要目的是获取项目网络的实用价值，不是为了单纯的获利。而且，对于一个去中心化的代币经济体系或治理体系，该代币在二级市场的价格完全受到市场的供需关系影响，而不由项目开发团队的贡献主导。这大大区别于（1）项目开发阶段代币的作用。因此 SAFT 白皮书认为，这样的 Utility Token 不具备“证券”的属性，一般不会纳入美国证监会的严格监管。但SAFT 的目的是去合美国 SEC 的规，严格来说只适用于专业投资者（Accredited Investment），并不适合大部分中小投资人。</p><p></p><figure class="wp-block-image" style="box-sizing: border-box; margin: 0px 0px 20px; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; white-space: normal; background-color: rgb(255, 255, 255);"><a class="j-wpcom-lightbox" href="http://www.liandu24.com/wp-content/uploads/2023/05/8Quw2Lz71E.png" data-group="0" data-id="6" data-index="6" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);"><img decoding="async" class="j-lazy" src="/resources/image/2023/07/19/440910356332613.png" data-original="http://localhost/dev-api/preview/sitex/resources/image/2023/07/19/440910356332613.png" alt="从三代币模型理解 SAFT 以及 Web3 代币投融资" style="box-sizing: border-box; border-style: none; vertical-align: top; height: auto;" /></a></figure><p></p><pre class="wp-block-preformatted" style="box-sizing: border-box; font-family: SFMono-Regular, &quot;Liberation Mono&quot;, Consolas, Menlo, monospace, &quot;Microsoft Yahei&quot;; white-space: pre-wrap; padding: 20px; line-height: 1.45; background-color: rgb(43, 48, 59); border-radius: 3px; border: 0px; color: rgb(238, 238, 238); overflow-x: scroll;">（from:&nbsp;Kraken’s&nbsp;Legal&nbsp;Chief&nbsp;Has&nbsp;No&nbsp;Time&nbsp;to&nbsp;Educate&nbsp;Firms&nbsp;About&nbsp;Crypto）</pre><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">虽然我们看到 SEC 在最近的 Kik 案和 Telegram 案中对于 SAFT 发出了诸多挑战，但是总感觉是功能型代币（Utility Token）的设计以及发行节奏上存在瑕疵。作为 SAFT 白皮书起草者之一，最懂 Crypto 以及美国证券法的律师之一，目前担任 Karken 总法律顾问的 Marco Santori，都在 2023 年 2 月因 Karken 的 Staking as a Service 业务被 SEC 干翻车，更不用说各个项目网络不同、Token 功能设计不同、代币经济设计不同、投资人不同的项目 SAFT 协议了。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">Web3 投融资在法律上有诸多方式，如涉及股权的 SPA（Share Purchase Agreement）、SAFE（Simple Agreement for Future Equity），以及涉及代币的 TPA（Token Purchase Agreement）、SAFT（Simple Agreement for Future Tokens），或者两者结合的 SAFE + Token Warrant/Side Letter。具体采取哪种形式，需要基于 Web3 投融资的本质。</p><h3 class="wp-block-heading" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-weight: 500; line-height: 1.46; color: rgb(38, 38, 38); margin: 32px 0px 16px; font-size: 18px; position: relative; padding-left: 18px; border: 0px; white-space: normal; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; font-weight: bolder;">三、Web3 投融资的本质</span></h3><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; font-weight: bolder;">Web3 项目投融资，最重要的在于确定价值于何处实现。</span>在为股权类项目估值时，更多关注的是公司的未来现金流的能力，因为股东享有公司利益分配的合法权益。在为代币类项目估值时，传统现金流的估值模式并不适用，更多关注的是项目网络规模效应，网络与代币之间的需求，以及代币的功能。因此，对比代币融资项目，代币经济非常重要。</p><p></p><figure class="wp-block-image" style="box-sizing: border-box; margin: 0px 0px 20px; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; white-space: normal; background-color: rgb(255, 255, 255);"><a class="j-wpcom-lightbox" href="http://www.liandu24.com/wp-content/uploads/2023/05/OB5pkk6Aa1.png" data-group="0" data-id="7" data-index="7" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);"><img decoding="async" class="j-lazy" src="/resources/image/2023/07/19/440910356852805.png" data-original="http://localhost/dev-api/preview/sitex/resources/image/2023/07/19/440910356852805.png" alt="从三代币模型理解 SAFT 以及 Web3 代币投融资" style="box-sizing: border-box; border-style: none; vertical-align: top; height: auto;" /></a></figure><p></p><pre class="wp-block-preformatted" style="box-sizing: border-box; font-family: SFMono-Regular, &quot;Liberation Mono&quot;, Consolas, Menlo, monospace, &quot;Microsoft Yahei&quot;; white-space: pre-wrap; padding: 20px; line-height: 1.45; background-color: rgb(43, 48, 59); border-radius: 3px; border: 0px; color: rgb(238, 238, 238); overflow-x: scroll;">(from:&nbsp;Connecting&nbsp;Web3&nbsp;Wallet&nbsp;to&nbsp;Twitter&nbsp;Account)</pre><h4 class="wp-block-heading" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-weight: 500; line-height: 1.1; color: rgb(38, 38, 38); margin-top: 10px; margin-bottom: 10px; font-size: 18px; white-space: normal; background-color: rgb(255, 255, 255);">（1）Twitter 的 Web3 假想</h4><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">目前创作者生态的 Web2 互联网巨头 Twitter，是通过公司这一组织形态运行，其目标是股东利益最大化，体现的是股东资本主义，投资的价值在于公司对于未来现金流的获取能力，股票价格反映未来现金流的价值。而试想一个基于 Web3 新经济模型的 Twitter，以其代币激励网络生态上的所有参与者（内容创作者、开发者、验证者、其他市场参与者等），共同维护 Twitter 生态网络并推动治理。代币的效能不仅是交换媒介，还能为用户访问 Twitter 生态网络、消费 Twitter 生态网络上的产品/服务、对 Twitter 生态网络的决策进行治理等提供效能。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">这种 Web3 新经济模型将经济利益和治理权力从中心化实体释放到整个去中心化的生态网络中，参与的所有利益相关者都能够分享到他们所创造的价值，体现的是利益相关者资本主义。这种模式下，Twitter 的股权不一定有意义，Twitter 的代币将取代股权去捕获 Twitter 生态网络上更大的价值，代币价格反映生态网络对于代币的供需关系。</p><p></p><figure class="wp-block-image" style="box-sizing: border-box; margin: 0px 0px 20px; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; white-space: normal; background-color: rgb(255, 255, 255);"><a class="j-wpcom-lightbox" href="http://www.liandu24.com/wp-content/uploads/2023/05/ANg9s57yvh.png" data-group="0" data-id="8" data-index="8" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);"><img decoding="async" class="j-lazy" src="/resources/image/2023/07/19/440910357307461.png" data-original="http://localhost/dev-api/preview/sitex/resources/image/2023/07/19/440910357307461.png" alt="从三代币模型理解 SAFT 以及 Web3 代币投融资" style="box-sizing: border-box; border-style: none; vertical-align: top; height: auto;" /></a></figure><p></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">(from: https://dune.com/hildobby/NFTs)</p><h4 class="wp-block-heading" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-weight: 500; line-height: 1.1; color: rgb(38, 38, 38); margin-top: 10px; margin-bottom: 10px; font-size: 18px; white-space: normal; background-color: rgb(255, 255, 255);">（2）Opensea 与 Blur</h4><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">曾经全球最大的 NFT 交易平台 Opensea 于 2022 年 1 月获得了 Paradigm 和 Coatue 的 3 亿美元的融资，估值 133 亿美元。Opensea 的现金流以其交易手续费为主要支撑，Opensea 的这类项目可以理解为 Web3 中典型的股权投融资项目，它们在许多方面可以适用传统的商业模式，投资人捕获的是公司未来现金流的价值，股权投资是更可取的。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">同期，2022 年 3 月，Blur 拿到了 Paradigm 的 1100 万美元融资。在 Opensea 这座大山面前，Blur 在一年后直接通过激活社区的方式（给社区参与者代币空投的形式），开启了 NFT 市场的流动性盛宴，实现了对 Opensea 网络效应的弯道超车。Blur 的这类项目可以理解为 Web3 中典型的代币投融资项目，投资人捕获的是 Blur 网络生态规模效应，生态应用和用户的体量越大，市场对该功能型代币的需求就越高，代币的价格依靠市场的价值发现。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">但考虑到 Blur 代币在上市之后的萎靡以及 Token 功能的局限，可以看出<span style="box-sizing: border-box; font-weight: bolder;">如何设计好代币的功能以及代币经济模式是项目长远运行的重中之重</span>。</p><p></p><figure class="wp-block-image" style="box-sizing: border-box; margin: 0px 0px 20px; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; white-space: normal; background-color: rgb(255, 255, 255);"><a class="j-wpcom-lightbox" href="http://www.liandu24.com/wp-content/uploads/2023/05/uzHQws30Xn.png" data-group="0" data-id="9" data-index="9" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);"><img decoding="async" class="j-lazy" src="/resources/image/2023/07/19/440910357737541.png" data-original="http://localhost/dev-api/preview/sitex/resources/image/2023/07/19/440910357737541.png" alt="从三代币模型理解 SAFT 以及 Web3 代币投融资" style="box-sizing: border-box; border-style: none; vertical-align: top; height: auto;" /></a></figure><p></p><pre class="wp-block-preformatted" style="box-sizing: border-box; font-family: SFMono-Regular, &quot;Liberation Mono&quot;, Consolas, Menlo, monospace, &quot;Microsoft Yahei&quot;; white-space: pre-wrap; padding: 20px; line-height: 1.45; background-color: rgb(43, 48, 59); border-radius: 3px; border: 0px; color: rgb(238, 238, 238); overflow-x: scroll;">(from:&nbsp;https://docs.blur.foundation/tokenomics)</pre><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">所以可以看出，<span style="box-sizing: border-box; font-weight: bolder;">Web3 项目投融资，目的都是去捕获项目的价值，区别在于确定价值于何处实现，通过何种方式去捕获。</span></p><h3 class="wp-block-heading" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-weight: 500; line-height: 1.46; color: rgb(38, 38, 38); margin: 32px 0px 16px; font-size: 18px; position: relative; padding-left: 18px; border: 0px; white-space: normal; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; font-weight: bolder;">四、写在最后</span></h3><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">Web3 项目价值流动性的大幅提升，对于项目方提出了更高的要求，其需要在白皮书融资阶段就能够相对清晰地描述项目未来的模式以及代币经济的安排，否则难以衔接后面的 SAFT 以及发展规划。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">因此，在项目早期模式尚未定型的阶段，也可以采用股权融资 + 代币条款的设置（SAFE + Token Warrant/Side Letter），一方面同样能够解决 SAFT 规避美国证券监管的目的，一方面也能为项目提供股权融资的途径，同时保留代币融资的可能。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; font-weight: bolder;">方式可以多种多样，但是Web3项目必须产生价值，否则都是雾里看花。</span></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">——END——</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">本文仅供学习、参考，希望对您有所帮助，不构成任何法律、投资意见，not your lawyer，DYOR。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; font-weight: bolder;">Reference:</span></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">[1] HashKey Group, Web3新经济和代币化白皮书</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);"><a href="https://www.hashkey.com/cn/insights/web3-new-economy-and-tokenization-whitepaper" rel="noopener" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);">https://www.hashkey.com/cn/insights/web3-new-economy-and-tokenization-whitepaper</a></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">[2] Cooly, The SAFT Project: Toward a Compliant Token SaleFramework</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);"><a href="https://www.cooley.com/news/insight/2017/2017-10-24-saft-project-whitepaper" rel="noopener" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);">https://www.cooley.com/news/insight/2017/2017-10-24-saft-project-whitepaper</a></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);">[3] 北拓研究 | 股权vs代币：投资模式与价值捕捉</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 20px; line-height: 1.8; overflow-wrap: break-word; white-space: pre-wrap; color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Ubuntu, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, &quot;Source Han Sans CN&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);"><a href="https://mp.weixin.qq.com/s/TqgqIon3Ijq77yCe1wx5ZA" rel="noopener" style="box-sizing: border-box; background-color: initial; color: var(--theme-color);">https://mp.weixin.qq.com/s/TqgqIon3Ijq77yCe1wx5ZA</a></p><p><br/></p>
+              <div class="entry-readmore">
+                <div class="entry-readmore-btn">
+                </div>
+              </div>
+              <div class="entry-copyright">
+                <p>
+                  <span>来源：</span>
+                  <span>
+                    <a href="#" style="font-size:14px;">
+                      互联网
+                    </a>
+                  </span><br>本文观点不代表gzmdrw立场，不承担法律责任，文章及观点也不构成任何投资意见。
+                </p>
+              </div>
+            </div>
+            <div class="entry-tag">
+                  <a href="#" rel="tag">Web3</a>
+            </div>
+            <div class="entry-action">
+              <div class="btn-zan1" data-id="440910133866565">
+                <i class="wpcom-icon wi">
+                  <svg aria-hidden="true">
+                    <use xlink:href="#wi-thumb-up-fill"></use>
+                  </svg>
+                </i>
+                赞 (<span class="entry-action-num"><i class="wpcom-icon wi wi-loader"><svg aria-hidden="true">
+                      <use xlink:href="#wi-loader"></use>
+                    </svg></i></span>)
+              </div>
+
+            </div>
+
+            <div class="entry-bar fixed">
+              <div class="entry-bar-inner clearfix" style="width: 860px;">
+                <div class="author pull-left art-author">
+                </div>
+                <div class="info pull-right">
+                  <div class="info-item meta">
+                    <a class="meta-item j-heart1" href="javascript:;" data-id="440910133866565">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-star"></use>
+                        </svg>
+                      </i>
+                      <span class="data"><i class="wpcom-icon wi wi-loader"><svg aria-hidden="true">
+                            <use xlink:href="#wi-loader"></use>
+                          </svg></i></span>
+                    </a>
+                    <a class="meta-item j-comment" href="#comments">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-comment"></use>
+                        </svg></i>
+                      <span class="data"><i class="wpcom-icon wi wi-loader"><svg aria-hidden="true">
+                            <use xlink:href="#wi-loader"></use>
+                          </svg></i></span>
+                    </a>
+                  </div>
+                  <div class="info-item share">
+                    <a class="meta-item mobile j-mobile-share2" href="javascript:;" data-title="从三代币模型理解 SAFT 以及 Web3 代币投融资"
+                      data-qrcode="/news/web3/440910133866565.shtml" data-time="2025年02月11日 16:38">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-share"></use>
+                        </svg></i> 生成海报</a>
+                    <a class="meta-item wechat" data-share="wechat" target="_blank" rel="nofollow" href="#">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-wechat"></use>
+                        </svg></i> </a>
+                    <a class="meta-item weibo" data-share="weibo" target="_blank" rel="nofollow" href="#">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-weibo"></use>
+                        </svg></i> </a>
+                    <a class="meta-item qq" data-share="qq" target="_blank" rel="nofollow" href="#">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-qq"></use>
+                        </svg></i> </a>
+                    <a class="meta-item twitter" data-share="twitter" target="_blank" rel="nofollow" href="#">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-twitter"></use>
+                        </svg></i> </a>
+                    <a class="meta-item facebook" data-share="facebook" target="_blank" rel="nofollow" href="#">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-facebook"></use>
+                        </svg></i> </a>
+                    <a class="meta-item linkedin" data-share="linkedin" target="_blank" rel="nofollow" href="#">
+                      <i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-linkedin"></use>
+                        </svg></i> </a>
+                  </div>
+                  <div class="info-item act">
+                    <a href="javascript:;" id="j-reading"><i class="wpcom-icon wi"><svg aria-hidden="true">
+                          <use xlink:href="#wi-article"></use>
+                        </svg></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<!--#include file="/include/pagewidget/ad_article1.shtml" -->
+
+          <div class="entry-related-posts">
+            <h3 class="entry-related-title">相关推荐</h3>
+            <ul class="entry-related cols-3 post-loop post-loop-default content-list">
+                  <li class="item item-no-thumb"
+                    data-id="640411834191941">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/640411834191941.shtml" target="_blank" rel="bookmark">
+                          news栏目中唯一的文章
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年02月02日 17点03分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="637957853511749">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="https://gzmdrw.cn/zhongyaolunshu/" target="_blank" rel="bookmark">
+                          Let me try
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年04月02日 16点33分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="528487814377541">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/new_box/528487814377541.shtml" target="_blank" rel="bookmark">
+                          321321
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年03月27日 19点58分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="485088154181701">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/new_box/485088154181701.shtml" target="_blank" rel="bookmark">
+                          测试
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年03月23日 18点14分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="446074472464453">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/web3/446074472464453.shtml" target="_blank" rel="bookmark">
+                          数据：某巨鲸从Binance转出311万枚CRV，价值约182万美元789
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年03月22日 09点47分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="446069064171589">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/nft/446069064171589.shtml" target="_blank" rel="bookmark">
+                          Worldcoin确认收到肯尼亚政府通知，目前已暂停在该国的服务
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年03月21日 16点22分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="446067922018373">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/nft/446067922018373.shtml" target="_blank" rel="bookmark">
+                          OKX Web3钱包Cryptopedia第5期现已正式开启，Lifeform早期用户可独家认领空投盒子NFT
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年03月20日 08点55分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="445844838629445">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/defi/445844838629445.shtml" target="_blank" rel="bookmark">
+                          一图速览“促进民营经济发展28条” 北京
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年03月19日 17点30分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="444774218055749">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/nft/444774218055749.shtml" target="_blank" rel="bookmark">
+                          引领Paradigm“意图交易”新赛道 , 获众多顶级VC青睐的dappOS有何亮点？
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年03月18日 10点04分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="441455600029765">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/vipbox/think/441455600029765.shtml" target="_blank" rel="bookmark">
+                          报告｜北京市互联网3.0创新发展白皮书（2023年）
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年02月16日 22点11分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="441455394152517">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/vipbox/think/441455394152517.shtml" target="_blank" rel="bookmark">
+                          报告｜清华大学《AIGC发展研究报告1.0》
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年02月15日 14点55分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="441455009255493">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/vipbox/daosearch/441455009255493.shtml" target="_blank" rel="bookmark">
+                          研报｜跨链DeFi借贷协议Radiant Capital
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年02月14日 09点29分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="441454841741381">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/vipbox/daosearch/441454841741381.shtml" target="_blank" rel="bookmark">
+                          研报｜RWA代币化：下一个加密财富密码？
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年02月13日 20点03分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="440910133866565">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/web3/440910133866565.shtml" target="_blank" rel="bookmark">
+                          从三代币模型理解 SAFT 以及 Web3 代币投融资
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年02月11日 16点38分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="440909824315461">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/web3/440909824315461.shtml" target="_blank" rel="bookmark">
+                          智者当借力而行：浅析六大 Web3 任务平台
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年02月10日 07点16分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item item-no-thumb"
+                    data-id="440909610135621">
+                    <div class="item-content">
+                      <h2 class="item-title">
+                        <a href="/news/web3/440909610135621.shtml" target="_blank" rel="bookmark">
+                          深入加密空投：历史、流程与分类，以及近期 6 个最值得参与的机会
+                        </a>
+                      </h2>
+                      <div class="item-excerpt">
+                        <p></p>
+                      </div>
+                      <div class="item-meta">
+
+                        <span class="item-meta-li date">2025年02月09日 18点52分</span>
+                        <div class="item-meta-right">
+                          <span class="item-meta-li likes" title="点赞数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-thumb-up"></use>
+                              </svg>
+                            </i>
+                          </span>
+                          <span class="item-meta-li views" title="阅读数">
+                            <i class="wpcom-icon wi">
+                              <svg aria-hidden="true">
+                                <use xlink:href="#wi-eye"></use>
+                              </svg>
+                            </i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+            </ul>
+          </div>
+
+          <div id="comments" class="entry-comments">
+            <div id="respond" class="comment-respond">
+              <h3 id="reply-title" class="comment-reply-title">
+                发表回复
+                <small>
+                  <a rel="nofollow" id="cancel-comment-reply-link" href="#respond" style="display:none;"><i
+                      class="wpcom-icon wi"><svg aria-hidden="true">
+                        <use xlink:href="#wi-close"></use>
+                      </svg></i></a>
+                </small>
+              </h3>
+              <form id="commentform" class="comment-form" novalidate="" style="display: none;"
+                data-id="440910133866565">
+                <div class="comment-form-comment">
+                  <textarea id="comment" name="comment" rows="4" placeholder="写下你的评论…"></textarea>
+                  <div class="comment-form-smile" style="display:none" data-target="#comment">
+                    <i class="wpcom-icon wi smile-icon"><svg aria-hidden="true">
+                        <use xlink:href="#wi-emotion"></use>
+                      </svg></i>
+                  </div>
+                </div>
+                <div class="form-submit">
+                  <div class="pull-left form-submit-text login-user">
+                    <img alt="" src="/images/0303.png" class="avatar avatar-60 photo" height="60"
+                      width="60"><span>xxx</span>
+                  </div>
+                  <button name="submit" type="button" id="submit" class="btn btn-primary btn-xs submit">提交</button>
+                  <input type="hidden" name="comment_conent_id" value="440910133866565" id="comment_conent_id">
+                </div>
+              </form>
+              <div class="comment-form" style="display: none;">
+                <div class="comment-must-login">请登录后评论...</div>
+                <div class="form-submit">
+                  <div class="form-submit-text pull-left"><a class="btn-login" href=" javascript:;">登录</a>后才能评论</div>
+                  <button name="submit" type="submit" id="must-submit" class="btn btn-primary btn-xs submit">提交</button>
+                </div>
+              </div>
+            </div>
+            <!-- #respond -->
+            <h3 class="comments-title"> 评论列表 </h3>
+            <ul class="comments-list" data-id="440910133866565">
+              
+            </ul>
+            <div class="load-more-wrap">
+              <div class="btn load-more btn-more-comment" data-id="440910133866565">点击查看更多</div>
+            </div>
+            <ul class="pagination"></ul>
+          </div><!-- .comments-area -->
+        </article>
+      </main>
+      <aside class="sidebar">
+<!--#include file="/include/block_recent.shtml" -->
+<!--#include file="/include/block_recent_defi.shtml" -->
+      </aside>
+    </div>
+  </div>
+<!--#include file="/include/footer.shtml" -->
+<!--#include file="/include/action.shtml" -->
+<!--#include file="/include/h5_bottom.shtml" -->
+
+  <script type="text/javascript" id="main-js-extra">
+    /* <![CDATA[ */
+    var _xy_cms = {
+      prefix: '/',
+      resource_prefix: '/',
+      api_prefix: 'http://localhost:8080/',
+      front_prefix: '/',
+      member_resource_prefix: '',
+      site_id: '440515705974853',
+      catalog_id: '440730091249733',
+      content_id: '440910133866565',
+      site_id: '440515705974853',
+      publish_pipe: 'pc',
+      preview: 'false' == 'true'
+    }
+    var _wpcom_js = { "webp": "", "ajaxurl": "", "theme_url": "", "slide_speed": "5000", "is_admin": "0", "js_lang": { "copy_done": "\u590d\u5236\u6210\u529f\uff01", "copy_fail": "\u6d4f\u89c8\u5668\u6682\u4e0d\u652f\u6301\u62f7\u8d1d\u529f\u80fd", "confirm": "\u786e\u5b9a", "qrcode": "\u4e8c\u7ef4\u7801", "page_loaded": "\u5df2\u7ecf\u5230\u5e95\u4e86", "no_content": "\u6682\u65e0\u5185\u5bb9", "load_failed": "\u52a0\u8f7d\u5931\u8d25\uff0c\u8bf7\u7a0d\u540e\u518d\u8bd5\uff01", "expand_more": "\u9605\u8bfb\u5269\u4f59 %s" }, "lightbox": "1", "post_id": "36029", "user_card_height": "356", "poster": { "notice": "\u8bf7\u957f\u6309\u4fdd\u5b58\u56fe\u7247\uff0c\u5c06\u5185\u5bb9\u5206\u4eab\u7ed9\u66f4\u591a\u597d\u53cb", "generating": "\u6b63\u5728\u751f\u6210\u6d77\u62a5\u56fe\u7247...", "failed": "\u6d77\u62a5\u56fe\u7247\u751f\u6210\u5931\u8d25" }, "video_height": "482", "fixed_sidebar": "1", "dark_style": "0", "font_url": "..\/css\/fonts.9b34824582affe8e.css", "follow_btn": "<i class=\"wpcom-icon wi\"><svg aria-hidden=\"true\"><use xlink:href=\"#wi-add\"><\/use><\/svg><\/i>\u5173\u6ce8", "followed_btn": "\u5df2\u5173\u6ce8", "user_card": "1" };
+/* ]]> */
+  </script>
+  <script type="text/javascript" src="/js/main.js" id="main-js"></script>
+  <script type="text/javascript" src="/js/icons-2.7.7.js" id="wpcom-icons-js"></script>
+  <script type="text/javascript" src="/js/comment-reply.min.js" id="comment-reply-js"></script>
+
+<!--#include file="/include/pagewidget/ad_top.shtml" -->
+<!--#include file="/include/block_user_login.shtml" -->
+<!--#include file="/include/stat.shtml" -->
+
+  <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "@id": "/news/web3/440910133866565.shtml",
+          "url": "/news/web3/440910133866565.shtml",
+          "headline": "从三代币模型理解 SAFT 以及 Web3 代币投融资",
+          "image": [""],
+          "description": "",
+          "datePublished": "2023-07-14T17:26:20",
+          "dateModified": "2023-07-14T17:26:22",
+          "author": {"@type":"Person","name":"xxxx","url":"#account_center","image":"#avatar"}        }
+  </script>
+  <script>jQuery(function ($) { setup_share(1); });</script>
+  <script>
+    (function ($) {
+      $(document)
+
+      cleanArticleContent = function (html) {
+        const nonPTagRegex = /<[^>]*?(?:>(?!<[^>]*?>)[^<]*)*>/g;
+        const pTagRegex = /<p\s[^>]*?(?:>(?!<\/p[^>]*?>)[^>]*)*>/g;
+        html = html.replace(nonPTagRegex, '');
+        html = html.replace(pTagRegex, '<p>');
+        return html;
+      }
+    })(jQuery)
+  </script>
+</body>
+
+</html>

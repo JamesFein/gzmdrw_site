@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    />
+
+    <!-- 添加 Montserrat 字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- 添加Font Awesome图标CSS -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <title>新闻中心_关于2024年我校60名教师申报专业技术职务任职资格评审结果的公示</title>
+    <style>
+        .list-group {
+            border: none;
+            border-radius: unset;
+        }
+
+        /* 左侧栏标题样式 */
+        .title-with-line {
+            position: relative;
+            padding-left: 20px;
+            background-color: transparent !important;
+            border: none;
+            font-weight: bold;
+            color: #333;
+            bottom: 1rem;
+        }
+
+        .title-with-line::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 25%;
+            width: 4px;
+            height: 50%;
+            background-color: #AD1E23;
+        }
+
+        /* 子栏目样式 */
+        .list-group-item {
+            border: none;
+            padding: 15px 20px;
+            background-color: #f5f5f5;
+            margin-bottom: 10px;
+            border-radius: unset;
+            transition: all 0.3s ease;
+        }
+
+        .list-group-item-action {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .list-group-item-action:hover,
+        .list-group-item-action.active {
+            background-color: #AD1E23;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .list-group-item-action.active:hover {
+            background-color: #92191d;
+        }
+
+        /* 分页控件样式 */
+        .pagination {
+            margin-bottom: 0;
+        }
+        
+        .pagination .page-link {
+            color: #333;
+            padding: 8px 16px;
+            border: 1px solid #dee2e6;
+            margin: 0 2px;
+        }
+
+        
+
+        .pagination .page-link:hover {
+            color: #AD1E23;
+            background-color: #f8f9fa;
+            border-color: #dee2e6;
+        }
+
+        .page-item {
+            margin-left: 5px;
+        }
+
+        .pagination .page-item.active .page-link {
+            background-color: #AD1E23;
+            border-color: #AD1E23;
+            color: #fff;
+        }
+
+        .pagination .page-item.active .page-link:hover {
+            background-color: #92191d;
+        }
+
+        .pagination-info {
+            color: #666;
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<!--#include file="/include/common/home_nav.shtml" -->
+
+    <!-- Banner部分 显示完整的面包屑 -->
+    <div class="banner-container position-relative">
+        <img src="/images/news_banner.jpg" alt="通知公告" class="w-100" style="height: 400px; object-fit: cover;">
+        <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+            <h1 class="display-4 fw-bold" style="font-family: 'Montserrat', sans-serif;">通知公告</h1>
+            <p class="lead">
+                <a href="/" class="text-white text-decoration-none">首页</a>
+                    <span class="text-white"> / </span>
+                            <a href="/xwzx/" class="text-white text-decoration-none">新闻中心</a>
+                    <span class="text-white"> / </span>
+                            <a href="/xwzx/tzgg/" class="text-white text-decoration-none">通知公告</a>
+            </p>
+        </div>
+    </div>
+   
+    <!-- 文章内容 start -->
+    <div class="container my-5" style="max-width: 1200px;">
+        <div class="row">
+            <!-- 左侧导航栏 -->
+            <div class="col-md-3">
+                <div class="list-group">
+                    <div class="list-group-item title-with-line">
+                        <p class="mb-0">通知公告</p>
+                    </div>
+                            <a href="/xwzx/rwyw/" class="list-group-item list-group-item-action ">人文要闻</a>
+                            <a href="/xwzx/xwzx/" class="list-group-item list-group-item-action ">新闻中心</a>
+                            <a href="/xwzx/tzgg/" class="list-group-item list-group-item-action active">通知公告</a>
+                </div>
+            </div>
+
+            <!-- 右侧文章列表 start 放在任何栏目下都可以-->
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-12 mb-4">
+                        <div class="card" style="border: none; border-radius: 0;">
+                            <div class="row g-0">
+                                <!-- 内容部分 -->
+                                <div class="col-md-12">
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-3">
+                                            <a href="/xwzx/tzgg/641755891560517.shtml" class="text-decoration-none text-dark fw-bold">
+                                                关于2024年我校60名教师申报专业技术职务任职资格评审结果的公示
+                                            </a>
+                                        </h5>
+                                        <p class="card-text text-muted mb-3"></p>
+                                        <div class="d-flex align-items-center text-muted small">
+                                            <i class="fas fa-user me-2"></i>
+                                            <span class="me-3">小编</span>
+                                            <i class="far fa-calendar me-2"></i>
+                                            <span class="me-3">2025-02-06</span>
+                                            <i class="fas fa-eye me-2"></i>
+                                            <span>0</span>
+                                        </div>
+                                        <!-- 文章内容 start -->
+                                        <div class="mt-5">
+                                                <p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; font-family: &quot;Open Sans&quot;, sans-serif; text-rendering: optimizelegibility; line-height: 30px; color: rgb(85, 85, 85); text-wrap-mode: wrap; background-color: rgb(255, 255, 255); -webkit-font-smoothing: antialiased !important;">&nbsp; 根据《省教育厅、省人力资源社会保障厅关于做好2024年高等学校教师、中等职业学校教师、中小学教师、实验技术人员等系列职称评审工作的通知》及相关要求，按照“公开、公平、竞争、择优”的原则，我厅在省人力资源社会保障厅的指导下，组织完成2024年申报高校、中职、中小学、实验系列专业技术职务任职资格评审工作。现将评审通过人员名单进行公示，通过人员名单请登录链接： http://rcrs.gzsrs.cn:8888/pub/#/gsggnews 进行查看。公示期自2025年1月2日至8日止（5个工作日）。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; font-family: &quot;Open Sans&quot;, sans-serif; text-rendering: optimizelegibility; line-height: 30px; color: rgb(85, 85, 85); text-wrap-mode: wrap; background-color: rgb(255, 255, 255); -webkit-font-smoothing: antialiased !important;"><br style="box-sizing: border-box;"/></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; font-family: &quot;Open Sans&quot;, sans-serif; text-rendering: optimizelegibility; line-height: 30px; color: rgb(85, 85, 85); text-wrap-mode: wrap; background-color: rgb(255, 255, 255); -webkit-font-smoothing: antialiased !important;">一、申报人员可登录“贵州省人才人事综合业务管理服务平台（ http://rcrs.gzsrs.cn:8888/ips/ ）”查看评审结果（职称申报评审管理→个人职称申报→点击追踪按钮→查看评审结果）。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; font-family: &quot;Open Sans&quot;, sans-serif; text-rendering: optimizelegibility; line-height: 30px; color: rgb(85, 85, 85); text-wrap-mode: wrap; background-color: rgb(255, 255, 255); -webkit-font-smoothing: antialiased !important;"><br style="box-sizing: border-box;"/></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; font-family: &quot;Open Sans&quot;, sans-serif; text-rendering: optimizelegibility; line-height: 30px; color: rgb(85, 85, 85); text-wrap-mode: wrap; background-color: rgb(255, 255, 255); -webkit-font-smoothing: antialiased !important;">二、对评审结果有异议的，可于2025年1月2日—1月8日（工作日9：00-12：00，14：00-17：00）以电话或书面形式向省教育厅职改办反映（地点：贵阳市南明区青年路167号省团校A栋一楼大厅）。反映情况须客观真实，以单位名义反映情况的材料需加盖单位公章，以个人名义反映情况的材料应署名并提供有效联系方式。</p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; font-family: &quot;Open Sans&quot;, sans-serif; text-rendering: optimizelegibility; line-height: 30px; color: rgb(85, 85, 85); text-wrap-mode: wrap; background-color: rgb(255, 255, 255); -webkit-font-smoothing: antialiased !important;"><br style="box-sizing: border-box;"/></p><p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; font-family: &quot;Open Sans&quot;, sans-serif; text-rendering: optimizelegibility; line-height: 30px; color: rgb(85, 85, 85); text-wrap-mode: wrap; background-color: rgb(255, 255, 255); -webkit-font-smoothing: antialiased !important;">三、请各推荐单位、申报人在系统中认真核对个人信息（姓名、民族、单位、申报专业、申报职称、申报类型、评审类别等），并于2025年1月10日前由推荐单位将加盖单位公章的核对情况扫描件发送至省教育厅职改办邮箱（shengzhigaiban@126.com）。若信息有误，请在来函中予以说明并注明正确的个人信息。</p><p><br/></p>
+                                        </div>
+                                        <!-- 文章内容 end -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+                </div>
+                </div>
+               
+    <!-- 文章内容 end  -->
+
+      <!-- 页脚 -->
+<!--#include file="/include/common/home_footer.shtml" -->
+
+
+    <!-- Bootstrap 5.3.0 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

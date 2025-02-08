@@ -1,0 +1,264 @@
+    <!-- 倒数第二顶部导航栏 start-->
+    <div class="container d-flex justify-content-center align-items-center" style="font-size: 20px;font-weight: 500; min-height:170px;">
+        <!-- 定义递归宏 -->
+          
+        <!-- 主导航菜单 -->
+        <ul class="nav nav-pills d-flex align-items-center">
+                <li class="nav-item ">
+                    <a class="nav-link " 
+                       href="/kuaixun/">
+                        7x24小时快讯
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" 
+                       href="#">
+                        工具
+                    </a>
+                        <ul class="dropdown-menu">
+                <li>
+                        <div class="dropend">
+                            <a class="dropdown-item dropdown-toggle" href="/tool/web3/">
+                                Web3工具库
+                            </a>
+                            <ul class="dropdown-menu">
+                <li>
+                        <a class="dropdown-item" href="/tool/web3/wallet/">钱包工具</a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/tool/web3/brc20/">BRC20工具</a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/tool/web3/browser/">浏览器工具</a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/tool/web3/nft/">NFT工具</a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/tool/web3/web3/">Web3工具</a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/tool/web3/kualianqiao/">跨链桥工具</a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/tool/web3/kexuejia/">科学家工具</a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/tool/web3/dex/">DEX工具</a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/tool/web3/yuming/">域名工具</a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/tool/web3/jishu/">技术工具</a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/tool/web3/nft_data/">NFT数据工具</a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/tool/web3/zonghe_data/">综合数据工具</a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/tool/web3/defi/">DeFi工具</a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/tool/web3/dao/">DAO工具</a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/tool/web3/kuangchi/">矿池算力工具</a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/tool/web3/fil/">FIL算力工具</a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/tool/web3/english_media/">英文媒体站</a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/tool/web3/kongtou/">空投工具</a>
+                </li>
+                            </ul>
+                        </div>
+                </li>
+                <li>
+                        <div class="dropend">
+                            <a class="dropdown-item dropdown-toggle" href="/tool/aigc/">
+                                人工智能库
+                            </a>
+                            <ul class="dropdown-menu">
+                <li>
+                        <a class="dropdown-item" href="/tool/aigc/chatgpt/">ChatGPT 应用</a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/tool/aigc/liaotian/">聊天AI</a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/tool/aigc/tishici/">AI提示词</a>
+                </li>
+                            </ul>
+                        </div>
+                </li>
+                <li>
+                        <div class="dropend">
+                            <a class="dropdown-item dropdown-toggle" href="/tool/collect/">
+                                数字藏品库
+                            </a>
+                            <ul class="dropdown-menu">
+                <li>
+                        <a class="dropdown-item" href="/tool/collect/gongju/">数藏工具</a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/tool/collect/qianbao/">数藏钱包 </a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/tool/collect/yuanyuzhou/">元宇宙平台 </a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/tool/collect/cangpian/">数字藏品平台</a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/tool/collect/qukuailian/">区块链平台 </a>
+                </li>
+                            </ul>
+                        </div>
+                </li>
+                        </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" 
+                       href="/contact/">
+                        联系我们
+                    </a>
+                        <ul class="dropdown-menu">
+                <li>
+                        <a class="dropdown-item" href="#">二维码</a>
+                </li>
+                        </ul>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link " 
+                       href="/gyrwkjxysy/">
+                        贵阳人文科技学院首页
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link " 
+                       href="/hhxx/">
+                        好好学习
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" 
+                       href="/ttxs/">
+                        天天向上
+                    </a>
+                        <ul class="dropdown-menu">
+                <li>
+                        <div class="dropend">
+                            <a class="dropdown-item dropdown-toggle" href="/ttxs/lrfc/">
+                                来日方长
+                            </a>
+                            <ul class="dropdown-menu">
+                <li>
+                        <a class="dropdown-item" href="/ttxs/lrfc/sjy/">三级一</a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/ttxs/lrfc/sje/">三级二</a>
+                </li>
+                            </ul>
+                        </div>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/ttxs/gbtj/">功不唐捐</a>
+                </li>
+                        </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" 
+                       href="/xwzx/">
+                        新闻中心
+                    </a>
+                        <ul class="dropdown-menu">
+                <li>
+                        <a class="dropdown-item" href="/xwzx/rwyw/">人文要闻</a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/xwzx/xwzx/">新闻中心</a>
+                </li>
+                <li>
+                        <a class="dropdown-item" href="/xwzx/tzgg/">通知公告</a>
+                </li>
+                        </ul>
+                </li>
+            <!-- 添加搜索框 -->
+            <li class="nav-item ms-auto py-2">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" class="form-control" placeholder="搜索">
+                </div>
+            </li>
+        </ul>
+  
+        <style>
+            .nav {
+                font-family: "Montserrat", sans-serif;
+                font-weight: bolder;
+            }
+            .nav-link {
+                color: #333;
+                padding: 0.5rem 1rem;
+            }
+  
+            .dropdown-menu {
+                border-radius: 0;
+            }
+  
+            /* 保持原有的下拉菜单hover样式 */
+            .dropdown:hover > .dropdown-menu {
+                display: block;
+                border-top: 3px solid #AD1E23;
+            }
+            .dropend:hover > .dropdown-menu {
+                display: block;
+                position: absolute;
+                left: 100%;
+                top: 0;
+            }
+            /* 搜索框样式 */
+            .search-box {
+                position: relative;
+            }
+            .search-box input {
+                padding: 0.375rem 0.75rem;
+                padding-left: 35px; /* 为图标留出空间 */
+                border-radius: 5px;
+                border: 1px solid #ced4da;
+                width: 200px;
+            }
+            .search-box input:focus {
+                outline: none;
+                border-color: black;
+            }
+            .search-icon {
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #6c757d;
+                cursor: pointer; /* 添加鼠标指针样式 */
+            }
+        </style>
+    </div>
+  
+  
+    
+    <!-- 添加初始化脚本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 移除所有下拉菜单的 data-bs-toggle 属性，防止点击触发
+            document.querySelectorAll('.dropdown-toggle').forEach(function(element) {
+                element.removeAttribute('data-bs-toggle');
+            });
+        });
+    </script>
+  
+    <!-- 倒数第二顶部导航栏 end-->
