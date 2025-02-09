@@ -19,7 +19,7 @@
         <div class="col-lg-3 col-md-3">
           <img
             class="mb-4"
-            src="/images/rw_logo.png"
+            src="/images/rw_logo_red.png"
             alt="贵阳人文科技学院官方门户网站"
             style="max-width: 220px; position: relative; right: 2rem"
           />
@@ -58,16 +58,16 @@
         </div>
 
         <!-- Contact Information -->
-        <div class="col-lg-4 col-md-4 text-center lh-lg fs-6">
-          <p>联系电话:0851-88308620</p>
+        <div class="col-lg-4 col-md-4 text-start lh-lg fs-6">
+          <p>联系电话: 0851-88308620</p>
           <p>
-            通讯地址:贵州省贵阳市花溪区花溪大学城 贵阳人文科技学院大学城校区
+            通讯地址: 贵州省贵阳市花溪区花溪大学城<br />&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;贵阳人文科技学院大学城校区
           </p>
-          <p>邮箱:gzmdrwkj@163.com 邮编:550025</p>
-          <p>师德师风举报信箱 rwjsgzb@163.com</p>
-          <p>师德师风举报电话 0851-88308972</p>
-          <p>开办者名称:贵阳人文科技学院</p>
-          <p>公安备案号:贵公网安备52011102003020号</p>
+          <p>邮箱：gzmdrwkj@163.com 邮编:550025</p>
+          <p>师德师风举报信箱：rwjsgzb@163.com</p>
+          <p>师德师风举报电话：0851-88308972</p>
+          <p>开办者名称：贵阳人文科技学院</p>
+          <p>公安备案号：贵公网安备52011102003020号</p>
         </div>
 
         <!-- Enrollment Information -->

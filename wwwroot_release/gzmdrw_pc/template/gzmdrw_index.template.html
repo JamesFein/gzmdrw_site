@@ -246,9 +246,9 @@
       <div class="col-md-6">
         <div class="news-card p-3 shadow-sm">
           <div class="news-header d-flex justify-content-between align-items-center mb-3">
-            <h5 class="m-0 fw-bold">新闻中心</h5>
             <@cms_catalog alias="xwzx_xwzx" level="self">
             <#list DataList as catalog>
+            <h5 class="m-0 fw-bold">${catalog.name}</h5>
             <a href="${catalog.link}" class="text-decoration-none text-dark transition link-danger">更多</a>
             </#list>
             </@cms_catalog>
@@ -268,9 +268,9 @@
       <div class="col-md-6">
         <div class="news-card p-3 shadow-sm">
           <div class="news-header d-flex justify-content-between align-items-center mb-3">
-            <h5 class="m-0 fw-bold">通知公告</h5>
             <@cms_catalog alias="xwzx_tzgg" level="self">
             <#list DataList as catalog>
+            <h5 class="m-0 fw-bold">${catalog.name}</h5>
             <a href="${catalog.link}" class="text-decoration-none text-dark transition link-danger">更多</a>
             </#list>
             </@cms_catalog>

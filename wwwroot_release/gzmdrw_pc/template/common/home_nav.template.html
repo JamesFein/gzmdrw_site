@@ -1,5 +1,5 @@
     <!-- 倒数第二顶部导航栏 start-->
-    <div class="container d-flex justify-content-center align-items-center" style="font-size: 20px;font-weight: 500; min-height:170px;">
+    <div class="nav-menu container d-flex justify-content-center align-items-center" style="font-size: 20px;font-weight: 500; min-height:170px;">
         <!-- 定义递归宏 -->
         <#macro renderMenu items currentLevel=1 maxLevel=3>
             <#list items as item>
@@ -49,57 +49,64 @@
                 </div>
             </li>
         </ul>
-  
-        <style>
-            .nav {
-                font-family: "Montserrat", sans-serif;
-                font-weight: bolder;
-            }
-            .nav-link {
-                color: #333;
-                padding: 0.5rem 1rem;
-            }
-  
-            .dropdown-menu {
-                border-radius: 0;
-            }
-  
-            /* 保持原有的下拉菜单hover样式 */
-            .dropdown:hover > .dropdown-menu {
-                display: block;
-                border-top: 3px solid #AD1E23;
-            }
-            .dropend:hover > .dropdown-menu {
-                display: block;
-                position: absolute;
-                left: 100%;
-                top: 0;
-            }
-            /* 搜索框样式 */
-            .search-box {
-                position: relative;
-            }
-            .search-box input {
-                padding: 0.375rem 0.75rem;
-                padding-left: 35px; /* 为图标留出空间 */
-                border-radius: 5px;
-                border: 1px solid #ced4da;
-                width: 200px;
-            }
-            .search-box input:focus {
-                outline: none;
-                border-color: black;
-            }
-            .search-icon {
-                position: absolute;
-                left: 10px;
-                top: 50%;
-                transform: translateY(-50%);
-                color: #6c757d;
-                cursor: pointer; /* 添加鼠标指针样式 */
-            }
-        </style>
     </div>
+    
+    <style>
+        .nav-menu .nav {
+            font-family: "Montserrat", sans-serif;
+            font-weight: bolder;
+        }
+
+        .nav-menu .nav-link {
+            color: #333;
+            padding: 0.5rem 1rem;
+        }
+
+        .nav-menu .dropdown-menu {
+            border-radius: 0;
+        }
+
+        /* 保持原有的下拉菜单hover样式 */
+        .nav-menu .dropdown:hover > .dropdown-menu {
+            display: block;
+            border-top: 3px solid #AD1E23;
+        }
+
+        .nav-menu .dropend:hover > .dropdown-menu {
+            display: block;
+            position: absolute;
+            left: 100%;
+            top: 0;
+        }
+
+        /* 搜索框样式 */
+        .nav-menu .search-box {
+            position: relative;
+        }
+
+        .nav-menu .search-box input {
+            padding: 0.375rem 0.75rem;
+            padding-left: 35px; /* 为图标留出空间 */
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+            width: 200px;
+
+        }
+        .nav-menu .search-box input:focus {
+            outline: none;
+            border-color: black;
+        }
+
+        .nav-menu .search-icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6c757d;
+
+            cursor: pointer; /* 添加鼠标指针样式 */
+        }
+    </style>
   
   
     
