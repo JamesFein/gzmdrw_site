@@ -2,94 +2,89 @@
 <header class="head-section">
   <!-- 导航栏容器 -->
   <div class="navbar navbar-default navbar-static-top container">
-    <!-- 移动端折叠按钮和Logo -->
-    <div class="navbar-header">
+    <!-- 添加 d-flex 和 align-items-center 类来使用 Flexbox 布局 -->
+    <div class="d-flex align-items-center w-100">
       <!-- 网站Logo -->
-      <a class="navbar-brand" href="/"><span>基因控</span></a>
-    </div>
+      <a class="navbar-brand" href="http://www.demo.com/"><span>Genomatrix</span></a>
 
-    <!-- 导航菜单区域 -->
-    <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <!-- 首页链接 -->
-        <li>
-          <a href="/">首页</a>
-        </li>
+      <!-- 移除collapse类，确保始终显示 -->
+      <div class="navbar-collapse" id="navbarContent">
+        <!-- 使用 navbar-nav me-auto 和 flex-row 来确保水平排列 -->
+        <ul class="navbar-nav me-auto flex-row align-items-center">
+          <!-- 首页链接 -->
+          <li>
+            <a href="http://www.demo.com/">HomePage</a>
+          </li>
 
-        <!-- 物种栏目及其子栏目 -->
-        <li class="dropdown">
-          <a
-            class="dropdown-toggle"
-            data-close-others="false"
-            data-delay="0"
-            data-hover="dropdown"
-            data-toggle="dropdown"
-            href="/species/"
-            >物种 <i class="fa fa-angle-down"></i>
-          </a>
-          <!-- 物种子栏目下拉菜单 -->
-          <ul class="dropdown-menu">
-            <li>
-              <a href="/species/metasequoia_glyptostroboides/">水杉</a>
-            </li>
-            <li>
-              <a href="/species/sequoiadendron_giganteum/">巨杉</a>
-            </li>
-            <li>
-              <a href="/species/taxus_chinensis/">红豆杉</a>
-            </li>
-            <li>
-              <a href="/species/torreya_grandis/">香榧</a>
-            </li>
-            <li>
-              <a href="/species/larix_kaempferi/">日本落叶松</a>
-            </li>
-            <li>
-              <a href="/species/pinus_tabuliformis/">油松</a>
-            </li>
-            <li>
-              <a href="/species/ginkgo_biloba/">银杏</a>
-            </li>
-          </ul>
-        </li>
+          <!-- 物种栏目及其子栏目 -->
+              <li class="nav-item dropdown position-relative">
+                <a class="nav-link dropdown-toggle" href="#" 
+                   role="button"
+                   data-bs-toggle="dropdown" 
+                   aria-expanded="false"
+                   id="speciesDropdown636544519884869">
+                  Species
+                </a>
+                <ul class="dropdown-menu position-absolute" aria-labelledby="speciesDropdown636544519884869">
+                      <li><a class="dropdown-item" href="http://www.demo.com/species/metasequoia_glyptostroboides/">Metasequoia Glyptostroboides</a></li>
+                      <li><a class="dropdown-item" href="http://www.demo.com/species/sequoiadendron_giganteum/">Sequoiadendron_Giganteum</a></li>
+                      <li><a class="dropdown-item" href="http://www.demo.com/species/taxus_chinensis/">Taxus_Chinensis</a></li>
+                      <li><a class="dropdown-item" href="http://www.demo.com/species/torreya_grandis/">Torreya_Grandis</a></li>
+                      <li><a class="dropdown-item" href="http://www.demo.com/species/larix_kaempferi/">Larix_Kaempferi</a></li>
+                      <li><a class="dropdown-item" href="http://www.demo.com/species/pinus_tabuliformis/">Pinus_Tabuliformis</a></li>
+                      <li><a class="dropdown-item" href="http://www.demo.com/species/ginkgo_biloba/">Ginkgo_Biloba</a></li>
+                </ul>
+              </li>
 
-        <!-- 基因组栏目以及其子栏目 -->
-        <li>
-          <a href="/genomics/">基因组</a>
-        </li>
+          <!-- 基因组栏目以及其子栏目 -->
+              <li>
+                <a class="nav-link"href="http://www.demo.com/genomics/">Genomics</a>
+              </li>
 
-        <!-- 搜索框 -->
-        <li>
-          <input
-            class="form-control search"
-            placeholder=" Search"
-            id="header_search"
-            type="text"
-          />
-        </li>
-      </ul>
+         <!-- 搜索框 -->
+          <li><input class="form-control search" placeholder=" Search" id="header_search" type="text"></li>
+        </ul>
+      </div>
     </div>
   </div>
 </header>
 
 <!-- 搜索功能脚本 -->
 <script>
-  window.onload = function () {
+  window.onload = function() {  
     // 监听搜索框回车事件
-    document
-      .getElementById("header_search")
-      .addEventListener("keyup", function (event) {
-        if (event.key === "Enter") {
-          // 构建搜索链接
-          var link = "/_search?sid=636438484807749&pp=pc";
-          if (link.indexOf("?") > -1) {
-            link += "&q=" + $("#header_search").val();
-          } else {
-            link += "?q=" + $("#header_search").val();
-          }
-          // 跳转到搜索结果页
-          window.location.href = link;
+    document.getElementById('header_search').addEventListener('keyup', function(event) {  
+      if (event.key === 'Enter') {
+        // 构建搜索链接
+        var link = "http://www.demo.com/_search?sid=636438484807749&pp=pc";
+        if (link.indexOf('?') > -1) {
+          link += "&q=" + $('#header_search').val();
+        } else {
+          link += "?q=" + $('#header_search').val();
         }
-      });
+        // 跳转到搜索结果页
+        window.location.href = link;
+      }  
+    }); 
   };
+</script>
+
+<!-- 修改样式部分 -->
+<style>
+  .navbar-nav {
+    margin-left: 20px;
+  }
+  
+  .navbar-nav li {
+    margin-right: 15px;
+  }
+
+  .navbar-nav li input.search {
+    width: 200px;
+  }
+</style>
+
+<!-- 添加调试代码 -->
+<script>
+
 </script>

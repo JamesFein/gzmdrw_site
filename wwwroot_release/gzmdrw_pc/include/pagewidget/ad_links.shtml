@@ -94,21 +94,10 @@
                         <div class="icw-icon-item">
                           <img
                             src="/resources/image/2025/02/07/642116635381829.png"
-                            alt="第七个logo"
+                            alt="试一试"
                             data-icw-tooltip
                             data-bs-placement="top"
-                            title="第七个logo"
-                          />
-                        </div>
-                      </div>
-                      <div class="icw-col-sm icw-col-md icw-col-lg">
-                        <div class="icw-icon-item">
-                          <img
-                            src="/resources/image/2025/02/07/642113546113093.png"
-                            alt="红色专题"
-                            data-icw-tooltip
-                            data-bs-placement="top"
-                            title="红色专题"
+                            title="试一试"
                           />
                         </div>
                       </div>
@@ -116,10 +105,10 @@
                         <div class="icw-icon-item">
                           <img
                             src="/resources/image/2025/02/07/642113396256837.png"
-                            alt="留言"
+                            alt="发文"
                             data-icw-tooltip
                             data-bs-placement="top"
-                            title="留言"
+                            title="发文"
                           />
                         </div>
                       </div>
@@ -127,10 +116,10 @@
                         <div class="icw-icon-item">
                           <img
                             src="/resources/image/2025/02/07/642113248432197.png"
-                            alt="云盘下载"
+                            alt="人文云"
                             data-icw-tooltip
                             data-bs-placement="top"
-                            title="云盘下载"
+                            title="人文云"
                           />
                         </div>
                       </div>
@@ -148,11 +137,22 @@
                       <div class="icw-col-sm icw-col-md icw-col-lg">
                         <div class="icw-icon-item">
                           <img
-                            src="/resources/image/2025/02/07/642113068814405.png"
-                            alt="校长信箱"
+                            src="/resources/image/2025/02/07/642113546113093.png"
+                            alt="主题思想教育"
                             data-icw-tooltip
                             data-bs-placement="top"
-                            title="校长信箱"
+                            title="主题思想教育"
+                          />
+                        </div>
+                      </div>
+                      <div class="icw-col-sm icw-col-md icw-col-lg">
+                        <div class="icw-icon-item">
+                          <img
+                            src="/resources/image/2025/02/07/642113068814405.png"
+                            alt="校长邮箱"
+                            data-icw-tooltip
+                            data-bs-placement="top"
+                            title="校长邮箱"
                           />
                         </div>
                       </div>
@@ -164,10 +164,10 @@
                         <div class="icw-icon-item">
                           <img
                             src="/resources/image/2025/02/07/642112874594373.png"
-                            alt="3d全景"
+                            alt="校园全景导航"
                             data-icw-tooltip
                             data-bs-placement="top"
-                            title="3d全景"
+                            title="校园全景导航"
                           />
                         </div>
                       </div>

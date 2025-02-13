@@ -1,0 +1,89 @@
+<div id="content-template" style="display: none">
+  <h2 class="fs-2 fw-medium">${Catalog.alias}</h2>
+  <div class="row g-4">
+    <div class="col-lg-8">
+      <table class="table mb-0">
+        <tr>
+          <td class="fw-medium p-3" style="width: 200px">Genus</td>
+          <td class="p-3"><i data-field="genus"></i></td>
+        </tr>
+        <tr>
+          <td class="fw-medium p-3 bg-light">Species</td>
+          <td class="p-3 bg-light"><i data-field="species"></i></td>
+        </tr>
+        <tr>
+          <td class="fw-medium p-3">Common Name</td>
+          <td class="p-3" data-field="commonName"></td>
+        </tr>
+        <tr>
+          <td class="fw-medium p-3 bg-light">Abbreviation</td>
+          <td class="p-3 bg-light">
+            <i data-field="abbreviation"></i>
+          </td>
+        </tr>
+        <tr>
+          <td class="fw-medium p-3">Ploidy</td>
+          <td class="p-3" data-field="ploidy"></td>
+        </tr>
+        <tr>
+          <td class="fw-medium p-3 bg-light">Chromosome Number</td>
+          <td class="p-3 bg-light" data-field="chromosomeNumber"></td>
+        </tr>
+        <tr>
+          <td class="fw-medium p-3">Genome Size</td>
+          <td class="p-3" data-field="genomeSize"></td>
+        </tr>
+        <tr>
+          <td class="fw-medium p-3 bg-light">Genome Assemblies</td>
+          <td class="p-3 bg-light" data-field="genomeAssemblies"></td>
+        </tr>
+        <tr>
+          <td class="fw-medium p-3">GRIN Taxonomy</td>
+          <td class="p-3">
+            <a
+              href="#"
+              data-field="grinTaxonomy"
+              onmouseover="this.style.textDecoration='underline'"
+              onmouseout="this.style.textDecoration='none'"
+              style="text-decoration: none; color: green"
+            ></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="pt-3 col-lg-4">
+      <img
+        src="${Prefix}images/species/${Catalog.alias}.jpg"
+        alt="Torreya grandis"
+        class="img-fluid rounded shadow-sm"
+        style="height: 100%; width: 100%; object-fit: cover"
+      />
+    </div>
+  </div>
+</div>
+
+<div id="content-container"></div>
+
+<!-- 引入物种数据文件 -->
+<script src="${Prefix}js/species/species-data.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const dataObjectName = "${Catalog.alias?lower_case}_data";
+    const template = document.getElementById("content-template").innerHTML;
+    const container = document.getElementById("content-container");
+
+    container.innerHTML = template;
+
+    // 从speciesData对象中获取数据
+    const speciesInfo = window.speciesData[dataObjectName];
+
+    // 填充所有数据字段
+    document.querySelectorAll("[data-field]").forEach((element) => {
+      const field = element.getAttribute("data-field");
+      element.textContent = speciesInfo[field];
+    });
+
+    document.getElementById("content-template").remove();
+  });
+</script>

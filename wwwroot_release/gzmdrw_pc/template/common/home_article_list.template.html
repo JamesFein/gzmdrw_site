@@ -17,7 +17,8 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <title>新闻中心_${Catalog.name}</title>
+
+    <title>贵阳人文科技学院_${Catalog.name!''}</title>
     <style>
         .list-group {
             border: none;
@@ -26,22 +27,20 @@
 
         /* 左侧栏标题样式 */
         .title-with-line {
-            position: relative;
             padding-left: 20px;
             background-color: transparent !important;
             border: none;
             font-weight: bold;
             color: #333;
-            bottom: 1rem;
         }
 
         .title-with-line::before {
             content: '';
             position: absolute;
             left: 0;
-            top: 25%;
-            width: 4px;
-            height: 50%;
+            top: 30%;
+            width: 3px;
+            height: 40%;
             background-color: #AD1E23;
         }
 
@@ -135,20 +134,41 @@
         </div>
     </div>
    
-
+    <!-- 文章内容 start -->
     <div class="container my-5" style="max-width: 1200px;">
         <div class="row">
             <!-- 左侧导航栏 -->
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <div class="list-group">
+
+                    <!-- 父级栏目名称 -->
                     <div class="list-group-item title-with-line">
-                        <p class="mb-0">${Catalog.name}</p>
+                        <#if Catalog.parentId == 0>
+                            <p class="mb-0">${Catalog.name}</p>
+                        <#else>
+                            <@cms_catalog id="${Catalog.parentId}" level="Self">
+                                <#list DataList as c>
+                                    <p class="mb-0">${c.name}</p>
+                                </#list>
+                            </@cms_catalog>
+                        </#if>
                     </div>
-                    <@cms_catalog alias="xwzx" level="Child">
-                        <#list DataList as c>
-                            <a href="${c.link}" class="list-group-item list-group-item-action ${(Catalog.catalogId==c.catalogId)?then('active','')}">${c.name}</a>
-                        </#list>
-                    </@cms_catalog>
+
+
+                    <!-- 所有子栏目名称 -->
+                    <#if Catalog.parentId == 0>
+                        <@cms_catalog id="${Catalog.catalogId}" level="Child">
+                            <#list DataList as c>
+                                <a href="${c.link}" class="list-group-item list-group-item-action ${(Catalog.catalogId==c.catalogId)?then('active','')}">${c.name}</a>
+                            </#list>
+                        </@cms_catalog>
+                    <#else>
+                        <@cms_catalog id="${Catalog.parentId}" level="Child">
+                            <#list DataList as c>
+                                <a href="${c.link}" class="list-group-item list-group-item-action ${(Catalog.catalogId==c.catalogId)?then('active','')}">${c.name}</a>
+                            </#list>
+                        </@cms_catalog>
+                    </#if>
                 </div>
             </div>
 
@@ -174,11 +194,11 @@
                                                 </h5>
                                                 <p class="card-text text-muted mb-3">${content.summary!''}</p>
                                                 <div class="d-flex align-items-center text-muted small">
-                                                    <i class="fas fa-user me-2"></i>
+                                                    <i class="far fa-user me-2"></i>
                                                     <span class="me-3">${content.author!'小编'}</span>
                                                     <i class="far fa-calendar me-2"></i>
                                                     <span class="me-3">${dateFormat(content.publishDate,'yyyy-MM-dd')}</span>
-                                                    <i class="fas fa-eye me-2"></i>
+                                                    <i class="far fa-eye me-2"></i>
                                                     <span>${content.viewCount!0}</span>
                                                 </div>
                                                 <p class="mt-2"><a href="${content.link}" class="text-decoration-none fw-bold" style="color:#AD1E23;">
@@ -197,7 +217,7 @@
                 <div class="d-flex justify-content-center align-items-center mt-4">
                     <#if PageTotal gt 0>
                         <nav aria-label="Page navigation">
-                            <ul class="pagination">
+                            <ul class="pagination mb-0">
                                 <!-- 首页 -->
                                 <#if PageNo gt 1>
                                     <li class="page-item">
@@ -251,17 +271,18 @@
                                 </#if>
                             </ul>
                         </nav>
-                        <!-- 分页信息 -->
-                        <div class="pagination-info ps-2 ">
+                        <div class="text-secondary fs-6 ps-2 mt-2 text-center">
                             共 ${PageCount?int} 页 ${PageTotal} 条数据
                         </div>
                     </#if>
                 </div>
             </div>
-            <!-- 右侧文章列表 end 放在任何栏目下都可以-->
-        </div>
-    </div>
 
+            <!-- 右侧文章列表 -->
+                </div>
+                </div>
+               
+    <!-- 文章内容 end  -->
 
       <!-- 页脚 -->
   <@cms_include file="common/home_footer.template.html"></@cms_include>

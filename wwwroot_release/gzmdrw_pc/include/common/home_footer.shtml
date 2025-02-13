@@ -17,12 +17,14 @@
       <div class="row justify-content-between">
         <!-- Logo and Social Media -->
         <div class="col-lg-3 col-md-3">
-          <img
-            class="mb-4"
-            src="/images/rw_logo_red.png"
-            alt="贵阳人文科技学院官方门户网站"
-            style="max-width: 220px; position: relative; right: 2rem"
-          />
+          <a href="/">
+            <img
+              class="mb-4"
+              src="/images/rw_logo_red.png"
+              alt="贵阳人文科技学院官方门户网站"
+              style="max-width: 220px; position: relative; right: 2rem"
+            />
+          </a>
           <p>高质量快捷门户网站</p>
           <div class="footer-social">
             <ul class="list-unstyled d-flex gap-4">

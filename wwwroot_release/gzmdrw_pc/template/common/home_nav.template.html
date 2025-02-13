@@ -1,5 +1,5 @@
     <!-- 倒数第二顶部导航栏 start-->
-    <div class="nav-menu container d-flex justify-content-center align-items-center" style="font-size: 20px;font-weight: 500; min-height:170px;">
+    <div class="nav-menu container-fluid d-flex justify-content-center align-items-center" style="font-size: 20px;font-weight: 500; min-height:170px;">
         <!-- 定义递归宏 -->
         <#macro renderMenu items currentLevel=1 maxLevel=3>
             <#list items as item>
@@ -28,8 +28,11 @@
             <#list DataList as c1>
                 <@cms_catalog id="${c1.catalogId}" level="Child" size="30">
                 <li class="nav-item <#if DataList?size gt 0>dropdown</#if>">
-                    <a class="nav-link <#if DataList?size gt 0>dropdown-toggle</#if>" 
-                       href="${c1.link!'#'}">
+                    <a class="nav-link <#if DataList?size gt 0>dropdown-toggle</#if>"
+                    <#if Catalog?? && Catalog.ancestors??>
+                        ${((Catalog.ancestors?split(':'))[0]==c1.catalogId?string)?then('style="color:#AD1E23;"','')}
+                    </#if>
+                    href="${c1.link!'#'}">
                         ${c1.name}
                     </a>
                     <#if DataList?size gt 0>
@@ -42,7 +45,7 @@
             </#list>
             </@cms_catalog>
             <!-- 添加搜索框 -->
-            <li class="nav-item ms-auto py-2">
+            <li class="nav-item p-2">
                 <div class="search-box">
                     <i class="fa-solid fa-magnifying-glass search-icon"></i>
                     <input type="text" class="form-control" placeholder="搜索">
@@ -105,6 +108,10 @@
             color: #6c757d;
 
             cursor: pointer; /* 添加鼠标指针样式 */
+        }
+
+        .nav-menu .nav-link:hover {
+            color: #AD1E23;
         }
     </style>
   

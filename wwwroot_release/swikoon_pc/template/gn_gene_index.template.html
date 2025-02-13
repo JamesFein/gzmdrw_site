@@ -5,10 +5,6 @@
   <!-- 基本的元信息设置 -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Developed By M Abdur Rokib Promy">
-  <meta name="author" content="cosmic">
-  <meta name="keywords" content="Bootstrap 3, Template, Theme, Responsive, Corporate, Business">
-  <link rel="shortcut icon" href="${Prefix}img/favicon.png">
   <!-- 页面标题: 产品标题_站点名称 -->
   <title>${Catalog.name}_${Site.name}</title>
 
@@ -26,7 +22,6 @@
   <link href="https://cdn.datatables.net/buttons/3.0.0/css/buttons.bootstrap5.min.css" rel="stylesheet">
 
   <!-- CMS系统全局变量设置 -->
-  <script>window._xy_cms = { catalog_id: '${Catalog.catalogId}', content_id: 'gene_index_form' };</script>
 
   <style>
     .border-custom {
@@ -38,32 +33,7 @@
 
 <body>
   <!-- 引入头部模板 -->
-  <@cms_include file="gn_header.template.html"></@cms_include>
-
-     <!-- 面包屑导航 -->
-    <div class="bg-light py-3">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <h1 class="h2">${Catalog.name}</h1>
-          </div>
-          <div class="col-md-8 d-flex align-items-center justify-content-end">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item"><a href="${Site.link}">HomePage</a></li>
-                <#list Catalog.ancestors?split(":") as catalogId>
-                  <@cms_catalog id="${catalogId}" level="Self">
-                    <#list DataList as catalog>
-                      <li class="breadcrumb-item"><a href="${catalog.link}">${catalog.name}</a></li>
-                    </#list>
-                  </@cms_catalog>
-                </#list>
-              </ol>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </div>
+  <@cms_include file="common/home_header.template.html"></@cms_include>
 
   <!-- 主要内容区域 -->
   <div class="container py-4">
@@ -159,10 +129,6 @@
   <script src="https://cdn.datatables.net/buttons/3.0.0/js/buttons.bootstrap5.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
   <script src="https://cdn.datatables.net/buttons/3.0.0/js/buttons.html5.min.js"></script>
-  
-  <!-- Site Scripts -->
-  <script defer src="${Prefix}js/common-scripts.js"></script>
-
 </body>
 
 </html>

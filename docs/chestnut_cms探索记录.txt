@@ -1,0 +1,1 @@
+当栏目发布后会在wwwroot_release/gzmdrw_pc下面生成一个栏目同名的文件夹存放shtml代码

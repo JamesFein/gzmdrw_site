@@ -1,5 +1,5 @@
 <!-- 页面头部区域 -->
-<header class="head-section">
+<header class="head-section fs-5" style="color: black;">
   <!-- 导航栏容器 -->
   <div class="navbar navbar-default navbar-static-top container">
     <!-- 添加 d-flex 和 align-items-center 类来使用 Flexbox 布局 -->
@@ -10,7 +10,7 @@
       <!-- 移除collapse类，确保始终显示 -->
       <div class="navbar-collapse" id="navbarContent">
         <!-- 使用 navbar-nav me-auto 和 flex-row 来确保水平排列 -->
-        <ul class="navbar-nav me-auto flex-row align-items-center">
+        <ul class="navbar-nav me-auto flex-row align-items-center fw-semibold">
           <!-- 首页链接 -->
           <li>
             <a href="${Site.link}">HomePage</a>
@@ -20,7 +20,7 @@
           <@cms_catalog alias="species" level="Self">
             <#list DataList as pcatalog>
               <li class="nav-item dropdown position-relative">
-                <a class="nav-link dropdown-toggle" href="#" 
+                <a class="dropdown-toggle" href="#" 
                    role="button"
                    data-bs-toggle="dropdown" 
                    aria-expanded="false"
@@ -42,7 +42,7 @@
           <@cms_catalog alias="genomics" level="Self">
             <#list DataList as catalog>
               <li>
-                <a class="nav-link"href="${catalog.link}">${catalog.name}</a>
+                <a href="${catalog.link}">${catalog.name}</a>
               </li>
             </#list>
           </@cms_catalog>
@@ -52,7 +52,6 @@
         </ul>
       </div>
     </div>
-  </div>
 </header>
 
 <!-- 搜索功能脚本 -->
@@ -75,7 +74,6 @@
   };
 </script>
 
-<!-- 修改样式部分 -->
 <style>
   .navbar-nav {
     margin-left: 20px;
@@ -90,7 +88,5 @@
   }
 </style>
 
-<!-- 添加调试代码 -->
-<script>
 
-</script>
+

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    />
+
+    <!-- 添加 Montserrat 字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- 添加Font Awesome图标CSS -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>新闻中心_校园风光</title>
+    <style>
+        .title-with-line {
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .title-with-line::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 25%;
+            width: 4px;
+            height: 50%;
+            background-color: #AD1E23;
+        }
+
+        /* 分页控件样式 */
+        .pagination .page-link {
+            color: #AD1E23;
+            border-color: #dee2e6;
+        }
+
+        .pagination .page-item.active .page-link {
+            background-color: #AD1E23;
+            border-color: #AD1E23;
+            color: white;
+        }
+
+        .pagination .page-link:hover {
+            color: white;
+            background-color: #AD1E23;
+            border-color: #AD1E23;
+        }
+
+        .pagination .page-link:focus {
+            box-shadow: 0 0 0 0.25rem rgba(173, 30, 35, 0.25);
+        }
+        .pagination .page-item {
+            margin-right: 0.5em;
+        }
+    </style>
+</head>
+<body>
+<!--#include file="/include/common/home_nav.shtml" -->
+
+    <!-- Banner部分 显示完整的面包屑 -->
+    <div class="banner-container position-relative">
+        <img src="/images/news_banner.jpg" alt="校园风光" class="w-100" style="height: 400px; object-fit: cover;">
+        <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+            <h1 class="display-4 fw-bold" style="font-family: 'Montserrat', sans-serif;">校园风光</h1>
+            <p class="lead">
+                <a href="/" class="text-white text-decoration-none">首页</a>
+                    <span class="text-white"> / </span>
+                            <a href="/xxgk/" class="text-white text-decoration-none">学校概况</a>
+                    <span class="text-white"> / </span>
+                            <a href="/xxgk/xyfg/" class="text-white text-decoration-none">校园风光</a>
+            </p>
+        </div>
+    </div>
+   
+
+    <div class="container my-5" style="max-width: 1200px;">
+        <div class="row">
+            <!-- 左侧导航栏，迁移代码记得加左侧导航栏的css代码 -->
+            <div class="col-md-3">
+                <div class="list-group border-0">
+                    <div class="list-group-item title-with-line border-0 bg-transparent fw-bold text-dark mb-3">
+                                <p class="mb-0">学校概况</p>
+                    </div>
+                            <a href="/xxgk/xxjj/" 
+                               class="list-group-item list-group-item-action border-0 rounded-0 mb-2 py-3 px-4 "
+                               style="background-color: #f5f5f5; font-size: 14px; transition: all 0.3s ease; " >
+                                学校简介
+                            </a>
+                            <a href="/xxgk/xxld/643925996519493.shtml" 
+                               class="list-group-item list-group-item-action border-0 rounded-0 mb-2 py-3 px-4 "
+                               style="background-color: #f5f5f5; font-size: 14px; transition: all 0.3s ease; " >
+                                学校领导
+                            </a>
+                            <a href="/xxgk/xyfg/" 
+                               class="list-group-item list-group-item-action border-0 rounded-0 mb-2 py-3 px-4 active"
+                               style="background-color: #f5f5f5; font-size: 14px; transition: all 0.3s ease; background-color: #AD1E23 !important; color: #fff;" >
+                                校园风光
+                            </a>
+                            <a href="/xxgk/xgxh/" 
+                               class="list-group-item list-group-item-action border-0 rounded-0 mb-2 py-3 px-4 "
+                               style="background-color: #f5f5f5; font-size: 14px; transition: all 0.3s ease; " >
+                                校规校徽
+                            </a>
+                            <a href="/xxgk/rwxl/" 
+                               class="list-group-item list-group-item-action border-0 rounded-0 mb-2 py-3 px-4 "
+                               style="background-color: #f5f5f5; font-size: 14px; transition: all 0.3s ease; " >
+                                人文校历
+                            </a>
+                </div>
+            </div>
+
+            <!-- 右侧文章列表 start 放在任何栏目下都可以，迁移代码记得加分页控件的css代码-->
+            <div class="col-md-9">
+                <div class="row">
+
+                            <div class="col-12 mb-4">
+                                <div class="card" style="border: none; border-radius: 0; border-bottom: 1px solid #e0e0e0;">
+                                    <div class="row g-0">
+                                        <!-- 内容部分 -->
+                                        <div class="col-md-12">
+                                            <div class="card-body">
+                                                <h5 class="card-title mb-3">
+                                                    <a href="/xxgk/xyfg/643931313569861.shtml" class="text-decoration-none text-dark fw-bold">
+                                                        校规校徽
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text text-muted mb-3"></p>
+                                                <div class="d-flex align-items-center text-muted small">
+                                                    <i class="fas fa-user me-2"></i>
+                                                    <span class="me-3">小编</span>
+                                                    <i class="far fa-calendar me-2"></i>
+                                                    <span class="me-3">2025-02-12</span>
+                                                    <i class="fas fa-eye me-2"></i>
+                                                    <span>0</span>
+                                                </div>
+                                                <p class="mt-2"><a href="/xxgk/xyfg/643931313569861.shtml" class="text-decoration-none fw-bold" style="color:#AD1E23;">
+                                                    查看更多 <i class="fas fa-arrow-right"></i>
+                                                </a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-4">
+                                <div class="card" style="border: none; border-radius: 0; border-bottom: 1px solid #e0e0e0;">
+                                    <div class="row g-0">
+                                        <!-- 内容部分 -->
+                                        <div class="col-md-12">
+                                            <div class="card-body">
+                                                <h5 class="card-title mb-3">
+                                                    <a href="/xxgk/xyfg/643930709794885.shtml" class="text-decoration-none text-dark fw-bold">
+                                                        校园风光
+                                                    </a>
+                                                </h5>
+                                                <p class="card-text text-muted mb-3"></p>
+                                                <div class="d-flex align-items-center text-muted small">
+                                                    <i class="fas fa-user me-2"></i>
+                                                    <span class="me-3">小编</span>
+                                                    <i class="far fa-calendar me-2"></i>
+                                                    <span class="me-3">2025-02-12</span>
+                                                    <i class="fas fa-eye me-2"></i>
+                                                    <span>0</span>
+                                                </div>
+                                                <p class="mt-2"><a href="/xxgk/xyfg/643930709794885.shtml" class="text-decoration-none fw-bold" style="color:#AD1E23;">
+                                                    查看更多 <i class="fas fa-arrow-right"></i>
+                                                </a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+
+                <!-- 分页控件 -->
+                <div class="d-flex justify-content-center align-items-center mt-4">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination mb-0">
+                                <!-- 首页 -->
+
+                                <!-- 上一页 -->
+                                
+                                <!-- 页码 -->
+                                    <li class="page-item active">
+                                            <a class="page-link" href="index.shtml">1</a>
+                                    </li>
+                                
+                                <!-- 下一页 -->
+
+                                <!-- 尾页 -->
+                            </ul>
+                        </nav>
+                        <div class="text-secondary fs-6 ps-2 mt-2 text-center">
+                            共 1 页 2 条数据
+                        </div>
+                </div>
+            </div>
+            <!-- 右侧文章列表 end 放在任何栏目下都可以-->
+        </div>
+    </div>
+
+
+      <!-- 页脚 -->
+<!--#include file="/include/common/home_footer.shtml" -->
+
+
+    <!-- Bootstrap 5.3.0 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

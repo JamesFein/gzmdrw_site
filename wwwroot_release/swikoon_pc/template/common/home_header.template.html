@@ -1,0 +1,118 @@
+<!-- 页面头部区域 -->
+<header class="head-section fs-5" style="color: black;">
+  <!-- 导航栏容器 -->
+  <div class="navbar navbar-default navbar-static-top container">
+    <!-- 添加 d-flex 和 align-items-center 类来使用 Flexbox 布局 -->
+    <div class="d-flex align-items-center w-100">
+      <!-- 网站Logo -->
+      <a class="navbar-brand" href="${Site.link}"><span>Genomatrix</span></a>
+
+      <!-- 移除collapse类，确保始终显示 -->
+      <div class="navbar-collapse" id="navbarContent">
+        <!-- 使用 navbar-nav me-auto 和 flex-row 来确保水平排列 -->
+        <ul class="navbar-nav me-auto flex-row align-items-center fs-4" style="color: #0C4034;">
+          <!-- 首页链接 -->
+          <li>
+            <a href="${Site.link}">HomePage</a>
+          </li>
+
+          <!-- 物种栏目及其子栏目 -->
+          <@cms_catalog alias="species" level="Self">
+            <#list DataList as pcatalog>
+              <li class="nav-item dropdown position-relative">
+                <a class="dropdown-toggle" href="#" 
+                   role="button"
+                   data-bs-toggle="dropdown" 
+                   aria-expanded="false"
+                   id="speciesDropdown${pcatalog.catalogId}">
+                  ${pcatalog.name}
+                </a>
+                <ul class="dropdown-menu position-absolute" aria-labelledby="speciesDropdown${pcatalog.catalogId}">
+                  <@cms_catalog id="${pcatalog.catalogId}" level="Child">
+                    <#list DataList as catalog>
+                      <li><a class="dropdown-item" href="${catalog.link}">${catalog.name}</a></li>
+                    </#list>
+                  </@cms_catalog>
+                </ul>
+              </li>
+            </#list>
+          </@cms_catalog>
+
+          <!-- 基因组栏目以及其子栏目 -->
+          <@cms_catalog alias="genomics" level="Self">
+            <#list DataList as catalog>
+              <li>
+                <a href="${catalog.link}">${catalog.name}</a>
+              </li>
+            </#list>
+          </@cms_catalog>
+
+         <!-- 搜索框 -->
+          <li><input class="form-control search" placeholder=" Search" id="header_search" type="text"></li>
+        </ul>
+      </div>
+    </div>
+</header>
+
+<!-- 搜索功能脚本 -->
+<script>
+  window.onload = function() {  
+    // 监听搜索框回车事件
+    document.getElementById('header_search').addEventListener('keyup', function(event) {  
+      if (event.key === 'Enter') {
+        // 构建搜索链接
+        var link = "${IsPreview?then(ApiPrefix, Prefix)}${dynamicPageLink('Search',false)}";
+        if (link.indexOf('?') > -1) {
+          link += "&q=" + $('#header_search').val();
+        } else {
+          link += "?q=" + $('#header_search').val();
+        }
+        // 跳转到搜索结果页
+        window.location.href = link;
+      }  
+    }); 
+  };
+</script>
+
+<style>
+  .navbar-nav {
+    margin-left: 20px;
+  }
+  
+  .navbar-nav li {
+    margin-right: 15px;
+  }
+
+  .navbar-nav li input.search {
+    width: 200px;
+  }
+</style>
+
+
+
+        <!-- 面包屑导航 -->
+  <div class="py-3" style="background-color: #0C4034; color: white;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h1 class="h2 mb-0">${Catalog.name}</h1>
+        </div>
+        <div class="col-md-6">
+          <nav aria-label="breadcrumb">
+            <ol class="mb-0 text-end list-inline">
+              <li class="text-white list-inline-item"><a href="${Site.link}" class="text-decoration-none text-white">HomePage</a></li>
+              <#list Catalog.ancestors?split(":") as catalogId>
+                <@cms_catalog id="${catalogId}" level="Self">
+                  <#list DataList as catalog>
+                    <li class="text-white list-inline-item"><a href="${catalog.link}" class="text-decoration-none text-white">/&nbsp;&nbsp;${catalog.name}</a></li>
+                  </#list>
+                </@cms_catalog>
+              </#list>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+

@@ -1,0 +1,138 @@
+<!-- Required Scripts:
+- jQuery: https://code.jquery.com/jquery-3.7.1.min.js
+- Bootstrap Bundle (includes Popper): https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js
+-->
+
+<!-- Required CSS:
+- Bootstrap: https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css
+- Font Awesome: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css
+-->
+
+<!-- 表单 start -->
+<div class="bg-white rounded shadow-sm px-4 pb-4">
+  <h2 class="mb-4">Gene Index</h2>
+
+  <!-- Gene ID Input -->
+  <div class="mb-3">
+    <label for="geneId" class="form-label">Gene ID</label>
+    <div class="input-group">
+      <input type="text" class="form-control" id="geneId" />
+    </div>
+    <div class="form-text">
+      e.g. FT, AT1G65480, BnaA02G0156900ZS, FLOWERING LOCUS T
+    </div>
+  </div>
+
+  <!-- Gene Region Input -->
+  <div class="mb-3">
+    <label for="geneRegion" class="form-label">Gene region</label>
+    <div class="input-group">
+      <input type="text" class="form-control" id="geneRegion" />
+    </div>
+    <div class="form-text">e.g. A01:150000..230000</div>
+  </div>
+
+  <!-- Gene Index Textarea -->
+  <div class="mb-3">
+    <label for="geneIndex" class="form-label">Gene Index</label>
+    <div class="input-group">
+      <textarea
+        class="form-control bg-light border"
+        style="min-height: 200px"
+        id="geneIndex"
+      ></textarea>
+    </div>
+  </div>
+
+  <!-- File Upload and Example Files -->
+  <div class="mb-3">
+    <div class="input-group">
+      <input
+        type="file"
+        class="form-control"
+        id="fileInput"
+        accept=".txt,.text"
+        data-bs-toggle="tooltip"
+        title="Only .txt or .text files are allowed"
+      />
+      <button
+        class="btn btn-outline-secondary dropdown-toggle"
+        type="button"
+        data-bs-toggle="dropdown"
+      >
+        example file
+      </button>
+      <ul class="dropdown-menu">
+        <li>
+          <a class="dropdown-item" href="#" onclick="loadExample('example_1')"
+            >example_1</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" href="#" onclick="loadExample('example_2')"
+            >example_2</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="d-flex gap-2">
+    <button class="btn btn-primary" onclick="handleSubmit()">submit</button>
+    <button class="btn btn-secondary" onclick="handleReset()">reset</button>
+  </div>
+</div>
+
+<script>
+  // 示例数据
+  const exampleData = {
+    example_1: `BnaA02G003510ZS
+                BnaA03G003920ZS
+                BnaA03G014440ZS
+                BnaA10G024480ZS
+                BnaC02G003910ZS
+                BnaC03G004630ZS
+                BnaC03G016770ZS
+                BnaC09G055610ZS
+                BnaC09G055670ZS
+                BnaC09G055700ZS`,
+    example_2: `BnaA02G003510ZS
+                BnaA03G003920ZS
+                BnaA03G014440ZS`,
+  };
+
+  // 加载示例文件
+  function loadExample(example) {
+    const geneIndexTextarea = document.getElementById("geneIndex");
+    geneIndexTextarea.value = exampleData[example];
+  }
+
+  // 处理文件上传
+  document.getElementById("fileInput").addEventListener("change", function (e) {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        document.getElementById("geneIndex").value = e.target.result;
+      };
+      reader.readAsText(file);
+    }
+  });
+
+  // 提交处理
+  function handleSubmit() {
+    // 这里添加提交逻辑
+    alert("提交成功！");
+  }
+
+  // 重置处理
+  function handleReset() {
+    document.getElementById("geneId").value = "";
+    document.getElementById("geneRegion").value = "";
+    document.getElementById("geneIndex").value = "";
+    document.getElementById("fileInput").value = "";
+  }
+</script>
+
+<!-- 表单 end -->
