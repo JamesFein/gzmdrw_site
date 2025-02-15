@@ -9,78 +9,143 @@
 -->
 
 <!-- 表单 start -->
-<div class="bg-white rounded shadow-sm px-4 pb-4">
-  <h2 class="mb-4">Gene Index</h2>
-
-  <!-- Gene ID Input -->
-  <div class="mb-3">
-    <label for="geneId" class="form-label">Gene ID</label>
-    <div class="input-group">
-      <input type="text" class="form-control" id="geneId" />
-    </div>
-    <div class="form-text">
-      e.g. FT, AT1G65480, BnaA02G0156900ZS, FLOWERING LOCUS T
-    </div>
-  </div>
-
-  <!-- Gene Region Input -->
-  <div class="mb-3">
-    <label for="geneRegion" class="form-label">Gene region</label>
-    <div class="input-group">
-      <input type="text" class="form-control" id="geneRegion" />
-    </div>
-    <div class="form-text">e.g. A01:150000..230000</div>
-  </div>
-
-  <!-- Gene Index Textarea -->
-  <div class="mb-3">
-    <label for="geneIndex" class="form-label">Gene Index</label>
-    <div class="input-group">
-      <textarea
-        class="form-control bg-light border"
-        style="min-height: 200px"
-        id="geneIndex"
-      ></textarea>
-    </div>
-  </div>
-
-  <!-- File Upload and Example Files -->
-  <div class="mb-3">
-    <div class="input-group">
-      <input
-        type="file"
-        class="form-control"
-        id="fileInput"
-        accept=".txt,.text"
-        data-bs-toggle="tooltip"
-        title="Only .txt or .text files are allowed"
-      />
-      <button
-        class="btn btn-outline-secondary dropdown-toggle"
-        type="button"
-        data-bs-toggle="dropdown"
-      >
-        example file
-      </button>
-      <ul class="dropdown-menu">
-        <li>
-          <a class="dropdown-item" href="#" onclick="loadExample('example_1')"
-            >example_1</a
+<div class="bg-white p-4 rounded shadow-sm mb-4" style="color: #0c4034">
+  <h2
+    class="text-left d-flex justify-content-between align-items-center mb-4"
+    style="cursor: pointer; font-size: 1.2rem"
+  >
+    <span class="text-dark fw-semibold">Gene Index</span>
+    <i class="fas fa-chevron-up" style="font-size: 0.8em"></i>
+  </h2>
+  <div class="form-content">
+    <form id="geneIndexForm">
+      <!-- Gene ID Input -->
+      <div class="mb-4">
+        <div class="d-flex align-items-center">
+          <label for="geneId" class="mb-0 fw-500 me-2" style="min-width: 80px"
+            >Gene ID</label
           >
-        </li>
-        <li>
-          <a class="dropdown-item" href="#" onclick="loadExample('example_2')"
-            >example_2</a
-          >
-        </li>
-      </ul>
-    </div>
-  </div>
+          <div class="flex-grow-1 d-flex align-items-center">
+            <input type="text" class="form-control" id="geneId" value="" />
+            <span
+              class="ms-2"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title="Help information about Gene ID"
+              style="cursor: pointer"
+              >?</span
+            >
+          </div>
+        </div>
+        <div class="mt-2 fst-italic" style="cursor: pointer; color: #8aaa39">
+          e.g.
+          <span class="text-decoration-underline">FT</span>,
+          <span class="text-decoration-underline">AT1G65480</span>,
+          <span class="text-decoration-underline">BnaA02G0156900ZS</span>,
+          <span class="text-decoration-underline">FLOWERING LOCUS T</span>
+        </div>
+      </div>
 
-  <!-- Action Buttons -->
-  <div class="d-flex gap-2">
-    <button class="btn btn-primary" onclick="handleSubmit()">submit</button>
-    <button class="btn btn-secondary" onclick="handleReset()">reset</button>
+      <!-- Gene Region Input -->
+      <div class="mb-4">
+        <div class="d-flex align-items-center">
+          <label
+            for="geneRegion"
+            class="mb-0 fw-500 me-2"
+            style="min-width: 80px"
+            >Gene region</label
+          >
+          <div class="flex-grow-1 d-flex align-items-center">
+            <input type="text" class="form-control" id="geneRegion" value="" />
+            <span
+              class="ms-2"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title="Help information about Gene Region"
+              style="cursor: pointer"
+              >?</span
+            >
+          </div>
+        </div>
+        <div class="mt-2 fst-italic" style="cursor: pointer; color: #8aaa39">
+          e.g.
+          <span class="text-decoration-underline">A01:150000..230000</span>
+        </div>
+      </div>
+
+      <!-- Gene Index Textarea -->
+      <div class="mb-4">
+        <div class="d-flex align-items-center">
+          <label
+            for="geneIndex"
+            class="mb-0 fw-500 me-2"
+            style="min-width: 80px"
+            >Gene Index</label
+          >
+          <div class="flex-grow-1 d-flex align-items-center">
+            <textarea class="form-control" id="geneIndex" rows="8"></textarea>
+            <span
+              class="ms-2"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title="Help information about Gene Index"
+              style="cursor: pointer"
+              >?</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- File Upload and Example Files -->
+      <div class="mb-4">
+        <div class="d-flex align-items-center">
+          <label class="mb-0 fw-500 me-2" style="min-width: 80px"
+            >File Upload</label
+          >
+          <div class="flex-grow-1">
+            <div class="input-group">
+              <input
+                type="file"
+                class="form-control"
+                id="fileInput"
+                accept=".txt,.text"
+              />
+              <button
+                class="btn dropdown-toggle btn-success"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                example file
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    onclick="loadExample('example_1')"
+                    >example_1</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    onclick="loadExample('example_2')"
+                    >example_2</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="text-center">
+        <button type="submit" class="btn me-2 btn-success">submit</button>
+        <button type="reset" class="btn btn-success">reset</button>
+      </div>
+    </form>
   </div>
 </div>
 
@@ -102,6 +167,49 @@
                 BnaA03G014440ZS`,
   };
 
+  // 初始化工具提示
+  document.addEventListener("DOMContentLoaded", () => {
+    const tooltipList = [
+      ...document.querySelectorAll('[data-bs-toggle="tooltip"]'),
+    ].map((el) => new bootstrap.Tooltip(el));
+
+    // 设置示例文本点击事件
+    document.querySelectorAll(".text-decoration-underline").forEach((span) => {
+      span.addEventListener("click", () => {
+        const input = span.closest(".mb-4").querySelector("input");
+        if (input) {
+          input.value = span.textContent;
+        }
+      });
+    });
+
+    // 设置表单事件
+    const form = document.getElementById("geneIndexForm");
+    form.addEventListener("reset", () => {
+      document.getElementById("geneId").value = "";
+      document.getElementById("geneRegion").value = "";
+      document.getElementById("geneIndex").value = "";
+      document.getElementById("fileInput").value = "";
+    });
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      // Add your submit logic here
+    });
+
+    // 设置章节折叠功能
+    const header = document.querySelector("h2");
+    const content = document.querySelector(".form-content");
+    const icon = header.querySelector("i");
+
+    header.addEventListener("click", () => {
+      const isVisible = content.style.display !== "none";
+      content.style.display = isVisible ? "none" : "block";
+      icon.classList.toggle("fa-chevron-up", !isVisible);
+      icon.classList.toggle("fa-chevron-down", isVisible);
+    });
+  });
+
   // 加载示例文件
   function loadExample(example) {
     const geneIndexTextarea = document.getElementById("geneIndex");
@@ -119,20 +227,6 @@
       reader.readAsText(file);
     }
   });
-
-  // 提交处理
-  function handleSubmit() {
-    // 这里添加提交逻辑
-    alert("提交成功！");
-  }
-
-  // 重置处理
-  function handleReset() {
-    document.getElementById("geneId").value = "";
-    document.getElementById("geneRegion").value = "";
-    document.getElementById("geneIndex").value = "";
-    document.getElementById("fileInput").value = "";
-  }
 </script>
 
 <!-- 表单 end -->

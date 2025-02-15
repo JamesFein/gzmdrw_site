@@ -40,9 +40,22 @@
 
           <!-- 基因组栏目以及其子栏目 -->
           <@cms_catalog alias="genomics" level="Self">
-            <#list DataList as catalog>
-              <li>
-                <a href="${catalog.link}">${catalog.name}</a>
+            <#list DataList as pcatalog>
+              <li class="nav-item dropdown position-relative">
+                <a class="dropdown-toggle" href="#" 
+                   role="button"
+                   data-bs-toggle="dropdown" 
+                   aria-expanded="false"
+                   id="speciesDropdown${pcatalog.catalogId}">
+                  ${pcatalog.name}
+                </a>
+                <ul class="dropdown-menu position-absolute" aria-labelledby="speciesDropdown${pcatalog.catalogId}">
+                  <@cms_catalog id="${pcatalog.catalogId}" level="Child">
+                    <#list DataList as catalog>
+                      <li><a class="dropdown-item" href="${catalog.link}">${catalog.name}</a></li>
+                    </#list>
+                  </@cms_catalog>
+                </ul>
               </li>
             </#list>
           </@cms_catalog>
@@ -90,14 +103,16 @@
 
 
 
-        <!-- 面包屑导航 -->
+      <!-- 面包屑导航 -->
   <div class="py-3" style="background-color: #0C4034; color: white;">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6">
-          <h1 class="h2 mb-0">${Catalog.name}</h1>
+          <h1 class="h2 mb-0">${(Catalog.name)!'Genomatrix Homepage'}</h1>
         </div>
         <div class="col-md-6">
+          <!-- 如果栏目存在，才渲染面包屑导航 -->
+          <#if Catalog??>
           <nav aria-label="breadcrumb">
             <ol class="mb-0 text-end list-inline">
               <li class="text-white list-inline-item"><a href="${Site.link}" class="text-decoration-none text-white">HomePage</a></li>
@@ -110,6 +125,7 @@
               </#list>
             </ol>
           </nav>
+          </#if>
         </div>
       </div>
     </div>

@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gene Cluster Search and Information</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.datatables.net/2.0.0/css/dataTables.bootstrap5.min.css"
+      rel="stylesheet"
+    />
+      <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      line-height: 1.6;
+      background-color: #f1f5ec;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    .text-decoration-underline-hover:hover {
+      text-decoration: underline;
+    }
+    .nav-link:hover {
+      color: #0C4034 !important;
+    }
+  </style>
+  </head>
+  <body>
+    <!-- 引入头部模板 -->
+    <@cms_include file="common/home_header.template.html"></@cms_include>
+    <div class="container mt-4" style="color: #0c4034">
+      <!-- 搜索表单部分 -->
+      <div class="bg-white p-4 rounded shadow-sm mb-4">
+        <h2
+          class="text-left d-flex justify-content-between align-items-center mb-4"
+          style="cursor: pointer;  font-size: 1.2rem"
+        >
+          <span>Gene Cluster Search</span>
+          <i class="fas fa-chevron-up" style="font-size: 0.8em"></i>
+        </h2>
+        <div class="form-content">
+          <form id="geneSearchForm">
+            <div class="mb-4">
+              <div class="d-flex align-items-center">
+                <label
+                  for="geneId"
+                  class="mb-0 fw-500 me-2"
+                  style="min-width: 80px;"
+                  >Gene ID</label
+                >
+                <div class="flex-grow-1 d-flex align-items-center">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="geneId"
+                    value=""
+                  />
+                  <span
+                    class="ms-2"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Help information about Gene ID"
+                    style="cursor: pointer"
+                    >?</span
+                  >
+                </div>
+              </div>
+              <div class="mt-2 fst-italic"  style="cursor: pointer; color: #8aaa39">
+                e.g.
+                <span
+                  class="text-decoration-underline"
+                  >FT</span
+                >,
+                <span
+                  class="text-decoration-underline"
+                  >AT1G65480</span
+                >,
+                <span
+                  class="text-decoration-underline"
+                  >BnaA02G0156900ZS</span
+                >,
+                <span
+                  class="text-decoration-underline"
+                  >FLOWERING LOCUS T</span
+                >,
+                <span
+                  class="text-decoration-underline"
+                  >BnaAnng09250D</span
+                >
+              </div>
+            </div>
+            <div class="text-center">
+              <button
+                type="submit"
+                class="btn btn-success me-2"
+              >
+                submit
+              </button>
+              <button
+                type="reset"
+                class="btn btn-success"
+              >
+                reset
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- 基因基本信息表 -->
+      <div class="bg-white rounded shadow-sm p-4">
+        <h2
+          class="text-left d-flex justify-content-between align-items-center mb-4"
+          style="cursor: pointer; font-size: 1.2rem"
+        >
+          <span>Basic Information of Genes</span>
+          <i class="fas fa-chevron-up" style="font-size: 0.8em"></i>
+        </h2>
+        <div class="table-responsive">
+          <table id="geneTable" class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th class="align-top">ZS11 Gene ID</th>
+                <th class="align-top">Darmor Gene ID</th>
+                <th class="align-top">Darmor-bzh Gene ID</th>
+                <th class="align-top">Express617 Gene ID</th>
+                <th class="align-top">GanganF73 Gene ID</th>
+                <th class="align-top">No2127 Gene ID</th>
+                <th class="align-top">NY7 Gene ID</th>
+                <th class="align-top">quinta Gene ID</th>
+                <th class="align-top">Shengli3 Gene ID</th>
+                <th class="align-top">Tapidor3 Gene ID</th>
+                <th class="align-top">Westar Gene ID</th>
+                <th class="align-top">Zheyou73 Gene ID</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="12" class="text-center">Loading data...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- bna 基因分布图 -->
+      <div class="bg-white rounded shadow-sm p-4 mt-4">
+        <h2
+          class="text-left d-flex justify-content-between align-items-center mb-4"
+          style="cursor: pointer; font-size: 1.2rem"
+        >
+          <span>Bna gene distribution in genome groups</span>
+          <i class="fas fa-chevron-up" style="font-size: 0.8em"></i>
+        </h2>
+        <div class="row">
+          <div class="col-md-7">
+            <div
+              class="position-relative"
+              style="height: 400px; margin-bottom: 20px"
+            >
+              <button
+                class="position-absolute top-0 end-0 m-2 btn btn-light p-2"
+                onclick="downloadChart('genomeGroupsBar')"
+                style="z-index: 100; background: rgba(255, 255, 255, 0.7)"
+              >
+                <i
+                  class="fas fa-download"
+                  style="color: #666; font-size: 14px"
+                ></i>
+              </button>
+              <div id="genomeGroupsBar" style="height: 100%; width: 100%"></div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div
+              class="position-relative"
+              style="height: 400px; margin-bottom: 20px"
+            >
+              <button
+                class="position-absolute top-0 end-0 m-2 btn btn-light p-2"
+                onclick="downloadChart('genomeGroupsPie')"
+                style="z-index: 100; background: rgba(255, 255, 255, 0.7)"
+              >
+                <i
+                  class="fas fa-download"
+                  style="color: #666; font-size: 14px"
+                ></i>
+              </button>
+              <div id="genomeGroupsPie" style="height: 100%; width: 100%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 染色体分布图 -->
+      <div class="bg-white rounded shadow-sm p-4 mt-4">
+        <h2
+          class="text-left d-flex justify-content-between align-items-center mb-4"
+          style="cursor: pointer; font-size: 1.2rem"
+        >
+          <span>The distribution of gene sets on chromosomes</span>
+          <i class="fas fa-chevron-up" style="font-size: 0.8em"></i>
+        </h2>
+        <div class="row">
+          <div class="col-md-7">
+            <div
+              class="position-relative"
+              style="height: 400px; margin-bottom: 20px"
+            >
+              <button
+                class="position-absolute end-0 m-2 btn btn-light p-2"
+                onclick="downloadChart('chromosomeBar')"
+                style="
+                  z-index: 100;
+                  background: rgba(255, 255, 255, 0.7);
+                  top: 1rem;
+                "
+              >
+                <i
+                  class="fas fa-download"
+                  style="color: #666; font-size: 14px"
+                ></i>
+              </button>
+              <div id="chromosomeBar" style="height: 100%; width: 100%"></div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div
+              class="position-relative"
+              style="height: 400px; margin-bottom: 20px"
+            >
+              <button
+                class="position-absolute top-0 end-0 m-2 btn btn-light p-2"
+                onclick="downloadChart('chromosomePie')"
+                style="z-index: 100; background: rgba(255, 255, 255, 0.7)"
+              >
+                <i
+                  class="fas fa-download"
+                  style="color: #666; font-size: 14px"
+                ></i>
+              </button>
+              <div id="chromosomePie" style="height: 100%; width: 100%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 基因物理位点图 -->
+      <div class="bg-white rounded shadow-sm p-4 my-4">
+        <h2
+          class="text-left d-flex justify-content-between align-items-center mb-4"
+          style="cursor: pointer; font-size: 1.2rem"
+        >
+          <span>The Physical Location of the Genes</span>
+          <i class="fas fa-chevron-up" style="font-size: 0.8em"></i>
+        </h2>
+        <div class="table-responsive">
+          <table
+            id="physicalLocationTable"
+            class="table table-striped table-bordered"
+          >
+            <thead>
+              <tr>
+                <th class="align-top" style="white-space: nowrap">Genome</th>
+                <th class="align-top" style="white-space: nowrap">Gene</th>
+                <th class="align-top" style="white-space: nowrap">Chr.</th>
+                <th class="align-top" style="white-space: nowrap">Start</th>
+                <th class="align-top" style="white-space: nowrap">End</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="5" class="text-center">Loading data...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- 引入页脚模板 -->
+    <@cms_include file="common/home_footer.template.html"></@cms_include>
+
+    <!-- Scripts -->
+    <script src="${Prefix}js/mock_data/gene_cluster_mock_data.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.0/js/dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.0/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.0.0/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.0.0/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+
+    <script>
+        // Show error message if present
+        document.addEventListener("DOMContentLoaded", () => {
+          showErrorMessage("${((error.message)?js_string)!'An error occurred'}");
+        });
+
+      // ==================== 页面整体初始化 ====================
+      document.addEventListener("DOMContentLoaded", async () => {
+        try {
+          // 初始化工具提示
+          const tooltipList = [
+            ...document.querySelectorAll('[data-bs-toggle="tooltip"]'),
+          ].map((el) => new bootstrap.Tooltip(el));
+
+          // 初始化各个组件
+          await Promise.all([
+            initializeGeneTable(),
+            initializePhysicalLocationTable(),
+            initializeCharts(),
+          ]);
+
+          // 设置章节折叠功能
+          setupSectionToggle();
+
+          // 设置表单事件处理
+          setupFormHandlers();
+        } catch (error) {
+          console.error("初始化失败:", error);
+          showErrorMessage("页面初始化失败，请刷新重试");
+        }
+      });
+
+      // ==================== Gene Cluster Search 板块 ====================
+      // 处理搜索表单相关的事件和功能
+      const setupFormHandlers = () => {
+        // 重置表单处理
+        const geneSearchForm = document.getElementById("geneSearchForm");
+        const geneIdInput = document.getElementById("geneId");
+
+        geneSearchForm.addEventListener("reset", () => {
+          geneIdInput.value = "";
+        });
+
+        // 示例文本点击事件
+        document
+          .querySelectorAll(".text-decoration-underline")
+          .forEach((span) => {
+            span.addEventListener("click", () => {
+              geneIdInput.value = span.textContent;
+            });
+          });
+
+        // 表单提交处理
+        geneSearchForm.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const geneId = geneIdInput.value.trim();
+
+          try {
+            await searchGene(geneId);
+          } catch (error) {
+            console.error("基因搜索失败:", error);
+            showErrorMessage("搜索失败，请重试");
+          }
+        });
+      };
+
+      // ==================== Basic Information of Genes 板块 ====================
+      // 初始化基因基本信息表格
+      const initializeGeneTable = async () => {
+        try {
+          // 检查依赖项
+          if (!window.jQuery || !$.fn.DataTable) {
+            throw new Error("必要的库未加载");
+          }
+
+          // 销毁现有表格实例
+          if ($.fn.DataTable.isDataTable("#geneTable")) {
+            $("#geneTable").DataTable().destroy();
+          }
+
+          // 创建新的表格实例
+          const table = $("#geneTable").DataTable({
+            data: geneBasicInfoData.tableData,
+            order: [[0, "asc"]],
+            dom: '<"row mx-2 p-2"<"col-sm-12 col-md-6"B><"col-sm-12 col-md-6 form-group"f>>' +
+                 '<"row"<"col-sm-12"tr>>' +
+                 '<"row"<"col-sm-12 col-md-5"i><"col-sm-12 col-md-7 d-flex mt-2 justify-content-end"p>>',
+            buttons: [
+              {
+                extend: 'excel',
+                text: '<i class="fas fa-file-excel"></i> Export Excel',
+                className: 'btn btn-success',
+                title: 'Basic Information of Genes'
+              }
+            ]
+          });
+
+          // 窗口大小改变时调整表格
+          window.addEventListener("resize", () => {
+            table.columns.adjust().draw();
+          });
+        } catch (error) {
+          throw new Error(`表格初始化失败: `,"${((error.message)?js_string)!'An error occurred'}");
+        }
+      };
+
+      // ==================== Bna gene distribution & Gene sets distribution 板块 ====================
+      // 初始化基因分布图表（包含 genome groups 和 chromosomes 两部分）
+      function initializeCharts() {
+        const colors = chartColors;
+
+        // ----- Bna gene distribution in genome groups 部分 -----
+        // 初始化 genome groups 的条形图和饼图
+        const genomeGroupsBar = echarts.init(
+          document.getElementById("genomeGroupsBar")
+        );
+        const genomeGroupsPie = echarts.init(
+          document.getElementById("genomeGroupsPie")
+        );
+
+        // Bar chart configuration for genome groups
+        const genomeGroupsBarOption = {
+          tooltip: {
+            trigger: "axis",
+            axisPointer: { type: "shadow" },
+          },
+          legend: {
+            data: genomeGroupsData.series.map((item) => item.name),
+          },
+          grid: {
+            left: "3%",
+            right: "4%",
+            bottom: "15%",
+            containLabel: true,
+          },
+          xAxis: {
+            type: "category",
+            data: genomeGroupsData.categories,
+            axisLabel: {
+              rotate: -45,
+              interval: 0,
+              align: "left",
+            },
+          },
+          yAxis: { type: "value" },
+          series: genomeGroupsData.series.map((item, index) => ({
+            name: item.name,
+            type: "bar",
+            stack: "total",
+            data: item.data,
+            itemStyle: { color: colors[index] },
+          })),
+        };
+
+        // Pie chart configuration for genome groups
+        const genomeGroupsPieOption = {
+          title: {
+            text: "ZS11",
+            left: "center",
+          },
+          tooltip: {
+            trigger: "item",
+            formatter: "{a} <br/>{b}: {c} ({d}%)",
+          },
+          series: [
+            {
+              name: "Distribution",
+              type: "pie",
+              radius: ["40%", "70%"],
+              avoidLabelOverlap: false,
+              itemStyle: {
+                borderRadius: 10,
+                borderColor: "#fff",
+                borderWidth: 2,
+              },
+              label: {
+                show: true,
+                position: "outside",
+                formatter: "{b}: {d}%",
+                alignTo: "edge",
+                minMargin: 5,
+                edgeDistance: 10,
+                lineHeight: 15,
+              },
+              labelLine: {
+                show: true,
+                length: 15,
+                length2: 20,
+              },
+              data: genomeGroupsData.series.map((item, index) => ({
+                value: item.data[0],
+                name: item.name,
+                itemStyle: { color: colors[index] },
+              })),
+            },
+          ],
+        };
+
+        genomeGroupsBar.setOption(genomeGroupsBarOption);
+        genomeGroupsPie.setOption(genomeGroupsPieOption);
+
+        // ----- The distribution of gene sets on chromosomes 部分 -----
+        // 初始化染色体分布的条形图和饼图
+        const chromosomeBar = echarts.init(
+          document.getElementById("chromosomeBar")
+        );
+        const chromosomePie = echarts.init(
+          document.getElementById("chromosomePie")
+        );
+
+        // Bar chart configuration for chromosome distribution
+        const chromosomeBarOption = {
+          tooltip: {
+            trigger: "axis",
+            axisPointer: { type: "shadow" },
+          },
+          legend: {
+            data: chromosomeData.series.map((item) => item.name),
+          },
+          grid: {
+            left: "3%",
+            right: "4%",
+            bottom: "15%",
+            containLabel: true,
+          },
+          xAxis: {
+            type: "category",
+            data: chromosomeData.categories,
+            axisLabel: {
+              rotate: -45,
+              interval: 0,
+              align: "left",
+            },
+          },
+          yAxis: {
+            type: "value",
+            max: 25,
+          },
+          series: chromosomeData.series.map((item) => ({
+            name: item.name,
+            type: "bar",
+            stack: "total",
+            data: item.data,
+          })),
+        };
+
+        // Pie chart configuration for chromosome distribution
+        const chromosomePieOption = {
+          title: {
+            text: "A02",
+            left: "center",
+          },
+          tooltip: {
+            trigger: "item",
+            formatter: "{a} <br/>{b}: {c} ({d}%)",
+          },
+          series: [
+            {
+              name: "Distribution",
+              type: "pie",
+              radius: ["40%", "70%"],
+              avoidLabelOverlap: false,
+              itemStyle: {
+                borderRadius: 10,
+                borderColor: "#fff",
+                borderWidth: 2,
+              },
+              label: {
+                show: true,
+                position: "outside",
+                formatter: "{b}: {d}%",
+                alignTo: "edge",
+                minMargin: 5,
+                edgeDistance: 10,
+                lineHeight: 15,
+              },
+              labelLine: {
+                show: true,
+                length: 15,
+                length2: 20,
+              },
+              data: chromosomeData.series.map((item) => ({
+                value: item.data[0],
+                name: item.name,
+              })),
+            },
+          ],
+        };
+
+        chromosomeBar.setOption(chromosomeBarOption);
+        chromosomePie.setOption(chromosomePieOption);
+
+        // 图表交互事件处理
+        // Genome groups 图表点击事件
+        genomeGroupsBar.on("click", function (params) {
+          const index = genomeGroupsData.categories.indexOf(params.name);
+          const newPieData = genomeGroupsData.series.map((item, i) => ({
+            value: item.data[index],
+            name: item.name,
+            itemStyle: { color: colors[i] },
+          }));
+
+          genomeGroupsPie.setOption({
+            title: { text: params.name },
+            series: [{ data: newPieData }],
+          });
+        });
+
+        // Chromosome 图表点击事件
+        chromosomeBar.on("click", function (params) {
+          const index = chromosomeData.categories.indexOf(params.name);
+          const newPieData = chromosomeData.series.map((item) => ({
+            value: item.data[index],
+            name: item.name,
+          }));
+
+          chromosomePie.setOption({
+            title: { text: params.name },
+            series: [{ data: newPieData }],
+          });
+        });
+
+        // 窗口大小调整处理
+        window.addEventListener("resize", function () {
+          genomeGroupsBar.resize();
+          genomeGroupsPie.resize();
+          chromosomeBar.resize();
+          chromosomePie.resize();
+        });
+      }
+
+      // 图表下载功能
+      function downloadChart(chartId) {
+        const chart = echarts.getInstanceByDom(
+          document.getElementById(chartId)
+        );
+        const url = chart.getDataURL({
+          type: "png",
+          pixelRatio: 2,
+          backgroundColor: "#fff",
+        });
+
+        const link = document.createElement("a");
+        link.download = chartId + "_chart.png";
+        link.href = url;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+
+      // ==================== The Physical Location of the Genes 板块 ====================
+      // 初始化基因物理位置表格
+      function initializePhysicalLocationTable() {
+        try {
+          if (typeof $ === "undefined") {
+            throw new Error("jQuery is not loaded", "${((error.message)?js_string)!'An error occurred'}" );
+          }
+          if (typeof $.fn.DataTable === "undefined") {
+            throw new Error("DataTables is not loaded","${((error.message)?js_string)!'An error occurred'}" );
+          }
+
+          if ($.fn.DataTable.isDataTable("#physicalLocationTable")) {
+            $("#physicalLocationTable").DataTable().destroy();
+          }
+
+          const table = $("#physicalLocationTable").DataTable({
+            data: geneIndexMockData.tableData,
+            order: [[0, "asc"]],
+            ordering: true,
+            columns: [
+              {
+                data: 0,
+                title: "Genome",
+                orderable: true,
+                className: "text-nowrap",
+              },
+              {
+                data: 1,
+                title: "Gene",
+                orderable: true,
+                className: "text-nowrap",
+              },
+              {
+                data: 2,
+                title: "Chr.",
+                orderable: true,
+                className: "text-nowrap",
+              },
+              {
+                data: 3,
+                title: "Start",
+                orderable: true,
+                className: "text-nowrap",
+              },
+              {
+                data: 4,
+                title: "End",
+                orderable: true,
+                className: "text-nowrap",
+              },
+            ],
+            dom:
+              '<"row mx-2 p-2"<"col-sm-12 col-md-6"B><"col-sm-12 col-md-6 form-group"f>>' +
+              '<"row"<"col-sm-12"tr>>' +
+              '<"row"<"col-sm-12 col-md-5"i><"col-sm-12 col-md-7 d-flex mt-2 justify-content-end"p>>',
+            buttons: [
+              {
+                extend: "excel",
+                text: '<i class="fas fa-file-excel"></i> Export Excel',
+                className: "btn btn-success",
+                title: "The Physical Location of the Genes",
+              },
+            ],
+            pageLength: 6,
+            scrollY: "400px",
+            scrollCollapse: true,
+            responsive: true,
+            language: {
+              search: "Search:",
+              lengthMenu: "Show _MENU_ entries",
+              info: "Showing _START_ to _END_ of _TOTAL_ entries",
+              infoEmpty: "Showing 0 to 0 of 0 entries",
+              infoFiltered: "(filtered from _MAX_ total entries)",
+            },
+            initComplete: function () {
+              $(".dt-buttons .btn").addClass("me-2 mb-2");
+              $(".dataTables_filter input").addClass("form-control");
+              console.log("DataTable initialization complete");
+            },
+          });
+
+          $(window).on("resize", function () {
+            table.columns.adjust().draw();
+          });
+
+          console.log("Table initialization successful");
+        } catch (error) {
+          console.error("Error initializing DataTable:", error);
+          $("#physicalLocationTable").before(
+            '<div class="alert alert-danger">Error loading table data. Please try refreshing the page.</div>'
+          );
+        }
+      }
+
+      // 设置章节折叠功能
+      const setupSectionToggle = () => {
+        document.querySelectorAll("h2").forEach((header) => {
+          header.addEventListener("click", () => {
+            const icon = header.querySelector("i");
+            const content = header
+              .closest("div")
+              .querySelector(".form-content, .table-responsive, .row");
+
+            const isVisible = content.style.display !== "none";
+            content.style.display = isVisible ? "none" : "block";
+            icon.classList.toggle("fa-chevron-up", !isVisible);
+            icon.classList.toggle("fa-chevron-down", isVisible);
+          });
+        });
+      };
+
+      // Add error handling function
+      function showErrorMessage(message) {
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'alert alert-danger';
+        errorDiv.textContent = message || '发生错误，请重试';
+        document.querySelector('.container').prepend(errorDiv);
+
+        // Auto remove after 5 seconds
+        setTimeout(() => {
+          errorDiv.remove();
+        }, 5000);
+      }
+    </script>
+  </body>
+</html>
